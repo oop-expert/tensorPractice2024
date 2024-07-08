@@ -2,10 +2,15 @@ import json
 import time
 import requests
 import base64
+import random
 
+generated_image = {'лягушка', 'джонни деп'}
+random_choice = random.choice(list(generated_image))
+
+negativePrompt_image = {'красивый', 'темно, камни'}
+random_choice_negativePrompt = random.choice(list(negativePrompt_image))
 
 class Text2ImageAPI:
-
     def __init__(self, url, api_key, secret_key):
         self.URL = url
         self.AUTH_HEADERS = {
@@ -19,13 +24,14 @@ class Text2ImageAPI:
         return data[0]['id']
 
     def generate(self, prompt, model, images=1, width=1024, height=1024, style=3):
-        styles = ['UHD','ANIME','DEFAULT','NUKE']
+        styles = ['KANDINSKY', 'UHD', 'ANIME', 'DEFAULT']
         params = {
             "type": "GENERATE",
             "numImages": images,
             "width": width,
             "height": height,
             "style": styles[style],
+            "negativePromptUnclip": random_choice_negativePrompt, #что в генерации не должно использоваться
             "generateParams": {
                 "query": f"{prompt}"
             }
@@ -54,7 +60,9 @@ if __name__ == '__main__':
     api = Text2ImageAPI('https://api-key.fusionbrain.ai/', '42C68103FF26F3BA248051567A147874',
                         '7BCDD2F342EDFE95409DF45037718FC9')
     model_id = api.get_model()
-    uuid = api.generate("принцесса лягушка", model_id, style=0)
+    print(random_choice)
+    print(random_choice_negativePrompt)
+    uuid = api.generate(random_choice, model_id, style=2)
     images = api.check_generation(uuid)
     print(images)
     image_base64 = images[0]
