@@ -15,6 +15,9 @@ class QuestionsTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 10)
 
+        films = [data['text'] for data in response.data]
+        self.assertEqual(len(films), len(set(films)))
+
     def test_get_nine_questions(self):
         url = reverse('questions')
         response = self.client.get(f'{url}?count=9')
