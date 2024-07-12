@@ -4,11 +4,14 @@ import requests
 import base64
 import random
 
-generated_image = {'лягушка', 'джонни деп'}
+generated_image = {'джонни деп в роли пирата в стиле аниме персонажа'}
 random_choice = random.choice(list(generated_image))
 
 negativePrompt_image = {'красивый', 'темно, камни'}
 random_choice_negativePrompt = random.choice(list(negativePrompt_image))
+
+def generate_random_number(min_value=0, max_value=3):
+  return random.randint(min_value, max_value)
 
 class Text2ImageAPI:
     def __init__(self, url, api_key, secret_key):
@@ -23,14 +26,12 @@ class Text2ImageAPI:
         data = response.json()
         return data[0]['id']
 
-    def generate(self, prompt, model, images=1, width=1024, height=1024, style=3):
-        styles = ['KANDINSKY', 'UHD', 'ANIME', 'DEFAULT']
+    def generate(self, prompt, model, images=1, width=1024, height=1024):
         params = {
             "type": "GENERATE",
             "numImages": images,
             "width": width,
             "height": height,
-            "style": styles[style],
             "negativePromptUnclip": random_choice_negativePrompt, #что в генерации не должно использоваться
             "generateParams": {
                 "query": f"{prompt}"
@@ -62,7 +63,7 @@ if __name__ == '__main__':
     model_id = api.get_model()
     print(random_choice)
     print(random_choice_negativePrompt)
-    uuid = api.generate(random_choice, model_id, style=2)
+    uuid = api.generate(random_choice, model_id)
     images = api.check_generation(uuid)
     print(images)
     image_base64 = images[0]
