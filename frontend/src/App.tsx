@@ -1,9 +1,15 @@
 import Router from './views/Router';
 import './App.css';
+import MainAppBar from './components/MainAppBar';
+import { ThemeProvider } from '@mui/material';
+import UITheme from './utils/Theme';
 
 function App() {
   return (
-    <Router />
+    <ThemeProvider theme={UITheme}>
+      <MainAppBar />
+      <Router />
+    </ThemeProvider>
   )
 }
 

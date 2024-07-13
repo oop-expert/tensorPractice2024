@@ -26,7 +26,7 @@ export default function RegistrationForm({username, onUsernameChange}: UsernameF
     <Container maxWidth='md' sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
       <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingX: 8}}>
         <IconButton onClick={() => dispatchColorId(-1)}>
-          <ArrowBackIosNewIcon sx={{color: 'white', }}/>
+          <ArrowBackIosNewIcon sx={{color: 'black', }}/>
         </IconButton>
 
         <Avatar alt='avatar 1' variant='circular' sx={{bgcolor: color, width: 100, height: 100}} >
@@ -34,16 +34,14 @@ export default function RegistrationForm({username, onUsernameChange}: UsernameF
         </Avatar>
 
         <IconButton onClick={() => dispatchColorId(1)}>
-          <ArrowForwardIosIcon sx={{color: 'white'}}/>
+          <ArrowForwardIosIcon sx={{color: 'black'}}/>
         </IconButton>
       </Box>
 
       <TextField 
         id='username' 
         label='Ваше имя' 
-        variant='filled' 
-        required 
-        color='primary' 
+        required
         error={!username}
         helperText={!username ? 'Это поле обязательно' : ''}
         onChange={onUsernameChange}

@@ -1,4 +1,4 @@
-import { Box, Button, Container, Divider, TextField } from '@mui/material';
+import { Button, Container, Divider, TextField } from '@mui/material';
 import { useState } from 'react';
 import RegistrationForm from '../components/RegistrationForm';
 import { useNavigate } from 'react-router-dom';
@@ -15,26 +15,28 @@ export default function MainPage() {
   const onCodeChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setCode(evt.target.value);
 
   return (
-    <Container maxWidth='lg' sx={{bgcolor: 'gray', padding: 5, borderRadius: 5, display: 'flex', flexDirection: 'column', gap: 5}}>
+    <Container maxWidth='lg' sx={{padding: 5, borderRadius: 5, display: 'flex', flexDirection: 'column', gap: 5}}>
       <RegistrationForm username={username} onUsernameChange={onUsernameChange}/>
       
       <Container maxWidth='md' sx={{display: 'flex', flexDirection: 'column', gap: 1}}>
-        <Box sx={{display: 'flex', gap: 1}}>
-          <TextField
-            id='code'
-            label='Код игровой сессии' 
-            variant='filled' 
-            color='primary' 
-            onChange={onCodeChange}
-            />
-
-          <Button
-            variant='contained'
-            disabled={!code || !username}
-            onClick={() => navigate(`/lobby/${code}`)}>
-              Подключиться
-          </Button>
-        </Box>
+        <TextField
+          id='code'
+          label='Код игровой сессии' 
+          onChange={onCodeChange}
+          InputProps={(
+            {endAdornment: (
+            <Button
+              variant='contained'
+              disabled={!code || !username}
+              onClick={() => navigate(`/lobby/${code}`)}>
+                Подключиться
+            </Button>),
+            sx: {
+              borderColor: '#87898F',
+              borderRadius: 50
+            }}
+            )}
+          />
 
         <Divider textAlign='center'>или</Divider>
 
