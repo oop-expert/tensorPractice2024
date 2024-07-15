@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:6.2
+    container_name: tensor_game_redis
+    ports:
+      - "6379:6379"
