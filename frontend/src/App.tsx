@@ -1,14 +1,12 @@
-import Router from './views/Router';
 import './App.css';
-import MainAppBar from './components/MainAppBar';
 import { ThemeProvider } from '@mui/material';
 import UITheme from './utils/Theme';
+import PageLayout from './views/PageLayout';
 
 function App() {
   return (
     <ThemeProvider theme={UITheme}>
-      <MainAppBar />
-      <Router />
+      <PageLayout />
     </ThemeProvider>
   )
 }

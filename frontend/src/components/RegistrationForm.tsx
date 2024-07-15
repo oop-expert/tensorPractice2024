@@ -1,12 +1,14 @@
-import { Avatar, Box, Container, IconButton, TextField } from '@mui/material';
+import { Avatar, Box, IconButton, TextField, useMediaQuery, useTheme } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useReducer } from 'react';
+import Panel from './Panel';
 
 type UsernameField = {
   username: string; 
-  onUsernameChange: (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+  onUsernameChange: (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
+  width?: number | string
 }
 
 const AVATAR_BG_COLORS = ['yellow', 'springgreen', 'blue', 'deeppink'];
@@ -17,35 +19,52 @@ const colorIdReducer = (colorId: number, step: number): number => (
   : Math.abs(colorId + step) % AVATAR_BG_COLORS.length
 );
 
-export default function RegistrationForm({username, onUsernameChange}: UsernameField) {
+export default function RegistrationForm({username, onUsernameChange, width='100%'}: UsernameField) {
   const [colorId, dispatchColorId] = useReducer(colorIdReducer, 0);
 
   const color = AVATAR_BG_COLORS[colorId];
 
+  const theme = useTheme();
+  const isMatching = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const avatarWidth = isMatching ? '50vw' : '18vw'
+  const avatarMaxWidth = isMatching ? 250 : 350;
+  const avatarGap = isMatching ? '2vw' : '24px'
+
   return (
-    <Container maxWidth='md' sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
-      <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingX: 8}}>
+    <Panel isMatchingMobile={isMatching} width={width}>
+      <h2>
+        Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
+      </h2>
+
+      <Box sx={{display: 'flex', gap: avatarGap, alignItems: 'center', marginX: 'auto'}}>
         <IconButton onClick={() => dispatchColorId(-1)}>
-          <ArrowBackIosNewIcon sx={{color: 'black', }}/>
+          <ArrowBackIosNewIcon sx={{color: 'white'}}/>
         </IconButton>
 
-        <Avatar alt='avatar 1' variant='circular' sx={{bgcolor: color, width: 100, height: 100}} >
-          <PersonIcon sx={{color: 'black', width: 75, height: 75}}/>
+        <Avatar alt='avatar 1' variant='circular' sx={{
+          bgcolor: color, 
+          maxWidth: avatarMaxWidth, 
+          maxHeight: avatarMaxWidth, 
+          width: avatarWidth, 
+          height: avatarWidth
+        }}>
+          <PersonIcon sx={{color: 'black', width: '80%', height: '80%'}}/>
         </Avatar>
 
         <IconButton onClick={() => dispatchColorId(1)}>
-          <ArrowForwardIosIcon sx={{color: 'black'}}/>
+          <ArrowForwardIosIcon sx={{color: 'white'}}/>
         </IconButton>
       </Box>
 
       <TextField 
         id='username' 
-        label='Ваше имя' 
+        label='Введите Ваш псевдоним' 
         required
         error={!username}
         helperText={!username ? 'Это поле обязательно' : ''}
         onChange={onUsernameChange}
       />
-    </Container>
+    </Panel>
   );
 }
