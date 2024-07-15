@@ -1,9 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Пример работы игры</title>
+  <title>Пример генерации картинок NeuroQuest</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #image-container {
+      width: 90%;
+      max-width: 500px;
+      height: auto;
+      border: 1px solid #ccc;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    #generated-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #input-area {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #answer-input {
+      width: 90%;
+      max-width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    #score {
+      font-size: 20px;
+    }
+
+    @media (max-width: 500px) {
+      #image-container {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <h1>NeuroQuest</h1>
+
+  <div id="image-container">
+    <img id="generated-image" src="" alt="Сгенерированное изображение">
+  </div>
+
+  <div id="input-area">
+    <input type="text" id="answer-input" placeholder="Введите ответ...">
+    <button onclick="checkAnswer()">Проверить</button>
+    <div id="score">Счёт: 0</div>
+  </div>
+
+  <script>
+    let score = 0;
+    let correctAnswer; // Переменная для хранения правильного ответа
+
+    window.onload = function() {
+      runKandinsky();
+    };
+
+    function runKandinsky() {
+      fetch('/kandinsky/')
+        .then(response => {
+          if (response.ok) {
+            return response.blob();
+          } else {
+            throw new Error('Ошибка при получении изображения');
+          }
+        })
+        .then(blob => {
+          const img = document.getElementById('generated-image');
+          const url = URL.createObjectURL(blob);
+          img.src = url;
+
+          //  Правильно записываем ответ:
+          correctAnswer = response.headers.get('X-Answer');
+        })
+        .catch(error => {
+          console.error('Ошибка:', error);
+        });
+    }
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById('answer-input').value.trim();
+      if (userAnswer === correctAnswer) {
+        score++;
+        document.getElementById('score').textContent = 'Счёт: ' + score;
+        alert('Верно!');
+        runKandinsky(); // Генерация нового изображения
+      } else {
+        alert('Неверно!');
+        runKandinsky(); // Генерация нового изображения
+      }
+      document.getElementById('answer-input').value = ''; // Очищаем поле ввода
+    }
+  </script>
 </body>
 </html>
