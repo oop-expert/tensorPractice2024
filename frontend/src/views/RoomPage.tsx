@@ -21,7 +21,7 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
 
     const handleCloseExit = () => {
       setOpen(false);
-      navigate(`/lobby/${Number(urlParams.id)}`);
+      navigate(`/lobby/${urlParams.id}`);
     }
 
     return(
@@ -82,7 +82,7 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
             />
             <Button
               variant='contained'
-              onClick={() => navigate(`/results/${Number(urlParams.id)}`)}>
+              onClick={() => navigate(`/results/${urlParams.id}`)}>
                 Ответить
             </Button>
           </Box>

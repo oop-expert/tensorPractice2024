@@ -1,11 +1,11 @@
 import { Avatar, Box, Button, Container, Stack } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 
 export default function ResultsPage({name}: {name: string},{color}: {color: string}){
     const navigate = useNavigate();
-    const urlParams = useParams();
       
     return(
         <Container maxWidth='lg' sx={{bgcolor: 'white', padding: '1.3vh', borderRadius: 5, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
@@ -49,7 +49,7 @@ export default function ResultsPage({name}: {name: string},{color}: {color: stri
 
                 <Button 
           variant='contained'
-          onClick={() => navigate(`/lobby/${Number(urlParams.id)}`)}>
+          onClick={() => navigate(`/lobby/${nanoid()}`)}>
             Играть снова
         </Button>
             </Box>
