@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k$5#m-rd0b=mjmrshkdsod&vu^@ew4%=pbq$zxlgk6_y2+aet#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,10 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
     'questions.apps.QuestionsConfig',
     'waiting_page.apps.WaitingPageConfig',
-    'rest_framework',
     'api.apps.ApiConfig',
     'frontend.apps.FrontendConfig'
 ]
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'tensorgame.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'tensorgame', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

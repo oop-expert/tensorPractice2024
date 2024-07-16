@@ -1,0 +1,196 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+
+tags:
+  - name: room
+    description: Действия с игровой сессией.
+  - name: player
+    description: Действия с игроком.
+  - name: question
+    description: Действия с вопросом.
+
+servers:
+  - url: 'http://127.0.0.1:8000/api'
+paths:
+
+  /room/:
+    post:
+      tags:
+        - room
+      description: Создание комнаты и вопросов, которые будут к ней привязаны.
+      responses:
+        201:
+          description: Комната с вопросами создана.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FullRoom'
+
+  /room/{room_id}/:
+    get:
+      tags:
+        - room
+      description: Возвращает комнату с привязанными к ней игроками и вопросами.
+      parameters:
+        - name: room_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FullRoom'
+        404:
+          description: Комната не найдена.
+
+  /question/{question_id}/:
+    get:
+      tags:
+        - question
+      description: Возвращает вопрос.
+      parameters:
+        - name: question_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Question'
+        404:
+          description: Вопрос не найден.
+
+  /player/calculate-score/:
+    patch:
+      tags:
+        - player
+      description: Расчитывает очки за данный ответ.
+      requestBody:
+        description: Информация для расчета очков.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CalculateScore'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetScore'
+        404:
+          description: Вопрос или игрок не найдены.
+  
+components:
+  schemas:
+    FullRoom:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 123456
+        code:
+          type: string
+          example: qwertyu
+        qr_code:
+          description: картинка qr-code, зашифрованная в base64
+          type: string
+        is_started:
+          type: boolean
+          example: true
+        players:
+          type: array
+          items:
+            $ref: '#/components/schemas/Player'
+        questions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Question'
+
+    Player:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 123456
+        name:
+          type: string
+          example: Adam
+        avatar:
+          description: аватар игрока, зашифрованная в base64
+          type: string
+        is_host:
+          type: boolean
+          example: true
+        is_ready:
+          type: boolean
+          example: true
+        score:
+          type: number
+          example: 5000
+        created_at:
+          type: string
+          example: 2024-01-01
+        room:
+          description: id комнаты, к которой привязан пользователь
+          type: integer
+          example: 123456
+
+    Question:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 123456
+        prompt:
+          description: запрос, который посылается нейронке
+          type: string
+          example: Фильм "Один дома"
+        image:
+          description: картинка, зашифрованная в base64
+          type: string
+        answer:
+          type: string
+          example: Один дома
+        room:
+          description: id комнаты, к которой привязан вопрос
+          type: integer
+          example: 123456
+
+    CalculateScore:
+      type: object
+      properties:
+        player_answer:
+          type: string
+          example: Один дома
+        player_id:
+          type: integer
+          example: 123456
+        question_id:
+          type: integer
+          example: 123456
+        seconds:
+          type: integer
+          example: 10
+
+    GetScore:
+      type: object
+      properties:
+        is_right:
+          type: boolean
+          example: true
+        score:
+          type: integer
+          example: 100
