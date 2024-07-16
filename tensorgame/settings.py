@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'questions.apps.QuestionsConfig',
     'waiting_page.apps.WaitingPageConfig',
     'rest_framework',
+    'api.apps.ApiConfig',
+    'frontend.apps.FrontendConfig'
 ]
 
 MIDDLEWARE = [
