@@ -116,6 +116,7 @@ export default function LobbyPage() {
         alignSelf='center'>
         <Button style={{width: '100%'}} variant='contained'>Готов играть</Button>
         <Button style={{width: '100%'}} variant='contained' onClick={() => navigate(`/room/${id}`)}>Начать</Button>
+        <Button style={{width: '100%'}} variant='outlined' onClick={() => navigate(`/`)}>Выйти</Button>
       </Box>
 
       <QrCodePopup 
