@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 # Django #
-*.log
 *.pot
 *.pyc
 __pycache__
@@ -33,7 +32,6 @@ media
 # Backup files #
 *.bak
 
-.idea
 *.iml
 *.ipr
 
@@ -158,11 +156,9 @@ Control.system-ca-bundle
 GitHub.sublime-settings
 
 # Visual Studio Code #
-.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
-!.vscode/extensions.json
 .history
 
 **/migrations/**
