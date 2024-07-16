@@ -1,9 +1,12 @@
-import { Avatar, Box, IconButton, TextField, useMediaQuery, useTheme } from '@mui/material';
-import PersonIcon from '@mui/icons-material/Person';
+import { Box, IconButton, TextField } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useReducer } from 'react';
 import Panel from './Panel';
+import DefaultAvatar from './DefaultAvatar';
+import { nanoid } from 'nanoid';
+import { AVATAR_BG_COLORS } from '../utils/utils';
+import { useMobileMatch } from '../hooks/useMobileMatch';
 
 type UsernameField = {
   username: string; 
@@ -11,7 +14,14 @@ type UsernameField = {
   width?: number | string
 }
 
-const AVATAR_BG_COLORS = ['yellow', 'springgreen', 'blue', 'deeppink'];
+const FormAvatarValues = {
+  DESKTOP_WIDTH: '18vw',
+  MOBILE_WIDTH: '50vw',
+  DESTOP_MAX_WIDTH: 350,
+  MOBILE_MAX_WIDTH: 250,
+  DESKTOP_GAP: '24px',
+  MOBILE_GAP: '2vw'
+};
 
 const colorIdReducer = (colorId: number, step: number): number => (
   colorId + step < 0 
@@ -24,12 +34,7 @@ export default function RegistrationForm({username, onUsernameChange, width='100
 
   const color = AVATAR_BG_COLORS[colorId];
 
-  const theme = useTheme();
-  const isMatching = useMediaQuery(theme.breakpoints.down('sm'));
-
-  const avatarWidth = isMatching ? '50vw' : '18vw'
-  const avatarMaxWidth = isMatching ? 250 : 350;
-  const avatarGap = isMatching ? '2vw' : '24px'
+  const isMatching = useMobileMatch();
 
   return (
     <Panel isMatchingMobile={isMatching} width={width}>
@@ -37,20 +42,23 @@ export default function RegistrationForm({username, onUsernameChange, width='100
         Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
       </h2>
 
-      <Box sx={{display: 'flex', gap: avatarGap, alignItems: 'center', marginX: 'auto'}}>
+      <Box sx={
+        {
+          display: 'flex', 
+          gap: isMatching ? FormAvatarValues.MOBILE_GAP : FormAvatarValues.DESKTOP_GAP, 
+          alignItems: 'center', 
+          marginX: 'auto'
+        }
+      }>
         <IconButton onClick={() => dispatchColorId(-1)}>
           <ArrowBackIosNewIcon sx={{color: 'white'}}/>
         </IconButton>
 
-        <Avatar alt='avatar 1' variant='circular' sx={{
-          bgcolor: color, 
-          maxWidth: avatarMaxWidth, 
-          maxHeight: avatarMaxWidth, 
-          width: avatarWidth, 
-          height: avatarWidth
-        }}>
-          <PersonIcon sx={{color: 'black', width: '80%', height: '80%'}}/>
-        </Avatar>
+        <DefaultAvatar 
+          color={color}
+          width={isMatching ? FormAvatarValues.MOBILE_WIDTH : FormAvatarValues.DESKTOP_WIDTH}
+          maxWidth={isMatching ? FormAvatarValues.MOBILE_MAX_WIDTH : FormAvatarValues.DESTOP_MAX_WIDTH}
+          userId={nanoid()}/>
 
         <IconButton onClick={() => dispatchColorId(1)}>
           <ArrowForwardIosIcon sx={{color: 'white'}}/>

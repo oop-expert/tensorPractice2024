@@ -1,4 +1,4 @@
-import { Button, Divider, TextField, useMediaQuery, useTheme } from '@mui/material';
+import { Button, Divider, TextField } from '@mui/material';
 import { useState } from 'react';
 import RegistrationForm from '../components/RegistrationForm';
 import { useNavigate } from 'react-router-dom';
@@ -6,13 +6,15 @@ import { nanoid } from 'nanoid';
 import PanelGroup from '../components/PanelGroup';
 import Panel from '../components/Panel';
 import MainAppBar from '../components/MainAppBar';
+import { useMobileMatch } from '../hooks/useMobileMatch';
+
+const DESKTOP_MAIN_PANEL_MARGIN = '15vh 0 0'
 
 export default function MainPage() {
   const [username, setUsername] = useState<string>('');
   const [code, setCode] = useState<string>('');
 
-  const theme = useTheme();
-  const isMatching = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMatching = useMobileMatch();
 
   const navigate = useNavigate();
 
@@ -21,7 +23,7 @@ export default function MainPage() {
   const onCodeChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setCode(evt.target.value);
 
   return (
-    <PanelGroup direction={isMatching ? 'column' : 'row'} margin={isMatching ? '0' : '15vh 0 0'}>
+    <PanelGroup direction={isMatching ? 'column' : 'row'} margin={isMatching ? 0 : DESKTOP_MAIN_PANEL_MARGIN}>
         <PanelGroup direction='column'>
           <RegistrationForm username={username} onUsernameChange={onUsernameChange}/>
         </PanelGroup>

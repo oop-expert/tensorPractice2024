@@ -43,6 +43,9 @@ const UITheme = createTheme({
     }
   },
   typography: {
+    fontFamily: 'Roboto',
+    fontSize: 18,
+    fontWeightRegular: 400,
     h1: {
       fontFamily: 'Roboto Slab Variable',
       fontSize: 28,
@@ -61,16 +64,20 @@ const UITheme = createTheme({
       textTransform: 'none',
       letterSpacing: 'normal',
       color: 'secondary'
-    },
+    }
   },
   components: {
     MuiButton: {
       defaultProps: {
         sx: {
           borderRadius: 50,
-          boxShadow: 'none',
-          paddingX: 5,
+          boxShadow: 'none'
+        }
+      },
+      styleOverrides: {
+        containedPrimary: {
           minHeight: 50,
+          paddingX: 5,
           '&:hover': {
             color: '#5B4C82',
           },
@@ -78,8 +85,58 @@ const UITheme = createTheme({
             color: '#FFFFFF',
             backgroundColor: '#B2AAC7' 
           }
+        },
+        outlinedPrimary: {
+          minHeight: 50,
+          paddingX: 5,
+          '&:hover': {
+            color: '#FFFFFF',
+            backgroundColor: '#65558F' 
+          },
+          '&:disabled': {
+            color: '#B2AAC7',
+            borderColor: '#B2AAC7' 
+          }
+        },
+        textPrimary: {
+          minHeight: 30,
+          maxHeight: 40,
+          padding: 0,
+          fontSize: 18,
+          textDecoration: 'underline',
+          textDecorationColor: '#5B4C82',
+          '&:hover': {
+            color: '#6840CF',
+            textDecorationColor: '#6840CF',
+            textDecoration: 'underline',
+            backgroundColor: 'transparent'
+          },
+          '&:disabled': {
+            color: '#B2AAC7',
+            textDecorationColor: '#B2AAC7'
+          }
         }
-      }
+      },
+      variants: [
+        {
+          props: {variant: 'flexEnd'},
+          style: {
+            width: '50%',
+            minWidth: 160,
+            alignSelf: 'flex-end',
+            border: 'solid 1px #65558F',
+            backgroundColor: 'transparent',
+            '&:hover': {
+            color: '#FFFFFF',
+            backgroundColor: '#65558F' 
+            },
+            '&:disabled': {
+              color: '#B2AAC7',
+              borderColor: '#B2AAC7' 
+            }
+          }
+        }
+      ]
     },
     MuiIconButton: {
       defaultProps: {
@@ -120,49 +177,51 @@ const UITheme = createTheme({
           }
         },
         InputLabelProps: {
-          sx: { top: -2 }
+          sx: { top: -5, maxWidth: '60%' }
         }
       }
     },
-    MuiGrid: {
-      styleOverrides: {
-        item: {
-          borderRadius: 40
+    MuiCard: {
+      defaultProps: {
+        sx: {
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 1,
+          bgcolor: '#ECE6F0',
+          padding: 2,
+          margin: '0 auto',
+          alignSelf: 'center',
+          maxWidth: 700,
+          borderRadius: 10
         }
       }
     },
-    MuiContainer: {
-      variants: [
-        {
-          props: {title: 'panels-group'},
-          style: {
-            padding: 0,
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center'
-          }
-        }, 
-        {
-          props: {title: 'desktop-panel'},
-          style: {
-            padding: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
-            backgroundColor: '#ECE6F0'
-          }
-        },
-        {
-          props: {title: 'mobile-panel'},
-          style: {
-            padding: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
-            backgroundColor: 'transparent'
+    MuiTypography: {
+      defaultProps:{
+        fontFamily: 'Roboto',
+        fontSize: 18,
+        fontWeight: 400,
+        textAlign: 'left'
+      }
+    },
+    MuiList: {
+      defaultProps: {
+        sx: {
+          '::-webkit-scrollbar': {
+            borderRadius: 50,
+            width: '8px'
+          },
+          '::-webkit-scrollbar-track': {
+            borderRadius: 50,
+            backgroundColor: '#FFFFFF',
+          },
+          '::-webkit-scrollbar-thumb': {
+            borderRadius: 50,
+            backgroundColor: '#65558F'
           }
         }
-      ]
+      }
     }
   }
 })

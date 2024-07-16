@@ -1,4 +1,6 @@
-import { AppBar, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar } from "@mui/material";
+import { useMobileMatch } from "../hooks/useMobileMatch";
+import { WIDTH_RELATIVE_TO_SCREEN } from "../utils/utils";
 
 const MainPageHeaderSx = {
   height: 125, 
@@ -8,8 +10,7 @@ const MainPageHeaderSx = {
 }
 
 export default function MainAppBar({isOnMainPage = false}: {isOnMainPage?: boolean}) {
-  const theme = useTheme();
-  const isMatching = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMatching = useMobileMatch();
 
   return (
     <AppBar 
@@ -21,8 +22,9 @@ export default function MainAppBar({isOnMainPage = false}: {isOnMainPage?: boole
             boxShadow: 'none', 
             borderEndStartRadius: 50,
             borderEndEndRadius: 50,
-            maxWidth: isMatching ? '100%' : '77%',
-            margin: '0 auto'
+            maxWidth: isMatching ? '100%' : WIDTH_RELATIVE_TO_SCREEN,
+            margin: '0 auto',
+            marginBottom: isMatching ? 0 : 5
           }
       } 
       color={isMatching ? 'secondary' : 'primary'}>

@@ -12,7 +12,7 @@ export default function Panel({children, isMatchingMobile, width='100%', height=
       bgcolor={isMatchingMobile ? 'transparent' : '#ECE6F0'}
       borderRadius={10}
       padding={desktopPadding}
-      width={`var(${width} - ${desktopPadding}rem)`}
+      width={`calc(${width} - ${desktopPadding}rem)`}
       height={height}
       margin={margin}>
         {children}

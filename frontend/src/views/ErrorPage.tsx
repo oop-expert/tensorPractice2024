@@ -1,9 +1,10 @@
-import { Box } from "@mui/material";
+import Panel from "../components/Panel";
+import { WIDTH_RELATIVE_TO_SCREEN } from "../utils/utils";
 
 export default function ErrorPage({message}: {message: string}) {
   return (
-    <Box maxWidth={500} minWidth={100} padding={2} bgcolor='gray' borderRadius={5}>
-      <p>{message}</p>
-    </Box>
+    <Panel width={WIDTH_RELATIVE_TO_SCREEN} margin={'0 auto'}>
+      <h2>{message}</h2>
+    </Panel>
   );
 }
