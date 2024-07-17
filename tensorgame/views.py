@@ -4,7 +4,6 @@ from . import kandinsky_api
 import base64
 import random
 
-
 def index(request):
     # return HttpResponse('<h4>12</h4>')
     return render(request, 'Index.html')
@@ -17,11 +16,12 @@ def kandinsky_view(request):
     model_id = api.get_model()
 
     answer = random.choice(list(kandinsky_api.generated_image))
-    print(f"Загаданное слово: {answer}")
-
+    original_answer = answer
+    answer = f"сцена из фильма {answer}"
+    print(f"Загаданный фильм: {answer}")
     uuid = api.generate(answer, model_id)
     images = api.check_generation(uuid)
-
+    print(f"Верный ответ: {original_answer}")
     if images:
         image_base64 = images[0]
         image_data = base64.b64decode(image_base64)
@@ -29,7 +29,7 @@ def kandinsky_view(request):
         # Создаем JSON-ответ
         response = JsonResponse({
             'image_base64': image_base64,
-            'answer': answer 
+            'answer': original_answer
         })
         return response
 

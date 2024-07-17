@@ -77,7 +77,7 @@
 
 <script>
     let score = 0;
-    let correctAnswer = ''; // Переменная для хранения правильного ответа
+    let correctAnswer = '   '; // Переменная для хранения правильного ответа
 
     window.onload = function() {
       runKandinsky();
@@ -100,7 +100,7 @@ function runKandinsky() {
             correctAnswer = data.answer;
 
             // Обновляем текст подсказки
-            document.getElementById('hint').textContent = 'Подсказка: Загаданное слово - ' + data.answer;
+            document.getElementById('hint').textContent = 'Загаданное слово - ' + data.answer;
         })
         .catch(error => {
             console.error('Ошибка:', error);

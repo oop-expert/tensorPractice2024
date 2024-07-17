@@ -4,7 +4,7 @@ import requests
 import base64
 import random
 
-generated_image = {'фильм дюна', 'фильм форсаж', 'фильм один дома', 'фильм 1+1', 'фильм брат', 'фильм холоп', 'фильм планета обезьян'}
+generated_image = {'дюна', '1+1', 'планета обезьян', 'интерстеллар', 'гнев человеческий', 'триггер', 'переводчик', 'мажор'}
 random_choice = random.choice(list(generated_image))
 
 #negativePrompt_image = {'красивый', 'темно, камни'}
