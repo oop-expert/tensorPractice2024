@@ -3,8 +3,17 @@ import time
 import requests
 import base64
 import random
+import os
 
-generated_image = {'дюна', '1+1', 'планета обезьян', 'интерстеллар', 'гнев человеческий', 'триггер', 'переводчик', 'мажор'}
+file_path = os.path.join(os.path.dirname(__file__), 'films.json')
+with open(file_path, 'r', encoding='utf-8') as f:
+    movie_data = json.load(f)
+
+movie_titles = [item['fields']['text'] for item in movie_data]
+
+generated_image = {''}
+generated_image.update(movie_titles)
+
 random_choice = random.choice(list(generated_image))
 
 #negativePrompt_image = {'красивый', 'темно, камни'}
