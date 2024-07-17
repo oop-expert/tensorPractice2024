@@ -16,11 +16,9 @@ def kandinsky_view(request):
                                       '7BCDD2F342EDFE95409DF45037718FC9')
     model_id = api.get_model()
 
-    #  Получаем загаданный фильм:
-    answer = random.choice(list(kandinsky_api.generated_image))  # Используем generated_image из kandinsky_api
+    answer = random.choice(list(kandinsky_api.generated_image))
     print(f"Загаданное слово: {answer}")
 
-    #  Генерируем изображение:
     uuid = api.generate(answer, model_id)
     images = api.check_generation(uuid)
 

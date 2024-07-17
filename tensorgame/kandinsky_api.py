@@ -4,11 +4,11 @@ import requests
 import base64
 import random
 
-generated_image = {'фильм дюна', 'фильм формаж 9', 'фильм один дома', 'фильм 1+1', 'фильм брат', 'фильм холоп 2', 'фильм планета обезьян'}
+generated_image = {'фильм дюна', 'фильм форсаж', 'фильм один дома', 'фильм 1+1', 'фильм брат', 'фильм холоп', 'фильм планета обезьян'}
 random_choice = random.choice(list(generated_image))
 
-negativePrompt_image = {'красивый', 'темно, камни'}
-random_choice_negativePrompt = random.choice(list(negativePrompt_image))
+#negativePrompt_image = {'красивый', 'темно, камни'}
+#random_choice_negativePrompt = random.choice(list(negativePrompt_image))
 
 class Text2ImageAPI:
     def __init__(self, url, api_key, secret_key):
@@ -59,7 +59,7 @@ def start_generating_image():
                         '7BCDD2F342EDFE95409DF45037718FC9')
     model_id = api.get_model()
     print(random_choice)
-    print(random_choice_negativePrompt)
+    #print(random_choice_negativePrompt)
     uuid = api.generate(random_choice, model_id)
     images = api.check_generation(uuid)
     print(images)
