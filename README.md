@@ -52,7 +52,7 @@ docker-compose -f docker-compose.yaml up -d
     "players": [
         {
             "name": "Len",
-            "is_admin": true,
+            "is_host": true,
             "is_ready": false
         }
     ]
@@ -78,7 +78,7 @@ docker-compose -f docker-compose.yaml up -d
     "players": [
         {
             "name": "Len",
-            "is_admin": true,
+            "is_host": true,
             "is_ready": true
         }
     ]
@@ -114,7 +114,7 @@ docker-compose -f docker-compose.yaml up -d
     "players": [
         {
             "name": "Len",
-            "is_admin": true,
+            "is_host": true,
             "is_ready": false
         }
     ]
@@ -132,12 +132,12 @@ docker-compose -f docker-compose.yaml up -d
     "players": [
         {
             "name": "viki",
-            "is_admin": true,
+            "is_host": true,
             "is_ready": true
         },
         {
             "name": "kek",
-            "is_admin": false,
+            "is_host": false,
             "is_ready": true
         }
     ]

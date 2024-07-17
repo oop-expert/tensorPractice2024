@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+FRONTEND_URL = 'http://tensorpractic.ru/'
+
 
 # Application definition
 

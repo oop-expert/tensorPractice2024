@@ -40,6 +40,7 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
         info = content.get('info', None)
         self.room = await self.get_room()
         self.user = await self.refresh_player()
+        self.players = await self.refresh_players()
 
         if command == 'change_status':
             await self.change_player_status()
@@ -56,6 +57,7 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
         elif command == 'start_game':
             statuses = [player['is_ready'] for player in self.players]
             if all(statuses) and self.user.is_host:
+                await self.change_room_status()
                 await self.channel_layer.group_send(
                     self.room_code,
                     {
@@ -66,6 +68,7 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
                 )
 
         elif command == 'restart_game':
+            await self.change_room_status()
             await self.channel_layer.group_send(
                 self.room_code,
                 {
@@ -104,14 +107,12 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
         }))
 
     async def websocket_start_game(self, event):
-        await self.change_room_status()
         await self.send_json(({
             'command': event['command'],
             'info': event['info']
         }))
 
     async def websocket_restart_game(self, event):
-        await self.change_room_status()
         await self.reset_players(event['username'])
         self.players = await self.refresh_players()
         await self.send_json(({
