@@ -65,6 +65,10 @@
     <img id="generated-image" src="" alt="Сгенерированное изображение">
 </div>
 
+<div id="hint-container">
+    <p id="hint">Загаданное слово - </p>
+</div>
+
 <div id="input-area">
     <input type="text" id="answer-input" placeholder="Введите ответ...">
     <button onclick="checkAnswer()">Проверить</button>
@@ -73,31 +77,34 @@
 
 <script>
     let score = 0;
-    let correctAnswer = ''; // Переменная для хранения правильного ответа
+    let correctAnswer = '   '; // Переменная для хранения правильного ответа
 
     window.onload = function() {
       runKandinsky();
     };
 
-  function runKandinsky() {
-  fetch('/kandinsky/')
-    .then(response => {
-      if (response.ok) {
-        return response.json(); // Изменяем на response.json()
-      } else {
-        throw new Error('Ошибка при получении изображения');
-      }
-    })
-    .then(data => {
-      const img = document.getElementById('generated-image');
-      const url = 'data:image/png;base64,' + data.image_base64;
-      img.src = url;
+function runKandinsky() {
+    fetch('/kandinsky/')
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Ошибка при получении изображения');
+            }
+        })
+        .then(data => {
+            const img = document.getElementById('generated-image');
+            const url = 'data:image/png;base64,' + data.image_base64;
+            img.src = url;
 
-      correctAnswer = data.answer;
-    })
-    .catch(error => {
-      console.error('Ошибка:', error);
-    });
+            correctAnswer = data.answer;
+
+            // Обновляем текст подсказки
+            document.getElementById('hint').textContent = 'Загаданное слово - ' + data.answer;
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+        });
 }
 
 function checkAnswer() {
