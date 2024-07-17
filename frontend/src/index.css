@@ -1,5 +1,5 @@
 body {
-  margin: 0 16px 16px;
+  margin: 0 2vw 2vh;
 }
 
 :root {
@@ -7,8 +7,8 @@ body {
   line-height: 1.5;
   font-weight: 400;
 
-  color: rgba(91, 76, 130, 1);
-  background-color: rgba(254, 249, 255, 1);
+  color: #030625;
+  background-color: #FFEFD9;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

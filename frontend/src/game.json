@@ -1,0 +1,23 @@
+{
+  "id": "fghidgdf",
+  "code": "754866",
+  "questions": [
+    {
+      "id": "1",
+      "image": "something in base64",
+      "answer": "answer"
+    }
+  ],
+  "players": [
+    {
+      "id": "1",
+      "name": "Name",
+      "avatar": "something in base64",
+      "isHost": true,
+      "isReady": true,
+      "score": 1300,
+      "combo": 2,
+      "createdAt": "date"
+    }
+  ]
+}

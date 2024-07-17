@@ -6,7 +6,10 @@ type PanelProps = {
   width?: number | string, 
   height?: number | string, 
   margin?: number | string,
-  isMatchingMobile?: boolean
+  padding?: number | string,
+  gap?: number | string,
+  isMatchingMobile?: boolean,
+  position?: 'absolute' | 'relative' | 'unset'
 };
 
 export default PanelProps;

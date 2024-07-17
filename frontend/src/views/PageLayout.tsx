@@ -9,7 +9,7 @@ export default function PageLayout() {
 
   return (
     <>
-      {pathname.length < MAIN_PAGE_PATHNAME_LENGTH || <MainAppBar />}
+      <MainAppBar isOnMainPage={pathname.length < MAIN_PAGE_PATHNAME_LENGTH} />
       <Router/>
     </>
   );

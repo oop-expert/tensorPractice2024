@@ -1,8 +1,11 @@
 import { useMediaQuery, useTheme } from "@mui/material"
 
-export const useMobileMatch = () => {
+export const useMediaMatch = () => {
   const theme = useTheme();
-  const isMathcingMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.only('md'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   
-  return isMathcingMobile;
+  return {isMobile, isTablet, isDesktop};
 }

@@ -1,9 +1,9 @@
-import PersonIcon from '@mui/icons-material/Person';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { Avatar } from '@mui/material';
+import { Colors } from '../utils/utils';
 
 type AvatarProps = {
-  color: string,
+  src: string,
   width: number | string,
   maxWidth?: number | string,
   minWidth?: number | string,
@@ -11,10 +11,10 @@ type AvatarProps = {
   empty?: boolean
 };
 
-export default function DefaultAvatar({color, width, maxWidth, minWidth, userId, empty=false}: AvatarProps) {
+export default function DefaultAvatar({src, width, maxWidth, minWidth, userId, empty=false}: AvatarProps) {
   return (
-    <Avatar alt={`avatar-${userId}`} variant='circular' sx={{
-      bgcolor: color, 
+    <Avatar alt={`avatar-${userId}`} src={src} variant='circular' sx={{
+      bgcolor: empty ? 'gray' : Colors.PANEL,
       maxWidth: maxWidth, 
       maxHeight: maxWidth, 
       minWidth: minWidth,
@@ -22,9 +22,7 @@ export default function DefaultAvatar({color, width, maxWidth, minWidth, userId,
       width: width, 
       height: width
     }}>
-      {!empty
-      ? <PersonIcon sx={{color: 'black', width: '80%', height: '80%'}} />
-      : <QuestionMarkIcon sx={{color: 'black', width: '80%', height: '80%'}} />}
+      <QuestionMarkIcon sx={{display: empty ? 'block' : 'none', color: 'black', width: '80%', height: '80%'}} />
     </Avatar>
   );
 }

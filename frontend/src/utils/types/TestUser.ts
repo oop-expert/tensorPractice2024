@@ -1,6 +1,6 @@
 export default interface TestUser {
   id: string;
   username: string;
-  avatarColor: string;
+  avatar: string;
   status: 'Готов' | 'Не готов' | '-'
 }
