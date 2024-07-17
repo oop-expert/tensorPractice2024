@@ -1,5126 +1,5980 @@
 [
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Побег из Шоушенка"
+      "text": "Побег из Шоушенка",
+      "answer": "Побег из Шоушенка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рай под ногами матерей"
+      "text": "Рай под ногами матерей",
+      "answer": "Рай под ногами матерей"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зеленая миля"
+      "text": "Зеленая миля",
+      "answer": "Зеленая миля"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Властелин Колец"
+      "text": "Властелин Колец",
+      "answer": "Властелин Колец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Крестный отец"
+      "text": "Крестный отец",
+      "answer": "Крестный отец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Начало"
+      "text": "Начало",
+      "answer": "Начало"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Темный рыцарь"
+      "text": "Темный рыцарь",
+      "answer": "Темный рыцарь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "1+1"
+      "text": "1+1",
+      "answer": "1+1"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Огненный лис"
+      "text": "Огненный лис",
+      "answer": "Огненный лис"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Форрест Гамп"
+      "text": "Форрест Гамп",
+      "answer": "Форрест Гамп"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Унесенные призраками"
+      "text": "Унесенные призраками",
+      "answer": "Унесенные призраками"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мой мир SHINEE в кино"
+      "text": "Мой мир SHINEE в кино",
+      "answer": "Мой мир SHINEE в кино"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Криминальное чтиво"
+      "text": "Криминальное чтиво",
+      "answer": "Криминальное чтиво"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Оппенгеймер"
+      "text": "Оппенгеймер",
+      "answer": "Оппенгеймер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Матрица"
+      "text": "Матрица",
+      "answer": "Матрица"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Список Шиндлера"
+      "text": "Список Шиндлера",
+      "answer": "Список Шиндлера"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лига справедливости Зака Снайдера"
+      "text": "Лига справедливости Зака Снайдера",
+      "answer": "Лига справедливости Зака Снайдера"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бойцовский клуб"
+      "text": "Бойцовский клуб",
+      "answer": "Бойцовский клуб"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Леон"
+      "text": "Леон",
+      "answer": "Леон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Назад в будущее"
+      "text": "Назад в будущее",
+      "answer": "Назад в будущее"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ну, погоди!"
+      "text": "Ну, погоди!",
+      "answer": "Ну, погоди!"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гладиатор"
+      "text": "Гладиатор",
+      "answer": "Гладиатор"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Астроскоп. Смотрим на звезды"
+      "text": "Астроскоп. Смотрим на звезды",
+      "answer": "Астроскоп. Смотрим на звезды"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Молчание ягнят"
+      "text": "Молчание ягнят",
+      "answer": "Молчание ягнят"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ходячий замок"
+      "text": "Ходячий замок",
+      "answer": "Ходячий замок"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тайна Коко"
+      "text": "Тайна Коко",
+      "answer": "Тайна Коко"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хатико: самый верный друг"
+      "text": "Хатико: самый верный друг",
+      "answer": "Хатико: самый верный друг"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Место встречи изменить нельзя"
+      "text": "Место встречи изменить нельзя",
+      "answer": "Место встречи изменить нельзя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "ВОЛЕЙБОЛ!! Битва на мусорной свалке"
+      "text": "ВОЛЕЙБОЛ!! Битва на мусорной свалке",
+      "answer": "ВОЛЕЙБОЛ!! Битва на мусорной свалке"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Твое имя"
+      "text": "Твое имя",
+      "answer": "Твое имя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "ВАЛЛ-И"
+      "text": "ВАЛЛ-И",
+      "answer": "ВАЛЛ-И"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пираты Карибского моря"
+      "text": "Пираты Карибского моря",
+      "answer": "Пираты Карибского моря"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Храброе сердце"
+      "text": "Храброе сердце",
+      "answer": "Храброе сердце"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джентльмены удачи"
+      "text": "Джентльмены удачи",
+      "answer": "Джентльмены удачи"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Интерстеллар"
+      "text": "Интерстеллар",
+      "answer": "Интерстеллар"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бриллиантовая рука"
+      "text": "Бриллиантовая рука",
+      "answer": "Бриллиантовая рука"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Истребитель демонов"
+      "text": "Истребитель демонов",
+      "answer": "Истребитель демонов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зеленая книга"
+      "text": "Зеленая книга",
+      "answer": "Зеленая книга"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Семь"
+      "text": "Семь",
+      "answer": "Семь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джанго освобожденный"
+      "text": "Джанго освобожденный",
+      "answer": "Джанго освобожденный"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чужой"
+      "text": "Чужой",
+      "answer": "Чужой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Иван Васильевич меняет профессию"
+      "text": "Иван Васильевич меняет профессию",
+      "answer": "Иван Васильевич меняет профессию"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аватар"
+      "text": "Аватар",
+      "answer": "Аватар"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Игры разума"
+      "text": "Игры разума",
+      "answer": "Игры разума"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Престиж"
+      "text": "Престиж",
+      "answer": "Престиж"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чужие"
+      "text": "Чужие",
+      "answer": "Чужие"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Остров проклятых"
+      "text": "Остров проклятых",
+      "answer": "Остров проклятых"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Изгой"
+      "text": "Изгой",
+      "answer": "Изгой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Приключения Шерлока Холмса и доктора Ватсона: Охота на тигра"
+      "text": "Приключения Шерлока Холмса и доктора Ватсона: Охота на тигра",
+      "answer": "Приключения Шерлока Холмса и доктора Ватсона: Охота на тигра"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Поймай меня, если сможешь"
+      "text": "Поймай меня, если сможешь",
+      "answer": "Поймай меня, если сможешь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Отступники"
+      "text": "Отступники",
+      "answer": "Отступники"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Титаник"
+      "text": "Титаник",
+      "answer": "Титаник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джокер"
+      "text": "Джокер",
+      "answer": "Джокер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Крепкий орешек"
+      "text": "Крепкий орешек",
+      "answer": "Крепкий орешек"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "А зори здесь тихие"
+      "text": "А зори здесь тихие",
+      "answer": "А зори здесь тихие"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Логан"
+      "text": "Логан",
+      "answer": "Логан"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Одна жизнь"
+      "text": "Одна жизнь",
+      "answer": "Одна жизнь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Душа"
+      "text": "Душа",
+      "answer": "Душа"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Стражи Галактики"
+      "text": "Стражи Галактики",
+      "answer": "Стражи Галактики"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Человек-паук"
+      "text": "Человек-паук",
+      "answer": "Человек-паук"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Как приручить дракона"
+      "text": "Как приручить дракона",
+      "answer": "Как приручить дракона"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Принцесса Мононоке"
+      "text": "Принцесса Мононоке",
+      "answer": "Принцесса Мононоке"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лицо со шрамом"
+      "text": "Лицо со шрамом",
+      "answer": "Лицо со шрамом"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Фуриоса: Хроники Безумного Макса"
+      "text": "Фуриоса: Хроники Безумного Макса",
+      "answer": "Фуриоса: Хроники Безумного Макса"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Железный человек"
+      "text": "Железный человек",
+      "answer": "Железный человек"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Капернаум"
+      "text": "Капернаум",
+      "answer": "Капернаум"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Брат"
+      "text": "Брат",
+      "answer": "Брат"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мстители"
+      "text": "Мстители",
+      "answer": "Мстители"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Корпорация Монстров"
+      "text": "Корпорация Монстров",
+      "answer": "Корпорация Монстров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джентльмены"
+      "text": "Джентльмены",
+      "answer": "Джентльмены"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "12 стульев"
+      "text": "12 стульев",
+      "answer": "12 стульев"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "По соображениям совести"
+      "text": "По соображениям совести",
+      "answer": "По соображениям совести"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вечное сияние чистого разума"
+      "text": "Вечное сияние чистого разума",
+      "answer": "Вечное сияние чистого разума"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "День сурка"
+      "text": "День сурка",
+      "answer": "День сурка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Любовь и голуби"
+      "text": "Любовь и голуби",
+      "answer": "Любовь и голуби"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Топ Ган: Мэверик"
+      "text": "Топ Ган: Мэверик",
+      "answer": "Топ Ган: Мэверик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шрэк"
+      "text": "Шрэк",
+      "answer": "Шрэк"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Служебный роман"
+      "text": "Служебный роман",
+      "answer": "Служебный роман"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Судзумэ, закрывающая двери"
+      "text": "Судзумэ, закрывающая двери",
+      "answer": "Судзумэ, закрывающая двери"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Богемская рапсодия"
+      "text": "Богемская рапсодия",
+      "answer": "Богемская рапсодия"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зверополис"
+      "text": "Зверополис",
+      "answer": "Зверополис"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Переводчик"
+      "text": "Переводчик",
+      "answer": "Переводчик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Игра"
+      "text": "Игра",
+      "answer": "Игра"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Реквием по мечте"
+      "text": "Реквием по мечте",
+      "answer": "Реквием по мечте"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Красавица и чудовище"
+      "text": "Красавица и чудовище",
+      "answer": "Красавица и чудовище"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Схватка"
+      "text": "Схватка",
+      "answer": "Схватка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рататуй"
+      "text": "Рататуй",
+      "answer": "Рататуй"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Отец"
+      "text": "Отец",
+      "answer": "Отец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Свет"
+      "text": "Свет",
+      "answer": "Свет"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Достучаться до небес"
+      "text": "Достучаться до небес",
+      "answer": "Достучаться до небес"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Спасти рядового Райана"
+      "text": "Спасти рядового Райана",
+      "answer": "Спасти рядового Райана"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Однажды в Америке"
+      "text": "Однажды в Америке",
+      "answer": "Однажды в Америке"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мальчик и птица"
+      "text": "Мальчик и птица",
+      "answer": "Мальчик и птица"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Долгая дорога домой"
+      "text": "Долгая дорога домой",
+      "answer": "Долгая дорога домой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Исчезнувшая"
+      "text": "Исчезнувшая",
+      "answer": "Исчезнувшая"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Агент Эмерсон"
+      "text": "Агент Эмерсон",
+      "answer": "Агент Эмерсон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Грань будущего"
+      "text": "Грань будущего",
+      "answer": "Грань будущего"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тур с Иванушками"
+      "text": "Тур с Иванушками",
+      "answer": "Тур с Иванушками"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бэтмен"
+      "text": "Бэтмен",
+      "answer": "Бэтмен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Достать ножи"
+      "text": "Достать ножи",
+      "answer": "Достать ножи"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "В погоне за счастьем"
+      "text": "В погоне за счастьем",
+      "answer": "В погоне за счастьем"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Терминатор"
+      "text": "Терминатор",
+      "answer": "Терминатор"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хоббит"
+      "text": "Хоббит",
+      "answer": "Хоббит"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аладдин"
+      "text": "Аладдин",
+      "answer": "Аладдин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пролетая над гнездом кукушки"
+      "text": "Пролетая над гнездом кукушки",
+      "answer": "Пролетая над гнездом кукушки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и узник Азкабана"
+      "text": "Гарри Поттер и узник Азкабана",
+      "answer": "Гарри Поттер и узник Азкабана"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звук свободы"
+      "text": "Звук свободы",
+      "answer": "Звук свободы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Загадочная история Бенджамина Баттона"
+      "text": "Загадочная история Бенджамина Баттона",
+      "answer": "Загадочная история Бенджамина Баттона"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Американская история Х"
+      "text": "Американская история Х",
+      "answer": "Американская история Х"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рапунцель: Запутанная История"
+      "text": "Рапунцель: Запутанная История",
+      "answer": "Рапунцель: Запутанная История"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дневник памяти"
+      "text": "Дневник памяти",
+      "answer": "Дневник памяти"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Добро пожаловать, или Посторонним вход воспрещен"
+      "text": "Добро пожаловать, или Посторонним вход воспрещен",
+      "answer": "Добро пожаловать, или Посторонним вход воспрещен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пятый элемент"
+      "text": "Пятый элемент",
+      "answer": "Пятый элемент"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шаг к мечте: Раз и навсегда"
+      "text": "Шаг к мечте: Раз и навсегда",
+      "answer": "Шаг к мечте: Раз и навсегда"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Раннее лето"
+      "text": "Раннее лето",
+      "answer": "Раннее лето"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Свалкармония"
+      "text": "Свалкармония",
+      "answer": "Свалкармония"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тайна третьей планеты"
+      "text": "Тайна третьей планеты",
+      "answer": "Тайна третьей планеты"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Человек дождя"
+      "text": "Человек дождя",
+      "answer": "Человек дождя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гран Туризмо"
+      "text": "Гран Туризмо",
+      "answer": "Гран Туризмо"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Черный лебедь"
+      "text": "Черный лебедь",
+      "answer": "Черный лебедь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Паразиты"
+      "text": "Паразиты",
+      "answer": "Паразиты"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ежик в тумане"
+      "text": "Ежик в тумане",
+      "answer": "Ежик в тумане"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шан-Чи и легенда десяти колец"
+      "text": "Шан-Чи и легенда десяти колец",
+      "answer": "Шан-Чи и легенда десяти колец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шоу Трумана"
+      "text": "Шоу Трумана",
+      "answer": "Шоу Трумана"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Миллионер из трущоб"
+      "text": "Миллионер из трущоб",
+      "answer": "Миллионер из трущоб"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рокки"
+      "text": "Рокки",
+      "answer": "Рокки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Артур, ты король"
+      "text": "Артур, ты король",
+      "answer": "Артур, ты король"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и кубок огня"
+      "text": "Гарри Поттер и кубок огня",
+      "answer": "Гарри Поттер и кубок огня"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Апокалипсис"
+      "text": "Апокалипсис",
+      "answer": "Апокалипсис"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Где ты, Адам?"
+      "text": "Где ты, Адам?",
+      "answer": "Где ты, Адам?"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "История игрушек"
+      "text": "История игрушек",
+      "answer": "История игрушек"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лучшее предложение"
+      "text": "Лучшее предложение",
+      "answer": "Лучшее предложение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вверх"
+      "text": "Вверх",
+      "answer": "Вверх"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Король говорит!"
+      "text": "Король говорит!",
+      "answer": "Король говорит!"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Волк и теленок"
+      "text": "Волк и теленок",
+      "answer": "Волк и теленок"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и Дары смерти"
+      "text": "Гарри Поттер и Дары смерти",
+      "answer": "Гарри Поттер и Дары смерти"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пипец"
+      "text": "Пипец",
+      "answer": "Пипец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мулан"
+      "text": "Мулан",
+      "answer": "Мулан"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ревущие двадцатые или судьба солдата в Америке"
+      "text": "Ревущие двадцатые или судьба солдата в Америке",
+      "answer": "Ревущие двадцатые или судьба солдата в Америке"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Олдбой"
+      "text": "Олдбой",
+      "answer": "Олдбой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гонка"
+      "text": "Гонка",
+      "answer": "Гонка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Небесный замок Лапута"
+      "text": "Небесный замок Лапута",
+      "answer": "Небесный замок Лапута"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Офицеры"
+      "text": "Офицеры",
+      "answer": "Офицеры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Белая птица. Новое чудо"
+      "text": "Белая птица. Новое чудо",
+      "answer": "Белая птица. Новое чудо"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и философский камень"
+      "text": "Гарри Поттер и философский камень",
+      "answer": "Гарри Поттер и философский камень"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дэдпул"
+      "text": "Дэдпул",
+      "answer": "Дэдпул"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Волк с Уолл-стрит"
+      "text": "Волк с Уолл-стрит",
+      "answer": "Волк с Уолл-стрит"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Доктор Стрэндж"
+      "text": "Доктор Стрэндж",
+      "answer": "Доктор Стрэндж"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Невидимый гость"
+      "text": "Невидимый гость",
+      "answer": "Невидимый гость"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Люди Икс"
+      "text": "Люди Икс",
+      "answer": "Люди Икс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Заложница"
+      "text": "Заложница",
+      "answer": "Заложница"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ледниковый период"
+      "text": "Ледниковый период",
+      "answer": "Ледниковый период"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Три билборда на границе Эббинга, Миссури"
+      "text": "Три билборда на границе Эббинга, Миссури",
+      "answer": "Три билборда на границе Эббинга, Миссури"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Маленькие женщины"
+      "text": "Маленькие женщины",
+      "answer": "Маленькие женщины"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кунг-Фу Панда"
+      "text": "Кунг-Фу Панда",
+      "answer": "Кунг-Фу Панда"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шерлок Холмс"
+      "text": "Шерлок Холмс",
+      "answer": "Шерлок Холмс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Девчата"
+      "text": "Девчата",
+      "answer": "Девчата"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пленницы"
+      "text": "Пленницы",
+      "answer": "Пленницы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Банши Инишерина"
+      "text": "Банши Инишерина",
+      "answer": "Банши Инишерина"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хеллбой"
+      "text": "Хеллбой",
+      "answer": "Хеллбой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Безумный Макс"
+      "text": "Безумный Макс",
+      "answer": "Безумный Макс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сияние"
+      "text": "Сияние",
+      "answer": "Сияние"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мой сосед Тоторо"
+      "text": "Мой сосед Тоторо",
+      "answer": "Мой сосед Тоторо"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Адвокат дьявола"
+      "text": "Адвокат дьявола",
+      "answer": "Адвокат дьявола"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бешеные псы"
+      "text": "Бешеные псы",
+      "answer": "Бешеные псы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Элементарно"
+      "text": "Элементарно",
+      "answer": "Элементарно"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Блэйд"
+      "text": "Блэйд",
+      "answer": "Блэйд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Район №9"
+      "text": "Район №9",
+      "answer": "Район №9"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бесславные ублюдки"
+      "text": "Бесславные ублюдки",
+      "answer": "Бесславные ублюдки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Марсианин"
+      "text": "Марсианин",
+      "answer": "Марсианин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Одержимость"
+      "text": "Одержимость",
+      "answer": "Одержимость"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бедные-несчастные"
+      "text": "Бедные-несчастные",
+      "answer": "Бедные-несчастные"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Господин Никто"
+      "text": "Господин Никто",
+      "answer": "Господин Никто"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Области тьмы"
+      "text": "Области тьмы",
+      "answer": "Области тьмы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Казино Рояль"
+      "text": "Казино Рояль",
+      "answer": "Казино Рояль"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Один дома"
+      "text": "Один дома",
+      "answer": "Один дома"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дурак"
+      "text": "Дурак",
+      "answer": "Дурак"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Головоломка"
+      "text": "Головоломка",
+      "answer": "Головоломка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кентавр"
+      "text": "Кентавр",
+      "answer": "Кентавр"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ральф"
+      "text": "Ральф",
+      "answer": "Ральф"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кошмар перед Рождеством"
+      "text": "Кошмар перед Рождеством",
+      "answer": "Кошмар перед Рождеством"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лабиринт Фавна"
+      "text": "Лабиринт Фавна",
+      "answer": "Лабиринт Фавна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шестое чувство"
+      "text": "Шестое чувство",
+      "answer": "Шестое чувство"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Законопослушный гражданин"
+      "text": "Законопослушный гражданин",
+      "answer": "Законопослушный гражданин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дюна"
+      "text": "Дюна",
+      "answer": "Дюна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Холодное сердце"
+      "text": "Холодное сердце",
+      "answer": "Холодное сердце"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Охотники за привидениями"
+      "text": "Охотники за привидениями",
+      "answer": "Охотники за привидениями"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Крупная рыба"
+      "text": "Крупная рыба",
+      "answer": "Крупная рыба"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Последний самурай"
+      "text": "Последний самурай",
+      "answer": "Последний самурай"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Старикам тут не место"
+      "text": "Старикам тут не место",
+      "answer": "Старикам тут не место"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Девушка с татуировкой дракона"
+      "text": "Девушка с татуировкой дракона",
+      "answer": "Девушка с татуировкой дракона"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Моана"
+      "text": "Моана",
+      "answer": "Моана"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "В поисках Немо"
+      "text": "В поисках Немо",
+      "answer": "В поисках Немо"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Город героев"
+      "text": "Город героев",
+      "answer": "Город героев"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Убить Билла"
+      "text": "Убить Билла",
+      "answer": "Убить Билла"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Убийцы цветочной луны"
+      "text": "Убийцы цветочной луны",
+      "answer": "Убийцы цветочной луны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Выживший"
+      "text": "Выживший",
+      "answer": "Выживший"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Человек-муравей"
+      "text": "Человек-муравей",
+      "answer": "Человек-муравей"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сказки Гофмана"
+      "text": "Сказки Гофмана",
+      "answer": "Сказки Гофмана"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ультиматум Борна"
+      "text": "Ультиматум Борна",
+      "answer": "Ультиматум Борна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ее заветное желание"
+      "text": "Ее заветное желание",
+      "answer": "Ее заветное желание"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Красота по-американски"
+      "text": "Красота по-американски",
+      "answer": "Красота по-американски"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кровавый алмаз"
+      "text": "Кровавый алмаз",
+      "answer": "Кровавый алмаз"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Социальная сеть"
+      "text": "Социальная сеть",
+      "answer": "Социальная сеть"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Заколдованный мальчик"
+      "text": "Заколдованный мальчик",
+      "answer": "Заколдованный мальчик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "1917"
+      "text": "1917",
+      "answer": "1917"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гадкий я"
+      "text": "Гадкий я",
+      "answer": "Гадкий я"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "300 спартанцев"
+      "text": "300 спартанцев",
+      "answer": "300 спартанцев"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Навсикая из долины Ветров"
+      "text": "Навсикая из долины Ветров",
+      "answer": "Навсикая из долины Ветров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Воспоминания о Марни"
+      "text": "Воспоминания о Марни",
+      "answer": "Воспоминания о Марни"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и Тайная Комната"
+      "text": "Гарри Поттер и Тайная Комната",
+      "answer": "Гарри Поттер и Тайная Комната"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Помни"
+      "text": "Помни",
+      "answer": "Помни"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гран Торино"
+      "text": "Гран Торино",
+      "answer": "Гран Торино"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Планета обезьян"
+      "text": "Планета обезьян",
+      "answer": "Планета обезьян"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Райя и последний дракон"
+      "text": "Райя и последний дракон",
+      "answer": "Райя и последний дракон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Майор Гром"
+      "text": "Майор Гром",
+      "answer": "Майор Гром"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Одиннадцать друзей Оушена"
+      "text": "Одиннадцать друзей Оушена",
+      "answer": "Одиннадцать друзей Оушена"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лука"
+      "text": "Лука",
+      "answer": "Лука"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Артист"
+      "text": "Артист",
+      "answer": "Артист"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Город грехов"
+      "text": "Город грехов",
+      "answer": "Город грехов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мальчишник в Вегасе"
+      "text": "Мальчишник в Вегасе",
+      "answer": "Мальчишник в Вегасе"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звезда родилась"
+      "text": "Звезда родилась",
+      "answer": "Звезда родилась"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Круэлла"
+      "text": "Круэлла",
+      "answer": "Круэлла"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Я - легенда"
+      "text": "Я - легенда",
+      "answer": "Я - легенда"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Нефть"
+      "text": "Нефть",
+      "answer": "Нефть"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Скала"
+      "text": "Скала",
+      "answer": "Скала"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Не время умирать"
+      "text": "Не время умирать",
+      "answer": "Не время умирать"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Троя"
+      "text": "Троя",
+      "answer": "Троя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Семь черных бумаг"
+      "text": "Семь черных бумаг",
+      "answer": "Семь черных бумаг"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Константин: повелитель тьмы"
+      "text": "Константин: повелитель тьмы",
+      "answer": "Константин: повелитель тьмы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дитя погоды"
+      "text": "Дитя погоды",
+      "answer": "Дитя погоды"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звездные Войны"
+      "text": "Звездные Войны",
+      "answer": "Звездные Войны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Эдвард руки-ножницы"
+      "text": "Эдвард руки-ножницы",
+      "answer": "Эдвард руки-ножницы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тор"
+      "text": "Тор",
+      "answer": "Тор"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Приговор"
+      "text": "Приговор",
+      "answer": "Приговор"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Привидение"
+      "text": "Привидение",
+      "answer": "Привидение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Амели"
+      "text": "Амели",
+      "answer": "Амели"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Горизонты"
+      "text": "Горизонты",
+      "answer": "Горизонты"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Эффект бабочки"
+      "text": "Эффект бабочки",
+      "answer": "Эффект бабочки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Весна, лето, осень, зима... и снова весна"
+      "text": "Весна, лето, осень, зима... и снова весна",
+      "answer": "Весна, лето, осень, зима... и снова весна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Легенда №17"
+      "text": "Легенда №17",
+      "answer": "Легенда №17"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Заклятие"
+      "text": "Заклятие",
+      "answer": "Заклятие"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Люди в черном"
+      "text": "Люди в черном",
+      "answer": "Люди в черном"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Маска"
+      "text": "Маска",
+      "answer": "Маска"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "RRR: Рядом ревёт революция"
+      "text": "RRR: Рядом ревёт революция",
+      "answer": "RRR: Рядом ревёт революция"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и Орден Феникса"
+      "text": "Гарри Поттер и Орден Феникса",
+      "answer": "Гарри Поттер и Орден Феникса"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Меня зовут Кхан"
+      "text": "Меня зовут Кхан",
+      "answer": "Меня зовут Кхан"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ведьмина служба доставки"
+      "text": "Ведьмина служба доставки",
+      "answer": "Ведьмина служба доставки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джуманджи"
+      "text": "Джуманджи",
+      "answer": "Джуманджи"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Человек из стали"
+      "text": "Человек из стали",
+      "answer": "Человек из стали"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Семь жизней"
+      "text": "Семь жизней",
+      "answer": "Семь жизней"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Убойные каникулы"
+      "text": "Убойные каникулы",
+      "answer": "Убойные каникулы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Командир"
+      "text": "Командир",
+      "answer": "Командир"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звездный путь"
+      "text": "Звездный путь",
+      "answer": "Звездный путь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чтец"
+      "text": "Чтец",
+      "answer": "Чтец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Суперсемейка"
+      "text": "Суперсемейка",
+      "answer": "Суперсемейка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звездная пыль"
+      "text": "Звездная пыль",
+      "answer": "Звездная пыль"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Руслан и Людмила"
+      "text": "Руслан и Людмила",
+      "answer": "Руслан и Людмила"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Поезд в Пусан"
+      "text": "Поезд в Пусан",
+      "answer": "Поезд в Пусан"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "В метре друг от друга"
+      "text": "В метре друг от друга",
+      "answer": "В метре друг от друга"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Добро пожаловать в Зомбилэнд"
+      "text": "Добро пожаловать в Зомбилэнд",
+      "answer": "Добро пожаловать в Зомбилэнд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Боец"
+      "text": "Боец",
+      "answer": "Боец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Паралимпиец"
+      "text": "Паралимпиец",
+      "answer": "Паралимпиец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Первому игроку приготовиться"
+      "text": "Первому игроку приготовиться",
+      "answer": "Первому игроку приготовиться"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лев"
+      "text": "Лев",
+      "answer": "Лев"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Укрась прощальное утро цветами обещания"
+      "text": "Укрась прощальное утро цветами обещания",
+      "answer": "Укрась прощальное утро цветами обещания"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Брестская крепость"
+      "text": "Брестская крепость",
+      "answer": "Брестская крепость"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Алита: Боевой ангел"
+      "text": "Алита: Боевой ангел",
+      "answer": "Алита: Боевой ангел"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Отель \"Гранд Будапешт\""
+      "text": "Отель \"Гранд Будапешт\"",
+      "answer": "Отель \"Гранд Будапешт\""
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Марс Экспресс"
+      "text": "Марс Экспресс",
+      "answer": "Марс Экспресс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "О чем говорят мужчины"
+      "text": "О чем говорят мужчины",
+      "answer": "О чем говорят мужчины"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Исходный код"
+      "text": "Исходный код",
+      "answer": "Исходный код"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Восстание планеты обезьян"
+      "text": "Восстание планеты обезьян",
+      "answer": "Восстание планеты обезьян"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "101 далматинец"
+      "text": "101 далматинец",
+      "answer": "101 далматинец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Суперпитомцы"
+      "text": "Суперпитомцы",
+      "answer": "Суперпитомцы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Первый мститель"
+      "text": "Первый мститель",
+      "answer": "Первый мститель"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мама"
+      "text": "Мама",
+      "answer": "Мама"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тайлер Рейк: Операция по спасению"
+      "text": "Тайлер Рейк: Операция по спасению",
+      "answer": "Тайлер Рейк: Операция по спасению"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жизнь Пи"
+      "text": "Жизнь Пи",
+      "answer": "Жизнь Пи"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "От заката до рассвета"
+      "text": "От заката до рассвета",
+      "answer": "От заката до рассвета"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Терминал"
+      "text": "Терминал",
+      "answer": "Терминал"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гордость и предубеждение"
+      "text": "Гордость и предубеждение",
+      "answer": "Гордость и предубеждение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гангстер"
+      "text": "Гангстер",
+      "answer": "Гангстер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Идентификация Борна"
+      "text": "Идентификация Борна",
+      "answer": "Идентификация Борна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Особое мнение"
+      "text": "Особое мнение",
+      "answer": "Особое мнение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Величайший шоумен"
+      "text": "Величайший шоумен",
+      "answer": "Величайший шоумен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сонная лощина"
+      "text": "Сонная лощина",
+      "answer": "Сонная лощина"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гнев человеческий"
+      "text": "Гнев человеческий",
+      "answer": "Гнев человеческий"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хищник"
+      "text": "Хищник",
+      "answer": "Хищник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Главный герой"
+      "text": "Главный герой",
+      "answer": "Главный герой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Энканто"
+      "text": "Энканто",
+      "answer": "Энканто"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Океаны"
+      "text": "Океаны",
+      "answer": "Океаны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Апгрейд"
+      "text": "Апгрейд",
+      "answer": "Апгрейд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Драйв"
+      "text": "Драйв",
+      "answer": "Драйв"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Братья Супер Марио в кино "
+      "text": "Братья Супер Марио в кино ",
+      "answer": "Братья Супер Марио в кино "
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "До встречи с тобой"
+      "text": "До встречи с тобой",
+      "answer": "До встречи с тобой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "007: Координаты \"Скайфолл\""
+      "text": "007: Координаты \"Скайфолл\"",
+      "answer": "007: Координаты \"Скайфолл\""
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Омерзительная восьмерка"
+      "text": "Омерзительная восьмерка",
+      "answer": "Омерзительная восьмерка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "2001 год: Космическая одиссея"
+      "text": "2001 год: Космическая одиссея",
+      "answer": "2001 год: Космическая одиссея"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Университет монстров"
+      "text": "Университет монстров",
+      "answer": "Университет монстров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "«V» значит Вендетта"
+      "text": "«V» значит Вендетта",
+      "answer": "«V» значит Вендетта"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Малена"
+      "text": "Малена",
+      "answer": "Малена"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Подземелья и драконы"
+      "text": "Подземелья и драконы",
+      "answer": "Подземелья и драконы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Игра на понижение"
+      "text": "Игра на понижение",
+      "answer": "Игра на понижение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Проза бродячих псов"
+      "text": "Проза бродячих псов",
+      "answer": "Проза бродячих псов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вперёд"
+      "text": "Вперёд",
+      "answer": "Вперёд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сталкер"
+      "text": "Сталкер",
+      "answer": "Сталкер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Одаренная"
+      "text": "Одаренная",
+      "answer": "Одаренная"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Майкл Джексон: Вот и все"
+      "text": "Майкл Джексон: Вот и все",
+      "answer": "Майкл Джексон: Вот и все"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Живая сталь"
+      "text": "Живая сталь",
+      "answer": "Живая сталь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Луна 2112"
+      "text": "Луна 2112",
+      "answer": "Луна 2112"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мои мамы"
+      "text": "Мои мамы",
+      "answer": "Мои мамы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мегамозг"
+      "text": "Мегамозг",
+      "answer": "Мегамозг"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дюнкерк"
+      "text": "Дюнкерк",
+      "answer": "Дюнкерк"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джон Уик"
+      "text": "Джон Уик",
+      "answer": "Джон Уик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Идеальные незнакомцы"
+      "text": "Идеальные незнакомцы",
+      "answer": "Идеальные незнакомцы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Отель Мумбаи: Противостояние"
+      "text": "Отель Мумбаи: Противостояние",
+      "answer": "Отель Мумбаи: Противостояние"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ван Гог. С любовью, Винсент"
+      "text": "Ван Гог. С любовью, Винсент",
+      "answer": "Ван Гог. С любовью, Винсент"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дело Ричарда Джуэлла"
+      "text": "Дело Ричарда Джуэлла",
+      "answer": "Дело Ричарда Джуэлла"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дикие истории"
+      "text": "Дикие истории",
+      "answer": "Дикие истории"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Трио из Бельвилля"
+      "text": "Трио из Бельвилля",
+      "answer": "Трио из Бельвилля"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "12 лет рабства"
+      "text": "12 лет рабства",
+      "answer": "12 лет рабства"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Поиск"
+      "text": "Поиск",
+      "answer": "Поиск"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пять сантиметров в секунду"
+      "text": "Пять сантиметров в секунду",
+      "answer": "Пять сантиметров в секунду"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Три дня на побег"
+      "text": "Три дня на побег",
+      "answer": "Три дня на побег"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пассажиры"
+      "text": "Пассажиры",
+      "answer": "Пассажиры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ван-Пис"
+      "text": "Ван-Пис",
+      "answer": "Ван-Пис"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Алеша Попович и Тугарин Змей"
+      "text": "Алеша Попович и Тугарин Змей",
+      "answer": "Алеша Попович и Тугарин Змей"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вам и не снилось"
+      "text": "Вам и не снилось",
+      "answer": "Вам и не снилось"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Эверест"
+      "text": "Эверест",
+      "answer": "Эверест"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чудо-женщина"
+      "text": "Чудо-женщина",
+      "answer": "Чудо-женщина"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сибирский цирюльник"
+      "text": "Сибирский цирюльник",
+      "answer": "Сибирский цирюльник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Доктор Сон"
+      "text": "Доктор Сон",
+      "answer": "Доктор Сон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Летят журавли"
+      "text": "Летят журавли",
+      "answer": "Летят журавли"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рыбка Поньо на утесе"
+      "text": "Рыбка Поньо на утесе",
+      "answer": "Рыбка Поньо на утесе"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Эквилибриум"
+      "text": "Эквилибриум",
+      "answer": "Эквилибриум"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Труп невесты"
+      "text": "Труп невесты",
+      "answer": "Труп невесты"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и Принц-Полукровка"
+      "text": "Гарри Поттер и Принц-Полукровка",
+      "answer": "Гарри Поттер и Принц-Полукровка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Игра в имитацию"
+      "text": "Игра в имитацию",
+      "answer": "Игра в имитацию"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Китайский квартал"
+      "text": "Китайский квартал",
+      "answer": "Китайский квартал"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бегущий по лезвию"
+      "text": "Бегущий по лезвию",
+      "answer": "Бегущий по лезвию"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Претенденты"
+      "text": "Претенденты",
+      "answer": "Претенденты"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Искупление"
+      "text": "Искупление",
+      "answer": "Искупление"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Собачья жизнь"
+      "text": "Собачья жизнь",
+      "answer": "Собачья жизнь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Иллюзионист"
+      "text": "Иллюзионист",
+      "answer": "Иллюзионист"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ушедшие"
+      "text": "Ушедшие",
+      "answer": "Ушедшие"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Далласский клуб покупателей"
+      "text": "Далласский клуб покупателей",
+      "answer": "Далласский клуб покупателей"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Она"
+      "text": "Она",
+      "answer": "Она"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Черная Пантера"
+      "text": "Черная Пантера",
+      "answer": "Черная Пантера"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рестлер"
+      "text": "Рестлер",
+      "answer": "Рестлер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Залечь на дно в Брюгге"
+      "text": "Залечь на дно в Брюгге",
+      "answer": "Залечь на дно в Брюгге"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "12 обезьян"
+      "text": "12 обезьян",
+      "answer": "12 обезьян"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Банды Нью-Йорка"
+      "text": "Банды Нью-Йорка",
+      "answer": "Банды Нью-Йорка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Анастасия"
+      "text": "Анастасия",
+      "answer": "Анастасия"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вспомнить все"
+      "text": "Вспомнить все",
+      "answer": "Вспомнить все"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Легенды осени"
+      "text": "Легенды осени",
+      "answer": "Легенды осени"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Скорость"
+      "text": "Скорость",
+      "answer": "Скорость"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Иллюзия обмана"
+      "text": "Иллюзия обмана",
+      "answer": "Иллюзия обмана"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ветер крепчает"
+      "text": "Ветер крепчает",
+      "answer": "Ветер крепчает"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хоккейные папы"
+      "text": "Хоккейные папы",
+      "answer": "Хоккейные папы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Семья по-быстрому"
+      "text": "Семья по-быстрому",
+      "answer": "Семья по-быстрому"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Красотка"
+      "text": "Красотка",
+      "answer": "Красотка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Возвращение"
+      "text": "Возвращение",
+      "answer": "Возвращение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ветреная река"
+      "text": "Ветреная река",
+      "answer": "Ветреная река"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Худший человек на свете"
+      "text": "Худший человек на свете",
+      "answer": "Худший человек на свете"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пила 10"
+      "text": "Пила 10",
+      "answer": "Пила 10"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ла-Ла Ленд"
+      "text": "Ла-Ла Ленд",
+      "answer": "Ла-Ла Ленд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Спирит: Душа прерий"
+      "text": "Спирит: Душа прерий",
+      "answer": "Спирит: Душа прерий"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Арахисовый сокол"
+      "text": "Арахисовый сокол",
+      "answer": "Арахисовый сокол"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мумия"
+      "text": "Мумия",
+      "answer": "Мумия"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Салют-7"
+      "text": "Салют-7",
+      "answer": "Салют-7"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Я, робот"
+      "text": "Я, робот",
+      "answer": "Я, робот"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Порок на экспорт"
+      "text": "Порок на экспорт",
+      "answer": "Порок на экспорт"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жизнь в розовом цвете"
+      "text": "Жизнь в розовом цвете",
+      "answer": "Жизнь в розовом цвете"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Малхолланд Драйв"
+      "text": "Малхолланд Драйв",
+      "answer": "Малхолланд Драйв"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Черепашки-ниндзя"
+      "text": "Черепашки-ниндзя",
+      "answer": "Черепашки-ниндзя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Воровка книг"
+      "text": "Воровка книг",
+      "answer": "Воровка книг"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Игры разумов"
+      "text": "Игры разумов",
+      "answer": "Игры разумов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Парфюмер: история одного убийцы"
+      "text": "Парфюмер: история одного убийцы",
+      "answer": "Парфюмер: история одного убийцы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Прибытие"
+      "text": "Прибытие",
+      "answer": "Прибытие"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мавританец"
+      "text": "Мавританец",
+      "answer": "Мавританец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Разборки в стиле Кунг-Фу"
+      "text": "Разборки в стиле Кунг-Фу",
+      "answer": "Разборки в стиле Кунг-Фу"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шоколад"
+      "text": "Шоколад",
+      "answer": "Шоколад"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "РЭД"
+      "text": "РЭД",
+      "answer": "РЭД"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "На гребне волны"
+      "text": "На гребне волны",
+      "answer": "На гребне волны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чудак из 5 «Б»"
+      "text": "Чудак из 5 «Б»",
+      "answer": "Чудак из 5 «Б»"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Правдивая ложь"
+      "text": "Правдивая ложь",
+      "answer": "Правдивая ложь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Скафандр и бабочка"
+      "text": "Скафандр и бабочка",
+      "answer": "Скафандр и бабочка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мотылек"
+      "text": "Мотылек",
+      "answer": "Мотылек"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мост в Терабитию"
+      "text": "Мост в Терабитию",
+      "answer": "Мост в Терабитию"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Снимки нашей планеты и письмена войны"
+      "text": "Снимки нашей планеты и письмена войны",
+      "answer": "Снимки нашей планеты и письмена войны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Два, три, демон, приди!"
+      "text": "Два, три, демон, приди!",
+      "answer": "Два, три, демон, приди!"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Судья"
+      "text": "Судья",
+      "answer": "Судья"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Невидимая сторона"
+      "text": "Невидимая сторона",
+      "answer": "Невидимая сторона"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Последняя дуэль"
+      "text": "Последняя дуэль",
+      "answer": "Последняя дуэль"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хранители"
+      "text": "Хранители",
+      "answer": "Хранители"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Догвилль"
+      "text": "Догвилль",
+      "answer": "Догвилль"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Американский психопат"
+      "text": "Американский психопат",
+      "answer": "Американский психопат"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Росомаха: Бессмертный"
+      "text": "Росомаха: Бессмертный",
+      "answer": "Росомаха: Бессмертный"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бойфренд из будущего"
+      "text": "Бойфренд из будущего",
+      "answer": "Бойфренд из будущего"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Реальная любовь"
+      "text": "Реальная любовь",
+      "answer": "Реальная любовь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Стальная хватка"
+      "text": "Стальная хватка",
+      "answer": "Стальная хватка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вторая жизнь Уве"
+      "text": "Вторая жизнь Уве",
+      "answer": "Вторая жизнь Уве"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Трансформеры"
+      "text": "Трансформеры",
+      "answer": "Трансформеры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Идеальные дни"
+      "text": "Идеальные дни",
+      "answer": "Идеальные дни"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "127 часов"
+      "text": "127 часов",
+      "answer": "127 часов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Человек-муравей и Оса"
+      "text": "Человек-муравей и Оса",
+      "answer": "Человек-муравей и Оса"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Каскадеры"
+      "text": "Каскадеры",
+      "answer": "Каскадеры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Телохранитель киллера"
+      "text": "Телохранитель киллера",
+      "answer": "Телохранитель киллера"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Остров собак"
+      "text": "Остров собак",
+      "answer": "Остров собак"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мастер и Маргарита"
+      "text": "Мастер и Маргарита",
+      "answer": "Мастер и Маргарита"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кубо. Легенда о самурае"
+      "text": "Кубо. Легенда о самурае",
+      "answer": "Кубо. Легенда о самурае"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Волшебная страна"
+      "text": "Волшебная страна",
+      "answer": "Волшебная страна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Учитель на замену"
+      "text": "Учитель на замену",
+      "answer": "Учитель на замену"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Помни меня"
+      "text": "Помни меня",
+      "answer": "Помни меня"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вайолет Эвергарден"
+      "text": "Вайолет Эвергарден",
+      "answer": "Вайолет Эвергарден"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Час пик"
+      "text": "Час пик",
+      "answer": "Час пик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Капитан Филлипс"
+      "text": "Капитан Филлипс",
+      "answer": "Капитан Филлипс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Подмена"
+      "text": "Подмена",
+      "answer": "Подмена"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Криминальный Город"
+      "text": "Криминальный Город",
+      "answer": "Криминальный Город"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Поезд на Юму"
+      "text": "Поезд на Юму",
+      "answer": "Поезд на Юму"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Праведник"
+      "text": "Праведник",
+      "answer": "Праведник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Царство небесное"
+      "text": "Царство небесное",
+      "answer": "Царство небесное"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аритмия"
+      "text": "Аритмия",
+      "answer": "Аритмия"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Анатомия падения"
+      "text": "Анатомия падения",
+      "answer": "Анатомия падения"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Патриот"
+      "text": "Патриот",
+      "answer": "Патриот"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Я делаю шаг"
+      "text": "Я делаю шаг",
+      "answer": "Я делаю шаг"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Скрытые фигуры"
+      "text": "Скрытые фигуры",
+      "answer": "Скрытые фигуры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Флэш"
+      "text": "Флэш",
+      "answer": "Флэш"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Расправь крылья"
+      "text": "Расправь крылья",
+      "answer": "Расправь крылья"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Другие"
+      "text": "Другие",
+      "answer": "Другие"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Камон Камон"
+      "text": "Камон Камон",
+      "answer": "Камон Камон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Опасная игра Слоун"
+      "text": "Опасная игра Слоун",
+      "answer": "Опасная игра Слоун"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "2+1"
+      "text": "2+1",
+      "answer": "2+1"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дракула"
+      "text": "Дракула",
+      "answer": "Дракула"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Виноваты звезды"
+      "text": "Виноваты звезды",
+      "answer": "Виноваты звезды"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Семейка Крудс"
+      "text": "Семейка Крудс",
+      "answer": "Семейка Крудс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Онегин"
+      "text": "Онегин",
+      "answer": "Онегин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Прощай, детка, прощай"
+      "text": "Прощай, детка, прощай",
+      "answer": "Прощай, детка, прощай"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Железная хватка"
+      "text": "Железная хватка",
+      "answer": "Железная хватка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кожа, в которой я живу"
+      "text": "Кожа, в которой я живу",
+      "answer": "Кожа, в которой я живу"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кошачьи миры Луиса Уэйна"
+      "text": "Кошачьи миры Луиса Уэйна",
+      "answer": "Кошачьи миры Луиса Уэйна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Цветы войны"
+      "text": "Цветы войны",
+      "answer": "Цветы войны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Один день"
+      "text": "Один день",
+      "answer": "Один день"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хранители снов"
+      "text": "Хранители снов",
+      "answer": "Хранители снов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Миграция"
+      "text": "Миграция",
+      "answer": "Миграция"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Король Лев"
+      "text": "Король Лев",
+      "answer": "Король Лев"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чудо на Гудзоне"
+      "text": "Чудо на Гудзоне",
+      "answer": "Чудо на Гудзоне"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ненормальный"
+      "text": "Ненормальный",
+      "answer": "Ненормальный"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Храбрая сердцем"
+      "text": "Храбрая сердцем",
+      "answer": "Храбрая сердцем"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кто я"
+      "text": "Кто я",
+      "answer": "Кто я"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Фантастические твари и где они обитают"
+      "text": "Фантастические твари и где они обитают",
+      "answer": "Фантастические твари и где они обитают"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ранго"
+      "text": "Ранго",
+      "answer": "Ранго"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Гравитация"
+      "text": "Гравитация",
+      "answer": "Гравитация"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мертвец"
+      "text": "Мертвец",
+      "answer": "Мертвец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бёрдмэн"
+      "text": "Бёрдмэн",
+      "answer": "Бёрдмэн"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вонка"
+      "text": "Вонка",
+      "answer": "Вонка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ангел А"
+      "text": "Ангел А",
+      "answer": "Ангел А"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Белый плен"
+      "text": "Белый плен",
+      "answer": "Белый плен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Суини Тодд, демон-парикмахер с Флит-стрит"
+      "text": "Суини Тодд, демон-парикмахер с Флит-стрит",
+      "answer": "Суини Тодд, демон-парикмахер с Флит-стрит"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Седьмая печать"
+      "text": "Седьмая печать",
+      "answer": "Седьмая печать"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Время первых"
+      "text": "Время первых",
+      "answer": "Время первых"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рио"
+      "text": "Рио",
+      "answer": "Рио"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дело храбрых"
+      "text": "Дело храбрых",
+      "answer": "Дело храбрых"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лунный свет"
+      "text": "Лунный свет",
+      "answer": "Лунный свет"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Прочь"
+      "text": "Прочь",
+      "answer": "Прочь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Экипаж"
+      "text": "Экипаж",
+      "answer": "Экипаж"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лакричная пицца"
+      "text": "Лакричная пицца",
+      "answer": "Лакричная пицца"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Любой ценой"
+      "text": "Любой ценой",
+      "answer": "Любой ценой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Быстрее пули"
+      "text": "Быстрее пули",
+      "answer": "Быстрее пули"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жизнь Адель"
+      "text": "Жизнь Адель",
+      "answer": "Жизнь Адель"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Добрыня Никитич и Змей Горыныч"
+      "text": "Добрыня Никитич и Змей Горыныч",
+      "answer": "Добрыня Никитич и Змей Горыныч"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Выстрел в пустоту"
+      "text": "Выстрел в пустоту",
+      "answer": "Выстрел в пустоту"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Капитан Фантастик"
+      "text": "Капитан Фантастик",
+      "answer": "Капитан Фантастик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мюнхен"
+      "text": "Мюнхен",
+      "answer": "Мюнхен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Малыш на драйве"
+      "text": "Малыш на драйве",
+      "answer": "Малыш на драйве"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жанна Дюбарри"
+      "text": "Жанна Дюбарри",
+      "answer": "Жанна Дюбарри"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Малефисента"
+      "text": "Малефисента",
+      "answer": "Малефисента"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Поехавшая"
+      "text": "Поехавшая",
+      "answer": "Поехавшая"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звёздные войны"
+      "text": "Звёздные войны",
+      "answer": "Звёздные войны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Знакомьтесь, Джо Блэк"
+      "text": "Знакомьтесь, Джо Блэк",
+      "answer": "Знакомьтесь, Джо Блэк"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Отверженные"
+      "text": "Отверженные",
+      "answer": "Отверженные"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "До рассвета"
+      "text": "До рассвета",
+      "answer": "До рассвета"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Одинокий мужчина"
+      "text": "Одинокий мужчина",
+      "answer": "Одинокий мужчина"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хитмен"
+      "text": "Хитмен",
+      "answer": "Хитмен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зов предков"
+      "text": "Зов предков",
+      "answer": "Зов предков"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вавилон"
+      "text": "Вавилон",
+      "answer": "Вавилон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Человек, который изменил все"
+      "text": "Человек, который изменил все",
+      "answer": "Человек, который изменил все"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Город Кошек"
+      "text": "Город Кошек",
+      "answer": "Город Кошек"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Годзилла и Конг: Новая империя"
+      "text": "Годзилла и Конг: Новая империя",
+      "answer": "Годзилла и Конг: Новая империя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мой парень - псих"
+      "text": "Мой парень - псих",
+      "answer": "Мой парень - псих"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "500 дней лета"
+      "text": "500 дней лета",
+      "answer": "500 дней лета"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Король неба"
+      "text": "Король неба",
+      "answer": "Король неба"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Леди Баг и Супер-Кот"
+      "text": "Леди Баг и Супер-Кот",
+      "answer": "Леди Баг и Супер-Кот"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рейд"
+      "text": "Рейд",
+      "answer": "Рейд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Веном"
+      "text": "Веном",
+      "answer": "Веном"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лед"
+      "text": "Лед",
+      "answer": "Лед"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сплит"
+      "text": "Сплит",
+      "answer": "Сплит"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аквамен"
+      "text": "Аквамен",
+      "answer": "Аквамен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Расплата"
+      "text": "Расплата",
+      "answer": "Расплата"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ральф против интернета"
+      "text": "Ральф против интернета",
+      "answer": "Ральф против интернета"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "12"
+      "text": "12",
+      "answer": "12"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Обливион"
+      "text": "Обливион",
+      "answer": "Обливион"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шпионский мост"
+      "text": "Шпионский мост",
+      "answer": "Шпионский мост"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шазам!"
+      "text": "Шазам!",
+      "answer": "Шазам!"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Миссия невыполнима"
+      "text": "Миссия невыполнима",
+      "answer": "Миссия невыполнима"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вселенная Стивена Хокинга"
+      "text": "Вселенная Стивена Хокинга",
+      "answer": "Вселенная Стивена Хокинга"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Призрак"
+      "text": "Призрак",
+      "answer": "Призрак"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Погребенный заживо"
+      "text": "Погребенный заживо",
+      "answer": "Погребенный заживо"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Коралина в стране кошмаров"
+      "text": "Коралина в стране кошмаров",
+      "answer": "Коралина в стране кошмаров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Приключения Тинтина: Тайна единорога"
+      "text": "Приключения Тинтина: Тайна единорога",
+      "answer": "Приключения Тинтина: Тайна единорога"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Под покровом ночи"
+      "text": "Под покровом ночи",
+      "answer": "Под покровом ночи"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Страсти по Матвею"
+      "text": "Страсти по Матвею",
+      "answer": "Страсти по Матвею"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Никто"
+      "text": "Никто",
+      "answer": "Никто"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Полночь в Париже"
+      "text": "Полночь в Париже",
+      "answer": "Полночь в Париже"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Человек божий"
+      "text": "Человек божий",
+      "answer": "Человек божий"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чего хотят женщины"
+      "text": "Чего хотят женщины",
+      "answer": "Чего хотят женщины"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джейн Эйр"
+      "text": "Джейн Эйр",
+      "answer": "Джейн Эйр"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Невероятный Халк"
+      "text": "Невероятный Халк",
+      "answer": "Невероятный Халк"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Облачный атлас"
+      "text": "Облачный атлас",
+      "answer": "Облачный атлас"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Билли Эллиот"
+      "text": "Билли Эллиот",
+      "answer": "Билли Эллиот"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Донни Дарко"
+      "text": "Донни Дарко",
+      "answer": "Донни Дарко"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бьютифул"
+      "text": "Бьютифул",
+      "answer": "Бьютифул"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Проклятие"
+      "text": "Проклятие",
+      "answer": "Проклятие"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Самолетом, поездом, автомобилем"
+      "text": "Самолетом, поездом, автомобилем",
+      "answer": "Самолетом, поездом, автомобилем"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Всегда говори \"Да\""
+      "text": "Всегда говори \"Да\"",
+      "answer": "Всегда говори \"Да\""
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Неадекватные люди"
+      "text": "Неадекватные люди",
+      "answer": "Неадекватные люди"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Время"
+      "text": "Время",
+      "answer": "Время"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "10 жизней"
+      "text": "10 жизней",
+      "answer": "10 жизней"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Блокада"
+      "text": "Блокада",
+      "answer": "Блокада"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Агенты А.Н.К.Л."
+      "text": "Агенты А.Н.К.Л.",
+      "answer": "Агенты А.Н.К.Л."
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Доспехи Бога"
+      "text": "Доспехи Бога",
+      "answer": "Доспехи Бога"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "День выборов"
+      "text": "День выборов",
+      "answer": "День выборов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вольт"
+      "text": "Вольт",
+      "answer": "Вольт"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Предложение"
+      "text": "Предложение",
+      "answer": "Предложение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Маленький принц"
+      "text": "Маленький принц",
+      "answer": "Маленький принц"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Движение вверх"
+      "text": "Движение вверх",
+      "answer": "Движение вверх"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Приют"
+      "text": "Приют",
+      "answer": "Приют"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Крушение"
+      "text": "Крушение",
+      "answer": "Крушение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Адреналин"
+      "text": "Адреналин",
+      "answer": "Адреналин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Город воров"
+      "text": "Город воров",
+      "answer": "Город воров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Королевство полной луны"
+      "text": "Королевство полной луны",
+      "answer": "Королевство полной луны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Нелюбовь"
+      "text": "Нелюбовь",
+      "answer": "Нелюбовь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Великолепная пятерка"
+      "text": "Великолепная пятерка",
+      "answer": "Великолепная пятерка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Контроль"
+      "text": "Контроль",
+      "answer": "Контроль"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хэнкок"
+      "text": "Хэнкок",
+      "answer": "Хэнкок"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мулен Руж"
+      "text": "Мулен Руж",
+      "answer": "Мулен Руж"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Монстры на каникулах"
+      "text": "Монстры на каникулах",
+      "answer": "Монстры на каникулах"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Влюбись в меня, если осмелишься"
+      "text": "Влюбись в меня, если осмелишься",
+      "answer": "Влюбись в меня, если осмелишься"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вторая жизнь Гарольда Фрая"
+      "text": "Вторая жизнь Гарольда Фрая",
+      "answer": "Вторая жизнь Гарольда Фрая"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Поп"
+      "text": "Поп",
+      "answer": "Поп"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Прошлые жизни"
+      "text": "Прошлые жизни",
+      "answer": "Прошлые жизни"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "С любовью, Рози"
+      "text": "С любовью, Рози",
+      "answer": "С любовью, Рози"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Военно-полевой госпиталь М.Э.Ш"
+      "text": "Военно-полевой госпиталь М.Э.Ш",
+      "answer": "Военно-полевой госпиталь М.Э.Ш"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зеленый Шершень"
+      "text": "Зеленый Шершень",
+      "answer": "Зеленый Шершень"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Великий Гэтсби"
+      "text": "Великий Гэтсби",
+      "answer": "Великий Гэтсби"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Серебряные коньки"
+      "text": "Серебряные коньки",
+      "answer": "Серебряные коньки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мы - Миллеры"
+      "text": "Мы - Миллеры",
+      "answer": "Мы - Миллеры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мне бы в небо"
+      "text": "Мне бы в небо",
+      "answer": "Мне бы в небо"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Стажер"
+      "text": "Стажер",
+      "answer": "Стажер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Фаворитка"
+      "text": "Фаворитка",
+      "answer": "Фаворитка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бункер"
+      "text": "Бункер",
+      "answer": "Бункер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Камуфляж и шпионаж"
+      "text": "Камуфляж и шпионаж",
+      "answer": "Камуфляж и шпионаж"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Великий уравнитель"
+      "text": "Великий уравнитель",
+      "answer": "Великий уравнитель"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вызов"
+      "text": "Вызов",
+      "answer": "Вызов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "9 рота"
+      "text": "9 рота",
+      "answer": "9 рота"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кинг Конг"
+      "text": "Кинг Конг",
+      "answer": "Кинг Конг"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Выживут только любовники"
+      "text": "Выживут только любовники",
+      "answer": "Выживут только любовники"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Более странно, чем в раю"
+      "text": "Более странно, чем в раю",
+      "answer": "Более странно, чем в раю"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Астрал"
+      "text": "Астрал",
+      "answer": "Астрал"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Брюс Всемогущий"
+      "text": "Брюс Всемогущий",
+      "answer": "Брюс Всемогущий"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бесконечная история"
+      "text": "Бесконечная история",
+      "answer": "Бесконечная история"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Патруль"
+      "text": "Патруль",
+      "answer": "Патруль"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сибирь. Монамур"
+      "text": "Сибирь. Монамур",
+      "answer": "Сибирь. Монамур"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Холоп"
+      "text": "Холоп",
+      "answer": "Холоп"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Воды слонам!"
+      "text": "Воды слонам!",
+      "answer": "Воды слонам!"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Горбатая гора"
+      "text": "Горбатая гора",
+      "answer": "Горбатая гора"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джейн Остин"
+      "text": "Джейн Остин",
+      "answer": "Джейн Остин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Д’Артаньян и три мушкетёра"
+      "text": "Д’Артаньян и три мушкетёра",
+      "answer": "Д’Артаньян и три мушкетёра"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пальма"
+      "text": "Пальма",
+      "answer": "Пальма"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Т-34"
+      "text": "Т-34",
+      "answer": "Т-34"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шесть превращений Яна Пищика"
+      "text": "Шесть превращений Яна Пищика",
+      "answer": "Шесть превращений Яна Пищика"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Три метра над уровнем неба"
+      "text": "Три метра над уровнем неба",
+      "answer": "Три метра над уровнем неба"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сестренка"
+      "text": "Сестренка",
+      "answer": "Сестренка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Французский вестник"
+      "text": "Французский вестник",
+      "answer": "Французский вестник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Призрак оперы"
+      "text": "Призрак оперы",
+      "answer": "Призрак оперы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кунг-фу жеребец"
+      "text": "Кунг-фу жеребец",
+      "answer": "Кунг-фу жеребец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Красавица и дракон"
+      "text": "Красавица и дракон",
+      "answer": "Красавица и дракон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Почему Бодхидхарма ушел на Восток"
+      "text": "Почему Бодхидхарма ушел на Восток",
+      "answer": "Почему Бодхидхарма ушел на Восток"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Профессионал"
+      "text": "Профессионал",
+      "answer": "Профессионал"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Великий"
+      "text": "Великий",
+      "answer": "Великий"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Принцесса и лягушка"
+      "text": "Принцесса и лягушка",
+      "answer": "Принцесса и лягушка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Принц Персии: Пески времени"
+      "text": "Принц Персии: Пески времени",
+      "answer": "Принц Персии: Пески времени"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Круиз по джунглям"
+      "text": "Круиз по джунглям",
+      "answer": "Круиз по джунглям"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мгла"
+      "text": "Мгла",
+      "answer": "Мгла"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Балерина"
+      "text": "Балерина",
+      "answer": "Балерина"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джуно"
+      "text": "Джуно",
+      "answer": "Джуно"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Самсара"
+      "text": "Самсара",
+      "answer": "Самсара"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зверопой"
+      "text": "Зверопой",
+      "answer": "Зверопой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Синий Жук"
+      "text": "Синий Жук",
+      "answer": "Синий Жук"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Голос монстра"
+      "text": "Голос монстра",
+      "answer": "Голос монстра"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Большая игра"
+      "text": "Большая игра",
+      "answer": "Большая игра"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Король Ричард"
+      "text": "Король Ричард",
+      "answer": "Король Ричард"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тихое место"
+      "text": "Тихое место",
+      "answer": "Тихое место"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "По щучьему велению"
+      "text": "По щучьему велению",
+      "answer": "По щучьему велению"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Наруто"
+      "text": "Наруто",
+      "answer": "Наруто"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Капитан Марвел"
+      "text": "Капитан Марвел",
+      "answer": "Капитан Марвел"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Глубоководный горизонт"
+      "text": "Глубоководный горизонт",
+      "answer": "Глубоководный горизонт"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хорошо быть тихоней"
+      "text": "Хорошо быть тихоней",
+      "answer": "Хорошо быть тихоней"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Фердинанд"
+      "text": "Фердинанд",
+      "answer": "Фердинанд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джон Картер"
+      "text": "Джон Картер",
+      "answer": "Джон Картер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Другой мир"
+      "text": "Другой мир",
+      "answer": "Другой мир"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Все о Мэрилин"
+      "text": "Все о Мэрилин",
+      "answer": "Все о Мэрилин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "История Рыцаря"
+      "text": "История Рыцаря",
+      "answer": "История Рыцаря"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Полицейский из Беверли-Хиллз"
+      "text": "Полицейский из Беверли-Хиллз",
+      "answer": "Полицейский из Беверли-Хиллз"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рецепт любви"
+      "text": "Рецепт любви",
+      "answer": "Рецепт любви"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ограбление на Бейкер-Стрит"
+      "text": "Ограбление на Бейкер-Стрит",
+      "answer": "Ограбление на Бейкер-Стрит"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джек Ричер"
+      "text": "Джек Ричер",
+      "answer": "Джек Ричер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Турецкий гамбит"
+      "text": "Турецкий гамбит",
+      "answer": "Турецкий гамбит"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Меняющие реальность"
+      "text": "Меняющие реальность",
+      "answer": "Меняющие реальность"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Книга джунглей"
+      "text": "Книга джунглей",
+      "answer": "Книга джунглей"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Стрелок"
+      "text": "Стрелок",
+      "answer": "Стрелок"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Команда А"
+      "text": "Команда А",
+      "answer": "Команда А"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лучшее во мне"
+      "text": "Лучшее во мне",
+      "answer": "Лучшее во мне"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пекло"
+      "text": "Пекло",
+      "answer": "Пекло"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дом странных детей мисс Перегрин"
+      "text": "Дом странных детей мисс Перегрин",
+      "answer": "Дом странных детей мисс Перегрин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Приключения Паддингтона"
+      "text": "Приключения Паддингтона",
+      "answer": "Приключения Паддингтона"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пока не сыграл в ящик"
+      "text": "Пока не сыграл в ящик",
+      "answer": "Пока не сыграл в ящик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Варкрафт"
+      "text": "Варкрафт",
+      "answer": "Варкрафт"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Путь домой"
+      "text": "Путь домой",
+      "answer": "Путь домой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Форсаж"
+      "text": "Форсаж",
+      "answer": "Форсаж"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Страсти Христовы"
+      "text": "Страсти Христовы",
+      "answer": "Страсти Христовы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Похороните меня за плинтусом"
+      "text": "Похороните меня за плинтусом",
+      "answer": "Похороните меня за плинтусом"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Страх и ненависть в Лас-Вегасе"
+      "text": "Страх и ненависть в Лас-Вегасе",
+      "answer": "Страх и ненависть в Лас-Вегасе"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чебурашка"
+      "text": "Чебурашка",
+      "answer": "Чебурашка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "28 панфиловцев"
+      "text": "28 панфиловцев",
+      "answer": "28 панфиловцев"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Славные парни"
+      "text": "Славные парни",
+      "answer": "Славные парни"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Робот по имени Чаппи"
+      "text": "Робот по имени Чаппи",
+      "answer": "Робот по имени Чаппи"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Атлантида: затерянный мир"
+      "text": "Атлантида: затерянный мир",
+      "answer": "Атлантида: затерянный мир"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рок-н-рольщик"
+      "text": "Рок-н-рольщик",
+      "answer": "Рок-н-рольщик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "На игле"
+      "text": "На игле",
+      "answer": "На игле"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Усатый нянь"
+      "text": "Усатый нянь",
+      "answer": "Усатый нянь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мальчишник"
+      "text": "Мальчишник",
+      "answer": "Мальчишник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Непрощенный"
+      "text": "Непрощенный",
+      "answer": "Непрощенный"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Обитель проклятых"
+      "text": "Обитель проклятых",
+      "answer": "Обитель проклятых"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вперед!"
+      "text": "Вперед!",
+      "answer": "Вперед!"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Васаби"
+      "text": "Васаби",
+      "answer": "Васаби"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лёд"
+      "text": "Лёд",
+      "answer": "Лёд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чёрная Вдова"
+      "text": "Чёрная Вдова",
+      "answer": "Чёрная Вдова"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дом Gucci"
+      "text": "Дом Gucci",
+      "answer": "Дом Gucci"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мадагаскар"
+      "text": "Мадагаскар",
+      "answer": "Мадагаскар"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Элвис"
+      "text": "Элвис",
+      "answer": "Элвис"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пчеловод"
+      "text": "Пчеловод",
+      "answer": "Пчеловод"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Повелитель ветра"
+      "text": "Повелитель ветра",
+      "answer": "Повелитель ветра"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Планета Ка-ПЭКС"
+      "text": "Планета Ка-ПЭКС",
+      "answer": "Планета Ка-ПЭКС"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Стиляги"
+      "text": "Стиляги",
+      "answer": "Стиляги"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "В поисках Дори"
+      "text": "В поисках Дори",
+      "answer": "В поисках Дори"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сто лет тому вперед"
+      "text": "Сто лет тому вперед",
+      "answer": "Сто лет тому вперед"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "28 недель спустя"
+      "text": "28 недель спустя",
+      "answer": "28 недель спустя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дневник баскетболиста"
+      "text": "Дневник баскетболиста",
+      "answer": "Дневник баскетболиста"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Эта дурацкая любовь"
+      "text": "Эта дурацкая любовь",
+      "answer": "Эта дурацкая любовь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ничего хорошего в отеле «Эль Рояль»"
+      "text": "Ничего хорошего в отеле «Эль Рояль»",
+      "answer": "Ничего хорошего в отеле «Эль Рояль»"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "1408"
+      "text": "1408",
+      "answer": "1408"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чудаки"
+      "text": "Чудаки",
+      "answer": "Чудаки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Хижина в лесу"
+      "text": "Хижина в лесу",
+      "answer": "Хижина в лесу"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "9"
+      "text": "9",
+      "answer": "9"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Самый пьяный округ в мире"
+      "text": "Самый пьяный округ в мире",
+      "answer": "Самый пьяный округ в мире"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зеленый театр в Земфире"
+      "text": "Зеленый театр в Земфире",
+      "answer": "Зеленый театр в Земфире"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мистер и миссис Смит"
+      "text": "Мистер и миссис Смит",
+      "answer": "Мистер и миссис Смит"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вестсайдская история"
+      "text": "Вестсайдская история",
+      "answer": "Вестсайдская история"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Петля времени"
+      "text": "Петля времени",
+      "answer": "Петля времени"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Легенды ночных стражей"
+      "text": "Легенды ночных стражей",
+      "answer": "Легенды ночных стражей"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жестокие игры"
+      "text": "Жестокие игры",
+      "answer": "Жестокие игры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Меч короля Артура"
+      "text": "Меч короля Артура",
+      "answer": "Меч короля Артура"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Союзники"
+      "text": "Союзники",
+      "answer": "Союзники"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Неисправимый Рон"
+      "text": "Неисправимый Рон",
+      "answer": "Неисправимый Рон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бэтмен против Супермена: На заре справедливости"
+      "text": "Бэтмен против Супермена: На заре справедливости",
+      "answer": "Бэтмен против Супермена: На заре справедливости"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Остров"
+      "text": "Остров",
+      "answer": "Остров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аббатство Даунтон"
+      "text": "Аббатство Даунтон",
+      "answer": "Аббатство Даунтон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Молодость"
+      "text": "Молодость",
+      "answer": "Молодость"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Клятва"
+      "text": "Клятва",
+      "answer": "Клятва"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мирай из будущего"
+      "text": "Мирай из будущего",
+      "answer": "Мирай из будущего"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лето"
+      "text": "Лето",
+      "answer": "Лето"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Душевная кухня"
+      "text": "Душевная кухня",
+      "answer": "Душевная кухня"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Не дыши"
+      "text": "Не дыши",
+      "answer": "Не дыши"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Код Гиас: Лелуш воскресший"
+      "text": "Код Гиас: Лелуш воскресший",
+      "answer": "Код Гиас: Лелуш воскресший"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рок-волна"
+      "text": "Рок-волна",
+      "answer": "Рок-волна"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Адмиралъ"
+      "text": "Адмиралъ",
+      "answer": "Адмиралъ"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Век Адалин"
+      "text": "Век Адалин",
+      "answer": "Век Адалин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Девятые врата"
+      "text": "Девятые врата",
+      "answer": "Девятые врата"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Грайндхаус"
+      "text": "Грайндхаус",
+      "answer": "Грайндхаус"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рождественская история"
+      "text": "Рождественская история",
+      "answer": "Рождественская история"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "День радио"
+      "text": "День радио",
+      "answer": "День радио"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Притворись моей женой"
+      "text": "Притворись моей женой",
+      "answer": "Притворись моей женой"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жизнь, как она есть"
+      "text": "Жизнь, как она есть",
+      "answer": "Жизнь, как она есть"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Статский советник"
+      "text": "Статский советник",
+      "answer": "Статский советник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Ярость"
+      "text": "Ярость",
+      "answer": "Ярость"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Симпсоны в кино"
+      "text": "Симпсоны в кино",
+      "answer": "Симпсоны в кино"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пункт назначения"
+      "text": "Пункт назначения",
+      "answer": "Пункт назначения"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Отличница легкого поведения"
+      "text": "Отличница легкого поведения",
+      "answer": "Отличница легкого поведения"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Плохие парни"
+      "text": "Плохие парни",
+      "answer": "Плохие парни"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "В Арктику"
+      "text": "В Арктику",
+      "answer": "В Арктику"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Секретарша"
+      "text": "Секретарша",
+      "answer": "Секретарша"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Марли и я"
+      "text": "Марли и я",
+      "answer": "Марли и я"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дом у озера"
+      "text": "Дом у озера",
+      "answer": "Дом у озера"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Секретная служба Санта Клауса"
+      "text": "Секретная служба Санта Клауса",
+      "answer": "Секретная служба Санта Клауса"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Отпуск по обмену"
+      "text": "Отпуск по обмену",
+      "answer": "Отпуск по обмену"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тролли"
+      "text": "Тролли",
+      "answer": "Тролли"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дежа вю"
+      "text": "Дежа вю",
+      "answer": "Дежа вю"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Механик"
+      "text": "Механик",
+      "answer": "Механик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Под стук трамвайных колес"
+      "text": "Под стук трамвайных колес",
+      "answer": "Под стук трамвайных колес"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Патерсон"
+      "text": "Патерсон",
+      "answer": "Патерсон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Изгнание"
+      "text": "Изгнание",
+      "answer": "Изгнание"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Куколка"
+      "text": "Куколка",
+      "answer": "Куколка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Однажды в... Голливуде"
+      "text": "Однажды в... Голливуде",
+      "answer": "Однажды в... Голливуде"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Я краснею"
+      "text": "Я краснею",
+      "answer": "Я краснею"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Черный ящик"
+      "text": "Черный ящик",
+      "answer": "Черный ящик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Место под соснами"
+      "text": "Место под соснами",
+      "answer": "Место под соснами"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Воздушный маршал"
+      "text": "Воздушный маршал",
+      "answer": "Воздушный маршал"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жена путешественника во времени"
+      "text": "Жена путешественника во времени",
+      "answer": "Жена путешественника во времени"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Невероятная жизнь Уолтера Митти"
+      "text": "Невероятная жизнь Уолтера Митти",
+      "answer": "Невероятная жизнь Уолтера Митти"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "На крючке"
+      "text": "На крючке",
+      "answer": "На крючке"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Илья Муромец и Соловей Разбойник"
+      "text": "Илья Муромец и Соловей Разбойник",
+      "answer": "Илья Муромец и Соловей Разбойник"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тачки"
+      "text": "Тачки",
+      "answer": "Тачки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Иностранец"
+      "text": "Иностранец",
+      "answer": "Иностранец"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Огонь"
+      "text": "Огонь",
+      "answer": "Огонь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тепло наших тел"
+      "text": "Тепло наших тел",
+      "answer": "Тепло наших тел"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Снегирь"
+      "text": "Снегирь",
+      "answer": "Снегирь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Два дня"
+      "text": "Два дня",
+      "answer": "Два дня"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Легенда"
+      "text": "Легенда",
+      "answer": "Легенда"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Индиана Джонс"
+      "text": "Индиана Джонс",
+      "answer": "Индиана Джонс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Три богатыря и шамаханская царица"
+      "text": "Три богатыря и шамаханская царица",
+      "answer": "Три богатыря и шамаханская царица"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Монгол"
+      "text": "Монгол",
+      "answer": "Монгол"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Смешарики снимают кино"
+      "text": "Смешарики снимают кино",
+      "answer": "Смешарики снимают кино"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рокки Бальбоа"
+      "text": "Рокки Бальбоа",
+      "answer": "Рокки Бальбоа"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "P.S. Я люблю тебя"
+      "text": "P.S. Я люблю тебя",
+      "answer": "P.S. Я люблю тебя"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Морфий"
+      "text": "Морфий",
+      "answer": "Морфий"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пять ночей с Фредди"
+      "text": "Пять ночей с Фредди",
+      "answer": "Пять ночей с Фредди"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Левша"
+      "text": "Левша",
+      "answer": "Левша"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Фрида"
+      "text": "Фрида",
+      "answer": "Фрида"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Химера"
+      "text": "Химера",
+      "answer": "Химера"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Барби"
+      "text": "Барби",
+      "answer": "Барби"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "И грянул шторм"
+      "text": "И грянул шторм",
+      "answer": "И грянул шторм"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зачарованная"
+      "text": "Зачарованная",
+      "answer": "Зачарованная"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Город тайн"
+      "text": "Город тайн",
+      "answer": "Город тайн"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Неуправляемый"
+      "text": "Неуправляемый",
+      "answer": "Неуправляемый"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рэмбо"
+      "text": "Рэмбо",
+      "answer": "Рэмбо"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кот в сапогах"
+      "text": "Кот в сапогах",
+      "answer": "Кот в сапогах"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Большое путешествие вглубь океанов"
+      "text": "Большое путешествие вглубь океанов",
+      "answer": "Большое путешествие вглубь океанов"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Боевой конь"
+      "text": "Боевой конь",
+      "answer": "Боевой конь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звёздный путь"
+      "text": "Звёздный путь",
+      "answer": "Звёздный путь"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Т2: Трейнспоттинг"
+      "text": "Т2: Трейнспоттинг",
+      "answer": "Т2: Трейнспоттинг"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Бамблби"
+      "text": "Бамблби",
+      "answer": "Бамблби"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Крик"
+      "text": "Крик",
+      "answer": "Крик"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Неизвестный"
+      "text": "Неизвестный",
+      "answer": "Неизвестный"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Операция \"Валькирия\""
+      "text": "Операция \"Валькирия\"",
+      "answer": "Операция \"Валькирия\""
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дьявол носит Prada"
+      "text": "Дьявол носит Prada",
+      "answer": "Дьявол носит Prada"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Анчартед: на картах не значится"
+      "text": "Анчартед: на картах не значится",
+      "answer": "Анчартед: на картах не значится"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Черный Адам"
+      "text": "Черный Адам",
+      "answer": "Черный Адам"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Охота на воров"
+      "text": "Охота на воров",
+      "answer": "Охота на воров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "99 франков"
+      "text": "99 франков",
+      "answer": "99 франков"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Монстро"
+      "text": "Монстро",
+      "answer": "Монстро"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Армагеддон"
+      "text": "Армагеддон",
+      "answer": "Армагеддон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Совокупность лжи"
+      "text": "Совокупность лжи",
+      "answer": "Совокупность лжи"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тайное окно"
+      "text": "Тайное окно",
+      "answer": "Тайное окно"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Линкольн для адвоката"
+      "text": "Линкольн для адвоката",
+      "answer": "Линкольн для адвоката"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Непослушники"
+      "text": "Непослушники",
+      "answer": "Непослушники"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Скотт Пилигрим против всех"
+      "text": "Скотт Пилигрим против всех",
+      "answer": "Скотт Пилигрим против всех"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Довод"
+      "text": "Довод",
+      "answer": "Довод"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Иуда и чёрный мессия"
+      "text": "Иуда и чёрный мессия",
+      "answer": "Иуда и чёрный мессия"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Голая правда"
+      "text": "Голая правда",
+      "answer": "Голая правда"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Выпускной"
+      "text": "Выпускной",
+      "answer": "Выпускной"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Динозавр"
+      "text": "Динозавр",
+      "answer": "Динозавр"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Как украсть миллион"
+      "text": "Как украсть миллион",
+      "answer": "Как украсть миллион"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Впритык"
+      "text": "Впритык",
+      "answer": "Впритык"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Разомкнутые объятия"
+      "text": "Разомкнутые объятия",
+      "answer": "Разомкнутые объятия"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кристофер Робин"
+      "text": "Кристофер Робин",
+      "answer": "Кристофер Робин"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Патхан: Схватка со смертью"
+      "text": "Патхан: Схватка со смертью",
+      "answer": "Патхан: Схватка со смертью"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аквамен и потерянное царство"
+      "text": "Аквамен и потерянное царство",
+      "answer": "Аквамен и потерянное царство"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "О чем говорят незнакомцы"
+      "text": "О чем говорят незнакомцы",
+      "answer": "О чем говорят незнакомцы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Джонни Д"
+      "text": "Джонни Д",
+      "answer": "Джонни Д"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Зеркало"
+      "text": "Зеркало",
+      "answer": "Зеркало"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сделано в Америке"
+      "text": "Сделано в Америке",
+      "answer": "Сделано в Америке"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Фонтан"
+      "text": "Фонтан",
+      "answer": "Фонтан"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мачо и ботан"
+      "text": "Мачо и ботан",
+      "answer": "Мачо и ботан"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Он и Она"
+      "text": "Он и Она",
+      "answer": "Он и Она"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дитя человеческое"
+      "text": "Дитя человеческое",
+      "answer": "Дитя человеческое"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Обитель зла"
+      "text": "Обитель зла",
+      "answer": "Обитель зла"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Форма воды"
+      "text": "Форма воды",
+      "answer": "Форма воды"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Коммандос"
+      "text": "Коммандос",
+      "answer": "Коммандос"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Крид: Наследие Рокки"
+      "text": "Крид: Наследие Рокки",
+      "answer": "Крид: Наследие Рокки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Миньоны"
+      "text": "Миньоны",
+      "answer": "Миньоны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Красный сад"
+      "text": "Красный сад",
+      "answer": "Красный сад"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Здоровый человек"
+      "text": "Здоровый человек",
+      "answer": "Здоровый человек"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Авиатор"
+      "text": "Авиатор",
+      "answer": "Авиатор"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Облачно, возможны осадки в виде фрикаделек"
+      "text": "Облачно, возможны осадки в виде фрикаделек",
+      "answer": "Облачно, возможны осадки в виде фрикаделек"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Черный телефон"
+      "text": "Черный телефон",
+      "answer": "Черный телефон"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Клаустрофобы"
+      "text": "Клаустрофобы",
+      "answer": "Клаустрофобы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Полет навигатора"
+      "text": "Полет навигатора",
+      "answer": "Полет навигатора"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жена смотрителя зоопарка"
+      "text": "Жена смотрителя зоопарка",
+      "answer": "Жена смотрителя зоопарка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Судья Дредд"
+      "text": "Судья Дредд",
+      "answer": "Судья Дредд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Пандорум"
+      "text": "Пандорум",
+      "answer": "Пандорум"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дикий Маугли"
+      "text": "Дикий Маугли",
+      "answer": "Дикий Маугли"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Землетрясение"
+      "text": "Землетрясение",
+      "answer": "Землетрясение"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чемпион мира"
+      "text": "Чемпион мира",
+      "answer": "Чемпион мира"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Быстрый и мертвый"
+      "text": "Быстрый и мертвый",
+      "answer": "Быстрый и мертвый"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сын"
+      "text": "Сын",
+      "answer": "Сын"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "А зори здесь тихие..."
+      "text": "А зори здесь тихие...",
+      "answer": "А зори здесь тихие..."
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Операция «Фортуна»: Искусство побеждать"
+      "text": "Операция «Фортуна»: Искусство побеждать",
+      "answer": "Операция «Фортуна»: Искусство побеждать"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Простая просьба"
+      "text": "Простая просьба",
+      "answer": "Простая просьба"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Лолита"
+      "text": "Лолита",
+      "answer": "Лолита"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Грех"
+      "text": "Грех",
+      "answer": "Грех"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Через вселенную"
+      "text": "Через вселенную",
+      "answer": "Через вселенную"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Звонок"
+      "text": "Звонок",
+      "answer": "Звонок"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Однажды в Ирландии"
+      "text": "Однажды в Ирландии",
+      "answer": "Однажды в Ирландии"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мечтатели"
+      "text": "Мечтатели",
+      "answer": "Мечтатели"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Парни со стволами"
+      "text": "Парни со стволами",
+      "answer": "Парни со стволами"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дорога перемен"
+      "text": "Дорога перемен",
+      "answer": "Дорога перемен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Губка Боб Квадратные Штаны"
+      "text": "Губка Боб Квадратные Штаны",
+      "answer": "Губка Боб Квадратные Штаны"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Транс"
+      "text": "Транс",
+      "answer": "Транс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Вышка"
+      "text": "Вышка",
+      "answer": "Вышка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Взрыв из прошлого"
+      "text": "Взрыв из прошлого",
+      "answer": "Взрыв из прошлого"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шесть демонов Эмили Роуз"
+      "text": "Шесть демонов Эмили Роуз",
+      "answer": "Шесть демонов Эмили Роуз"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Великолепная семерка"
+      "text": "Великолепная семерка",
+      "answer": "Великолепная семерка"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Королевство"
+      "text": "Королевство",
+      "answer": "Королевство"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Двадцать одно"
+      "text": "Двадцать одно",
+      "answer": "Двадцать одно"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чарли и шоколадная фабрика"
+      "text": "Чарли и шоколадная фабрика",
+      "answer": "Чарли и шоколадная фабрика"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Убийца"
+      "text": "Убийца",
+      "answer": "Убийца"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Чрезвычайная ситуация"
+      "text": "Чрезвычайная ситуация",
+      "answer": "Чрезвычайная ситуация"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Экзамен"
+      "text": "Экзамен",
+      "answer": "Экзамен"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Неудержимые"
+      "text": "Неудержимые",
+      "answer": "Неудержимые"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "На солнце, вдоль рядов кукурузы"
+      "text": "На солнце, вдоль рядов кукурузы",
+      "answer": "На солнце, вдоль рядов кукурузы"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мэри и ведьмин цветок"
+      "text": "Мэри и ведьмин цветок",
+      "answer": "Мэри и ведьмин цветок"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Жмурки"
+      "text": "Жмурки",
+      "answer": "Жмурки"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Соник в кино"
+      "text": "Соник в кино",
+      "answer": "Соник в кино"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Робин Гуд"
+      "text": "Робин Гуд",
+      "answer": "Робин Гуд"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Тайная жизнь домашних животных"
+      "text": "Тайная жизнь домашних животных",
+      "answer": "Тайная жизнь домашних животных"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аисты"
+      "text": "Аисты",
+      "answer": "Аисты"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Дом у дороги"
+      "text": "Дом у дороги",
+      "answer": "Дом у дороги"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Мир Юрского периода"
+      "text": "Мир Юрского периода",
+      "answer": "Мир Юрского периода"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Сайлент Хилл"
+      "text": "Сайлент Хилл",
+      "answer": "Сайлент Хилл"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Короли улиц"
+      "text": "Короли улиц",
+      "answer": "Короли улиц"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Значит, война"
+      "text": "Значит, война",
+      "answer": "Значит, война"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "День независимости"
+      "text": "День независимости",
+      "answer": "День независимости"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Шпион"
+      "text": "Шпион",
+      "answer": "Шпион"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Кролик Питер"
+      "text": "Кролик Питер",
+      "answer": "Кролик Питер"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Во власти стихии"
+      "text": "Во власти стихии",
+      "answer": "Во власти стихии"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Голодные игры"
+      "text": "Голодные игры",
+      "answer": "Голодные игры"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Оно"
+      "text": "Оно",
+      "answer": "Оно"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Астерикс и Обеликс"
+      "text": "Астерикс и Обеликс",
+      "answer": "Астерикс и Обеликс"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Счастливчик Гилмор"
+      "text": "Счастливчик Гилмор",
+      "answer": "Счастливчик Гилмор"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Аллея кошмаров"
+      "text": "Аллея кошмаров",
+      "answer": "Аллея кошмаров"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Не/смотря ни на что"
+      "text": "Не/смотря ни на что",
+      "answer": "Не/смотря ни на что"
     }
   },
   {
-    "model": "questions.question",
+    "model": "backend.prompt",
     "fields": {
-      "text": "Рай"
+      "text": "Рай",
+      "answer": "Рай"
     }
   }
 ]

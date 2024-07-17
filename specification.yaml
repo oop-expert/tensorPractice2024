@@ -71,6 +71,27 @@ paths:
         404:
           description: Вопрос не найден.
 
+  /question/generate-image/{question_id}/:
+    patch:
+      tags:
+        - question
+      description: Генерирует изображение и добавляет его в поле image
+      parameters:
+        - name: question_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Question'
+        404:
+          description: Вопрос не найден.
+
   /player/calculate-score/:
     patch:
       tags:

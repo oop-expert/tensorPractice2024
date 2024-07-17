@@ -63,16 +63,17 @@ class Text2ImageAPI:
             time.sleep(delay)
 
 
-def start_generating_image():
+def start_generating_image(prompt):
     api = Text2ImageAPI('https://api-key.fusionbrain.ai/', '42C68103FF26F3BA248051567A147874',
                         '7BCDD2F342EDFE95409DF45037718FC9')
     model_id = api.get_model()
-    print(random_choice)
+    print(prompt)
     #print(random_choice_negativePrompt)
-    uuid = api.generate(random_choice, model_id)
+    uuid = api.generate(prompt, model_id)
     images = api.check_generation(uuid)
     print(images)
     image_base64 = images[0]
-    image_data = base64.b64decode(image_base64)
-    with open("image.jpg", "wb") as file:
-        file.write(image_data)
+    return image_base64
+    # image_data = base64.b64decode(image_base64)
+    # with open("image.jpg", "wb") as file:
+    #     file.write(image_data)

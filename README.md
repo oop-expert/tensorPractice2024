@@ -1,3 +1,9 @@
+## Подготовка проекта
+`
+python -m spacy download ru_core_news_lg
+`
+
+
 ## Подготовка базы данных
 
 `

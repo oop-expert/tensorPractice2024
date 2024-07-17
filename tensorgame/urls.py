@@ -16,13 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
+# from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('questions/', include('questions.urls')),
-    path('api/', include('api.urls')),
-    path('', include('frontend.urls')),
-    path('', views.index),
-    path('kandinsky/', views.kandinsky_view, name='kandinsky')
+    path('api/', include('backend.urls')),
+    # path('questions/', include('questions.urls')),
+    # path('api/', include('api.urls')),
+    # path('', include('frontend.urls')),
+    # path('', views.index),
+    # path('kandinsky/', views.kandinsky_view, name='kandinsky')
 ]
