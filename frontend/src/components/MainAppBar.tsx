@@ -46,7 +46,7 @@ export default function MainAppBar({isOnMainPage = false, isInternal = false}: {
   const {isMobile, isDesktop} = useMediaMatch();
   const [isMenuOpened, setMenuOpen] = useState<boolean>(false);
   
-  if(isOnMainPage && isDesktop || isInternal && !isDesktop) {
+  if(isOnMainPage && !isMobile || isInternal && !isDesktop) {
     return <></>;
   } 
 

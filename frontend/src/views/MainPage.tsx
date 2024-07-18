@@ -13,13 +13,26 @@ import Player from '../utils/types/Player';
 import { createGame, joinGame, selectGame } from '../store/gameSlice';
 
 const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
-const TABLET_MAIN_PANEL_MARGIN = '5vh auto 0';
+const H_TABLET_MAIN_PANEL_MARGIN = '5vh auto 0';
+const V_TABLET_MAIN_PANEL_MARGIN = '25% auto 0';
 
 const avatarIdReducer = (colorId: number, step: number): number => (
   colorId + step < 0 
   ? AVATARS.length - 1
   : Math.abs(colorId + step) % AVATARS.length
 );
+
+const getPanelMargin = (isMobile: boolean, isHTablet: boolean, isVTablet: boolean) => {
+  if(isMobile) {
+    return 0;
+  } else if(isHTablet) {
+    return H_TABLET_MAIN_PANEL_MARGIN;
+  } else if(isVTablet) {
+    return V_TABLET_MAIN_PANEL_MARGIN;
+  }
+
+  return DESKTOP_MAIN_PANEL_MARGIN;
+};
 
 export default function MainPage() {
   const [avatarId, dispatchAvatarId] = useReducer(avatarIdReducer, 0);
@@ -28,7 +41,7 @@ export default function MainPage() {
   const [username, setUsername] = useState<string>('');
   const [code, setCode] = useState<string>('');
   
-  const {isMobile, isDesktop} = useMediaMatch();
+  const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
 
   const game = useSelector(selectGame);
   const dispatch = useDispatch();
@@ -63,7 +76,7 @@ export default function MainPage() {
     const player = generatePlayer(false);
     dispatch(signUp(player));
     dispatch(joinGame({code, player}));
-  };
+  }; 
 
   useEffect(() => {
     if(game.id > 0) {
@@ -74,11 +87,11 @@ export default function MainPage() {
   return (
     <PanelGroup 
       position='relative'
-      direction={isDesktop ? 'row' : 'column'} 
-      margin={isMobile ? 0 : (isDesktop ? DESKTOP_MAIN_PANEL_MARGIN : TABLET_MAIN_PANEL_MARGIN)} 
+      direction={isDesktop || isHorizontalTablet ? 'row' : 'column'} 
+      margin={getPanelMargin(isMobile, isHorizontalTablet, isVerticalTablet)} 
       width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN}
-      height={isMobile ? '90vh' : '80vh'}
-      gap='30px'>
+      height={isMobile ? '100%' : '80vh'}
+      gap={isMobile ? '10vh' : '30px'}>
         <PanelGroup direction='column'>
           <RegistrationForm 
             username={username} 
@@ -90,7 +103,7 @@ export default function MainPage() {
         <PanelGroup direction='column' gap='30px'>
           <MainAppBar isInternal/>
 
-            <Panel isMatchingMobile={isMobile}>
+            <Panel isMatchingMobile={isMobile} height={!isDesktop && !isHorizontalTablet ? 'fit-content' : '100%'}>
               <Typography variant='h2' hidden={isMobile}>Создайте комнату или войдите в уже существующую</Typography>
               <TextField
                 id='code'

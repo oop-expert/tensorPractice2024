@@ -27,7 +27,7 @@ export default function RegistrationForm({username, onUsernameChange, avatar, di
   const {isMobile} = useMediaMatch();
 
   return (
-    <Panel isMatchingMobile={isMobile} width={width}>
+    <Panel isMatchingMobile={isMobile} width={width} gap={isMobile ? '5vh' : 2}>
       <Typography variant='h2'>
         Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
       </Typography>

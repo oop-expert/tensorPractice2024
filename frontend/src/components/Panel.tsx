@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import PanelProps from "../utils/types/PanelProps";
 import { Colors } from "../utils/utils";
 
-export default function Panel({children, isMatchingMobile, width='100%', height='100%', margin=0, padding=5, position='unset'}: PanelProps) {
+export default function Panel({children, isMatchingMobile, width='100%', height='100%', gap=2, margin=0, padding=5, position='unset'}: PanelProps) {
   const desktopPadding = isMatchingMobile ? 0 : padding;
 
   return (
@@ -10,7 +10,7 @@ export default function Panel({children, isMatchingMobile, width='100%', height=
       position={position}
       display='flex'
       flexDirection='column'
-      gap={2}
+      gap={gap}
       bgcolor={isMatchingMobile ? 'transparent' : Colors.PANEL}
       borderRadius={10}
       padding={desktopPadding}

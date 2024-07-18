@@ -15,6 +15,7 @@ import { openPopup } from '../store/popupSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { changePlayer, quitGame, selectGame, startGame } from '../store/gameSlice';
 import { selectPlayer, setReady } from '../store/playerSlice';
+import Player from '../utils/types/Player';
 
 const LOBBY_CAPACITY = 10;
 const LIST_MAX_HEIGHT = '40vh';
@@ -37,7 +38,7 @@ export default function LobbyPage() {
   const game = useSelector(selectGame);
   const player = useSelector(selectPlayer);
 
-  const isStartDisabled = player.isHost && game.players.every((p) => p.isReady);
+  const isStartDisabled = player.isHost && game.players.every((p: Player) => p.isReady);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
