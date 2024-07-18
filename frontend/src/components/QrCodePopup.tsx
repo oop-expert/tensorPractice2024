@@ -47,7 +47,7 @@ export default function QrCodePopup({onLinkSave, onCodeSave}: QrCodePopupProps) 
         
         <img style={{alignSelf: 'center'}} src={TestQrCode} width={isMobile ? QrCodeSizes.MOBILE_MIN_WIDTH : QrCodeSizes.DESKTOP_MIN_WIDTH}/>
 
-        <Box hidden={!isMobile} display='flex' flexDirection='column' gap={0.5} alignItems={'flex-start'}>
+        <Box display={isMobile ? 'flex' : 'none'} flexDirection='column' gap={0.5} alignItems={'flex-start'}>
           <Button 
             variant='text' 
             endIcon={<ContentCopyIcon />}

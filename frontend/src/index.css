@@ -19,3 +19,13 @@ body {
 h1 {
   font-family: 'Roboto Slab Variable', serif;
 }
+
+input::placeholder {
+  font-size: 18px;
+}
+
+@media (min-width: 1536) {
+  input::placeholder {
+    font-size: 30px;
+  }
+}

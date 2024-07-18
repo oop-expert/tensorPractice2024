@@ -1,5 +1,17 @@
-import { Components, createTheme, PaletteOptions, Theme } from "@mui/material";
+import { BreakpointsOptions, Components, createTheme, PaletteOptions, Theme } from "@mui/material";
 import { Colors } from "./utils";
+
+const Breakpoints: BreakpointsOptions = {
+  values: {
+    xs: 0,
+    sm: 600,
+    md: 800,
+    lg: 1100,
+    xl: 1600,
+  }
+}
+
+const defaultTheme = createTheme({breakpoints: Breakpoints});
 
 const Palette: PaletteOptions = {
   primary: {
@@ -45,6 +57,9 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       borderRadius: 50,
       boxShadow: 'none',
       fontSize: 21,
+      [defaultTheme.breakpoints.up('xl')]: {
+        fontSize: 30,
+      },
       lineHeight: 1,
       textTransform: 'none',
       '&:hover': {
@@ -58,6 +73,9 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
   styleOverrides: {
     containedPrimary: {
       minHeight: 50,
+      [defaultTheme.breakpoints.up('xl')]: {
+        minHeight: 70,
+      },
       paddingX: 5,
       color: Colors.Text.ON_BUTTON,
       backgroundColor: Colors.PrimaryButton.ACTIVE,
@@ -81,6 +99,9 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
     },
     containedSecondary: {
       minHeight: 50,
+      [defaultTheme.breakpoints.up('xl')]: {
+        minHeight: 70,
+      },
       paddingX: 5,
       color: Colors.Text.ON_BUTTON,
       backgroundColor: Colors.SecondaryButton.ACTIVE,
@@ -105,6 +126,10 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
     textPrimary: {
       minHeight: 40,
       maxHeight: 50,
+      [defaultTheme.breakpoints.up('xl')]: {
+        minHeight: 60,
+        maxHeight: 70
+      },
       padding: 0,
       fontSize: 18,
       textAlign: 'left',
@@ -129,11 +154,18 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
     },
     textSecondary: {
       minHeight: 50,
+      [defaultTheme.breakpoints.up('xl')]: {
+        minHeight: 70,
+      },
       paddingX: 5,
       color: Colors.Text.PRIMARY,
       lineHeight: 1,
       textAlign: 'left',
       backgroundColor: Colors.TRANSPARENT,
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      width: '100%',
       '&:hover': {
         backgroundColor: Colors.SecondaryButton.DISABLED
       },
@@ -259,11 +291,34 @@ const TextFieldOptions:  Components<Omit<Theme, 'components'>>['MuiTextField'] =
         borderColor: Colors.VoidInput.OUTLINE,
         borderRadius: 50,
         padding: 0,
-        height: 50
+        minHeight: '50px',
+        height: '50px',
+        fontSize: 18,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 30,
+          minHeight: '70px',
+          height: '70px'
+        }
       }
     },
     InputLabelProps: {
-      sx: { top: -3, maxWidth: '60%', color: Colors.Text.PLACEHOLDER },
+      sx: { 
+        top: -3,
+        maxWidth: '60%', 
+        color: Colors.Text.PLACEHOLDER,
+        fontSize: 18,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 30,
+        },
+      },
+    },
+    FormHelperTextProps: {
+      sx: {
+        fontSize: 14,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 24,
+        },
+      }
     }
   }
 };
@@ -280,6 +335,9 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
       style: {
         fontFamily: 'Roboto Slab Variable',
         fontSize: 28,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 48,
+        },
         fontWeight: 500,
         textAlign: 'center'
       }
@@ -288,7 +346,10 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
       props: {variant: 'h2'},
       style: {
         fontSize: 24,
-        fontWeight: 500,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 40,
+        },
+        fontWeight: 600,
         textAlign: 'center'
       }
     },
@@ -296,7 +357,10 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
       props: {variant: 'button'},
       style: {
         fontSize: 21,
-        fontWeight: 500,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 30,
+        },
+        fontWeight: 600,
         textAlign: 'center',
         textTransform: 'none',
         letterSpacing: 'normal',
@@ -308,6 +372,9 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
       props: {variant: 'body1'},
       style: {
         fontSize: 18,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 30,
+        },
         fontWeight: 400,
         textAlign: 'left',
         lineHeight: 1
@@ -366,15 +433,7 @@ const DialogOptions: Components<Omit<Theme, 'components'>>['MuiDialog'] = {
 
 const UITheme = createTheme({
   palette: Palette,
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 800,
-      lg: 1100,
-      xl: 1536,
-    }
-  },
+  breakpoints: Breakpoints,
   components: {
     MuiButton: ButtonOptions,
     MuiIconButton: IconButtonOptions,

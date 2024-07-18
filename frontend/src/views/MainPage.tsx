@@ -12,7 +12,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Player from '../utils/types/Player';
 import { createGame, joinGame, selectGame } from '../store/gameSlice';
 
-const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0'
+const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
+const TABLET_MAIN_PANEL_MARGIN = '5vh auto 0';
 
 const avatarIdReducer = (colorId: number, step: number): number => (
   colorId + step < 0 
@@ -72,9 +73,11 @@ export default function MainPage() {
 
   return (
     <PanelGroup 
+      position='relative'
       direction={isDesktop ? 'row' : 'column'} 
-      margin={isMobile ? 0 : DESKTOP_MAIN_PANEL_MARGIN} 
+      margin={isMobile ? 0 : (isDesktop ? DESKTOP_MAIN_PANEL_MARGIN : TABLET_MAIN_PANEL_MARGIN)} 
       width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN}
+      height={isMobile ? '90vh' : '80vh'}
       gap='30px'>
         <PanelGroup direction='column'>
           <RegistrationForm 
@@ -87,37 +90,37 @@ export default function MainPage() {
         <PanelGroup direction='column' gap='30px'>
           <MainAppBar isInternal/>
 
-          <Panel isMatchingMobile={isMobile}>
-            <h2 hidden={isMobile}>Создайте комнату или войдите в уже существующую</h2>
-            <TextField
-              id='code'
-              label='Код игровой сессии' 
-              onChange={onCodeChange}
-              InputProps={(
-                {
-                  endAdornment: (
-                    <Button
-                      variant='contained'
-                      color='secondary'
-                      disabled={!code || !username}
-                      onClick={onGameJoin}>
-                        Войти
-                    </Button>
-                  ),
-                  sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
-                }
-              )}/>
+            <Panel isMatchingMobile={isMobile}>
+              <Typography variant='h2' hidden={isMobile}>Создайте комнату или войдите в уже существующую</Typography>
+              <TextField
+                id='code'
+                placeholder='Код игровой сессии'
+                onChange={onCodeChange}
+                InputProps={(
+                  {
+                    endAdornment: (
+                      <Button
+                        variant='contained'
+                        color='secondary'
+                        disabled={!code || !username}
+                        onClick={onGameJoin}>
+                          Войти
+                      </Button>
+                    ),
+                    sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
+                  }
+                )}/>
 
-            <Divider textAlign='center'><Typography variant='body1'>или</Typography></Divider>
+              <Divider textAlign='center'><Typography variant='body1'>или</Typography></Divider>
 
-            <Button 
-              variant='contained' 
-              color='primary'
-              disabled={!username}
-              onClick={onGameCreate}>
-                Создать комнату
-            </Button>
-        </Panel>
+              <Button 
+                variant='contained' 
+                color='primary'
+                disabled={!username}
+                onClick={onGameCreate}>
+                  Создать комнату
+              </Button>
+          </Panel>
       </PanelGroup>
     </PanelGroup>
   );

@@ -2,12 +2,16 @@ import { Box, Button, Divider } from '@mui/material';
 import ShareIcon from '@mui/icons-material/Share';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Colors } from '../utils/utils';
-import { useNavigate } from 'react-router-dom';
+import { matchPath, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { openPopup } from '../store/popupSlice';
+import { quitGame } from '../store/gameSlice';
 
 export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, closeMenu: () => void}) {
   const navigate = useNavigate();
+  const {pathname} = useLocation();
+
+  const shouldDisplayShare = matchPath('/lobby/:id', pathname);
 
   const dispatch = useDispatch();
 
@@ -18,6 +22,7 @@ export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, cl
 
   const onQuit = () => {
     closeMenu();
+    dispatch(quitGame());
     navigate('/');
   };
 
@@ -37,7 +42,7 @@ export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, cl
       sx={{
         borderStartEndRadius: 0
       }}>
-        <Button variant='text' color='secondary' endIcon={<ShareIcon />} onClick={onPopupOpen}>
+        <Button style={{display: shouldDisplayShare ? 'flex' : 'none'}} variant='text' color='secondary' endIcon={<ShareIcon />} onClick={onPopupOpen}>
           Поделиться
         </Button>
 

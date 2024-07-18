@@ -1,4 +1,4 @@
-import { Box, IconButton, TextField } from '@mui/material';
+import { Box, IconButton, TextField, Typography } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Panel from './Panel';
@@ -28,9 +28,9 @@ export default function RegistrationForm({username, onUsernameChange, avatar, di
 
   return (
     <Panel isMatchingMobile={isMobile} width={width}>
-      <h2>
+      <Typography variant='h2'>
         Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
-      </h2>
+      </Typography>
 
       <Box sx={
         {
@@ -57,7 +57,7 @@ export default function RegistrationForm({username, onUsernameChange, avatar, di
 
       <TextField 
         id='username' 
-        label='Введите Ваш псевдоним' 
+        placeholder='Введите Ваш псевдоним' 
         required
         error={!username}
         helperText={!username ? 'Это поле обязательно' : ''}

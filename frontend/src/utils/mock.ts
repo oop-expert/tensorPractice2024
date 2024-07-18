@@ -25,7 +25,7 @@ export const generateRandomPlayers = (): Array<Player> => Array.from({length: ge
     name: faker.person.firstName(),
     avatar: AVATARS[getRandomInteger(0, AVATARS.length - 1)],
     isHost: i === 0,
-    isReady: getRandomInteger(0, 1) === 0,
+    isReady: true,
     score: 0,
     createdAt: new Date().toString()
   };
