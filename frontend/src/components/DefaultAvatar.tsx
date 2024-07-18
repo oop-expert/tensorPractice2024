@@ -7,7 +7,7 @@ type AvatarProps = {
   width: number | string,
   maxWidth?: number | string,
   minWidth?: number | string,
-  userId: string,
+  userId: number,
   empty?: boolean
 };
 

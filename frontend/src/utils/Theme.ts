@@ -1,5 +1,4 @@
 import { Components, createTheme, PaletteOptions, Theme } from "@mui/material";
-import { TypographyOptions } from "@mui/material/styles/createTypography";
 import { Colors } from "./utils";
 
 const Palette: PaletteOptions = {
@@ -40,36 +39,14 @@ const Palette: PaletteOptions = {
   }
 };
 
-const Typography: TypographyOptions = {
-  fontFamily: 'Roboto',
-  fontSize: 18,
-  fontWeightRegular: 400,
-  h1: {
-    fontFamily: 'Roboto Slab Variable',
-    fontSize: 28,
-    fontWeight: 500,
-    textAlign: 'center'
-  },
-  h2: {
-    fontSize: 24,
-    fontWeight: 500,
-    textAlign: 'center'
-  },
-  button: {
-    fontSize: 21,
-    fontWeight: 500,
-    textAlign: 'center',
-    textTransform: 'none',
-    letterSpacing: 'normal',
-    color: 'secondary'
-  }
-};
-
 const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
   defaultProps: {
     sx: {
       borderRadius: 50,
       boxShadow: 'none',
+      fontSize: 21,
+      lineHeight: 1,
+      textTransform: 'none',
       '&:hover': {
         boxShadow: 'none'
       },
@@ -126,10 +103,11 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       }
     },
     textPrimary: {
-      minHeight: 30,
-      maxHeight: 40,
+      minHeight: 40,
+      maxHeight: 50,
       padding: 0,
       fontSize: 18,
+      textAlign: 'left',
       color: Colors.Text.PRIMARY,
       textDecoration: 'underline',
       textDecorationColor: Colors.Text.PRIMARY,
@@ -285,18 +263,57 @@ const TextFieldOptions:  Components<Omit<Theme, 'components'>>['MuiTextField'] =
       }
     },
     InputLabelProps: {
-      sx: { top: -5, maxWidth: '60%' }
+      sx: { top: -3, maxWidth: '60%', color: Colors.Text.PLACEHOLDER },
     }
   }
 };
 
-const MuiTypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] = {
+const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] = {
   defaultProps:{
-    fontFamily: 'Roboto',
-    fontSize: 18,
-    fontWeight: 400,
-    textAlign: 'left'
-  }
+    style: {
+      fontFamily: 'Roboto'
+    }
+  },
+  variants: [
+    {
+      props: {variant: 'h1'},
+      style: {
+        fontFamily: 'Roboto Slab Variable',
+        fontSize: 28,
+        fontWeight: 500,
+        textAlign: 'center'
+      }
+    },
+    {
+      props: {variant: 'h2'},
+      style: {
+        fontSize: 24,
+        fontWeight: 500,
+        textAlign: 'center'
+      }
+    },
+    {
+      props: {variant: 'button'},
+      style: {
+        fontSize: 21,
+        fontWeight: 500,
+        textAlign: 'center',
+        textTransform: 'none',
+        letterSpacing: 'normal',
+        lineHeight: 1,
+        color: Colors.Text.ON_BUTTON
+      }
+    },
+    {
+      props: {variant: 'body1'},
+      style: {
+        fontSize: 18,
+        fontWeight: 400,
+        textAlign: 'left',
+        lineHeight: 1
+      }
+    }
+  ]
 }
 
 const ListOptions: Components<Omit<Theme, 'components'>>['MuiList'] = {
@@ -323,17 +340,32 @@ const DialogOptions: Components<Omit<Theme, 'components'>>['MuiDialog'] = {
     PaperProps: {
       sx: {
         borderRadius: 5,
-        padding: 5, 
-        width: '20%',
-        minWidth: '200px'
+        minWidth: '200px',
+        margin: '8px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 2
       }
+    }
+  },
+  styleOverrides: {
+    paperWidthSm: {
+      width: '90%',
+      padding: '5vw'
+    },
+    paperWidthMd: {
+      width: '50%',
+      padding: '5vw'
+    },
+    paperWidthLg: {
+      width: '500px',
+      padding: '50px'
     }
   }
 }
 
 const UITheme = createTheme({
   palette: Palette,
-  typography: Typography,
   breakpoints: {
     values: {
       xs: 0,
@@ -347,7 +379,7 @@ const UITheme = createTheme({
     MuiButton: ButtonOptions,
     MuiIconButton: IconButtonOptions,
     MuiTextField: TextFieldOptions,
-    MuiTypography: MuiTypographyOptions,
+    MuiTypography: TypographyOptions,
     MuiList: ListOptions,
     MuiDialog: DialogOptions
   }

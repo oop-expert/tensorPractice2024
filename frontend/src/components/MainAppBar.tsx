@@ -1,4 +1,4 @@
-import { AppBar, Box, IconButton, SxProps } from '@mui/material';
+import { AppBar, Box, IconButton, SxProps, Typography } from '@mui/material';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -58,7 +58,7 @@ export default function MainAppBar({isOnMainPage = false, isInternal = false}: {
       position='static' 
       sx={ getHeaderSx(isMobile, isInternal) } 
       color={isMobile ? 'secondary' : 'primary'}>
-        <h1 style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</h1>
+        <Typography variant='h1' style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</Typography>
 
         <Box hidden={!isMobile} position='relative'>
           <IconButton color='inherit' onClick={openMenu}>

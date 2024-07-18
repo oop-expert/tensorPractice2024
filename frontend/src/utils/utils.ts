@@ -1,5 +1,8 @@
 export const WIDTH_RELATIVE_TO_SCREEN = '70vw';
 
+export const CODE_LENGTH = 8;
+export const MAX_PLAYERS = 10;
+
 export const AVATAR_BG_COLORS = ['yellow', 'springgreen', 'blue', 'deeppink'];
 
 export const Colors = {
@@ -23,9 +26,9 @@ export const Colors = {
     SECONDARY: '#49454F',
     HIGHLIGHT_MAJOR: '#C94F48',
     HIGHLIGHT_MINOR: '#F49C1E',
-    PLACEHOLDER: '#87898F',
+    PLACEHOLDER: '#787878',
     ON_BUTTON: '#FFFFFF',
-    DISABLED: '#87898F'
+    DISABLED: '#787878'
   },
   VoidInput: {
     FILL: '#FFFFFF',
@@ -33,7 +36,7 @@ export const Colors = {
   },  
   ErrorInput: {
     FILL: '#FAEBEB',
-    OUTLINE: '#F68499'
+    OUTLINE: '#F74D4D'
   },
   SuccessInput: {
     FILL: '#FFFFFF',
@@ -51,3 +54,5 @@ export const getRandomInteger = (min: number, max: number): number => {
   const rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 }
+
+export const generateRandomId = (additionalNumber:number = 0) => Date.now() % 1000 + additionalNumber;

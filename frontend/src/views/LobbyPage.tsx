@@ -2,11 +2,8 @@ import { Box, Button, IconButton, List, TextField } from '@mui/material';
 import Panel from '../components/Panel';
 import LobbyUserInfo from '../components/LobbyUserInfo';
 import { nanoid } from 'nanoid';
-import { faker } from '@faker-js/faker/locale/ru';
-import { AVATARS, getRandomInteger, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
-import TestUser from '../utils/types/TestUser';
+import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import { useHref, useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
 import QrCodePopup from '../components/QrCodePopup';
 import QrCode2Icon from '@mui/icons-material/QrCode2';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
@@ -14,19 +11,16 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import PanelGroup from '../components/PanelGroup';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import CloseIcon from '@mui/icons-material/Close';
+import { openPopup } from '../store/popupSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { changePlayer, quitGame, selectGame, startGame } from '../store/gameSlice';
+import { selectPlayer, setReady } from '../store/playerSlice';
 
-const TEST = [1, 2, 3, 4, 5];
 const LOBBY_CAPACITY = 10;
 const LIST_MAX_HEIGHT = '40vh';
-const DESKTOP_LOBBY_BUTTON_WIDTH = '70%';
+const DESKTOP_BUTTON_GROUP_WIDTH = '70%';
+const DESKTOP_SINGLE_BUTTON_WIDTH = '30%';
 const LOBBY_H2_Y_MARGIN = '4px';
-
-const generateTestUser = (id: number): TestUser => ({
-  id: `${nanoid()}${id}`,
-  username: faker.person.firstName(),
-  avatar: AVATARS[getRandomInteger(0, AVATARS.length - 1)],
-  status: getRandomInteger(0, 1) === 0 ? 'Не готов' : 'Готов'
-});
 
 export default function LobbyPage() {
   const {id} = useParams();
@@ -35,19 +29,33 @@ export default function LobbyPage() {
 
   const {isMobile, isDesktop} = useMediaMatch();
 
-  const [isPopupOpened, setPopupOpen] = useState<boolean>(false);
+  const dispatch = useDispatch();
+  const onPopupOpen = () => dispatch(openPopup());
 
-  const onPopupClose = () => setPopupOpen(false);
-  const onPopupOpen = () => setPopupOpen(true);
+  const game = useSelector(selectGame);
+  const player = useSelector(selectPlayer);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   };
 
   const onLinkCopy = () => copyToClipboard(lobbyUrl);
-  const onCodeCopy = () => copyToClipboard(id ?? '');
+  const onCodeCopy = () => copyToClipboard(game.code);
 
-  const quit = () => navigate('/');
+  const onSetReady = () => {
+    dispatch(setReady());
+    dispatch(changePlayer(player.id));
+  };
+
+  const onGameStart = () => {
+    dispatch(startGame());
+    navigate(`/room/${id}`)
+  };
+
+  const onQuit = () => {
+    dispatch(quitGame());
+    navigate('/');
+  };
 
   return (
     <PanelGroup 
@@ -79,7 +87,7 @@ export default function LobbyPage() {
 
           <TextField
             id='code'
-            value={id}
+            value={game.code}
             aria-readonly
             InputProps={(
               {
@@ -99,7 +107,7 @@ export default function LobbyPage() {
         padding={5}> 
 
         <Box display={isMobile ? 'none' : 'block'} position='absolute' top={10} right={10}>
-          <IconButton color='warning' onClick={quit}>
+          <IconButton color='warning' onClick={onQuit}>
             <CloseIcon />
           </IconButton>
         </Box>
@@ -108,7 +116,7 @@ export default function LobbyPage() {
 
         <List style={{maxHeight: LIST_MAX_HEIGHT, overflowY: 'scroll'}}>
           {Array.from({length: LOBBY_CAPACITY}, (_v, i) => (
-            <LobbyUserInfo key={nanoid()} user={i < TEST.length ? generateTestUser(TEST[i]) : undefined}/>
+            <LobbyUserInfo key={nanoid()} user={i < game.players.length ? game.players[i] : undefined}/>
           ))}
         </List>
 
@@ -116,15 +124,13 @@ export default function LobbyPage() {
           display='flex'
           flexDirection={!isDesktop ? 'column' : 'row'}
           gap={2}
-          width={!isDesktop ? '100%' : DESKTOP_LOBBY_BUTTON_WIDTH}
+          width={!isDesktop ? '100%' : (player.isHost ? DESKTOP_BUTTON_GROUP_WIDTH : DESKTOP_SINGLE_BUTTON_WIDTH)}
           alignSelf='center'>
-            <Button style={{width: '100%'}} variant='contained' color='secondary'>Готов играть</Button>
-            <Button style={{width: '100%'}} variant='contained' color='primary' onClick={() => navigate(`/room/${id}`)}>Начать</Button>
+            <Button disabled={player.isReady} style={{width: '100%'}} variant='contained' color='secondary' onClick={onSetReady}>Готов играть</Button>
+            <Button style={{width: '100%', display: player.isHost ? 'block' : 'none'}} variant='contained' color='primary' onClick={onGameStart}>Начать</Button>
         </Box>
 
         <QrCodePopup 
-          isPopupOpened={isPopupOpened}
-          onPopupClose={onPopupClose}
           onLinkSave={onLinkCopy}
           onCodeSave={onCodeCopy} />
       </Panel>

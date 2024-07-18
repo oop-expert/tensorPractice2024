@@ -1,16 +1,16 @@
 import { Box, IconButton, TextField } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { useReducer } from 'react';
 import Panel from './Panel';
 import DefaultAvatar from './DefaultAvatar';
-import { nanoid } from 'nanoid';
-import { AVATARS } from '../utils/utils';
 import { useMediaMatch } from '../hooks/useMobileMatch';
+import { generateRandomId } from '../utils/utils';
 
 type UsernameField = {
   username: string; 
   onUsernameChange: (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
+  avatar: string,
+  dispatchAvatarId: (action: number) => void,
   width?: number | string
 }
 
@@ -23,17 +23,7 @@ const FormAvatarValues = {
   MOBILE_GAP: '2vw'
 };
 
-const colorIdReducer = (colorId: number, step: number): number => (
-  colorId + step < 0 
-  ? AVATARS.length - 1
-  : Math.abs(colorId + step) % AVATARS.length
-);
-
-export default function RegistrationForm({username, onUsernameChange, width='100%'}: UsernameField) {
-  const [avatarId, dispatchAvatarId] = useReducer(colorIdReducer, 0);
-
-  const avatar = AVATARS[avatarId];
-
+export default function RegistrationForm({username, onUsernameChange, avatar, dispatchAvatarId, width='100%'}: UsernameField) {
   const {isMobile} = useMediaMatch();
 
   return (
@@ -58,7 +48,7 @@ export default function RegistrationForm({username, onUsernameChange, width='100
           src={avatar}
           width={isMobile ? FormAvatarValues.MOBILE_WIDTH : FormAvatarValues.DESKTOP_WIDTH}
           maxWidth={isMobile ? FormAvatarValues.MOBILE_MAX_WIDTH : FormAvatarValues.DESTOP_MAX_WIDTH}
-          userId={nanoid()}/>
+          userId={generateRandomId()}/>
 
         <IconButton color='primary' onClick={() => dispatchAvatarId(1)}>
           <ArrowForwardIosIcon />

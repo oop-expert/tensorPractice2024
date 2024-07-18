@@ -1,7 +1,7 @@
 import { Box, ListItem, Typography } from '@mui/material';
 import DefaultAvatar from './DefaultAvatar';
-import TestUser from '../utils/types/TestUser';
 import { useMediaMatch } from '../hooks/useMobileMatch';
+import Player from '../utils/types/Player';
 
 const LobbyAvatarValues = {
   DESKTOP_WIDTH: '10vw',
@@ -12,14 +12,17 @@ const LobbyAvatarValues = {
   MOBILE_MAX_WIDTH: 60
 };
 
-const DefaultUser: TestUser = {
-  id: '',
-  username: 'Пусто',
-  avatar: 'grey',
-  status: '-'
-}
+const DefaultPlayer: Player = {
+  id: 0,
+  name: 'Пусто',
+  avatar: '',
+  isHost: false,
+  isReady: false,
+  score: 0,
+  createdAt: new Date().toString()
+};
 
-export default function LobbyUserInfo({user=DefaultUser}: {user?: TestUser}) {
+export default function LobbyUserInfo({user=DefaultPlayer}: {user?: Player}) {
   const {isMobile} = useMediaMatch();
 
   return (
@@ -37,10 +40,10 @@ export default function LobbyUserInfo({user=DefaultUser}: {user?: TestUser}) {
           userId={user.id}
           empty={!user.id}/>
 
-        <Typography>{user.username}</Typography>
+        <Typography variant='body1'>{user.name}</Typography>
       </Box>
 
-      <Typography>{user.status}</Typography>
+      <Typography variant='body1'>{user.isReady ? 'Готов' : 'Не готов'}</Typography>
     </ListItem>
   );
 }
