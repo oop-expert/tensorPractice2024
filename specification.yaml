@@ -92,6 +92,27 @@ paths:
         404:
           description: Вопрос не найден.
 
+  /player/{player_id}/:
+    get:
+      tags:
+        - player
+      description: Возвращает игрока.
+      parameters:
+        - name: player_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Player'
+        404:
+          description: Игрок не найден.
+
   /player/calculate-score/:
     patch:
       tags:

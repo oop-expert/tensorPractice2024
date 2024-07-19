@@ -23,7 +23,7 @@ def generate_unique_code():
 
 def generate_qr_code(code):
     qr = qrcode.QRCode(version=1, box_size=10, border=5)
-    qr.add_data(f'{FRONTEND_URL}room/{code}/')
+    qr.add_data(f'{FRONTEND_URL}lobby/{code}/')
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
     img_bytes = io.BytesIO()
