@@ -9,7 +9,7 @@ export default function Timer() {
 
   useEffect(() => {
     if (secondsAmount == 0) {
-      alert('End')
+      //alert('End')
       return;
     }
 
@@ -22,10 +22,12 @@ export default function Timer() {
   const seconds = secondsAmount % 60;
 
   return (
-    <Box sx={{fontSize:'2.5vh', fontWeight:500}}>
-      <span>{String(minutes).padStart(2, '0')}</span>
-      <span>:</span>
-      <span>{String(seconds).padStart(2, '0')}</span>
+    <Box sx={{display:'flex', justifyContent:'center'}}>
+      <Box sx={{fontSize:'2.5vh', fontWeight:500, border:'3px solid #F49C1E', color:'#F49C1E', borderRadius:'30px', width:'15vh'}}>
+        <span>{String(minutes).padStart(2, '0')}</span>
+        <span>:</span>
+        <span>{String(seconds).padStart(2, '0')}</span>
+      </Box>
     </Box>
   )
 }
