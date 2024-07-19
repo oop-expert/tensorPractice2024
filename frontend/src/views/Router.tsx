@@ -10,8 +10,8 @@ export default function Router() {
     <Routes>
       <Route path='/' element={<MainPage/>}/>
       <Route path='lobby/:id' element={<LobbyPage/>} />
-      <Route path='room/:id' element={<RoomPage name={'Екатерина'}/>} />
-      <Route path='results/:id'element={<ResultsPage name={'Екатерина'}/>} />
+      <Route path='room/:id' element={<RoomPage/>} />
+      <Route path='results/:id'element={<ResultsPage/>} />
       <Route path='*' element={<ErrorPage message='Такой страницы не существует'/>} />
     </Routes>
   );
