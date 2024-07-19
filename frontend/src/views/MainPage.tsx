@@ -10,7 +10,7 @@ import { AVATARS, generateRandomId, WIDTH_RELATIVE_TO_SCREEN } from '../utils/ut
 import { signUp } from '../store/playerSlice';
 import { useSelector } from 'react-redux';
 import Player from '../utils/types/Player';
-import { postCreateGame, joinGame, selectGame } from '../store/gameSlice';
+import { postCreateGame, joinGame, selectGame, getQuestion } from '../store/gameSlice';
 import { useAppDispatch } from '../store/storeHooks';
 
 const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
@@ -61,7 +61,8 @@ export default function MainPage() {
       isHost,
       isReady: false,
       score: 0,
-      createdAt: new Date().toString()
+      createdAt: new Date().toString(),
+      isRight: false
     };
 
     return player;
@@ -81,6 +82,8 @@ export default function MainPage() {
 
   useEffect(() => {
     if(game.id > 0) {
+      dispatch(getQuestion(game.questions[0].id));
+      console.log(game.questions[0].id);
       navigate(`/lobby/${game.id}`);
     }
   });
