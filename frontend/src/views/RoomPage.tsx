@@ -14,6 +14,9 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
     const onFilmNameChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFilm(evt.target.value);
     const [open, setOpen] = useState(false);
 
+    //film нужно где-то использовать, иначе TS не даст сделать сборку
+    console.log(film);
+
     const handleClickOpen = () => {
       setOpen(true);
     };

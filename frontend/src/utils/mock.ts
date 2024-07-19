@@ -27,7 +27,8 @@ export const generateRandomPlayers = (): Array<Player> => Array.from({length: ge
     isHost: i === 0,
     isReady: true,
     score: 0,
-    createdAt: new Date().toString()
+    createdAt: new Date().toString(),
+    isRight: false
   };
 
   return player;

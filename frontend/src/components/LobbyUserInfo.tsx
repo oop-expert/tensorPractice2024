@@ -19,7 +19,8 @@ const DefaultPlayer: Player = {
   isHost: false,
   isReady: false,
   score: 0,
-  createdAt: new Date().toString()
+  createdAt: new Date().toString(),
+  isRight: false
 };
 
 export default function LobbyUserInfo({user=DefaultPlayer}: {user?: Player}) {
