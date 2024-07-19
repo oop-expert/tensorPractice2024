@@ -10,6 +10,7 @@ export default function PanelGroup({children, direction='row', justifyContent='u
       gap={gap}
       width={width}
       height={height}
+      minHeight='fit-content'
       margin={margin}>
         {children}
     </Box>

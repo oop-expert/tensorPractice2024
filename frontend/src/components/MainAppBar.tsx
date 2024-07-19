@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
 
-const getHeaderSx = (isMobile: boolean, isInternal: boolean): SxProps => {
+const getHeaderSx = (isMobile: boolean, isVTablet: boolean, isInternal: boolean): SxProps => {
   if(isInternal) {
     return {
       height: 125, 
@@ -37,16 +37,16 @@ const getHeaderSx = (isMobile: boolean, isInternal: boolean): SxProps => {
       borderEndEndRadius: 50,
       width: WIDTH_RELATIVE_TO_SCREEN,
       margin: '0 auto',
-      marginBottom: '5vh'
+      marginBottom: isVTablet ? '0' : '5vh'
     }
   );
 }
 
 export default function MainAppBar({isOnMainPage = false, isInternal = false}: {isOnMainPage?: boolean, isInternal?: boolean}) {
-  const {isMobile, isDesktop} = useMediaMatch();
+  const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
   const [isMenuOpened, setMenuOpen] = useState<boolean>(false);
   
-  if(isOnMainPage && !isMobile || isInternal && !isDesktop) {
+  if(isOnMainPage && (isDesktop || isHorizontalTablet) || isInternal && !isDesktop && !isHorizontalTablet) {
     return <></>;
   } 
 
@@ -56,7 +56,7 @@ export default function MainAppBar({isOnMainPage = false, isInternal = false}: {
   return (
     <AppBar
       position='static' 
-      sx={ getHeaderSx(isMobile, isInternal) } 
+      sx={ getHeaderSx(isMobile, isVerticalTablet, isInternal) } 
       color={isMobile ? 'secondary' : 'primary'}>
         <Typography variant='h1' style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</Typography>
 

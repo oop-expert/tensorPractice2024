@@ -1,4 +1,4 @@
-import { Button, Divider, TextField, Typography } from '@mui/material';
+import { Button, CircularProgress, Divider, TextField, Typography } from '@mui/material';
 import { useEffect, useReducer, useState } from 'react';
 import RegistrationForm from '../components/RegistrationForm';
 import { useNavigate } from 'react-router-dom';
@@ -8,13 +8,14 @@ import MainAppBar from '../components/MainAppBar';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import { AVATARS, generateRandomId, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import { signUp } from '../store/playerSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Player from '../utils/types/Player';
-import { createGame, joinGame, selectGame } from '../store/gameSlice';
+import { postCreateGame, joinGame, selectGame } from '../store/gameSlice';
+import { useAppDispatch } from '../store/storeHooks';
 
 const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
 const H_TABLET_MAIN_PANEL_MARGIN = '5vh auto 0';
-const V_TABLET_MAIN_PANEL_MARGIN = '25% auto 0';
+const V_TABLET_MAIN_PANEL_MARGIN = '15% auto 0';
 
 const avatarIdReducer = (colorId: number, step: number): number => (
   colorId + step < 0 
@@ -43,8 +44,8 @@ export default function MainPage() {
   
   const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
 
-  const game = useSelector(selectGame);
-  const dispatch = useDispatch();
+  const {game, status: gameStatus} = useSelector(selectGame);
+  const dispatch = useAppDispatch();
 
   const navigate = useNavigate();
 
@@ -69,7 +70,7 @@ export default function MainPage() {
   const onGameCreate = () => {
     const player = generatePlayer(true);
     dispatch(signUp(player));
-    dispatch(createGame(player));
+    dispatch(postCreateGame());
   };
 
   const onGameJoin = () => {
@@ -80,7 +81,7 @@ export default function MainPage() {
 
   useEffect(() => {
     if(game.id > 0) {
-      navigate(`/lobby/${game.id}`)
+      navigate(`/lobby/${game.id}`);
     }
   });
 
@@ -90,7 +91,7 @@ export default function MainPage() {
       direction={isDesktop || isHorizontalTablet ? 'row' : 'column'} 
       margin={getPanelMargin(isMobile, isHorizontalTablet, isVerticalTablet)} 
       width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN}
-      height={isMobile ? '100%' : '80vh'}
+      height={isMobile ? '100%' : '75vh'}
       gap={isMobile ? '10vh' : '30px'}>
         <PanelGroup direction='column'>
           <RegistrationForm 
@@ -129,9 +130,9 @@ export default function MainPage() {
               <Button 
                 variant='contained' 
                 color='primary'
-                disabled={!username}
+                disabled={!username || gameStatus === 'loading'}
                 onClick={onGameCreate}>
-                  Создать комнату
+                  {gameStatus === 'loading' ? <CircularProgress color='primary'/> : <>Создать комнату</>}
               </Button>
           </Panel>
       </PanelGroup>

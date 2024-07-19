@@ -18,7 +18,6 @@ import { selectPlayer, setReady } from '../store/playerSlice';
 import Player from '../utils/types/Player';
 
 const LOBBY_CAPACITY = 10;
-const LIST_MAX_HEIGHT = '40vh';
 const DESKTOP_BUTTON_GROUP_WIDTH = '70%';
 const DESKTOP_SINGLE_BUTTON_WIDTH = '30%';
 const LOBBY_H2_Y_MARGIN = '4px';
@@ -30,12 +29,11 @@ export default function LobbyPage() {
 
   const {isMobile, isDesktop} = useMediaMatch();
   const isThinnerThan1000 = useMediaQuery('(max-width:1000px)');
-  const isShorterThan700 = useMediaQuery('(max-height:700px)');
 
   const dispatch = useDispatch();
   const onPopupOpen = () => dispatch(openPopup());
 
-  const game = useSelector(selectGame);
+  const {game} = useSelector(selectGame);
   const player = useSelector(selectPlayer);
 
   const isStartDisabled = player.isHost && game.players.every((p: Player) => p.isReady);
@@ -109,7 +107,8 @@ export default function LobbyPage() {
         position='relative'
         isMatchingMobile={isMobile} 
         margin={'0 auto'}
-        padding={5}> 
+        padding={5}
+        height={isMobile ? '100%' : '60vh'}> 
           <Box display={isMobile ? 'none' : 'block'} position='absolute' top={20} right={20}>
             <IconButton color='warning' onClick={onQuit}>
               <CloseIcon />
@@ -118,15 +117,14 @@ export default function LobbyPage() {
 
           <Typography variant='h2' sx={{marginTop: LOBBY_H2_Y_MARGIN, marginBottom: LOBBY_H2_Y_MARGIN}}>Ожидаем участников команды</Typography>
 
-          <List style={{height: '80%', maxHeight: LIST_MAX_HEIGHT, overflowY: 'scroll'}}>
+          <List style={{height: 'stretch', overflowY: 'scroll'}}>
             {Array.from({length: LOBBY_CAPACITY}, (_v, i) => (
               <LobbyUserInfo key={nanoid()} user={i < game.players.length ? game.players[i] : undefined}/>
             ))}
           </List>
 
           <Box
-            position='absolute'
-            bottom={isMobile ? '0' : (isShorterThan700 ? '2vh' : '5vh')}
+            
             display='flex'
             flexDirection={isMobile ? 'column' : 'row'}
             gap={2}

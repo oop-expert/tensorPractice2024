@@ -431,6 +431,17 @@ const DialogOptions: Components<Omit<Theme, 'components'>>['MuiDialog'] = {
   }
 }
 
+const CircularProgressOptions: Components<Omit<Theme, 'components'>>['MuiCircularProgress'] = {
+  styleOverrides: {
+    colorPrimary: {
+      color: Colors.Text.ON_BUTTON
+    },
+    colorSecondary: {
+      color: Colors.Text.HIGHLIGHT_MAJOR
+    }
+  }
+}
+
 const UITheme = createTheme({
   palette: Palette,
   breakpoints: Breakpoints,
@@ -440,7 +451,8 @@ const UITheme = createTheme({
     MuiTextField: TextFieldOptions,
     MuiTypography: TypographyOptions,
     MuiList: ListOptions,
-    MuiDialog: DialogOptions
+    MuiDialog: DialogOptions,
+    MuiCircularProgress: CircularProgressOptions
   }
 })
 
