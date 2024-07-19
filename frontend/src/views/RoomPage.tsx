@@ -9,54 +9,54 @@ import { useMediaMatch } from '../hooks/useMobileMatch';
 export default function RoomPage({name}: {name: string},{color}: {color: string}) {
   const [film, setFilm] = useState<string>('');
   const {isMobile} = useMediaMatch();
-    const navigate = useNavigate();
-    const urlParams = useParams();
-    const onFilmNameChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFilm(evt.target.value);
-    const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const urlParams = useParams();
+  const onFilmNameChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFilm(evt.target.value);
+  const [open, setOpen] = useState(false);
 
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
   
-    const handleClose = () => {
-      setOpen(false);
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-    const handleCloseExit = () => {
-      setOpen(false);
-      navigate(`/lobby/${Number(urlParams.id)}`);
-    }
-    const ZoomImg = () => {
-      let img = document.getElementById("img1");
-      let answerFild = document.getElementById("answer");
-      let answerButton = document.getElementById("answerButton");
-      if(img!==null && answerFild!== null && answerButton !== null){
-        answerFild.style.display = "none";
-        //answerFild.style.opacity = "0";
-        answerButton.style.display = "none";
-        answerButton.style.pointerEvents = "none";
-        img.style.width = "50%";
-        img.style.transform = "scale(2)";
-        img.style.transition = "transform 0.25s ease";
-      
-    }}
-    const UnzoomImg = () => {
-      let img = document.getElementById("img1");
-      let answerFild = document.getElementById("answer");
-      let answerButton = document.getElementById("answerButton");
-      if(img!==null && answerFild!== null && answerButton !== null){
-        answerFild.style.display = "";
-        answerButton.style.display = "";
-        answerButton.style.pointerEvents = "auto";
-        img.style.width = "40vh";
-        answerButton.style.transition = "transform 0.25s ease";
-        img.style.transform = "scale(1)";
-        img.style.transition = "transform 0.25s ease";
+  const handleCloseExit = () => {
+    setOpen(false);
+    navigate(`/lobby/${Number(urlParams.id)}`);
+  }
+  const ZoomImg = () => {
+    let img = document.getElementById("img1");
+    let answerFild = document.getElementById("answer");
+    let answerButton = document.getElementById("answerButton");
+    if(img!==null && answerFild!== null && answerButton !== null){
+      answerFild.style.display = "none";
+      //answerFild.style.opacity = "0";
+      answerButton.style.display = "none";
+      answerButton.style.pointerEvents = "none";
+      img.style.width = "50%";
+      img.style.transform = "scale(2)";
+      img.style.transition = "transform 0.25s ease";
+     
+  }}
+  const UnzoomImg = () => {
+    let img = document.getElementById("img1");
+    let answerFild = document.getElementById("answer");
+    let answerButton = document.getElementById("answerButton");
+    if(img!==null && answerFild!== null && answerButton !== null){
+      answerFild.style.display = "";
+      answerButton.style.display = "";
+      answerButton.style.pointerEvents = "auto";
+      img.style.width = "40vh";
+      answerButton.style.transition = "transform 0.25s ease";
+      img.style.transform = "scale(1)";
+      img.style.transition = "transform 0.25s ease";
         
-    }}
+  }}
 
-    return(
-      <>
+  return(
+    <>
       <Dialog
         open={open}
         onClose={handleClose}
@@ -67,8 +67,8 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description" sx={{whiteSpace: 'pre-line',textAlign:'center'}}>
-          Внимание! Если вы выйдете из игры во время текущего раунда, вам не будет разрешено вернуться.{'\n'}
-          Вы уверены, что хотите выйти?
+            Внимание! Если вы выйдете из игры во время текущего раунда, вам не будет разрешено вернуться.{'\n'}
+            Вы уверены, что хотите выйти?
           </DialogContentText>
         </DialogContent>
         <DialogActions sx={{display:'flex', flexDirection:'column', gap:1}}>
@@ -107,7 +107,7 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
           </CardMedia>
           <Typography>Раунд 1 из 10</Typography>
         </Box>
-        
+          
         <Container maxWidth='md' sx={{position:'absolute', bottom:'1vh', left:'50%', marginRight:'-50%', transform:'translate(-50%, -50%)', alignItems:'center', margin:'0 auto', display: 'flex', flexDirection: 'column', paddingTop:'10px', gap: 1}}>
           <Stack direction={isMobile ? 'column' : 'row'} sx={{display: 'flex', alignItems:'center', gap: 1}}>
             <TextField 
@@ -125,8 +125,8 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
                 Ответить
             </Button>
           </Stack>
+        </Container>
       </Container>
-    </Container>
     </>
-    );
+  );
 }
