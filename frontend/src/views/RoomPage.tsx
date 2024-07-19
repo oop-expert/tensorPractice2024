@@ -72,7 +72,7 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
           </DialogContentText>
         </DialogContent>
         <DialogActions sx={{display:'flex', flexDirection:'column', gap:1}}>
-          <Button variant='contained' style={{backgroundColor:'#F49C1E80', border:'0'}} onClick={handleCloseExit}>Выйти</Button>
+          <Button variant='contained' color='secondary' onClick={handleCloseExit}>Выйти</Button>
           <Button variant='contained' onClick={handleClose}>
             Вернуться в игру
           </Button>
@@ -121,7 +121,7 @@ export default function RoomPage({name}: {name: string},{color}: {color: string}
             <Button
               id='answerButton'
               variant='contained'
-              onClick={() => navigate(`/results/${Number(urlParams.id)}`)}>
+              onClick={() => navigate(`/results/${urlParams.id}`)}>
                 Ответить
             </Button>
           </Stack>

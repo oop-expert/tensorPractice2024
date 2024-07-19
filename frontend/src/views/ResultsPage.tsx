@@ -11,8 +11,8 @@ export default function ResultsPage({name}: {name: string},{color}: {color: stri
       
     return(
         <Container maxWidth='lg' sx={{padding: '1.3vh', borderRadius: 5, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
-          <Container maxWidth='md' sx={{display: 'flex', padding: '0vw', flexDirection: 'row',justifyContent:'center', alignItems: 'center', gap:'2px'}}>
-            <Box sx={{display: 'flex', fontSize:'2vh',flexDirection: 'column',  alignItems: 'center'}}>
+          <Container maxWidth='lg' sx={{display: 'flex', padding: '0vw', flexDirection: 'row',justifyContent:'center', alignItems: 'center', gap:'2px'}}>
+            <Box sx={{display: 'flex', width:'100%', fontSize:'2vh',flexDirection: 'column',  alignItems: 'center'}}>
                 <Typography sx={{fontSize:'48', fontWeight:'700', borderRadius:'142px', padding:'15'}}>Результаты игры</Typography>
                 <Box width={'100%'} display={isMobile ? 'none' : 'flex'} >
                     <Typography sx={{textAlign:'left', padding:'0.1vh 2vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', color:'black'}}>Победитель:</Typography>
@@ -148,8 +148,14 @@ export default function ResultsPage({name}: {name: string},{color}: {color: stri
                         <Typography>800</Typography>
                     </Box>
                 </List>
-                <Container maxWidth='md' sx={{position:'absolute', bottom:'1vh', left:'50%', marginRight:'-50%', transform:'translate(-50%, -50%)', alignItems:'center', margin:'0 auto', display: 'flex', flexDirection: 'column', paddingBottom:'10px', gap: 1}}>
-                    <Button 
+                <Container maxWidth='md' sx={{position:'absolute', bottom:'1vh', left:'50%', marginRight:'-50%', transform:'translate(-50%, -50%)', alignItems:'center', margin:'0 auto', display: 'flex', flexDirection: 'row', justifyContent:'center', paddingBottom:'10px', gap: 1}}>
+                    <Button
+                        variant='contained'
+                        color="secondary"
+                        onClick={() => navigate(`/`)}>
+                            Завершить игру
+                    </Button>
+                    <Button
                         variant='contained'
                         onClick={() => navigate(`/lobby/${nanoid()}`)}>
                             Играть снова
