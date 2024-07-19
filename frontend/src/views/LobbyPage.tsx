@@ -149,6 +149,7 @@ export default function LobbyPage() {
           </Box>
       </Panel>
       <QrCodePopup 
+        qrCode={game.qr_code}
         onLinkSave={onLinkCopy}
         onCodeSave={onCodeCopy} />
     </PanelGroup>

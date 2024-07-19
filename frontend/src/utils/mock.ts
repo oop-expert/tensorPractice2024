@@ -36,8 +36,8 @@ export const generateRandomPlayers = (): Array<Player> => Array.from({length: ge
 export const generateGame = (players: Array<Player>, code?: string): Game => ({
   id: generateRandomId(),
   code: code ?? nanoid(CODE_LENGTH),
-  qrCode: TestQrCode,
-  isStarted: false,
+  qr_code: TestQrCode,
+  is_started: false,
   players,
   questions: generateQuestions()
 });

@@ -1,5 +1,4 @@
 import { Box, Button, Dialog, IconButton, Typography } from '@mui/material';
-import TestQrCode from '../assets/test_qr_code.png';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CloseIcon from '@mui/icons-material/Close';
@@ -8,7 +7,8 @@ import { selectPopupOpen, closePopup } from '../store/popupSlice';
 
 type QrCodePopupProps = {
   onLinkSave: () => void,
-  onCodeSave: () => void
+  onCodeSave: () => void,
+  qrCode: string
 }
 
 const POPUP_H1_BOTTOM_MARGIN = '4px';
@@ -19,7 +19,7 @@ const QrCodeSizes = {
   MOBILE_MIN_WIDTH: '70%'
 }
 
-export default function QrCodePopup({onLinkSave, onCodeSave}: QrCodePopupProps) {
+export default function QrCodePopup({onLinkSave, onCodeSave, qrCode}: QrCodePopupProps) {
   const {isMobile, isDesktop} = useMediaMatch();
   const isOpened = useSelector(selectPopupOpen);
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ export default function QrCodePopup({onLinkSave, onCodeSave}: QrCodePopupProps) 
             Делитесь ссылкой на комнату, кодом комнаты или следующим QR-кодом:</Typography>
         </Box>
         
-        <img style={{alignSelf: 'center'}} src={TestQrCode} width={isMobile ? QrCodeSizes.MOBILE_MIN_WIDTH : QrCodeSizes.DESKTOP_MIN_WIDTH}/>
+        <img style={{alignSelf: 'center'}} src={`data:image/png;base64,${qrCode}`} width={isMobile ? QrCodeSizes.MOBILE_MIN_WIDTH : QrCodeSizes.DESKTOP_MIN_WIDTH}/>
 
         <Box display={isMobile ? 'flex' : 'none'} flexDirection='column' gap={0.5} alignItems={'flex-start'}>
           <Button 

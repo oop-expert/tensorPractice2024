@@ -83,7 +83,6 @@ export default function MainPage() {
   useEffect(() => {
     if(game.id > 0) {
       dispatch(getQuestion(game.questions[0].id));
-      console.log(game.questions[0].id);
       navigate(`/lobby/${game.id}`);
     }
   });

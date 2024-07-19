@@ -20,8 +20,8 @@ const getQuestion = createAsyncThunk<Question, number, AsyncThunkConfig>('game/g
 const initialGame: Game = {
   id: 0,
   code: '0',
-  qrCode: '',
-  isStarted: false,
+  qr_code: '',
+  is_started: false,
   players: [],
   questions: []
 };
@@ -43,7 +43,7 @@ const gameSlice = createSlice({
       state.game = initialGame;
     },
     startGame: (state) => {
-      state.game.isStarted = true;
+      state.game.is_started = true;
     },
     changePlayer: (state, action) => {
       const playerIndex = state.game.players.findIndex((p) => p.id === action.payload);
