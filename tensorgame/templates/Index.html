@@ -77,49 +77,55 @@
 
 <script>
     let score = 0;
-    let correctAnswer = '   '; // Переменная для хранения правильного ответа
+    let correctAnswer = '';
+    let imageCount = 0;
 
     window.onload = function() {
-      runKandinsky();
+      updateImage();
     };
 
-function runKandinsky() {
-    fetch('/kandinsky/')
+    function updateImage() {
+      fetch('/kandinsky/')
         .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Ошибка при получении изображения');
-            }
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Ошибка при получении изображения');
+          }
         })
         .then(data => {
-            const img = document.getElementById('generated-image');
-            const url = 'data:image/png;base64,' + data.image_base64;
-            img.src = url;
+          const img = document.getElementById('generated-image');
+          const url = 'data:image/png;base64,' + data.image_base64;
+          img.src = url;
 
-            correctAnswer = data.answer;
+          // Сохраняем правильный ответ
+          correctAnswer = data.answer;
 
-            // Обновляем текст подсказки
-            document.getElementById('hint').textContent = 'Загаданное слово - ' + data.answer;
+          document.getElementById('hint').textContent = 'Загаданное слово - ' + data.answer;
+
+          imageCount++;
+          if (imageCount >= 10) {
+            alert('Игра завершена!');
+          }
         })
         .catch(error => {
-            console.error('Ошибка:', error);
+          console.error('Ошибка:', error);
         });
-}
+    }
 
-function checkAnswer() {
-  const userAnswer = document.getElementById('answer-input').value.trim();
-  if (userAnswer === correctAnswer) {
-    score++;
-    document.getElementById('score').textContent = 'Счёт: ' + score;
-    alert('Верно!');
-    runKandinsky(); // Генерация нового изображения
-  } else {
-    alert('Неверно!');
-    runKandinsky();
-  }
-  document.getElementById('answer-input').value = ''; // Очищаем поле ввода
-}
+    function checkAnswer() {
+      const userAnswer = document.getElementById('answer-input').value.trim();
+      if (userAnswer === correctAnswer) {
+        score++;
+        document.getElementById('score').textContent = 'Счёт: ' + score;
+        alert('Верно!');
+        updateImage(); // Обновляем картинку
+      } else {
+        alert('Неверно!');
+        updateImage(); // Обновляем картинку
+      }
+      document.getElementById('answer-input').value = ''; // Очищаем поле ввода
+    }
 </script>
 </body>
 </html>

@@ -4,6 +4,7 @@ from . import kandinsky_api
 import base64
 import random
 import time
+import threading
 
 # Список API ключей (добавьте свои ключи)
 api_keys = [
@@ -32,20 +33,44 @@ api_keys = [
 # Словарь для отслеживания последних запросов для каждого API ключа
 last_requests = {}
 
+# Список для хранения сгенерированных изображений и ответов
+generated_data = []
 
+# Флаг, показывающий, что генерация изображений запущена
+generating = False
+
+# Количество изображений, которое нужно сгенерировать
+NUM_IMAGES = 10
 def index(request):
+    global generated_data, generating
+    generated_data = []
+    generating = False
+
+    # Запускаем генерацию изображений в нескольких потоках
+    threads = []
+    for i in range(NUM_IMAGES):
+        threads.append(threading.Thread(target=generate_image, args=(i,)))
+        threads[-1].start()
+
+    # Ожидаем завершения всех потоков
+    for thread in threads:
+        thread.join()
+
     return render(request, 'Index.html')
 
+def generate_image(index):
+    global generated_data
 
-def kandinsky_view(request):
-    # Выбираем случайный API ключ
+    # Используем цикл для выбора случайного API ключа
     api_key = random.choice(api_keys)
 
-    # Проверяем, не был ли отправлен запрос на этот ключ недавно
-    if api_key['url'] in last_requests and time.time() - last_requests[
-        api_key['url']] < 10:  # Ограничение на 1 запрос в 10 секунд
-        print(f"API ключ {api_key['url']} недоступен, используем другой")
-        return kandinsky_view(request)  # Рекурсивно выбираем другой ключ
+    # Проверяем доступность ключа
+    while True:
+        if api_key['url'] not in last_requests or time.time() - last_requests[api_key['url']] >= 10:
+            break
+        else:
+            print(f"API ключ {api_key['url']} недоступен, переходим к следующему")
+            time.sleep(1)  # Пауза, чтобы не перегружать API
 
     api = kandinsky_api.Text2ImageAPI(api_key['url'], api_key['key1'], api_key['key2'])
     model_id = api.get_model()
@@ -55,22 +80,22 @@ def kandinsky_view(request):
     answer = f"сцена из фильма {answer}"
     print(f"Загаданный фильм: {answer}")
     uuid = api.generate(answer, model_id)
-
-    # Запоминаем время последнего запроса
     last_requests[api_key['url']] = time.time()
 
     images = api.check_generation(uuid)
     print(f"Верный ответ: {original_answer}")
     if images:
         image_base64 = images[0]
-        image_data = base64.b64decode(image_base64)
-
-        # Создаем JSON-ответ
-        response = JsonResponse({
-            'image_base64': image_base64,
-            'answer': original_answer
-        })
-        return response
-
+        generated_data.append({'image_base64': image_base64, 'answer': original_answer})
     else:
-        return HttpResponse('Ошибка генерации изображения', status=500)
+        print('Ошибка генерации изображения')
+
+def kandinsky_view(request):
+    global generated_data
+
+    if generated_data:
+        # Извлекаем данные для следующего изображения
+        image_data = generated_data.pop(0)
+        return JsonResponse(image_data)
+    else:
+        return HttpResponse('Игра завершена', status=200)
