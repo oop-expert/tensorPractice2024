@@ -7,11 +7,12 @@ import Panel from '../components/Panel';
 import MainAppBar from '../components/MainAppBar';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import { AVATARS, generateRandomId, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
-import { signUp } from '../store/playerSlice';
+import { selectPlayer, signUp } from '../store/playerSlice';
 import { useSelector } from 'react-redux';
 import Player from '../utils/types/Player';
-import { postCreateGame, joinGame, selectGame, getQuestion } from '../store/gameSlice';
+import { postCreateGame, joinGame, selectGame } from '../store/gameSlice';
 import { useAppDispatch } from '../store/storeHooks';
+import { WebSocketActionTypes } from '../store/webSocketMiddleware';
 
 const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
 const H_TABLET_MAIN_PANEL_MARGIN = '5vh auto 0';
@@ -45,6 +46,7 @@ export default function MainPage() {
   const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
 
   const {game, status: gameStatus} = useSelector(selectGame);
+  const player = useSelector(selectPlayer);
   const dispatch = useAppDispatch();
 
   const navigate = useNavigate();
@@ -82,7 +84,7 @@ export default function MainPage() {
 
   useEffect(() => {
     if(game.id > 0) {
-      dispatch(getQuestion(game.questions[0].id));
+      dispatch({type: WebSocketActionTypes.JOIN_GAME, payload: {gameCode: game.code, username: player.name}});
       navigate(`/lobby/${game.id}`);
     }
   });

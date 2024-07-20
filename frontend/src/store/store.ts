@@ -2,13 +2,16 @@ import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import PopupReducer from './popupSlice';
 import GameReducer from './gameSlice';
 import PlayerReducer from './playerSlice';
+import { WebSocketMiddleware } from "./webSocketMiddleware";
+import Socket from "./Socket";
 
 export const store = configureStore({
   reducer: {
     popup: PopupReducer,
     game: GameReducer,
     player: PlayerReducer
-  }
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(WebSocketMiddleware(new Socket()))
 });
 
 export type Store = typeof store;

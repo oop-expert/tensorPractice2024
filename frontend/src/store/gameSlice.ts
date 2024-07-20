@@ -5,6 +5,7 @@ import { AsyncThunkConfig, State } from "./store";
 import AxiosInstance from "../utils/Axios";
 import GameState from "../utils/types/GameState";
 import Question from "../utils/types/Question";
+import Player from "../utils/types/Player";
 
 //запросы делаются в этих функциях
 const postCreateGame = createAsyncThunk<Game, void, AsyncThunkConfig>('game/createGame', async () => {
@@ -51,6 +52,9 @@ const gameSlice = createSlice({
       if(playerIndex >= 0) {
         state.game.players[playerIndex].isReady = true;
       }
+    },
+    updatePlayers: (state, action) => {
+      state.game.players = action.payload.map((player: Player) => ({...player}));
     }
   },
   //здесь задаются дейтсвия при выполнении запроса
@@ -84,6 +88,6 @@ const gameSlice = createSlice({
 });
 
 export const selectGame = (state: State) => state.game;
-export const {joinGame, quitGame, startGame, changePlayer} = gameSlice.actions;
+export const {joinGame, quitGame, startGame, changePlayer, updatePlayers} = gameSlice.actions;
 export {postCreateGame, getQuestion};
 export default gameSlice.reducer;
