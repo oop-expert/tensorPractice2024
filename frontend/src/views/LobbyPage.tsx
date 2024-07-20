@@ -13,9 +13,11 @@ import { useMediaMatch } from '../hooks/useMobileMatch';
 import CloseIcon from '@mui/icons-material/Close';
 import { openPopup } from '../store/popupSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { changePlayer, quitGame, selectGame, startGame } from '../store/gameSlice';
+import { selectGame } from '../store/gameSlice';
 import { selectPlayer, setReady } from '../store/playerSlice';
 import Player from '../utils/types/Player';
+import { useEffect, useState } from 'react';
+import { WebSocketActionTypes } from '../store/webSocketMiddleware';
 
 const LOBBY_CAPACITY = 10;
 const DESKTOP_BUTTON_GROUP_WIDTH = '70%';
@@ -47,18 +49,32 @@ export default function LobbyPage() {
 
   const onSetReady = () => {
     dispatch(setReady());
-    dispatch(changePlayer(player.id));
+    dispatch({type: WebSocketActionTypes.CHANGE_STATUS, payload: {gameCode: game.id, username: player.name}});
   };
 
   const onGameStart = () => {
-    dispatch(startGame());
-    navigate(`/room/${id}`)
+    dispatch({type: WebSocketActionTypes.START_GAME, payload: {gameCode: game.id, username: player.name}});
   };
 
   const onQuit = () => {
-    dispatch(quitGame());
+    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.id, username: player.name}});
     navigate('/');
   };
+
+  const [once, setOnce] = useState(false);
+
+  useEffect(() => {
+    if(game.id > 0 && !once) {
+      dispatch({type: WebSocketActionTypes.JOIN_GAME, payload: {gameCode: game.code, username: player.name}});
+      setOnce(true);
+    }
+  }, [game, player.name, dispatch, once]);
+
+  useEffect(() => {
+    if(game.is_started) {
+      navigate(`/room/${id}`);
+    }
+  }, [game, id, navigate])
 
   return (
     <PanelGroup 

@@ -6,6 +6,8 @@ import AxiosInstance from "../utils/Axios";
 import GameState from "../utils/types/GameState";
 import Question from "../utils/types/Question";
 import Player from "../utils/types/Player";
+import { AVATARS, generateRandomId, getRandomInteger } from "../utils/utils";
+import PlayerResponce from "../utils/types/PlayerResponce";
 
 //запросы делаются в этих функциях
 const postCreateGame = createAsyncThunk<Game, void, AsyncThunkConfig>('game/createGame', async () => {
@@ -54,7 +56,17 @@ const gameSlice = createSlice({
       }
     },
     updatePlayers: (state, action) => {
-      state.game.players = action.payload.map((player: Player) => ({...player}));
+      const players = action.payload.map((player: PlayerResponce, i: number): Player => ({
+        id: generateRandomId(i + 1),
+        name: player.name,
+        avatar: AVATARS[getRandomInteger(0, AVATARS.length - 1)],
+        score: 0,
+        createdAt: new Date().toDateString(),
+        isHost: player.is_host,
+        isReady: player.is_ready,
+        isRight: false
+      }));
+      state.game.players = [...players];
     }
   },
   //здесь задаются дейтсвия при выполнении запроса

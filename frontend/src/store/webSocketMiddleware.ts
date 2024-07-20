@@ -27,13 +27,14 @@ export const WebSocketMiddleware =
 
     switch(action.type) {
       case WebSocketActionTypes.JOIN_GAME: {
-        socket.connect(`ws://127.0.0.1:8000/ws/room/${action.payload.gameCode}/?username=${action.payload.username}`);
+        socket.connect(`ws://tensorpractic.ru:8000/ws/room/${action.payload.gameCode}/?username=${action.payload.username}`);
 
-        socket.onMessage((evt: MessageEvent<WebSocketCommand>) => {
+        socket.onMessage((evt: MessageEvent) => {
           if(evt.data.command === 'start_game') {
             dispatch(startGame());
           } else {
-            dispatch(updatePlayers(evt.data.players ?? []));
+            const data = JSON.parse(evt.data);
+            dispatch(updatePlayers(data.players ?? []));
           }
         });
 
@@ -43,17 +44,17 @@ export const WebSocketMiddleware =
       }
 
       case WebSocketActionTypes.CHANGE_STATUS: {
-        socket.send(getChangeStatusCommand(typeof action.payload.username === 'string' ? action.payload.username : ''));
+        socket.send(getChangeStatusCommand(action.payload.username));
         break;
       }
 
       case WebSocketActionTypes.START_GAME: {
-        socket.send(getStartGameCommand(typeof action.payload.username === 'string' ? action.payload.username : ''));
+        socket.send(getStartGameCommand(action.payload.username));
         break;
       }
 
       case WebSocketActionTypes.RESTART_GAME: {
-        socket.send(getRestartGameCommand(typeof action.payload.username === 'string' ? action.payload.username : ''));
+        socket.send(getRestartGameCommand(action.payload.username));
         break;
       }
 
