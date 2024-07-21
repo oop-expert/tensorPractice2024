@@ -84,19 +84,27 @@
       updateImage();
     };
 
-    function updateImage() {
-      fetch('/kandinsky/')
-        .then(response => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw new Error('Ошибка при получении изображения');
-          }
-        })
-        .then(data => {
-          const img = document.getElementById('generated-image');
-          const url = 'data:image/png;base64,' + data.image_base64;
-          img.src = url;
+     function updateImage() {
+          fetch('/kandinsky/')
+            .then(response => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error('Ошибка при получении изображения');
+              }
+            })
+            .then(data => {
+              // Проверяем, не получили ли мы статус waiting
+              if (data.status === 'waiting') {
+                // Повторный запрос через 1 секунду
+                setTimeout(updateImage, 1000);
+                return; // Выход из функции
+              }
+
+              // Если получили изображение, то обновляем его
+              const img = document.getElementById('generated-image');
+              const url = 'data:image/png;base64,' + data.image_base64;
+              img.src = url;
 
           // Сохраняем правильный ответ
           correctAnswer = data.answer;

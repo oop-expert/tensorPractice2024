@@ -6,7 +6,6 @@ import random
 import time
 import threading
 
-# Список API ключей (добавьте свои ключи)
 api_keys = [
     {'url': 'https://api-key.fusionbrain.ai/', 'key1': '42C68103FF26F3BA248051567A147874',
      'key2': '7BCDD2F342EDFE95409DF45037718FC9'},
@@ -41,10 +40,12 @@ generating = False
 
 # Количество изображений, которое нужно сгенерировать
 NUM_IMAGES = 10
+
+
 def index(request):
     global generated_data, generating
     generated_data = []
-    generating = False
+    generating = True
 
     # Запускаем генерацию изображений в нескольких потоках
     threads = []
@@ -52,16 +53,11 @@ def index(request):
         threads.append(threading.Thread(target=generate_image, args=(i,)))
         threads[-1].start()
 
-    # Ожидаем завершения всех потоков
-    for thread in threads:
-        thread.join()
-
     return render(request, 'Index.html')
+
 
 def generate_image(index):
     global generated_data
-
-    # Используем цикл для выбора случайного API ключа
     api_key = random.choice(api_keys)
 
     # Проверяем доступность ключа
@@ -74,28 +70,35 @@ def generate_image(index):
 
     api = kandinsky_api.Text2ImageAPI(api_key['url'], api_key['key1'], api_key['key2'])
     model_id = api.get_model()
-
     answer = random.choice(list(kandinsky_api.generated_image))
     original_answer = answer
     answer = f"сцена из фильма {answer}"
     print(f"Загаданный фильм: {answer}")
+
     uuid = api.generate(answer, model_id)
     last_requests[api_key['url']] = time.time()
-
     images = api.check_generation(uuid)
     print(f"Верный ответ: {original_answer}")
+
     if images:
         image_base64 = images[0]
         generated_data.append({'image_base64': image_base64, 'answer': original_answer})
     else:
         print('Ошибка генерации изображения')
 
-def kandinsky_view(request):
-    global generated_data
 
+def kandinsky_view(request):
+    global generated_data, generating
+
+    # Если генерация завершена, отправляем сообщение об окончании игры
+    if not generating and not generated_data:
+        return HttpResponse('Игра завершена', status=200)
+
+    # Если есть сгенерированные изображения, отправляем следующее
     if generated_data:
         # Извлекаем данные для следующего изображения
         image_data = generated_data.pop(0)
         return JsonResponse(image_data)
-    else:
-        return HttpResponse('Игра завершена', status=200)
+
+    # Если генерация еще не завершена, возвращаем статус waiting
+    return JsonResponse({'status': 'waiting'})
