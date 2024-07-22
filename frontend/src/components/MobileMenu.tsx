@@ -3,9 +3,12 @@ import ShareIcon from '@mui/icons-material/Share';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Colors } from '../utils/utils';
 import { matchPath, useLocation, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { openPopup } from '../store/popupSlice';
-import { quitGame } from '../store/gameSlice';
+import { selectGame } from '../store/gameSlice';
+import { WebSocketActionTypes } from '../store/webSocketMiddleware';
+import { useAppDispatch } from '../store/storeHooks';
+import { selectPlayer } from '../store/playerSlice';
 
 export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, closeMenu: () => void}) {
   const navigate = useNavigate();
@@ -13,7 +16,9 @@ export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, cl
 
   const shouldDisplayShare = matchPath('/lobby/:id', pathname);
 
-  const dispatch = useDispatch();
+  const {game} = useSelector(selectGame);
+  const player = useSelector(selectPlayer);
+  const dispatch = useAppDispatch();
 
   const onPopupOpen = () => {
     closeMenu();
@@ -22,7 +27,7 @@ export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, cl
 
   const onQuit = () => {
     closeMenu();
-    dispatch(quitGame());
+    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.code, username: player.name, avatarId: player.avatarId}})
     navigate('/');
   };
 
