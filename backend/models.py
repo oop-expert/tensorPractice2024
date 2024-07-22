@@ -8,6 +8,7 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from tensorgame.settings import FRONTEND_URL
+from tensorgame.views import generate_images
 
 
 def generate_unique_code():
@@ -78,3 +79,5 @@ def post_save_room(sender, instance, *args, **kwargs):
         prompts = Prompt.objects.all().order_by('?')[:10]
         for prompt in prompts:
             Question.objects.create(room=instance, answer=prompt.answer)
+        questions = Question.objects.filter(room=instance)
+        generate_images(questions)

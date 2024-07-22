@@ -56,7 +56,15 @@ def index(request):
     return render(request, 'Index.html')
 
 
-def generate_image(index):
+def generate_images(questions):
+    # Запускаем генерацию изображений в нескольких потоках
+    threads = []
+    for question in questions:
+        threads.append(threading.Thread(target=generate_image, args=(question,)))
+        threads[-1].start()
+
+
+def generate_image(question):
     global generated_data
     api_key = random.choice(api_keys)
 
@@ -70,9 +78,9 @@ def generate_image(index):
 
     api = kandinsky_api.Text2ImageAPI(api_key['url'], api_key['key1'], api_key['key2'])
     model_id = api.get_model()
-    answer = random.choice(list(kandinsky_api.generated_image))
-    original_answer = answer
-    answer = f"сцена из фильма {answer}"
+    # answer = random.choice(list(kandinsky_api.generated_image))
+    original_answer = question.answer.lower()
+    answer = f"сцена из фильма {original_answer}"
     print(f"Загаданный фильм: {answer}")
 
     uuid = api.generate(answer, model_id)
@@ -82,6 +90,8 @@ def generate_image(index):
 
     if images:
         image_base64 = images[0]
+        question.image = image_base64
+        question.save()
         generated_data.append({'image_base64': image_base64, 'answer': original_answer})
     else:
         print('Ошибка генерации изображения')

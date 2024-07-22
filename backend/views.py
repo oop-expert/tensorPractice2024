@@ -2,10 +2,9 @@ from rest_framework import mixins, viewsets, generics, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .models import Room, Question, Prompt, Player
+from .models import Room, Question, Player
 from .serializers import RoomSerializer, QuestionSerializer, PlayerSerializer
 from .utils import get_similarity
-from tensorgame.kandinsky_api import start_generating_image
 
 
 class CreateRetrieveRoomViewSet(mixins.CreateModelMixin,
@@ -33,16 +32,6 @@ class QuestionAPIView(generics.RetrieveAPIView):
 class PlayerAPIView(generics.RetrieveAPIView):
     queryset = Player.objects.all()
     serializer_class = PlayerSerializer
-
-
-@api_view(['PATCH'])
-def generate_image(request, pk):
-    question = Question.objects.get(pk=pk)
-    prompt = Prompt.objects.filter(answer=question.answer).first()
-    question.image = start_generating_image(prompt.text)
-    question.save()
-    serializer = QuestionSerializer(question)
-    return Response(serializer.data)
 
 
 @api_view(['PATCH'])
