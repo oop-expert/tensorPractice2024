@@ -24,6 +24,7 @@ export const generateRandomPlayers = (): Array<Player> => Array.from({length: ge
     id: generateRandomId(i + 1),
     name: faker.person.firstName(),
     avatar: AVATARS[getRandomInteger(0, AVATARS.length - 1)],
+    avatarId: getRandomInteger(0, AVATARS.length - 1),
     isHost: i === 0,
     isReady: true,
     score: 0,

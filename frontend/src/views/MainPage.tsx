@@ -6,10 +6,10 @@ import PanelGroup from '../components/PanelGroup';
 import Panel from '../components/Panel';
 import MainAppBar from '../components/MainAppBar';
 import { useMediaMatch } from '../hooks/useMobileMatch';
-import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
+import { Colors, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import { selectPlayer, signUp } from '../store/playerSlice';
 import { useSelector } from 'react-redux';
-import { postCreateGame, selectGame } from '../store/gameSlice';
+import { getGameByCode, postCreateGame, selectGame } from '../store/gameSlice';
 import { useAppDispatch } from '../store/storeHooks';
 
 const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
@@ -33,7 +33,7 @@ export default function MainPage() {
   
   const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
 
-  const {game, status: gameStatus} = useSelector(selectGame);
+  const {game, status: gameStatus, errorCode, errorMessage} = useSelector(selectGame);
   const player = useSelector(selectPlayer);
   const dispatch = useAppDispatch();
 
@@ -48,11 +48,12 @@ export default function MainPage() {
 
   const onGameJoin = () => {
     dispatch(signUp(false));
+    dispatch(getGameByCode(code));
   }; 
 
   useEffect(() => {
     if(game.id > 0) {
-      navigate(`/lobby/${game.id}`);
+      navigate(`/lobby/${game.code}`);
     }
   });
 
@@ -73,6 +74,7 @@ export default function MainPage() {
 
             <Panel isMatchingMobile={isMobile} height={!isDesktop && !isHorizontalTablet ? 'fit-content' : '100%'}>
               <Typography variant='h2' hidden={isMobile}>Создайте комнату или войдите в уже существующую</Typography>
+              
               <TextField
                 id='code'
                 placeholder='Код игровой сессии'
@@ -85,7 +87,7 @@ export default function MainPage() {
                         color='secondary'
                         disabled={!code || !player.name}
                         onClick={onGameJoin}>
-                          Войти
+                          {gameStatus === 'loading' ? <CircularProgress color='primary'/> : <>Войти</>}
                       </Button>
                     ),
                     sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
@@ -101,6 +103,8 @@ export default function MainPage() {
                 onClick={onGameCreate}>
                   {gameStatus === 'loading' ? <CircularProgress color='primary'/> : <>Создать комнату</>}
               </Button>
+
+              <Typography hidden={!errorCode} variant='h2' color={Colors.ErrorInput.OUTLINE}>{errorMessage ?? ''}</Typography>
           </Panel>
       </PanelGroup>
     </PanelGroup>

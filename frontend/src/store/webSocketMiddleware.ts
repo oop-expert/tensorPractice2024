@@ -1,9 +1,11 @@
 import { Middleware, PayloadAction } from "@reduxjs/toolkit";
-import { quitGame, startGame, updatePlayers } from "./gameSlice";
+import { quitGame, setError, startGame, updatePlayers } from "./gameSlice";
 import WebSocketCommand from "../utils/types/WebSocketCommand";
-import { getChangeStatusCommand, getRestartGameCommand, getStartGameCommand } from "./WebSocketCommands";
+import { getChangeStatusCommand, getErrorMessage, getRestartGameCommand, getStartGameCommand } from "./WebSocketCommands";
 import Socket from "./Socket";
 import WebSocketProps from "../utils/types/WebSocketProps";
+import { changePlayer } from "./playerSlice";
+import PlayerResponce from "../utils/types/PlayerResponce";
 
 export const WebSocketActionTypes = {
   JOIN_GAME: 'webSocket/joinGame',
@@ -27,15 +29,24 @@ export const WebSocketMiddleware =
 
     switch(action.type) {
       case WebSocketActionTypes.JOIN_GAME: {
-        socket.connect(`ws://tensorpractic.ru:8000/ws/room/${action.payload.gameCode}/?username=${action.payload.username}`);
+        socket.connect(`ws://127.0.0.1:8000/ws/room/${action.payload.gameCode}/?username=${action.payload.username}&avatar_id=${action.payload.avatarId}`);
 
         socket.onMessage((evt: MessageEvent) => {
           const data = JSON.parse(evt.data);
           if(data.command === 'start_game') {
             dispatch(startGame());
           } else {
+            const player = data.players.find((p: PlayerResponce) => p.name === action.payload.username);
+            if(player) {
+              dispatch(changePlayer(player));
+            }
+
             dispatch(updatePlayers(data.players ?? []));
           }
+        });
+
+        socket.onClose((evt: CloseEvent) => {
+          dispatch(setError({code: evt.code, message: getErrorMessage(evt.code)}));
         });
 
         break;

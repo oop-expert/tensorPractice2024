@@ -1,3 +1,6 @@
+import Player from "./types/Player";
+import PlayerResponce from "./types/PlayerResponce";
+
 export const WIDTH_RELATIVE_TO_SCREEN = '70vw';
 
 export const CODE_LENGTH = 8;
@@ -56,3 +59,19 @@ export const getRandomInteger = (min: number, max: number): number => {
 }
 
 export const generateRandomId = (additionalNumber:number = 0) => Date.now() % 1000 + additionalNumber;
+
+export const getPlayerFromResponce = (responce: PlayerResponce): Player => {
+  const avatarId = !responce.avatar ? 0 : parseInt(responce.avatar);
+
+  return ({
+    id: responce.id,
+    name: responce.name,
+    avatar: AVATARS[avatarId],
+    avatarId,
+    isHost: responce.is_host,
+    isReady: responce.is_ready,
+    score: responce.score,
+    createdAt: responce.created_at,
+    isRight: false
+  });
+}

@@ -4,8 +4,7 @@ import { AsyncThunkConfig, State } from "./store";
 import AxiosInstance from "../utils/Axios";
 import GameState from "../utils/types/GameState";
 import Question from "../utils/types/Question";
-import Player from "../utils/types/Player";
-import { AVATARS, generateRandomId, getRandomInteger } from "../utils/utils";
+import { getPlayerFromResponce } from "../utils/utils";
 import PlayerResponce from "../utils/types/PlayerResponce";
 
 //запросы делаются в этих функциях
@@ -14,8 +13,8 @@ const postCreateGame = createAsyncThunk<Game, void, AsyncThunkConfig>('game/crea
   return resp.data as Game;
 });
 
-const getGameById = createAsyncThunk<Game, number, AsyncThunkConfig>('game/getGame', async (gameId: number) => {
-  const resp = await AxiosInstance.get(`/room/${gameId}`);
+const getGameByCode = createAsyncThunk<Game, string, AsyncThunkConfig>('game/getGame', async (gameCode: string) => {
+  const resp = await AxiosInstance.get(`/room/${gameCode}`);
   return resp.data as Game;
 });
 
@@ -35,7 +34,11 @@ const initialGame: Game = {
 
 const initialState: GameState = {
   game: initialGame, 
-  status: 'idle'
+  status: 'idle',
+  questionIndex: 0,
+  generatingStatus: 'idle',
+  errorCode: undefined,
+  errorMessage: undefined
 }
 
 const gameSlice = createSlice({
@@ -48,25 +51,13 @@ const gameSlice = createSlice({
     startGame: (state) => {
       state.game.is_started = true;
     },
-    changePlayer: (state, action) => {
-      const playerIndex = state.game.players.findIndex((p) => p.id === action.payload);
-
-      if(playerIndex >= 0) {
-        state.game.players[playerIndex].isReady = true;
-      }
-    },
     updatePlayers: (state, action) => {
-      const players = action.payload.map((player: PlayerResponce, i: number): Player => ({
-        id: generateRandomId(i + 1),
-        name: player.name,
-        avatar: AVATARS[getRandomInteger(0, AVATARS.length - 1)],
-        score: 0,
-        createdAt: new Date().toDateString(),
-        isHost: player.is_host,
-        isReady: player.is_ready,
-        isRight: false
-      }));
+      const players = action.payload.map((player: PlayerResponce) => getPlayerFromResponce(player));
       state.game.players = [...players];
+    },
+    setError: (state, action) => {
+      state.errorCode = action.payload.code.toString();
+      state.errorMessage = action.payload.message;
     }
   },
   //здесь задаются дейтсвия при выполнении запроса
@@ -74,42 +65,54 @@ const gameSlice = createSlice({
     builder
       .addCase(postCreateGame.pending, (state) => {
         state.status = 'loading';
+        state.errorCode = undefined;
       })
       .addCase(postCreateGame.fulfilled, (state, action) => {
         state.status = 'success';
         state.game = action.payload;
+        state.errorCode = undefined;
       })
-      .addCase(postCreateGame.rejected, (state) => {
+      .addCase(postCreateGame.rejected, (state, action) => {
         state.status = 'error';
+        state.errorCode = action.error.code;
+        state.errorMessage = action.error.message;
       })
-      .addCase(getGameById.pending, (state) => {
+      .addCase(getGameByCode.pending, (state) => {
         state.status = 'loading'
+        state.errorCode = undefined;
       })
-      .addCase(getGameById.fulfilled, (state, action) => {
+      .addCase(getGameByCode.fulfilled, (state, action) => {
         state.status = 'success';
         state.game = action.payload;
+        state.errorCode = undefined;
       })
-      .addCase(getGameById.rejected, (state) => {
+      .addCase(getGameByCode.rejected, (state, action) => {
         state.status = 'error';
+        state.errorCode = action.error.code;
+        state.errorMessage = action.error.message;
       })
       .addCase(getQuestion.pending, (state) => {
         state.status = 'loading';
+        state.errorCode = undefined;
       })
       .addCase(getQuestion.fulfilled, (state, action) => {
         state.status = 'success';
+        state.errorCode = undefined;
         const questionIndex = state.game.questions.findIndex((q) => q.id === action.payload.id);
 
         if(questionIndex >= 0) {
           state.game.questions[questionIndex] = action.payload;
         }
       })
-      .addCase(getQuestion.rejected, (state) => {
+      .addCase(getQuestion.rejected, (state, action) => {
         state.status = 'error';
+        state.errorCode = action.error.code;
+        state.errorMessage = action.error.message;
       })
   }
 });
 
 export const selectGame = (state: State) => state.game;
-export const {quitGame, startGame, changePlayer, updatePlayers} = gameSlice.actions;
-export {postCreateGame, getGameById, getQuestion};
+export const {quitGame, startGame, updatePlayers, setError} = gameSlice.actions;
+export {postCreateGame, getGameByCode, getQuestion};
 export default gameSlice.reducer;

@@ -1,4 +1,5 @@
 export default interface WebSocketProps {
   gameCode: string,
-  username: string
+  username: string,
+  avatarId: string
 }

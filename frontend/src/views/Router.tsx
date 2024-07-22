@@ -9,9 +9,9 @@ export default function Router() {
   return (
     <Routes>
       <Route path='/' element={<MainPage/>}/>
-      <Route path='lobby/:id' element={<LobbyPage/>} />
-      <Route path='room/:id' element={<RoomPage/>} />
-      <Route path='results/:id'element={<ResultsPage/>} />
+      <Route path='lobby/:code' element={<LobbyPage/>} />
+      <Route path='room/:code' element={<RoomPage/>} />
+      <Route path='results/:code' element={<ResultsPage/>} />
       <Route path='*' element={<ErrorPage message='Такой страницы не существует'/>} />
     </Routes>
   );

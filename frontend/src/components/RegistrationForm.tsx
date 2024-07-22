@@ -24,7 +24,7 @@ const avatarIdReducer = (colorId: number, step: number): number => (
   : Math.abs(colorId + step) % AVATARS.length
 );
 
-export default function RegistrationForm({width='100%'}: {width?: number | string}) {
+export default function RegistrationForm({width='100%', padding=5}: {width?: number | string, padding?: number | string}) {
   const {isMobile} = useMediaMatch();
 
   const dispatch = useAppDispatch();
@@ -37,23 +37,24 @@ export default function RegistrationForm({width='100%'}: {width?: number | strin
   const onUsernameChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setUsername(evt.target.value);
 
   useEffect(() => {
-    dispatch(setInfo({name: username, avatar}));
-  }, [username, avatar, dispatch]);
+    if(username) {
+      dispatch(setInfo({name: username, avatarId}));
+    }
+  }, [username, avatarId, dispatch]);
 
   return (
-    <Panel isMatchingMobile={isMobile} width={width} gap={isMobile ? '5vh' : 2}>
+    <Panel isMatchingMobile={isMobile} width={width} padding={padding} gap={isMobile ? '5vh' : 2}>
       <Typography variant='h2'>
         Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
       </Typography>
 
-      <Box sx={
-        {
+      <Box 
+        sx={{
           display: 'flex', 
           gap: isMobile ? FormAvatarValues.MOBILE_GAP : FormAvatarValues.DESKTOP_GAP, 
           alignItems: 'center', 
           marginX: 'auto'
-        }
-      }>
+        }}>
         <IconButton color='primary' onClick={() => dispatchAvatarId(-1)}>
           <ArrowBackIosNewIcon />
         </IconButton>
@@ -75,8 +76,7 @@ export default function RegistrationForm({width='100%'}: {width?: number | strin
         required
         error={!username}
         helperText={!username ? 'Это поле обязательно' : ''}
-        onChange={onUsernameChange}
-      />
+        onChange={onUsernameChange}/>
     </Panel>
   );
 }

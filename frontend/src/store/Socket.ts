@@ -25,7 +25,11 @@ export default class Socket<CommandType> {
     this.socket?.addEventListener('message', listener);
   }
 
-  onClose(listener: () => void) {
+  onError(listener: (evt: Event) => void) {
+    this.socket?.addEventListener('error', listener);
+  }
+
+  onClose(listener: (evt: CloseEvent) => void) {
     this.socket?.addEventListener('close', listener);
   }
 }

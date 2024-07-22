@@ -418,11 +418,11 @@ const DialogOptions: Components<Omit<Theme, 'components'>>['MuiDialog'] = {
   styleOverrides: {
     paperWidthSm: {
       width: '90%',
-      padding: '5vw'
+      padding: '3vw'
     },
     paperWidthMd: {
       width: '50%',
-      padding: '5vw'
+      padding: '3vw'
     },
     paperWidthLg: {
       width: '500px',

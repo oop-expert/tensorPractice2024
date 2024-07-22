@@ -16,6 +16,7 @@ const DefaultPlayer: Player = {
   id: 0,
   name: 'Пусто',
   avatar: '',
+  avatarId: 0,
   isHost: false,
   isReady: false,
   score: 0,

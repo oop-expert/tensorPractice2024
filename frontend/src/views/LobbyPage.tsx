@@ -13,7 +13,7 @@ import { useMediaMatch } from '../hooks/useMobileMatch';
 import CloseIcon from '@mui/icons-material/Close';
 import { openPopup } from '../store/popupSlice';
 import { useSelector } from 'react-redux';
-import { getGameById, selectGame } from '../store/gameSlice';
+import { getGameByCode, selectGame } from '../store/gameSlice';
 import { selectPlayer, setReady } from '../store/playerSlice';
 import Player from '../utils/types/Player';
 import { useEffect, useMemo } from 'react';
@@ -28,7 +28,7 @@ const DESKTOP_SINGLE_BUTTON_WIDTH = '30%';
 const LOBBY_H2_Y_MARGIN = '4px';
 
 export default function LobbyPage() {
-  const {id} = useParams();
+  const {code} = useParams();
   const lobbyUrl = window.location.href;
   const navigate = useNavigate();
 
@@ -55,32 +55,35 @@ export default function LobbyPage() {
 
   const onSetReady = () => {
     dispatch(setReady());
-    dispatch({type: WebSocketActionTypes.CHANGE_STATUS, payload: {gameCode: game.id, username: player.name}});
+    dispatch({type: WebSocketActionTypes.CHANGE_STATUS, payload: {gameCode: game.id, username: player.name, avatarId: player.avatarId}});
   };
 
   const onGameStart = () => {
-    dispatch({type: WebSocketActionTypes.START_GAME, payload: {gameCode: game.id, username: player.name}});
+    dispatch({type: WebSocketActionTypes.START_GAME, payload: {gameCode: game.id, username: player.name, avatarId: player.avatarId}});
   };
 
   const onQuit = () => {
-    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.id, username: player.name}});
+    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.id, username: player.name, avatarId: player.avatarId}});
     navigate('/');
   };
 
   useEffect(() => {
-    if(game.id <= 0) {
-      const parsedId = parseInt(id ?? '');
-      dispatch(getGameById(parsedId));
-    } else if(canJoinGame) {
-      dispatch({type: WebSocketActionTypes.JOIN_GAME, payload: {gameCode: game.code, username: player.name}});
+    if(game.id <= 0 && code) {
+      dispatch(getGameByCode(code));
     }
-  }, [game, player.name, player.id, dispatch, id, canJoinGame]);
+  }, [game, player, dispatch, code, canJoinGame]);
+
+  useEffect(() => {
+    if(canJoinGame) {
+      dispatch({type: WebSocketActionTypes.JOIN_GAME, payload: {gameCode: game.code, username: player.name, avatarId: player.avatarId}});
+    }
+  });
 
   useEffect(() => {
     if(game.is_started && isPlayerConnected) {
-      navigate(`/room/${id}`);
+      navigate(`/room/${code}`);
     }
-  }, [game.is_started, isPlayerConnected, id, navigate])
+  }, [game.is_started, isPlayerConnected, code, navigate])
 
   return (
     <PanelGroup 
@@ -145,8 +148,7 @@ export default function LobbyPage() {
             ))}
           </List>
 
-          <Box
-            
+          <Box 
             display='flex'
             flexDirection={isMobile ? 'column' : 'row'}
             gap={2}
@@ -175,8 +177,8 @@ export default function LobbyPage() {
         onLinkSave={onLinkCopy}
         onCodeSave={onCodeCopy} />
       
-      {game.is_started
-      ? <PopupRegistrationForm canJoin={game.id >= 0}/>
+      {!game.is_started
+      ? <PopupRegistrationForm />
       : <ErrorMessage isOpened={!isPlayerConnected}/>}
     </PanelGroup>
   );
