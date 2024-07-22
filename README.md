@@ -23,8 +23,8 @@ python manage.py loaddata films.json
 
 ## WebSocket
 
-Пример ссылки для подключения: `ws://127.0.0.1:8000/ws/room/AAA/?username=Len`, 
-где AAA - код комнаты, а Len - имя игрока.
+Пример ссылки для подключения: `ws://127.0.0.1:8000/ws/room/AAA/?username=Len&avatar_id=1`, 
+где AAA - код комнаты, Len - имя игрока и avatar_id - id аватара.
 
 
 ### Запуск redis для WebSocket
@@ -51,9 +51,14 @@ docker-compose -f docker-compose.yaml up -d
     "username": "Len",
     "players": [
         {
+            "id": 6,
             "name": "Len",
-            "is_host": true,
-            "is_ready": false
+            "avatar": "1",
+            "is_host": false,
+            "is_ready": false,
+            "score": 0,
+            "created_at": "2024-07-22T18:08:55.272831+05:00",
+            "room": 2
         }
     ]
 }
@@ -77,9 +82,14 @@ docker-compose -f docker-compose.yaml up -d
     "username": "Len",
     "players": [
         {
+            "id": 6,
             "name": "Len",
-            "is_host": true,
-            "is_ready": true
+            "avatar": "1",
+            "is_host": false,
+            "is_ready": false,
+            "score": 0,
+            "created_at": "2024-07-22T18:08:55.272831+05:00",
+            "room": 2
         }
     ]
 }
@@ -113,9 +123,14 @@ docker-compose -f docker-compose.yaml up -d
     "username": "Len",
     "players": [
         {
+            "id": 6,
             "name": "Len",
-            "is_host": true,
-            "is_ready": false
+            "avatar": "1",
+            "is_host": false,
+            "is_ready": false,
+            "score": 0,
+            "created_at": "2024-07-22T18:08:55.272831+05:00",
+            "room": 2
         }
     ]
 }
@@ -131,21 +146,32 @@ docker-compose -f docker-compose.yaml up -d
     "username": "Len",
     "players": [
         {
+            "id": 6,
             "name": "viki",
-            "is_host": true,
-            "is_ready": true
+            "avatar": "1",
+            "is_host": false,
+            "is_ready": false,
+            "score": 0,
+            "created_at": "2024-07-22T18:08:55.272831+05:00",
+            "room": 2
         },
         {
+            "id": 7,
             "name": "kek",
-            "is_host": false,
-            "is_ready": true
-        }
+            "avatar": "2",
+            "is_host": true,
+            "is_ready": false,
+            "score": 0,
+            "created_at": "2024-07-22T18:08:55.272831+05:00",
+            "room": 2
+        },
     ]
 }
 ```
 
 ### Коды ошибок, которые могут возникнуть при подключении
 - 4001 - имя пользователя не задано
+- 4002 - игрок с таким именем уже существует в этой комнате
 - 4003 - игра уже началась
 - 4004 - комната не найдена
 

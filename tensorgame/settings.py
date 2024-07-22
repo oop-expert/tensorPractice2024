@@ -95,15 +95,21 @@ DATABASES = {
     }
 }
 
-REDIS_HOST = 'localhost'
-REDIS_PORT = 6379
+# REDIS_HOST = 'localhost'
+# REDIS_PORT = 6379
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             'hosts': [f'redis://{REDIS_HOST}:{REDIS_PORT}'],
+#         },
+#     },
+# }
+
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            'hosts': [f'redis://{REDIS_HOST}:{REDIS_PORT}'],
-        },
-    },
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
 }
 
 # Password validation
@@ -141,6 +147,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

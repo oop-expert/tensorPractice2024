@@ -57,6 +57,9 @@ class Player(models.Model):
     def __str__(self) -> str:
         return self.name
 
+    class Meta:
+        unique_together = ('name', 'room',)
+
 
 class Question(models.Model):
     image = models.TextField(null=True, blank=True)

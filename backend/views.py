@@ -1,4 +1,4 @@
-from rest_framework import mixins, viewsets, generics
+from rest_framework import mixins, viewsets, generics, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -12,7 +12,17 @@ class CreateRetrieveRoomViewSet(mixins.CreateModelMixin,
                                 mixins.RetrieveModelMixin,
                                 viewsets.GenericViewSet):
     queryset = Room.objects.all()
+    lookup_field = 'room_code'
     serializer_class = RoomSerializer
+
+    def retrieve(self, request, *args, **kwargs):
+        room_code = kwargs[self.lookup_field]
+        room = Room.objects.filter(code=room_code)
+        if not room:
+            return Response(data={'error': 'No room found!'}, status=status.HTTP_404_NOT_FOUND)
+        else:
+            serializer = RoomSerializer(room[0])
+            return Response(serializer.data)
 
 
 class QuestionAPIView(generics.RetrieveAPIView):

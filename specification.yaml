@@ -29,13 +29,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/FullRoom'
 
-  /room/{room_id}/:
+  /room/{room_code}/:
     get:
       tags:
         - room
       description: Возвращает комнату с привязанными к ней игроками и вопросами.
       parameters:
-        - name: room_id
+        - name: room_code
+          description: код комнаты
           in: path
           required: true
           schema:

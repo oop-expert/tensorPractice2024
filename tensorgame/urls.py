@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from tensorgame import settings
 # from . import views
 
 urlpatterns = [
@@ -26,4 +28,4 @@ urlpatterns = [
     # path('', include('frontend.urls')),
     # path('', views.index),
     # path('kandinsky/', views.kandinsky_view, name='kandinsky')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

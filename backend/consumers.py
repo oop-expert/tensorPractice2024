@@ -3,24 +3,29 @@ from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from django.http import QueryDict
 
 from .models import Room, Player
+from .serializers import PlayerSerializer
 
 
 class RoomConsumer(AsyncJsonWebsocketConsumer):
     async def connect(self):
         self.room_code = self.scope['url_route']['kwargs']['room_code']
         query = QueryDict(self.scope['query_string'])
-        username = query.get('username')
+        username, avatar_id = query.get('username'), query.get('avatar_id')
         self.room = await self.get_room()
         await self.accept()
 
+        if not avatar_id or avatar_id not in ['1', '2', '3', '4', '5', '6']:
+            avatar_id = '1'
         if not username:
             return await self.close(4001, 'username is not specified')
         if not self.room:
             return await self.close(4004, 'room is not found')
         if self.room.is_started:
             return await self.close(4003, 'game is started')
+        if await self.user_exists(username):
+            return await self.close(4002, 'user with this name is already exists')
 
-        self.user = await self.get_or_create_player(username)
+        self.user = await self.create_player(username, avatar_id)
         await self.channel_layer.group_add(
             self.room_code,
             self.channel_name
@@ -80,7 +85,7 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
             )
 
     async def disconnect(self, close_code):
-        if close_code not in [4001, 4003, 4004]:
+        if close_code not in [4001, 4003, 4004, 4002]:
             self.user = await self.refresh_player()
             await self.delete_player()
             await self.channel_layer.group_send(
@@ -123,6 +128,10 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
         }))
 
     @database_sync_to_async
+    def user_exists(self, username):
+        return Player.objects.filter(room=self.room, name=username).exists()
+
+    @database_sync_to_async
     def get_room(self):
         return Room.objects.filter(code=self.room_code).first()
 
@@ -131,12 +140,13 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
         return Room.objects.filter(code=self.room_code).update(is_started=not self.room.is_started)
 
     @database_sync_to_async
-    def get_or_create_player(self, name):
-        player, _ = Player.objects.get_or_create(room=self.room, name=name)
-        players_count = self.room.player_set.all().count()
-        if players_count == 1:
-            player.is_host = True
-            player.save()
+    def create_player(self, name, avatar):
+        is_host = self.room.player_set.all().count() == 0
+        player = Player.objects.create(room=self.room, name=name, avatar=avatar, is_host=is_host)
+        # players_count = self.room.player_set.all().count()
+        # if players_count == 1:
+        #     player.is_host = True
+        #     player.save()
         return player
 
     @database_sync_to_async
@@ -149,14 +159,9 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
 
     @database_sync_to_async
     def refresh_players(self):
-        return [
-            {
-                'name': player.name,
-                'is_host': player.is_host,
-                'is_ready': player.is_ready
-            }
-            for player in self.room.player_set.all()
-        ]
+        players = Player.objects.filter(room=self.room)
+        serializer = PlayerSerializer(players, many=True)
+        return serializer.data
 
     @database_sync_to_async
     def reset_players(self, admin):
