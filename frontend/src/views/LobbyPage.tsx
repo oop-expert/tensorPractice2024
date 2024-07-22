@@ -12,12 +12,15 @@ import PanelGroup from '../components/PanelGroup';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import CloseIcon from '@mui/icons-material/Close';
 import { openPopup } from '../store/popupSlice';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectGame } from '../store/gameSlice';
+import { useSelector } from 'react-redux';
+import { getGameById, selectGame } from '../store/gameSlice';
 import { selectPlayer, setReady } from '../store/playerSlice';
 import Player from '../utils/types/Player';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { WebSocketActionTypes } from '../store/webSocketMiddleware';
+import { useAppDispatch } from '../store/storeHooks';
+import PopupRegistrationForm from '../components/PopupRegistrationForm';
+import ErrorMessage from '../components/ErrorMessage';
 
 const LOBBY_CAPACITY = 10;
 const DESKTOP_BUTTON_GROUP_WIDTH = '70%';
@@ -32,13 +35,16 @@ export default function LobbyPage() {
   const {isMobile, isDesktop} = useMediaMatch();
   const isThinnerThan1000 = useMediaQuery('(max-width:1000px)');
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const onPopupOpen = () => dispatch(openPopup());
 
   const {game} = useSelector(selectGame);
   const player = useSelector(selectPlayer);
 
   const isStartDisabled = player.isHost && game.players.every((p: Player) => p.isReady);
+
+  const isPlayerConnected = useMemo(() => game.players.some((p) => p.name === player.name), [game, player]);
+  const canJoinGame = game.id > 0 && !game.is_started && player.id > 0 && !isPlayerConnected;
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -61,20 +67,20 @@ export default function LobbyPage() {
     navigate('/');
   };
 
-  const [once, setOnce] = useState(false);
-
   useEffect(() => {
-    if(game.id > 0 && !once) {
+    if(game.id <= 0) {
+      const parsedId = parseInt(id ?? '');
+      dispatch(getGameById(parsedId));
+    } else if(canJoinGame) {
       dispatch({type: WebSocketActionTypes.JOIN_GAME, payload: {gameCode: game.code, username: player.name}});
-      setOnce(true);
     }
-  }, [game, player.name, dispatch, once]);
+  }, [game, player.name, player.id, dispatch, id, canJoinGame]);
 
   useEffect(() => {
-    if(game.is_started) {
+    if(game.is_started && isPlayerConnected) {
       navigate(`/room/${id}`);
     }
-  }, [game, id, navigate])
+  }, [game.is_started, isPlayerConnected, id, navigate])
 
   return (
     <PanelGroup 
@@ -168,6 +174,10 @@ export default function LobbyPage() {
         qrCode={game.qr_code}
         onLinkSave={onLinkCopy}
         onCodeSave={onCodeCopy} />
+      
+      {game.is_started
+      ? <PopupRegistrationForm canJoin={game.id >= 0}/>
+      : <ErrorMessage isOpened={!isPlayerConnected}/>}
     </PanelGroup>
   );
 }

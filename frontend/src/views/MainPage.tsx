@@ -1,27 +1,20 @@
 import { Button, CircularProgress, Divider, TextField, Typography } from '@mui/material';
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useState } from 'react';
 import RegistrationForm from '../components/RegistrationForm';
 import { useNavigate } from 'react-router-dom';
 import PanelGroup from '../components/PanelGroup';
 import Panel from '../components/Panel';
 import MainAppBar from '../components/MainAppBar';
 import { useMediaMatch } from '../hooks/useMobileMatch';
-import { AVATARS, generateRandomId, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
-import { signUp } from '../store/playerSlice';
+import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
+import { selectPlayer, signUp } from '../store/playerSlice';
 import { useSelector } from 'react-redux';
-import Player from '../utils/types/Player';
-import { postCreateGame, joinGame, selectGame } from '../store/gameSlice';
+import { postCreateGame, selectGame } from '../store/gameSlice';
 import { useAppDispatch } from '../store/storeHooks';
 
 const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
 const H_TABLET_MAIN_PANEL_MARGIN = '5vh auto 0';
 const V_TABLET_MAIN_PANEL_MARGIN = '15% auto 0';
-
-const avatarIdReducer = (colorId: number, step: number): number => (
-  colorId + step < 0 
-  ? AVATARS.length - 1
-  : Math.abs(colorId + step) % AVATARS.length
-);
 
 const getPanelMargin = (isMobile: boolean, isHTablet: boolean, isVTablet: boolean) => {
   if(isMobile) {
@@ -36,48 +29,25 @@ const getPanelMargin = (isMobile: boolean, isHTablet: boolean, isVTablet: boolea
 };
 
 export default function MainPage() {
-  const [avatarId, dispatchAvatarId] = useReducer(avatarIdReducer, 0);
-  const avatar = AVATARS[avatarId];
-  
-  const [username, setUsername] = useState<string>('');
   const [code, setCode] = useState<string>('');
   
   const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
 
   const {game, status: gameStatus} = useSelector(selectGame);
+  const player = useSelector(selectPlayer);
   const dispatch = useAppDispatch();
 
   const navigate = useNavigate();
 
-  const onUsernameChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setUsername(evt.target.value);
-
   const onCodeChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setCode(evt.target.value);
 
-  const generatePlayer = (isHost: boolean) => {
-    const player: Player = {
-      id: generateRandomId(),
-      name: username,
-      avatar,
-      isHost,
-      isReady: false,
-      score: 0,
-      createdAt: new Date().toString(),
-      isRight: false
-    };
-
-    return player;
-  };
-
   const onGameCreate = () => {
-    const player = generatePlayer(true);
-    dispatch(signUp(player));
+    dispatch(signUp(true));
     dispatch(postCreateGame());
   };
 
   const onGameJoin = () => {
-    const player = generatePlayer(false);
-    dispatch(signUp(player));
-    dispatch(joinGame({code, player}));
+    dispatch(signUp(false));
   }; 
 
   useEffect(() => {
@@ -95,11 +65,7 @@ export default function MainPage() {
       height={isMobile ? '100%' : '75vh'}
       gap={isMobile ? '10vh' : '30px'}>
         <PanelGroup direction='column'>
-          <RegistrationForm 
-            username={username} 
-            onUsernameChange={onUsernameChange}
-            avatar={avatar}
-            dispatchAvatarId={dispatchAvatarId}/>
+          <RegistrationForm />
         </PanelGroup>
 
         <PanelGroup direction='column' gap='30px'>
@@ -117,7 +83,7 @@ export default function MainPage() {
                       <Button
                         variant='contained'
                         color='secondary'
-                        disabled={!code || !username}
+                        disabled={!code || !player.name}
                         onClick={onGameJoin}>
                           Войти
                       </Button>
@@ -131,7 +97,7 @@ export default function MainPage() {
               <Button 
                 variant='contained' 
                 color='primary'
-                disabled={!username || gameStatus === 'loading'}
+                disabled={!player.name || gameStatus === 'loading'}
                 onClick={onGameCreate}>
                   {gameStatus === 'loading' ? <CircularProgress color='primary'/> : <>Создать комнату</>}
               </Button>

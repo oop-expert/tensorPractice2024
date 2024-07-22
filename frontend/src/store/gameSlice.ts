@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import Game from "../utils/types/Game";
-import { generateGame, generateRandomPlayers } from "../utils/mock";
 import { AsyncThunkConfig, State } from "./store";
 import AxiosInstance from "../utils/Axios";
 import GameState from "../utils/types/GameState";
@@ -12,6 +11,11 @@ import PlayerResponce from "../utils/types/PlayerResponce";
 //запросы делаются в этих функциях
 const postCreateGame = createAsyncThunk<Game, void, AsyncThunkConfig>('game/createGame', async () => {
   const resp = await AxiosInstance.post('/room/');
+  return resp.data as Game;
+});
+
+const getGameById = createAsyncThunk<Game, number, AsyncThunkConfig>('game/getGame', async (gameId: number) => {
+  const resp = await AxiosInstance.get(`/room/${gameId}`);
   return resp.data as Game;
 });
 
@@ -38,10 +42,6 @@ const gameSlice = createSlice({
   name: 'game',
   initialState: initialState,
   reducers: {
-    joinGame: (state, action) => {
-      state.game = generateGame(generateRandomPlayers(), action.payload.code);
-      state.game.players.push(action.payload.player);
-    },
     quitGame: (state) => {
       state.game = initialGame;
     },
@@ -82,6 +82,16 @@ const gameSlice = createSlice({
       .addCase(postCreateGame.rejected, (state) => {
         state.status = 'error';
       })
+      .addCase(getGameById.pending, (state) => {
+        state.status = 'loading'
+      })
+      .addCase(getGameById.fulfilled, (state, action) => {
+        state.status = 'success';
+        state.game = action.payload;
+      })
+      .addCase(getGameById.rejected, (state) => {
+        state.status = 'error';
+      })
       .addCase(getQuestion.pending, (state) => {
         state.status = 'loading';
       })
@@ -100,6 +110,6 @@ const gameSlice = createSlice({
 });
 
 export const selectGame = (state: State) => state.game;
-export const {joinGame, quitGame, startGame, changePlayer, updatePlayers} = gameSlice.actions;
-export {postCreateGame, getQuestion};
+export const {quitGame, startGame, changePlayer, updatePlayers} = gameSlice.actions;
+export {postCreateGame, getGameById, getQuestion};
 export default gameSlice.reducer;

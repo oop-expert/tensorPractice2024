@@ -4,15 +4,10 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Panel from './Panel';
 import DefaultAvatar from './DefaultAvatar';
 import { useMediaMatch } from '../hooks/useMobileMatch';
-import { generateRandomId } from '../utils/utils';
-
-type UsernameField = {
-  username: string; 
-  onUsernameChange: (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void,
-  avatar: string,
-  dispatchAvatarId: (action: number) => void,
-  width?: number | string
-}
+import { AVATARS, generateRandomId } from '../utils/utils';
+import { useEffect, useReducer, useState } from 'react';
+import { setInfo } from '../store/playerSlice';
+import { useAppDispatch } from '../store/storeHooks';
 
 const FormAvatarValues = {
   DESKTOP_WIDTH: '18vw',
@@ -23,8 +18,27 @@ const FormAvatarValues = {
   MOBILE_GAP: '2vw'
 };
 
-export default function RegistrationForm({username, onUsernameChange, avatar, dispatchAvatarId, width='100%'}: UsernameField) {
+const avatarIdReducer = (colorId: number, step: number): number => (
+  colorId + step < 0 
+  ? AVATARS.length - 1
+  : Math.abs(colorId + step) % AVATARS.length
+);
+
+export default function RegistrationForm({width='100%'}: {width?: number | string}) {
   const {isMobile} = useMediaMatch();
+
+  const dispatch = useAppDispatch();
+
+  const [avatarId, dispatchAvatarId] = useReducer(avatarIdReducer, 0);
+  const [username, setUsername] = useState<string>('');
+
+  const avatar = AVATARS[avatarId];
+
+  const onUsernameChange = (evt: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setUsername(evt.target.value);
+
+  useEffect(() => {
+    dispatch(setInfo({name: username, avatar}));
+  }, [username, avatar, dispatch]);
 
   return (
     <Panel isMatchingMobile={isMobile} width={width} gap={isMobile ? '5vh' : 2}>

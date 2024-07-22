@@ -30,15 +30,13 @@ export const WebSocketMiddleware =
         socket.connect(`ws://tensorpractic.ru:8000/ws/room/${action.payload.gameCode}/?username=${action.payload.username}`);
 
         socket.onMessage((evt: MessageEvent) => {
-          if(evt.data.command === 'start_game') {
+          const data = JSON.parse(evt.data);
+          if(data.command === 'start_game') {
             dispatch(startGame());
           } else {
-            const data = JSON.parse(evt.data);
             dispatch(updatePlayers(data.players ?? []));
           }
         });
-
-        socket.onClose(() => dispatch(quitGame()));
 
         break;
       }
@@ -60,6 +58,7 @@ export const WebSocketMiddleware =
 
       case WebSocketActionTypes.QUIT_GAME: {
         socket.disconnect();
+        dispatch(quitGame());
         break;
       }
     }
