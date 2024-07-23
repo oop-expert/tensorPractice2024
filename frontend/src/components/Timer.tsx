@@ -14,7 +14,7 @@ type QwestionProps={
   player:Player
 }
 let count: number = 1
-let COUNTDOWN_INITIAL_TIME_IN_SECONDS = 15
+let COUNTDOWN_INITIAL_TIME_IN_SECONDS = 30
 export let gameQwestion: Question
 export default function Timer( {qwestion, player}: QwestionProps) {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ export default function Timer( {qwestion, player}: QwestionProps) {
       setTimeout(() => {
         count = count + 1;
         setOpen(false);
-        setSecondsAmount(15);
+        setSecondsAmount(30);
         //dispatch(getQuestion(qwestion.id + 1));
         //dispatch(getImageQuestion(qwestion.id + 1));
         dispatch(getGameByCode(((game.code))));
@@ -47,7 +47,7 @@ export default function Timer( {qwestion, player}: QwestionProps) {
           answerButton.style.display = "";
           answerButton.style.pointerEvents = "auto";
         } 
-      }, 5000)
+      }, 10000)
       return;
     }
  
