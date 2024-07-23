@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, List, TextField, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, CircularProgress, IconButton, List, TextField, Typography, useMediaQuery } from '@mui/material';
 import Panel from '../components/Panel';
 import LobbyUserInfo from '../components/LobbyUserInfo';
 import { nanoid } from 'nanoid';
@@ -16,7 +16,7 @@ import { useSelector } from 'react-redux';
 import { getGameByCode, selectGame } from '../store/gameSlice';
 import { selectPlayer, setReady } from '../store/playerSlice';
 import Player from '../utils/types/Player';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { WebSocketActionTypes } from '../store/webSocketMiddleware';
 import { useAppDispatch } from '../store/storeHooks';
 import PopupRegistrationForm from '../components/PopupRegistrationForm';
@@ -46,6 +46,10 @@ export default function LobbyPage() {
   const isPlayerConnected = useMemo(() => game.players.some((p) => p.name === player.name), [game, player]);
   const canJoinGame = game.id > 0 && !game.is_started && player.id > 0 && !isPlayerConnected;
 
+  const hasAllImages = useMemo(() => game.questions.every((q) => q.image), [game]);
+
+  const [countdown, setCountdown] = useState<number>(0);
+
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   };
@@ -74,16 +78,33 @@ export default function LobbyPage() {
   }, [game, player, dispatch, code, canJoinGame]);
 
   useEffect(() => {
-    if(canJoinGame) {
+    if(isPlayerConnected) {
+      return;
+    } else if(canJoinGame) {
       dispatch({type: WebSocketActionTypes.JOIN_GAME, payload: {gameCode: game.code, username: player.name, avatarId: player.avatarId}});
     }
   });
 
   useEffect(() => {
-    if(game.is_started && isPlayerConnected) {
+    if(game.is_started && hasAllImages && isPlayerConnected) {
       navigate(`/room/${code}`);
     }
-  }, [game.is_started, isPlayerConnected, code, navigate])
+  }, [game.is_started, isPlayerConnected, code, navigate, hasAllImages])
+
+  useEffect(() => {
+    if(isPlayerConnected && !hasAllImages) {
+      if(countdown === 0) {
+        dispatch(getGameByCode(game.code));
+        setCountdown(10000);
+      } else {
+        setTimeout(() => {
+          setCountdown(0);
+        }, 10000);
+      }
+    } else {
+      return;
+    }
+  }, [game.code, isPlayerConnected, countdown, hasAllImages, dispatch]);
 
   return (
     <PanelGroup 
@@ -140,7 +161,9 @@ export default function LobbyPage() {
             </IconButton>
           </Box>
 
-          <Typography variant='h2' sx={{marginTop: LOBBY_H2_Y_MARGIN, marginBottom: LOBBY_H2_Y_MARGIN}}>Ожидаем участников команды</Typography>
+          <Typography variant='h2' sx={{marginTop: LOBBY_H2_Y_MARGIN, marginBottom: LOBBY_H2_Y_MARGIN}}>
+            {game.is_started && !hasAllImages ? 'Генерируются изображения' : 'Ожидаем участников команды'}
+          </Typography>
 
           <List style={{height: 'stretch', overflowY: 'scroll'}}>
             {Array.from({length: LOBBY_CAPACITY}, (_v, i) => (
@@ -168,7 +191,7 @@ export default function LobbyPage() {
                 variant='contained' 
                 color='primary' 
                 onClick={onGameStart}>
-                  Начать
+                  {game.is_started && !hasAllImages ? <CircularProgress color='primary'/> : <>Начать</>}
               </Button>
           </Box>
       </Panel>

@@ -7,6 +7,8 @@ import Question from "../utils/types/Question";
 import { getPlayerFromResponce } from "../utils/utils";
 import PlayerResponce from "../utils/types/PlayerResponce";
 
+const isPlayerResponce = (responce: unknown): responce is PlayerResponce => (responce as PlayerResponce).is_host !== undefined;
+
 //запросы делаются в этих функциях
 const postCreateGame = createAsyncThunk<Game, void, AsyncThunkConfig>('game/createGame', async () => {
   const resp = await AxiosInstance.post('/room/');
@@ -70,6 +72,7 @@ const gameSlice = createSlice({
       .addCase(postCreateGame.fulfilled, (state, action) => {
         state.status = 'success';
         state.game = action.payload;
+        state.game.players = action.payload.players.map((player) => isPlayerResponce(player) ? getPlayerFromResponce(player) : player);
         state.errorCode = undefined;
       })
       .addCase(postCreateGame.rejected, (state, action) => {
@@ -84,6 +87,7 @@ const gameSlice = createSlice({
       .addCase(getGameByCode.fulfilled, (state, action) => {
         state.status = 'success';
         state.game = action.payload;
+        state.game.players = action.payload.players.map((player) => isPlayerResponce(player) ? getPlayerFromResponce(player) : player);
         state.errorCode = undefined;
       })
       .addCase(getGameByCode.rejected, (state, action) => {

@@ -1,12 +1,14 @@
 import { Avatar, Box, Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography} from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Timer from '../components/Timer';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import { useSelector } from 'react-redux';
 import { selectGame } from '../store/gameSlice';
 import { selectPlayer } from '../store/playerSlice';
+import { useAppDispatch } from '../store/storeHooks';
+import { WebSocketActionTypes } from '../store/webSocketMiddleware';
 
 
 export default function RoomPage() {
@@ -14,8 +16,9 @@ export default function RoomPage() {
   const player = useSelector(selectPlayer)
   const {isMobile} = useMediaMatch();
   const navigate = useNavigate();
-  const urlParams = useParams();
   const [open, setOpen] = useState(false);
+
+  const dispatch = useAppDispatch();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -26,7 +29,8 @@ export default function RoomPage() {
 
   const handleCloseExit = () => {
     setOpen(false);
-    navigate(`/lobby/${Number(urlParams.id)}`);
+    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.code, username: player.name, avatarId: player.avatarId}});
+    navigate(`/`);
   }
 
   return(

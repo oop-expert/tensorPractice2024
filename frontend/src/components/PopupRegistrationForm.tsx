@@ -6,7 +6,6 @@ import { useAppDispatch } from '../store/storeHooks';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import { quitGame, selectGame } from '../store/gameSlice';
 import { Colors } from '../utils/utils';
-import { useMemo } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,11 +13,9 @@ export default function PopupRegistrationForm() {
   const navigate = useNavigate();
   const {isMobile, isDesktop} = useMediaMatch();
 
-  const {game, errorCode, errorMessage, status} = useSelector(selectGame);
+  const {errorCode, errorMessage, status} = useSelector(selectGame);
   const player = useSelector(selectPlayer);
   const dispatch = useAppDispatch();
-
-  const isInGame = useMemo(() => game.players.some((p) => p.name === player.name), [player.name, game]);
 
   const maxWidth = isMobile ? 'sm' : (isDesktop ? 'lg' : 'md');
 
@@ -32,7 +29,7 @@ export default function PopupRegistrationForm() {
   };
 
   return (
-    <Dialog open={player.id <= 0 || !isInGame || errorCode === '4002'} maxWidth={maxWidth}>
+    <Dialog open={player.id <= 0 || errorCode === '4002'} maxWidth={maxWidth}>
       <Box display='flex' flexDirection='column' gap={1}>
         <Box
           position='absolute'

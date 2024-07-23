@@ -14,7 +14,7 @@ type QwestionProps={
   player:Player
 }
 let count: number = 1
-let COUNTDOWN_INITIAL_TIME_IN_SECONDS = 30
+let COUNTDOWN_INITIAL_TIME_IN_SECONDS = 15
 export let gameQwestion: Question
 export default function Timer( {qwestion, player}: QwestionProps) {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ export default function Timer( {qwestion, player}: QwestionProps) {
       setTimeout(() => {
         count = count + 1;
         setOpen(false);
-        setSecondsAmount(30);
+        setSecondsAmount(15);
         //dispatch(getQuestion(qwestion.id + 1));
         //dispatch(getImageQuestion(qwestion.id + 1));
         dispatch(getGameByCode(((game.code))));
@@ -47,7 +47,7 @@ export default function Timer( {qwestion, player}: QwestionProps) {
           answerButton.style.display = "";
           answerButton.style.pointerEvents = "auto";
         } 
-      }, 10000)
+      }, 5000)
       return;
     }
  
@@ -132,7 +132,7 @@ export default function Timer( {qwestion, player}: QwestionProps) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description" sx={{whiteSpace: 'pre-line',textAlign:'center', color:"black", fontSize:'22px'}}>
-            {qwestion.answer}
+            {qwestion?.answer}
           </DialogContentText>
         </DialogContent>
       </Dialog>
@@ -151,7 +151,7 @@ export default function Timer( {qwestion, player}: QwestionProps) {
           id='img1'
           component="img"
           alt="Сгенерированное изображение"
-          image={`data:image/png;base64,${qwestion.image}`}
+          image={`data:image/png;base64,${qwestion.image ?? ''}`}
           //image="https://images.unsplash.com/photo-1518756131217-31eb79b20e8f"
           onMouseOver={ZoomImg}
           onMouseOut={UnzoomImg}>

@@ -7,6 +7,7 @@ import { getGameByCode, selectGame } from "../store/gameSlice";
 import { useEffect } from "react";
 import { useAppDispatch } from "../store/storeHooks";
 import Player from "../utils/types/Player";
+import { WebSocketActionTypes } from "../store/webSocketMiddleware";
 
 
 export default function ResultsPage(){
@@ -18,8 +19,24 @@ export default function ResultsPage(){
     useEffect(() => {
         dispatch(getGameByCode( game.code));
     }, [dispatch,  game.code]);
+
+    useEffect(() => {
+        if(game.id <= 0) {
+            navigate('/');
+        } else if(!game.is_started) {
+            dispatch({type: WebSocketActionTypes.RESTART_GAME, payload: {gameCode: game.code, username: '', avatarId: 0}});
+            navigate(`/lobby/${game.code}`);
+        }
+    }, [game.is_started, game.code, game.id, dispatch, navigate])
+
+
+    const quitGame = () => {
+        dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.code, username: '', avatarId: 0}});
+        navigate(`/`);
+    }
+
     console.log(game)
-    const onGameCreate = () => {
+    /*const onGameCreate = () => {
         navigate(`/`);
         //dispatch(signUp(true));
         //dispatch(postCreateGame());
@@ -27,7 +44,7 @@ export default function ResultsPage(){
         //     navigate(`/lobby/${game.id}`);
         //     navigate(`/`);
         // }
-    };
+    };*/
     let players = game.players
     console.log(players)
     let firstPlace
@@ -98,15 +115,15 @@ export default function ResultsPage(){
                         <Button
                             variant='contained'
                             color="secondary"
-                            onClick={() => navigate(`/`)}>
+                            onClick={quitGame}>
                                 Завершить игру
                         </Button>
                     </Box>
-                    <Button 
+                    {/*<Button 
                         variant='contained'
                         onClick={onGameCreate}>
                             Играть снова
-                    </Button>
+                    </Button>*/}
                 </Container>
             </Box>
            </Container>
