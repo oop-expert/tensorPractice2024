@@ -3,7 +3,7 @@ import Panel from '../components/Panel';
 import LobbyUserInfo from '../components/LobbyUserInfo';
 import { nanoid } from 'nanoid';
 import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import QrCodePopup from '../components/QrCodePopup';
 import QrCode2Icon from '@mui/icons-material/QrCode2';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
@@ -29,7 +29,8 @@ const LOBBY_H2_Y_MARGIN = '4px';
 
 export default function LobbyPage() {
   const {code} = useParams();
-  const lobbyUrl = window.location.href;
+  const {pathname} = useLocation();
+  const lobbyUrl = `http://tensorpractic.ru${pathname}`;
   const navigate = useNavigate();
 
   const {isMobile, isDesktop} = useMediaMatch();
