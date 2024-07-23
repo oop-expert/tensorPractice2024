@@ -29,15 +29,18 @@ export default function ResultsPage(){
         // }
     };
     let players = game.players
+    console.log(players)
     let firstPlace
-    let playersFiltered = players.sort((a, b) => Number(a.score) - Number(b.score)).reverse();
-    if(playersFiltered.length !== 0 ){
-        if(playersFiltered.length > 1){
+    let playersFiltered
+    
+    if(players.length !== 0 ){
+        if(players.length > 1){
+            playersFiltered = [...players].sort((a, b) => Number(a.score) - Number(b.score)).reverse();
             firstPlace = playersFiltered.splice(0,1)
             console.log(firstPlace)
             console.log(playersFiltered)
         }
-        console.log(playersFiltered)
+        console.log(players)
     }
     console.log(firstPlace)
     return(
@@ -48,18 +51,18 @@ export default function ResultsPage(){
                 <Box width={'100%'} display={isMobile ? 'none' : 'flex'} >
                     <Typography sx={{textAlign:'left', padding:'0.1vh 2vh', marginY:'1vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', color:'black'}}>Победитель:</Typography>
                 </Box>
-                {(playersFiltered.length === 1)?
+                {(players.length === 1)?
                     <Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', margin:'0.9vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
                         <Avatar alt='avatar 1' variant='circular'  sx={{ width: '15vh', height: '15vh'}} >
                             <PersonIcon sx={{color: 'black', width: '10vh', height: '10vh'}}/>
                         </Avatar>
                         <Box alignItems={isMobile ? 'center' : 'flex-start'} sx={{margin:'1.6vw', display:'flex', flexDirection:'column', gap:'3vh'}}>
-                                <Typography style={{fontWeight:'500', fontSize:'3vh', color:'#C94F48'}}>{playersFiltered[0].name}</Typography>
-                            <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {playersFiltered[0].score}</Typography>
+                                <Typography style={{fontWeight:'500', fontSize:'3vh', color:'#C94F48'}}>{players[0].name}</Typography>
+                            <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {players[0].score}</Typography>
                         </Box>
                     </Stack>
                     :<>
-                        {(firstPlace!==undefined)?
+                        {(firstPlace !== undefined && playersFiltered !== undefined)?
                         <Box><Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', margin:'0.9vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
                         <Avatar alt='avatar 1' variant='circular' src={firstPlace[0].avatar} sx={{ width: '15vh', height: '15vh'}} >
                             <PersonIcon sx={{color: 'black', width: '10vh', height: '10vh'}}/>

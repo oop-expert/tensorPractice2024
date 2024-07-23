@@ -40,7 +40,7 @@ export default function Timer( {qwestion, player}: QwestionProps) {
         //qwestion = game.questions[count-1];
         //console.log('timout',count, qwestion.id);
         if (count===11){
-          navigate(`/results/${urlParams.id}`)
+          navigate(`/results/${urlParams.code}`)
         }
         let answerButton = document.getElementById("answerButton");
         if(answerButton !== null){
@@ -58,9 +58,9 @@ export default function Timer( {qwestion, player}: QwestionProps) {
   // useEffect(() => {
   //   dispatch(getImageQuestion(qwestion.id));
   // }, [dispatch, qwestion.id]);
-  useEffect(() => {
-    dispatch(getGameByCode(game.code));
-}, [dispatch, game.code]);
+//   useEffect(() => {
+//     dispatch(getGameByCode(game.code));
+// }, [dispatch, game.code]);
 // for( let i=0; i<=10; i++){
 //   dispatch(getImageQuestion(game.questions[i].id));
 // }
