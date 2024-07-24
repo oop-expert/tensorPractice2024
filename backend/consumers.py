@@ -9,13 +9,14 @@ from .serializers import PlayerSerializer
 class RoomConsumer(AsyncJsonWebsocketConsumer):
     async def connect(self):
         self.room_code = self.scope['url_route']['kwargs']['room_code']
+        self.user = ''
         query = QueryDict(self.scope['query_string'])
         username, avatar_id = query.get('username'), query.get('avatar_id')
         self.room = await self.get_room()
         await self.accept()
 
-        if not avatar_id or avatar_id not in ['1', '2', '3', '4', '5', '6']:
-            avatar_id = '1'
+        if not avatar_id or avatar_id not in ['1', '2', '3', '4', '5', '0']:
+            avatar_id = '0'
         if not username:
             return await self.close(4001, 'username is not specified')
         if not self.room:
@@ -48,6 +49,7 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
         self.players = await self.refresh_players()
 
         if command == 'change_status':
+            await self.close()
             await self.change_player_status()
             await self.channel_layer.group_send(
                 self.room_code,
@@ -85,7 +87,7 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
             )
 
     async def disconnect(self, close_code):
-        if close_code not in [4001, 4003, 4004, 4002]:
+        if type(self.user) != str:
             self.user = await self.refresh_player()
             await self.delete_player()
             await self.channel_layer.group_send(
@@ -143,10 +145,6 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
     def create_player(self, name, avatar):
         is_host = self.room.player_set.all().count() == 0
         player = Player.objects.create(room=self.room, name=name, avatar=avatar, is_host=is_host)
-        # players_count = self.room.player_set.all().count()
-        # if players_count == 1:
-        #     player.is_host = True
-        #     player.save()
         return player
 
     @database_sync_to_async

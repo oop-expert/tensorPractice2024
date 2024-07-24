@@ -9,13 +9,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Рай под ногами матерей",
-      "answer": "Рай под ногами матерей"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Зеленая миля",
       "answer": "Зеленая миля"
     }
@@ -79,13 +72,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Мой мир SHINEE в кино",
-      "answer": "Мой мир SHINEE в кино"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Криминальное чтиво",
       "answer": "Криминальное чтиво"
     }
@@ -107,13 +93,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Список Шиндлера",
-      "answer": "Список Шиндлера"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Лига справедливости Зака Снайдера",
       "answer": "Лига справедливости Зака Снайдера"
     }
@@ -123,13 +102,6 @@
     "fields": {
       "text": "Бойцовский клуб",
       "answer": "Бойцовский клуб"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Леон",
-      "answer": "Леон"
     }
   },
   {
@@ -151,13 +123,6 @@
     "fields": {
       "text": "Гладиатор",
       "answer": "Гладиатор"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Астроскоп. Смотрим на звезды",
-      "answer": "Астроскоп. Смотрим на звезды"
     }
   },
   {
@@ -193,13 +158,6 @@
     "fields": {
       "text": "Место встречи изменить нельзя",
       "answer": "Место встречи изменить нельзя"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "ВОЛЕЙБОЛ!! Битва на мусорной свалке",
-      "answer": "ВОЛЕЙБОЛ!! Битва на мусорной свалке"
     }
   },
   {
@@ -254,34 +212,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Истребитель демонов",
-      "answer": "Истребитель демонов"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Зеленая книга",
-      "answer": "Зеленая книга"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Семь",
-      "answer": "Семь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Джанго освобожденный",
-      "answer": "Джанго освобожденный"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Чужой",
       "answer": "Чужой"
     }
@@ -310,13 +240,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Престиж",
-      "answer": "Престиж"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Чужие",
       "answer": "Чужие"
     }
@@ -333,13 +256,6 @@
     "fields": {
       "text": "Изгой",
       "answer": "Изгой"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Приключения Шерлока Холмса и доктора Ватсона: Охота на тигра",
-      "answer": "Приключения Шерлока Холмса и доктора Ватсона: Охота на тигра"
     }
   },
   {
@@ -387,20 +303,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Логан",
-      "answer": "Логан"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Одна жизнь",
-      "answer": "Одна жизнь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Душа",
       "answer": "Душа"
     }
@@ -436,29 +338,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Лицо со шрамом",
-      "answer": "Лицо со шрамом"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Фуриоса: Хроники Безумного Макса",
-      "answer": "Фуриоса: Хроники Безумного Макса"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Железный человек",
       "answer": "Железный человек"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Капернаум",
-      "answer": "Капернаум"
     }
   },
   {
@@ -485,29 +366,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Джентльмены",
-      "answer": "Джентльмены"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "12 стульев",
       "answer": "12 стульев"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "По соображениям совести",
-      "answer": "По соображениям совести"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Вечное сияние чистого разума",
-      "answer": "Вечное сияние чистого разума"
     }
   },
   {
@@ -522,13 +382,6 @@
     "fields": {
       "text": "Любовь и голуби",
       "answer": "Любовь и голуби"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Топ Ган: Мэверик",
-      "answer": "Топ Ган: Мэверик"
     }
   },
   {
@@ -569,20 +422,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Переводчик",
-      "answer": "Переводчик"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Игра",
-      "answer": "Игра"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Реквием по мечте",
       "answer": "Реквием по мечте"
     }
@@ -597,29 +436,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Схватка",
-      "answer": "Схватка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Рататуй",
       "answer": "Рататуй"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Отец",
-      "answer": "Отец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Свет",
-      "answer": "Свет"
     }
   },
   {
@@ -632,22 +450,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Спасти рядового Райана",
-      "answer": "Спасти рядового Райана"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Однажды в Америке",
       "answer": "Однажды в Америке"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мальчик и птица",
-      "answer": "Мальчик и птица"
     }
   },
   {
@@ -660,50 +464,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Исчезнувшая",
-      "answer": "Исчезнувшая"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Агент Эмерсон",
-      "answer": "Агент Эмерсон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Грань будущего",
-      "answer": "Грань будущего"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Тур с Иванушками",
-      "answer": "Тур с Иванушками"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Бэтмен",
       "answer": "Бэтмен"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Достать ножи",
-      "answer": "Достать ножи"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "В погоне за счастьем",
-      "answer": "В погоне за счастьем"
     }
   },
   {
@@ -737,22 +499,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и узник Азкабана",
-      "answer": "Гарри Поттер и узник Азкабана"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Звук свободы",
-      "answer": "Звук свободы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Загадочная история Бенджамина Баттона",
-      "answer": "Загадочная история Бенджамина Баттона"
+      "text": "Гарри Поттер",
+      "answer": "Гарри Поттер"
     }
   },
   {
@@ -772,13 +520,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Дневник памяти",
-      "answer": "Дневник памяти"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Добро пожаловать, или Посторонним вход воспрещен",
       "answer": "Добро пожаловать, или Посторонним вход воспрещен"
     }
@@ -788,27 +529,6 @@
     "fields": {
       "text": "Пятый элемент",
       "answer": "Пятый элемент"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Шаг к мечте: Раз и навсегда",
-      "answer": "Шаг к мечте: Раз и навсегда"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Раннее лето",
-      "answer": "Раннее лето"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Свалкармония",
-      "answer": "Свалкармония"
     }
   },
   {
@@ -828,22 +548,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Гран Туризмо",
-      "answer": "Гран Туризмо"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Черный лебедь",
       "answer": "Черный лебедь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Паразиты",
-      "answer": "Паразиты"
     }
   },
   {
@@ -863,22 +569,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Шоу Трумана",
-      "answer": "Шоу Трумана"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Миллионер из трущоб",
       "answer": "Миллионер из трущоб"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рокки",
-      "answer": "Рокки"
     }
   },
   {
@@ -891,22 +583,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и кубок огня",
-      "answer": "Гарри Поттер и кубок огня"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Апокалипсис",
       "answer": "Апокалипсис"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Где ты, Адам?",
-      "answer": "Где ты, Адам?"
     }
   },
   {
@@ -919,22 +597,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Лучшее предложение",
-      "answer": "Лучшее предложение"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Вверх",
       "answer": "Вверх"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Король говорит!",
-      "answer": "Король говорит!"
     }
   },
   {
@@ -947,50 +611,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Гарри Поттер и Дары смерти",
-      "answer": "Гарри Поттер и Дары смерти"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пипец",
-      "answer": "Пипец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Мулан",
       "answer": "Мулан"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ревущие двадцатые или судьба солдата в Америке",
-      "answer": "Ревущие двадцатые или судьба солдата в Америке"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Олдбой",
-      "answer": "Олдбой"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Гонка",
-      "answer": "Гонка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Небесный замок Лапута",
-      "answer": "Небесный замок Лапута"
     }
   },
   {
@@ -1003,29 +625,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Белая птица. Новое чудо",
-      "answer": "Белая птица. Новое чудо"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Гарри Поттер и философский камень",
-      "answer": "Гарри Поттер и философский камень"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Дэдпул",
       "answer": "Дэдпул"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Волк с Уолл-стрит",
-      "answer": "Волк с Уолл-стрит"
     }
   },
   {
@@ -1038,13 +639,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Невидимый гость",
-      "answer": "Невидимый гость"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Люди Икс",
       "answer": "Люди Икс"
     }
@@ -1052,22 +646,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Заложница",
-      "answer": "Заложница"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Ледниковый период",
       "answer": "Ледниковый период"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Три билборда на границе Эббинга, Миссури",
-      "answer": "Три билборда на границе Эббинга, Миссури"
     }
   },
   {
@@ -1096,20 +676,6 @@
     "fields": {
       "text": "Девчата",
       "answer": "Девчата"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пленницы",
-      "answer": "Пленницы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Банши Инишерина",
-      "answer": "Банши Инишерина"
     }
   },
   {
@@ -1150,36 +716,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Бешеные псы",
-      "answer": "Бешеные псы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Элементарно",
       "answer": "Элементарно"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Блэйд",
-      "answer": "Блэйд"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Район №9",
-      "answer": "Район №9"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Бесславные ублюдки",
-      "answer": "Бесславные ублюдки"
     }
   },
   {
@@ -1199,13 +737,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Бедные-несчастные",
-      "answer": "Бедные-несчастные"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Господин Никто",
       "answer": "Господин Никто"
     }
@@ -1213,29 +744,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Области тьмы",
-      "answer": "Области тьмы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Казино Рояль",
-      "answer": "Казино Рояль"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Один дома",
       "answer": "Один дома"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дурак",
-      "answer": "Дурак"
     }
   },
   {
@@ -1269,22 +779,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Лабиринт Фавна",
-      "answer": "Лабиринт Фавна"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Шестое чувство",
       "answer": "Шестое чувство"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Законопослушный гражданин",
-      "answer": "Законопослушный гражданин"
     }
   },
   {
@@ -1311,29 +807,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Крупная рыба",
-      "answer": "Крупная рыба"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Последний самурай",
       "answer": "Последний самурай"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Старикам тут не место",
-      "answer": "Старикам тут не место"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Девушка с татуировкой дракона",
-      "answer": "Девушка с татуировкой дракона"
     }
   },
   {
@@ -1360,27 +835,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Убить Билла",
-      "answer": "Убить Билла"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Убийцы цветочной луны",
-      "answer": "Убийцы цветочной луны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Выживший",
-      "answer": "Выживший"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Человек-муравей",
       "answer": "Человек-муравей"
     }
@@ -1388,57 +842,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Сказки Гофмана",
-      "answer": "Сказки Гофмана"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ультиматум Борна",
-      "answer": "Ультиматум Борна"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ее заветное желание",
-      "answer": "Ее заветное желание"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Красота по-американски",
-      "answer": "Красота по-американски"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Кровавый алмаз",
-      "answer": "Кровавый алмаз"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Социальная сеть",
-      "answer": "Социальная сеть"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Заколдованный мальчик",
       "answer": "Заколдованный мальчик"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "1917",
-      "answer": "1917"
     }
   },
   {
@@ -1453,41 +858,6 @@
     "fields": {
       "text": "300 спартанцев",
       "answer": "300 спартанцев"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Навсикая из долины Ветров",
-      "answer": "Навсикая из долины Ветров"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Воспоминания о Марни",
-      "answer": "Воспоминания о Марни"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Гарри Поттер и Тайная Комната",
-      "answer": "Гарри Поттер и Тайная Комната"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Помни",
-      "answer": "Помни"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Гран Торино",
-      "answer": "Гран Торино"
     }
   },
   {
@@ -1528,29 +898,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Артист",
-      "answer": "Артист"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Город грехов",
-      "answer": "Город грехов"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Мальчишник в Вегасе",
       "answer": "Мальчишник в Вегасе"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Звезда родилась",
-      "answer": "Звезда родилась"
     }
   },
   {
@@ -1570,57 +919,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Нефть",
-      "answer": "Нефть"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Скала",
-      "answer": "Скала"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Не время умирать",
-      "answer": "Не время умирать"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Троя",
-      "answer": "Троя"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Семь черных бумаг",
-      "answer": "Семь черных бумаг"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Константин: повелитель тьмы",
-      "answer": "Константин: повелитель тьмы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Дитя погоды",
       "answer": "Дитя погоды"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Звездные Войны",
-      "answer": "Звездные Войны"
     }
   },
   {
@@ -1640,13 +940,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Приговор",
-      "answer": "Приговор"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Привидение",
       "answer": "Привидение"
     }
@@ -1654,29 +947,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Амели",
-      "answer": "Амели"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Горизонты",
-      "answer": "Горизонты"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Эффект бабочки",
       "answer": "Эффект бабочки"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Весна, лето, осень, зима... и снова весна",
-      "answer": "Весна, лето, осень, зима... и снова весна"
     }
   },
   {
@@ -1710,27 +982,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "RRR: Рядом ревёт революция",
-      "answer": "RRR: Рядом ревёт революция"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Гарри Поттер и Орден Феникса",
-      "answer": "Гарри Поттер и Орден Феникса"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Меня зовут Кхан",
-      "answer": "Меня зовут Кхан"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Ведьмина служба доставки",
       "answer": "Ведьмина служба доставки"
     }
@@ -1759,43 +1010,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Убойные каникулы",
-      "answer": "Убойные каникулы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Командир",
-      "answer": "Командир"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Звездный путь",
-      "answer": "Звездный путь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Чтец",
-      "answer": "Чтец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Суперсемейка",
       "answer": "Суперсемейка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Звездная пыль",
-      "answer": "Звездная пыль"
     }
   },
   {
@@ -1829,20 +1045,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Боец",
-      "answer": "Боец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Паралимпиец",
-      "answer": "Паралимпиец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Первому игроку приготовиться",
       "answer": "Первому игроку приготовиться"
     }
@@ -1850,36 +1052,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Лев",
-      "answer": "Лев"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Укрась прощальное утро цветами обещания",
-      "answer": "Укрась прощальное утро цветами обещания"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Брестская крепость",
-      "answer": "Брестская крепость"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Алита: Боевой ангел",
       "answer": "Алита: Боевой ангел"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Отель \"Гранд Будапешт\"",
-      "answer": "Отель \"Гранд Будапешт\""
     }
   },
   {
@@ -1894,13 +1068,6 @@
     "fields": {
       "text": "О чем говорят мужчины",
       "answer": "О чем говорят мужчины"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Исходный код",
-      "answer": "Исходный код"
     }
   },
   {
@@ -1941,13 +1108,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Тайлер Рейк: Операция по спасению",
-      "answer": "Тайлер Рейк: Операция по спасению"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Жизнь Пи",
       "answer": "Жизнь Пи"
     }
@@ -1976,27 +1136,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Гангстер",
-      "answer": "Гангстер"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Идентификация Борна",
-      "answer": "Идентификация Борна"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Особое мнение",
-      "answer": "Особое мнение"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Величайший шоумен",
       "answer": "Величайший шоумен"
     }
@@ -2011,13 +1150,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Гнев человеческий",
-      "answer": "Гнев человеческий"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Хищник",
       "answer": "Хищник"
     }
@@ -2025,36 +1157,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Главный герой",
-      "answer": "Главный герой"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Энканто",
       "answer": "Энканто"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Океаны",
-      "answer": "Океаны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Апгрейд",
-      "answer": "Апгрейд"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Драйв",
-      "answer": "Драйв"
     }
   },
   {
@@ -2074,43 +1178,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "007: Координаты \"Скайфолл\"",
-      "answer": "007: Координаты \"Скайфолл\""
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Омерзительная восьмерка",
-      "answer": "Омерзительная восьмерка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "2001 год: Космическая одиссея",
-      "answer": "2001 год: Космическая одиссея"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Университет монстров",
       "answer": "Университет монстров"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "«V» значит Вендетта",
-      "answer": "«V» значит Вендетта"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Малена",
-      "answer": "Малена"
     }
   },
   {
@@ -2123,29 +1192,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Игра на понижение",
-      "answer": "Игра на понижение"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Проза бродячих псов",
-      "answer": "Проза бродячих псов"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Вперёд",
       "answer": "Вперёд"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Сталкер",
-      "answer": "Сталкер"
     }
   },
   {
@@ -2172,29 +1220,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Луна 2112",
-      "answer": "Луна 2112"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мои мамы",
-      "answer": "Мои мамы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Мегамозг",
       "answer": "Мегамозг"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дюнкерк",
-      "answer": "Дюнкерк"
     }
   },
   {
@@ -2207,27 +1234,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Идеальные незнакомцы",
-      "answer": "Идеальные незнакомцы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Отель Мумбаи: Противостояние",
-      "answer": "Отель Мумбаи: Противостояние"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ван Гог. С любовью, Винсент",
-      "answer": "Ван Гог. С любовью, Винсент"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Дело Ричарда Джуэлла",
       "answer": "Дело Ричарда Джуэлла"
     }
@@ -2235,43 +1241,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Дикие истории",
-      "answer": "Дикие истории"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Трио из Бельвилля",
       "answer": "Трио из Бельвилля"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "12 лет рабства",
-      "answer": "12 лет рабства"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Поиск",
-      "answer": "Поиск"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пять сантиметров в секунду",
-      "answer": "Пять сантиметров в секунду"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Три дня на побег",
-      "answer": "Три дня на побег"
     }
   },
   {
@@ -2298,13 +1269,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Вам и не снилось",
-      "answer": "Вам и не снилось"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Эверест",
       "answer": "Эверест"
     }
@@ -2319,20 +1283,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Сибирский цирюльник",
-      "answer": "Сибирский цирюльник"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Доктор Сон",
-      "answer": "Доктор Сон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Летят журавли",
       "answer": "Летят журавли"
     }
@@ -2340,64 +1290,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Рыбка Поньо на утесе",
-      "answer": "Рыбка Поньо на утесе"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Эквилибриум",
-      "answer": "Эквилибриум"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Труп невесты",
-      "answer": "Труп невесты"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Гарри Поттер и Принц-Полукровка",
-      "answer": "Гарри Поттер и Принц-Полукровка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Игра в имитацию",
-      "answer": "Игра в имитацию"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Китайский квартал",
-      "answer": "Китайский квартал"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Бегущий по лезвию",
       "answer": "Бегущий по лезвию"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Претенденты",
-      "answer": "Претенденты"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Искупление",
-      "answer": "Искупление"
     }
   },
   {
@@ -2417,57 +1311,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Ушедшие",
-      "answer": "Ушедшие"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Далласский клуб покупателей",
-      "answer": "Далласский клуб покупателей"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Она",
-      "answer": "Она"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Черная Пантера",
       "answer": "Черная Пантера"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рестлер",
-      "answer": "Рестлер"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Залечь на дно в Брюгге",
-      "answer": "Залечь на дно в Брюгге"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "12 обезьян",
-      "answer": "12 обезьян"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Банды Нью-Йорка",
-      "answer": "Банды Нью-Йорка"
     }
   },
   {
@@ -2487,36 +1332,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Легенды осени",
-      "answer": "Легенды осени"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Скорость",
-      "answer": "Скорость"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Иллюзия обмана",
       "answer": "Иллюзия обмана"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ветер крепчает",
-      "answer": "Ветер крепчает"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Хоккейные папы",
-      "answer": "Хоккейные папы"
     }
   },
   {
@@ -2543,22 +1360,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Ветреная река",
-      "answer": "Ветреная река"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Худший человек на свете",
-      "answer": "Худший человек на свете"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пила 10",
-      "answer": "Пила 10"
+      "text": "Пила",
+      "answer": "Пила"
     }
   },
   {
@@ -2578,22 +1381,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Арахисовый сокол",
-      "answer": "Арахисовый сокол"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Мумия",
       "answer": "Мумия"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Салют-7",
-      "answer": "Салют-7"
     }
   },
   {
@@ -2606,50 +1395,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Порок на экспорт",
-      "answer": "Порок на экспорт"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Жизнь в розовом цвете",
-      "answer": "Жизнь в розовом цвете"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Малхолланд Драйв",
-      "answer": "Малхолланд Драйв"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Черепашки-ниндзя",
       "answer": "Черепашки-ниндзя"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Воровка книг",
-      "answer": "Воровка книг"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Игры разумов",
-      "answer": "Игры разумов"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Парфюмер: история одного убийцы",
-      "answer": "Парфюмер: история одного убийцы"
     }
   },
   {
@@ -2662,57 +1409,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Мавританец",
-      "answer": "Мавританец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Разборки в стиле Кунг-Фу",
-      "answer": "Разборки в стиле Кунг-Фу"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Шоколад",
-      "answer": "Шоколад"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "РЭД",
-      "answer": "РЭД"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "На гребне волны",
       "answer": "На гребне волны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Чудак из 5 «Б»",
-      "answer": "Чудак из 5 «Б»"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Правдивая ложь",
-      "answer": "Правдивая ложь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Скафандр и бабочка",
-      "answer": "Скафандр и бабочка"
     }
   },
   {
@@ -2725,64 +1423,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Мост в Терабитию",
-      "answer": "Мост в Терабитию"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Снимки нашей планеты и письмена войны",
-      "answer": "Снимки нашей планеты и письмена войны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Два, три, демон, приди!",
-      "answer": "Два, три, демон, приди!"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Судья",
-      "answer": "Судья"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Невидимая сторона",
-      "answer": "Невидимая сторона"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Последняя дуэль",
-      "answer": "Последняя дуэль"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Хранители",
       "answer": "Хранители"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Догвилль",
-      "answer": "Догвилль"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Американский психопат",
-      "answer": "Американский психопат"
     }
   },
   {
@@ -2795,34 +1437,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Бойфренд из будущего",
-      "answer": "Бойфренд из будущего"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Реальная любовь",
-      "answer": "Реальная любовь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Стальная хватка",
-      "answer": "Стальная хватка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Вторая жизнь Уве",
-      "answer": "Вторая жизнь Уве"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Трансформеры",
       "answer": "Трансформеры"
     }
@@ -2830,43 +1444,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Идеальные дни",
-      "answer": "Идеальные дни"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "127 часов",
-      "answer": "127 часов"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Человек-муравей и Оса",
       "answer": "Человек-муравей и Оса"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Каскадеры",
-      "answer": "Каскадеры"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Телохранитель киллера",
-      "answer": "Телохранитель киллера"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Остров собак",
-      "answer": "Остров собак"
     }
   },
   {
@@ -2886,13 +1465,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Волшебная страна",
-      "answer": "Волшебная страна"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Учитель на замену",
       "answer": "Учитель на замену"
     }
@@ -2907,85 +1479,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Вайолет Эвергарден",
-      "answer": "Вайолет Эвергарден"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Час пик",
-      "answer": "Час пик"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Капитан Филлипс",
-      "answer": "Капитан Филлипс"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Подмена",
-      "answer": "Подмена"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Криминальный Город",
-      "answer": "Криминальный Город"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Поезд на Юму",
-      "answer": "Поезд на Юму"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Праведник",
-      "answer": "Праведник"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Царство небесное",
-      "answer": "Царство небесное"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Аритмия",
-      "answer": "Аритмия"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Анатомия падения",
-      "answer": "Анатомия падения"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Патриот",
       "answer": "Патриот"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Я делаю шаг",
-      "answer": "Я делаю шаг"
     }
   },
   {
@@ -3005,34 +1500,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Расправь крылья",
-      "answer": "Расправь крылья"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Другие",
-      "answer": "Другие"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Камон Камон",
-      "answer": "Камон Камон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Опасная игра Слоун",
-      "answer": "Опасная игра Слоун"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "2+1",
       "answer": "2+1"
     }
@@ -3042,13 +1509,6 @@
     "fields": {
       "text": "Дракула",
       "answer": "Дракула"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Виноваты звезды",
-      "answer": "Виноваты звезды"
     }
   },
   {
@@ -3068,57 +1528,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Прощай, детка, прощай",
-      "answer": "Прощай, детка, прощай"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Железная хватка",
-      "answer": "Железная хватка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Кожа, в которой я живу",
-      "answer": "Кожа, в которой я живу"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Кошачьи миры Луиса Уэйна",
-      "answer": "Кошачьи миры Луиса Уэйна"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Цветы войны",
-      "answer": "Цветы войны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Один день",
-      "answer": "Один день"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Хранители снов",
       "answer": "Хранители снов"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Миграция",
-      "answer": "Миграция"
     }
   },
   {
@@ -3131,29 +1542,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Чудо на Гудзоне",
-      "answer": "Чудо на Гудзоне"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ненормальный",
-      "answer": "Ненормальный"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Храбрая сердцем",
       "answer": "Храбрая сердцем"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Кто я",
-      "answer": "Кто я"
     }
   },
   {
@@ -3180,50 +1570,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Мертвец",
-      "answer": "Мертвец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Бёрдмэн",
-      "answer": "Бёрдмэн"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Вонка",
       "answer": "Вонка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ангел А",
-      "answer": "Ангел А"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Белый плен",
-      "answer": "Белый плен"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Суини Тодд, демон-парикмахер с Флит-стрит",
-      "answer": "Суини Тодд, демон-парикмахер с Флит-стрит"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Седьмая печать",
-      "answer": "Седьмая печать"
     }
   },
   {
@@ -3243,57 +1591,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Дело храбрых",
-      "answer": "Дело храбрых"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Лунный свет",
-      "answer": "Лунный свет"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Прочь",
-      "answer": "Прочь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Экипаж",
       "answer": "Экипаж"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Лакричная пицца",
-      "answer": "Лакричная пицца"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Любой ценой",
-      "answer": "Любой ценой"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Быстрее пули",
-      "answer": "Быстрее пули"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Жизнь Адель",
-      "answer": "Жизнь Адель"
     }
   },
   {
@@ -3306,13 +1605,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Выстрел в пустоту",
-      "answer": "Выстрел в пустоту"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Капитан Фантастик",
       "answer": "Капитан Фантастик"
     }
@@ -3320,50 +1612,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Мюнхен",
-      "answer": "Мюнхен"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Малыш на драйве",
-      "answer": "Малыш на драйве"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Жанна Дюбарри",
-      "answer": "Жанна Дюбарри"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Малефисента",
       "answer": "Малефисента"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Поехавшая",
-      "answer": "Поехавшая"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Звёздные войны",
-      "answer": "Звёздные войны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Знакомьтесь, Джо Блэк",
-      "answer": "Знакомьтесь, Джо Блэк"
     }
   },
   {
@@ -3383,36 +1633,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Одинокий мужчина",
-      "answer": "Одинокий мужчина"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Хитмен",
-      "answer": "Хитмен"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Зов предков",
       "answer": "Зов предков"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Вавилон",
-      "answer": "Вавилон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Человек, который изменил все",
-      "answer": "Человек, который изменил все"
     }
   },
   {
@@ -3425,13 +1647,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Годзилла и Конг: Новая империя",
-      "answer": "Годзилла и Конг: Новая империя"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Мой парень - псих",
       "answer": "Мой парень - псих"
     }
@@ -3439,29 +1654,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "500 дней лета",
-      "answer": "500 дней лета"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Король неба",
-      "answer": "Король неба"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Леди Баг и Супер-Кот",
       "answer": "Леди Баг и Супер-Кот"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рейд",
-      "answer": "Рейд"
     }
   },
   {
@@ -3481,13 +1675,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Сплит",
-      "answer": "Сплит"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Аквамен",
       "answer": "Аквамен"
     }
@@ -3495,36 +1682,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Расплата",
-      "answer": "Расплата"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Ральф против интернета",
       "answer": "Ральф против интернета"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "12",
-      "answer": "12"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Обливион",
-      "answer": "Обливион"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Шпионский мост",
-      "answer": "Шпионский мост"
     }
   },
   {
@@ -3558,43 +1717,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Погребенный заживо",
-      "answer": "Погребенный заживо"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Коралина в стране кошмаров",
       "answer": "Коралина в стране кошмаров"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Приключения Тинтина: Тайна единорога",
-      "answer": "Приключения Тинтина: Тайна единорога"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Под покровом ночи",
-      "answer": "Под покровом ночи"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Страсти по Матвею",
-      "answer": "Страсти по Матвею"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Никто",
-      "answer": "Никто"
     }
   },
   {
@@ -3607,22 +1731,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Человек божий",
-      "answer": "Человек божий"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Чего хотят женщины",
       "answer": "Чего хотят женщины"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Джейн Эйр",
-      "answer": "Джейн Эйр"
     }
   },
   {
@@ -3635,34 +1745,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Облачный атлас",
-      "answer": "Облачный атлас"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Билли Эллиот",
-      "answer": "Билли Эллиот"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Донни Дарко",
-      "answer": "Донни Дарко"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Бьютифул",
-      "answer": "Бьютифул"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Проклятие",
       "answer": "Проклятие"
     }
@@ -3670,57 +1752,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Самолетом, поездом, автомобилем",
-      "answer": "Самолетом, поездом, автомобилем"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Всегда говори \"Да\"",
       "answer": "Всегда говори \"Да\""
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Неадекватные люди",
-      "answer": "Неадекватные люди"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Время",
-      "answer": "Время"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "10 жизней",
-      "answer": "10 жизней"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Блокада",
-      "answer": "Блокада"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Агенты А.Н.К.Л.",
-      "answer": "Агенты А.Н.К.Л."
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Доспехи Бога",
-      "answer": "Доспехи Бога"
     }
   },
   {
@@ -3735,13 +1768,6 @@
     "fields": {
       "text": "Вольт",
       "answer": "Вольт"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Предложение",
-      "answer": "Предложение"
     }
   },
   {
@@ -3768,69 +1794,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Крушение",
-      "answer": "Крушение"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Адреналин",
-      "answer": "Адреналин"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Город воров",
-      "answer": "Город воров"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Королевство полной луны",
-      "answer": "Королевство полной луны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Нелюбовь",
-      "answer": "Нелюбовь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Великолепная пятерка",
-      "answer": "Великолепная пятерка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Контроль",
-      "answer": "Контроль"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Хэнкок",
-      "answer": "Хэнкок"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мулен Руж",
-      "answer": "Мулен Руж"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Монстры на каникулах",
       "answer": "Монстры на каникулах"
     }
@@ -3845,85 +1808,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Вторая жизнь Гарольда Фрая",
-      "answer": "Вторая жизнь Гарольда Фрая"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Поп",
-      "answer": "Поп"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Прошлые жизни",
-      "answer": "Прошлые жизни"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "С любовью, Рози",
-      "answer": "С любовью, Рози"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Военно-полевой госпиталь М.Э.Ш",
-      "answer": "Военно-полевой госпиталь М.Э.Ш"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Зеленый Шершень",
       "answer": "Зеленый Шершень"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Великий Гэтсби",
-      "answer": "Великий Гэтсби"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Серебряные коньки",
-      "answer": "Серебряные коньки"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мы - Миллеры",
-      "answer": "Мы - Миллеры"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мне бы в небо",
-      "answer": "Мне бы в небо"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Стажер",
-      "answer": "Стажер"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Фаворитка",
-      "answer": "Фаворитка"
     }
   },
   {
@@ -3943,13 +1829,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Великий уравнитель",
-      "answer": "Великий уравнитель"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Вызов",
       "answer": "Вызов"
     }
@@ -3957,29 +1836,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "9 рота",
-      "answer": "9 рота"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Кинг Конг",
       "answer": "Кинг Конг"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Выживут только любовники",
-      "answer": "Выживут только любовники"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Более странно, чем в раю",
-      "answer": "Более странно, чем в раю"
     }
   },
   {
@@ -4006,43 +1864,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Патруль",
-      "answer": "Патруль"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Сибирь. Монамур",
-      "answer": "Сибирь. Монамур"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Холоп",
       "answer": "Холоп"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Воды слонам!",
-      "answer": "Воды слонам!"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Горбатая гора",
-      "answer": "Горбатая гора"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Джейн Остин",
-      "answer": "Джейн Остин"
     }
   },
   {
@@ -4062,36 +1885,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Т-34",
-      "answer": "Т-34"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Шесть превращений Яна Пищика",
-      "answer": "Шесть превращений Яна Пищика"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Три метра над уровнем неба",
       "answer": "Три метра над уровнем неба"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Сестренка",
-      "answer": "Сестренка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Французский вестник",
-      "answer": "Французский вестник"
     }
   },
   {
@@ -4104,29 +1899,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Кунг-фу жеребец",
-      "answer": "Кунг-фу жеребец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Красавица и дракон",
       "answer": "Красавица и дракон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Почему Бодхидхарма ушел на Восток",
-      "answer": "Почему Бодхидхарма ушел на Восток"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Профессионал",
-      "answer": "Профессионал"
     }
   },
   {
@@ -4153,36 +1927,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Круиз по джунглям",
-      "answer": "Круиз по джунглям"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мгла",
-      "answer": "Мгла"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Балерина",
       "answer": "Балерина"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Джуно",
-      "answer": "Джуно"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Самсара",
-      "answer": "Самсара"
     }
   },
   {
@@ -4202,13 +1948,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Голос монстра",
-      "answer": "Голос монстра"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Большая игра",
       "answer": "Большая игра"
     }
@@ -4218,13 +1957,6 @@
     "fields": {
       "text": "Король Ричард",
       "answer": "Король Ричард"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Тихое место",
-      "answer": "Тихое место"
     }
   },
   {
@@ -4251,29 +1983,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Глубоководный горизонт",
-      "answer": "Глубоководный горизонт"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Хорошо быть тихоней",
-      "answer": "Хорошо быть тихоней"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Фердинанд",
       "answer": "Фердинанд"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Джон Картер",
-      "answer": "Джон Картер"
     }
   },
   {
@@ -4286,92 +1997,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Все о Мэрилин",
-      "answer": "Все о Мэрилин"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "История Рыцаря",
-      "answer": "История Рыцаря"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Полицейский из Беверли-Хиллз",
-      "answer": "Полицейский из Беверли-Хиллз"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рецепт любви",
-      "answer": "Рецепт любви"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ограбление на Бейкер-Стрит",
-      "answer": "Ограбление на Бейкер-Стрит"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Джек Ричер",
-      "answer": "Джек Ричер"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Турецкий гамбит",
-      "answer": "Турецкий гамбит"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Меняющие реальность",
-      "answer": "Меняющие реальность"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Книга джунглей",
       "answer": "Книга джунглей"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Стрелок",
-      "answer": "Стрелок"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Команда А",
-      "answer": "Команда А"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Лучшее во мне",
-      "answer": "Лучшее во мне"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пекло",
-      "answer": "Пекло"
     }
   },
   {
@@ -4386,13 +2013,6 @@
     "fields": {
       "text": "Приключения Паддингтона",
       "answer": "Приключения Паддингтона"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пока не сыграл в ящик",
-      "answer": "Пока не сыграл в ящик"
     }
   },
   {
@@ -4419,27 +2039,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Страсти Христовы",
-      "answer": "Страсти Христовы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Похороните меня за плинтусом",
-      "answer": "Похороните меня за плинтусом"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Страх и ненависть в Лас-Вегасе",
-      "answer": "Страх и ненависть в Лас-Вегасе"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Чебурашка",
       "answer": "Чебурашка"
     }
@@ -4454,36 +2053,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Славные парни",
-      "answer": "Славные парни"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Робот по имени Чаппи",
-      "answer": "Робот по имени Чаппи"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Атлантида: затерянный мир",
       "answer": "Атлантида: затерянный мир"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рок-н-рольщик",
-      "answer": "Рок-н-рольщик"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "На игле",
-      "answer": "На игле"
     }
   },
   {
@@ -4498,34 +2069,6 @@
     "fields": {
       "text": "Мальчишник",
       "answer": "Мальчишник"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Непрощенный",
-      "answer": "Непрощенный"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Обитель проклятых",
-      "answer": "Обитель проклятых"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Вперед!",
-      "answer": "Вперед!"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Васаби",
-      "answer": "Васаби"
     }
   },
   {
@@ -4559,41 +2102,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Элвис",
-      "answer": "Элвис"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пчеловод",
-      "answer": "Пчеловод"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Повелитель ветра",
-      "answer": "Повелитель ветра"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Планета Ка-ПЭКС",
-      "answer": "Планета Ка-ПЭКС"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Стиляги",
-      "answer": "Стиляги"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "В поисках Дори",
       "answer": "В поисках Дори"
     }
@@ -4615,78 +2123,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Дневник баскетболиста",
-      "answer": "Дневник баскетболиста"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Эта дурацкая любовь",
-      "answer": "Эта дурацкая любовь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ничего хорошего в отеле «Эль Рояль»",
-      "answer": "Ничего хорошего в отеле «Эль Рояль»"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "1408",
-      "answer": "1408"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Чудаки",
-      "answer": "Чудаки"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Хижина в лесу",
-      "answer": "Хижина в лесу"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "9",
-      "answer": "9"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Самый пьяный округ в мире",
-      "answer": "Самый пьяный округ в мире"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Зеленый театр в Земфире",
-      "answer": "Зеленый театр в Земфире"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Мистер и миссис Смит",
       "answer": "Мистер и миссис Смит"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Вестсайдская история",
-      "answer": "Вестсайдская история"
     }
   },
   {
@@ -4706,134 +2144,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Жестокие игры",
-      "answer": "Жестокие игры"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Меч короля Артура",
       "answer": "Меч короля Артура"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Союзники",
-      "answer": "Союзники"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Неисправимый Рон",
-      "answer": "Неисправимый Рон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Бэтмен против Супермена: На заре справедливости",
-      "answer": "Бэтмен против Супермена: На заре справедливости"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Остров",
-      "answer": "Остров"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Аббатство Даунтон",
-      "answer": "Аббатство Даунтон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Молодость",
-      "answer": "Молодость"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Клятва",
-      "answer": "Клятва"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мирай из будущего",
-      "answer": "Мирай из будущего"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Лето",
-      "answer": "Лето"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Душевная кухня",
-      "answer": "Душевная кухня"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Не дыши",
-      "answer": "Не дыши"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Код Гиас: Лелуш воскресший",
-      "answer": "Код Гиас: Лелуш воскресший"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рок-волна",
-      "answer": "Рок-волна"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Адмиралъ",
-      "answer": "Адмиралъ"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Век Адалин",
-      "answer": "Век Адалин"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Девятые врата",
-      "answer": "Девятые врата"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Грайндхаус",
-      "answer": "Грайндхаус"
     }
   },
   {
@@ -4853,34 +2165,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Притворись моей женой",
-      "answer": "Притворись моей женой"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Жизнь, как она есть",
-      "answer": "Жизнь, как она есть"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Статский советник",
-      "answer": "Статский советник"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Ярость",
-      "answer": "Ярость"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Симпсоны в кино",
       "answer": "Симпсоны в кино"
     }
@@ -4895,43 +2179,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Отличница легкого поведения",
-      "answer": "Отличница легкого поведения"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Плохие парни",
       "answer": "Плохие парни"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "В Арктику",
-      "answer": "В Арктику"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Секретарша",
-      "answer": "Секретарша"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Марли и я",
-      "answer": "Марли и я"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дом у озера",
-      "answer": "Дом у озера"
     }
   },
   {
@@ -4944,57 +2193,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Отпуск по обмену",
-      "answer": "Отпуск по обмену"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Тролли",
       "answer": "Тролли"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дежа вю",
-      "answer": "Дежа вю"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Механик",
-      "answer": "Механик"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Под стук трамвайных колес",
-      "answer": "Под стук трамвайных колес"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Патерсон",
-      "answer": "Патерсон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Изгнание",
-      "answer": "Изгнание"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Куколка",
-      "answer": "Куколка"
     }
   },
   {
@@ -5014,48 +2214,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Черный ящик",
-      "answer": "Черный ящик"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Место под соснами",
-      "answer": "Место под соснами"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Воздушный маршал",
-      "answer": "Воздушный маршал"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Жена путешественника во времени",
-      "answer": "Жена путешественника во времени"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Невероятная жизнь Уолтера Митти",
-      "answer": "Невероятная жизнь Уолтера Митти"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "На крючке",
-      "answer": "На крючке"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Илья Муромец и Соловей Разбойник",
       "answer": "Илья Муромец и Соловей Разбойник"
     }
@@ -5070,43 +2228,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Иностранец",
-      "answer": "Иностранец"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Огонь",
-      "answer": "Огонь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Тепло наших тел",
       "answer": "Тепло наших тел"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Снегирь",
-      "answer": "Снегирь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Два дня",
-      "answer": "Два дня"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Легенда",
-      "answer": "Легенда"
     }
   },
   {
@@ -5126,36 +2249,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Монгол",
-      "answer": "Монгол"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Смешарики снимают кино",
       "answer": "Смешарики снимают кино"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рокки Бальбоа",
-      "answer": "Рокки Бальбоа"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "P.S. Я люблю тебя",
-      "answer": "P.S. Я люблю тебя"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Морфий",
-      "answer": "Морфий"
     }
   },
   {
@@ -5168,22 +2263,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Левша",
-      "answer": "Левша"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Фрида",
       "answer": "Фрида"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Химера",
-      "answer": "Химера"
     }
   },
   {
@@ -5210,27 +2291,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Город тайн",
-      "answer": "Город тайн"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Неуправляемый",
-      "answer": "Неуправляемый"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рэмбо",
-      "answer": "Рэмбо"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Кот в сапогах",
       "answer": "Кот в сапогах"
     }
@@ -5238,29 +2298,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Большое путешествие вглубь океанов",
-      "answer": "Большое путешествие вглубь океанов"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Боевой конь",
-      "answer": "Боевой конь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Звёздный путь",
       "answer": "Звёздный путь"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Т2: Трейнспоттинг",
-      "answer": "Т2: Трейнспоттинг"
     }
   },
   {
@@ -5280,20 +2319,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Неизвестный",
-      "answer": "Неизвестный"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Операция \"Валькирия\"",
-      "answer": "Операция \"Валькирия\""
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Дьявол носит Prada",
       "answer": "Дьявол носит Prada"
     }
@@ -5308,183 +2333,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Черный Адам",
-      "answer": "Черный Адам"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Охота на воров",
-      "answer": "Охота на воров"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "99 франков",
-      "answer": "99 франков"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Монстро",
-      "answer": "Монстро"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Армагеддон",
-      "answer": "Армагеддон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Совокупность лжи",
-      "answer": "Совокупность лжи"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Тайное окно",
-      "answer": "Тайное окно"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Линкольн для адвоката",
-      "answer": "Линкольн для адвоката"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Непослушники",
-      "answer": "Непослушники"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Скотт Пилигрим против всех",
-      "answer": "Скотт Пилигрим против всех"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Довод",
-      "answer": "Довод"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Иуда и чёрный мессия",
-      "answer": "Иуда и чёрный мессия"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Голая правда",
-      "answer": "Голая правда"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Выпускной",
-      "answer": "Выпускной"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Динозавр",
-      "answer": "Динозавр"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Как украсть миллион",
-      "answer": "Как украсть миллион"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Впритык",
-      "answer": "Впритык"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Разомкнутые объятия",
-      "answer": "Разомкнутые объятия"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Кристофер Робин",
-      "answer": "Кристофер Робин"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Патхан: Схватка со смертью",
-      "answer": "Патхан: Схватка со смертью"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Аквамен и потерянное царство",
       "answer": "Аквамен и потерянное царство"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "О чем говорят незнакомцы",
-      "answer": "О чем говорят незнакомцы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Джонни Д",
-      "answer": "Джонни Д"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Зеркало",
-      "answer": "Зеркало"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Сделано в Америке",
-      "answer": "Сделано в Америке"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Фонтан",
-      "answer": "Фонтан"
     }
   },
   {
@@ -5497,71 +2347,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Он и Она",
-      "answer": "Он и Она"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дитя человеческое",
-      "answer": "Дитя человеческое"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Обитель зла",
-      "answer": "Обитель зла"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Форма воды",
-      "answer": "Форма воды"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Коммандос",
-      "answer": "Коммандос"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Крид: Наследие Рокки",
-      "answer": "Крид: Наследие Рокки"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Миньоны",
       "answer": "Миньоны"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Красный сад",
-      "answer": "Красный сад"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Здоровый человек",
-      "answer": "Здоровый человек"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Авиатор",
-      "answer": "Авиатор"
     }
   },
   {
@@ -5574,99 +2361,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Черный телефон",
-      "answer": "Черный телефон"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Клаустрофобы",
-      "answer": "Клаустрофобы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Полет навигатора",
-      "answer": "Полет навигатора"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Жена смотрителя зоопарка",
-      "answer": "Жена смотрителя зоопарка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Судья Дредд",
-      "answer": "Судья Дредд"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Пандорум",
-      "answer": "Пандорум"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дикий Маугли",
-      "answer": "Дикий Маугли"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Землетрясение",
-      "answer": "Землетрясение"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Чемпион мира",
-      "answer": "Чемпион мира"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Быстрый и мертвый",
-      "answer": "Быстрый и мертвый"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Сын",
-      "answer": "Сын"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "А зори здесь тихие...",
       "answer": "А зори здесь тихие..."
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Операция «Фортуна»: Искусство побеждать",
-      "answer": "Операция «Фортуна»: Искусство побеждать"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Простая просьба",
-      "answer": "Простая просьба"
     }
   },
   {
@@ -5679,55 +2375,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Грех",
-      "answer": "Грех"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Через вселенную",
-      "answer": "Через вселенную"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Звонок",
-      "answer": "Звонок"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Однажды в Ирландии",
-      "answer": "Однажды в Ирландии"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мечтатели",
-      "answer": "Мечтатели"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Парни со стволами",
-      "answer": "Парни со стволами"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дорога перемен",
-      "answer": "Дорога перемен"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Губка Боб Квадратные Штаны",
       "answer": "Губка Боб Квадратные Штаны"
     }
@@ -5735,106 +2382,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Транс",
-      "answer": "Транс"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Вышка",
-      "answer": "Вышка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Взрыв из прошлого",
-      "answer": "Взрыв из прошлого"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Шесть демонов Эмили Роуз",
-      "answer": "Шесть демонов Эмили Роуз"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Великолепная семерка",
-      "answer": "Великолепная семерка"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Королевство",
-      "answer": "Королевство"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Двадцать одно",
-      "answer": "Двадцать одно"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Чарли и шоколадная фабрика",
       "answer": "Чарли и шоколадная фабрика"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Убийца",
-      "answer": "Убийца"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Чрезвычайная ситуация",
-      "answer": "Чрезвычайная ситуация"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Экзамен",
-      "answer": "Экзамен"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Неудержимые",
-      "answer": "Неудержимые"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "На солнце, вдоль рядов кукурузы",
-      "answer": "На солнце, вдоль рядов кукурузы"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Мэри и ведьмин цветок",
-      "answer": "Мэри и ведьмин цветок"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Жмурки",
-      "answer": "Жмурки"
     }
   },
   {
@@ -5861,20 +2410,6 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Аисты",
-      "answer": "Аисты"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Дом у дороги",
-      "answer": "Дом у дороги"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Мир Юрского периода",
       "answer": "Мир Юрского периода"
     }
@@ -5882,50 +2417,8 @@
   {
     "model": "backend.prompt",
     "fields": {
-      "text": "Сайлент Хилл",
-      "answer": "Сайлент Хилл"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Короли улиц",
-      "answer": "Короли улиц"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Значит, война",
-      "answer": "Значит, война"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "День независимости",
-      "answer": "День независимости"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Шпион",
-      "answer": "Шпион"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
       "text": "Кролик Питер",
       "answer": "Кролик Питер"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Во власти стихии",
-      "answer": "Во власти стихии"
     }
   },
   {
@@ -5947,34 +2440,6 @@
     "fields": {
       "text": "Астерикс и Обеликс",
       "answer": "Астерикс и Обеликс"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Счастливчик Гилмор",
-      "answer": "Счастливчик Гилмор"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Аллея кошмаров",
-      "answer": "Аллея кошмаров"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Не/смотря ни на что",
-      "answer": "Не/смотря ни на что"
-    }
-  },
-  {
-    "model": "backend.prompt",
-    "fields": {
-      "text": "Рай",
-      "answer": "Рай"
     }
   }
 ]
