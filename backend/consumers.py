@@ -49,7 +49,6 @@ class RoomConsumer(AsyncJsonWebsocketConsumer):
         self.players = await self.refresh_players()
 
         if command == 'change_status':
-            await self.close()
             await self.change_player_status()
             await self.channel_layer.group_send(
                 self.room_code,
