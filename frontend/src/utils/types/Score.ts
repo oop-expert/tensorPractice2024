@@ -1,4 +1,4 @@
 export default interface Score {
-  isRight: boolean,
+  is_right: boolean,
   score: number
 }

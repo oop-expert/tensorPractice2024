@@ -14,7 +14,7 @@ export default function PopupRegistrationForm() {
   const {isMobile, isDesktop} = useMediaMatch();
 
   const {errorCode, errorMessage, status} = useSelector(selectGame);
-  const player = useSelector(selectPlayer);
+  const {player} = useSelector(selectPlayer);
   const dispatch = useAppDispatch();
 
   const maxWidth = isMobile ? 'sm' : (isDesktop ? 'lg' : 'md');
@@ -41,7 +41,7 @@ export default function PopupRegistrationForm() {
         </Box>
         <RegistrationForm padding={0}/>
         <Button variant='contained' color='primary' onClick={onJoin}>
-          {status === 'loading' ? <CircularProgress color='primary'/> : <>Подключиться</>}
+          {status === 'loading' ? <CircularProgress color='primary'/> : 'Подключиться'}
         </Button>
         <Typography hidden={!errorCode} variant='h2' color={Colors.ErrorInput.OUTLINE}>{errorMessage ?? ''}</Typography>
       </Box>

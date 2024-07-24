@@ -15,13 +15,12 @@ const initialPlayer: Player = {
   isHost: false,
   isReady: false,
   score: 0,
-  createdAt: new Date().toString(),
-  isRight: false
+  createdAt: new Date().toString()
 };
 
 const initialState: PlayerState = {
   player: initialPlayer,
-  status: 'idle'
+  answerStatus: 'idle'
 };
 
 const generatePlayer = (isHost: boolean, name: string, avatarId: number): Player => ({
@@ -32,8 +31,7 @@ const generatePlayer = (isHost: boolean, name: string, avatarId: number): Player
   isHost,
   isReady: false,
   score: 0,
-  createdAt: new Date().toString(),
-  isRight: false
+  createdAt: new Date().toString()
 });
 
 
@@ -62,22 +60,27 @@ const platerSlice = createSlice({
     },
     changePlayer: (state, action) => {
       state.player = getPlayerFromResponce(action.payload);
+    },
+    resetAnswerStatus: (state) => {
+      state.answerStatus = 'idle';
     }
   },
   extraReducers(builder) {
     builder
       .addCase(patchAnswer.pending, (state) => {
-        state.status = 'loading';
+        state.answerStatus = 'loading';
       })
       .addCase(patchAnswer.fulfilled, (state, action) => {
-        state.status = 'success';
-        state.player.isRight = action.payload.isRight;
+        state.answerStatus = action.payload.is_right ? 'success' : 'incorrect';
         state.player.score = action.payload.score;
+      })
+      .addCase(patchAnswer.rejected, (state) => {
+        state.answerStatus = 'error';
       })
   }
 });
 
-export const selectPlayer = (state: State) => state.player.player;
-export const {setInfo, signUp, setReady, countScore, changePlayer} = platerSlice.actions;
+export const selectPlayer = (state: State) => state.player;
+export const {setInfo, signUp, setReady, countScore, changePlayer, resetAnswerStatus} = platerSlice.actions;
 export {patchAnswer};
 export default platerSlice.reducer;

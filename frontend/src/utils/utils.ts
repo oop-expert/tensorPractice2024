@@ -1,6 +1,5 @@
 import Player from "./types/Player";
 import PlayerResponce from "./types/PlayerResponce";
-
 export const WIDTH_RELATIVE_TO_SCREEN = '70vw';
 
 export const CODE_LENGTH = 8;
@@ -14,13 +13,13 @@ export const Colors = {
   TRANSPARENT: 'rgba(0, 0, 0, 0)',
   PrimaryButton: {
     ACTIVE: '#C94F48',
-    DISABLED: '#C94F4880',
+    DISABLED: '#914B4780',
     HOVERED: '#FFFFFF',
     CLICKED: '#FFCAC7'
   },
   SecondaryButton: {
     ACTIVE: '#F49C1E',
-    DISABLED: '#F49C1E80',
+    DISABLED: '#91724780',
     HOVERED: '#FFFFFF',
     CLICKED: '#FFE8C7'
   },
@@ -45,11 +44,37 @@ export const Colors = {
     FILL: '#FFFFFF',
     OUTLINE: '#0DC268'
   },
+  InfoInput: {
+    FILL: '#D4D5D7',
+    OUTLINE: '#8C8D8F'
+  },
   ScrollBar: {
     TRACK: '#FFFFFF',
     THUMB: '#F49C1E'
   }
 };
+
+export const AvatarValues = {
+  DESKTOP_WIDTH: '6vw',
+  MOBILE_WIDTH: '6vw',
+  DESKTOP_MIN_WIDTH: 80,
+  MOBILE_MIN_WIDTH: 50,
+  DESTOP_MAX_WIDTH: 90,
+  MOBILE_MAX_WIDTH: 60
+};
+
+export const UpperGridValues = {
+  DESKTOP_HEIGHT: '6vw',
+  PADDING_Y: '12px'
+}
+
+export const GridRowsValues = {
+  GAP: '4vh',
+  UPPER_HEIGHT: '10vh',
+  MIDDLE_HEIGHT: '55vh',
+  DOWN_HEIGHT: '9vh',
+  MIDDLE_AND_DOWN: '64vh'
+}
 
 export const AVATARS = Array.from({length: 6}, (_v, k) => new URL(`../assets/Avatar ${k + 1}.png`, import.meta.url).href);
 
@@ -62,6 +87,7 @@ export const generateRandomId = (additionalNumber:number = 0) => Date.now() % 10
 
 export const getPlayerFromResponce = (responce: PlayerResponce): Player => {
   const avatarId = !responce.avatar ? 0 : parseInt(responce.avatar);
+  
 
   return ({
     id: responce.id,
@@ -71,7 +97,6 @@ export const getPlayerFromResponce = (responce: PlayerResponce): Player => {
     isHost: responce.is_host,
     isReady: responce.is_ready,
     score: responce.score,
-    createdAt: responce.created_at,
-    isRight: false
+    createdAt: responce.created_at
   });
 }

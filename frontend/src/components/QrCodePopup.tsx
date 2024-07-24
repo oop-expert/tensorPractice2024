@@ -21,7 +21,7 @@ const QrCodeSizes = {
 
 export default function QrCodePopup({onLinkSave, onCodeSave, qrCode}: QrCodePopupProps) {
   const {isMobile, isDesktop} = useMediaMatch();
-  const isOpened = useSelector(selectPopupOpen);
+  const {isQrOpened} = useSelector(selectPopupOpen);
   const dispatch = useDispatch();
 
   const onPopupClose = () => dispatch(closePopup());
@@ -29,7 +29,7 @@ export default function QrCodePopup({onLinkSave, onCodeSave, qrCode}: QrCodePopu
   const maxWidth = isMobile ? 'sm' : (isDesktop ? 'lg' : 'md');
 
   return (
-      <Dialog open={isOpened} onClose={onPopupClose} maxWidth={maxWidth}>
+      <Dialog open={isQrOpened} onClose={onPopupClose} maxWidth={maxWidth}>
         <Box
           position='absolute'
           top={5}

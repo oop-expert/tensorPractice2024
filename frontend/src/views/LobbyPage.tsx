@@ -1,9 +1,8 @@
 import { Box, Button, CircularProgress, IconButton, List, TextField, Typography, useMediaQuery } from '@mui/material';
 import Panel from '../components/Panel';
 import LobbyUserInfo from '../components/LobbyUserInfo';
-import { nanoid } from 'nanoid';
 import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import QrCodePopup from '../components/QrCodePopup';
 import QrCode2Icon from '@mui/icons-material/QrCode2';
 import InsertLinkIcon from '@mui/icons-material/InsertLink';
@@ -11,7 +10,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import PanelGroup from '../components/PanelGroup';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import CloseIcon from '@mui/icons-material/Close';
-import { openPopup } from '../store/popupSlice';
+import { openQrPopup } from '../store/popupSlice';
 import { useSelector } from 'react-redux';
 import { getGameByCode, selectGame } from '../store/gameSlice';
 import { selectPlayer, setReady } from '../store/playerSlice';
@@ -21,33 +20,33 @@ import { WebSocketActionTypes } from '../store/webSocketMiddleware';
 import { useAppDispatch } from '../store/storeHooks';
 import PopupRegistrationForm from '../components/PopupRegistrationForm';
 import ErrorMessage from '../components/ErrorMessage';
+import LoadingPopup from '../components/LoadingPopup';
+import QuitGamePopup from '../components/QuitGamePopup';
 
-const LOBBY_CAPACITY = 10;
 const DESKTOP_BUTTON_GROUP_WIDTH = '70%';
 const DESKTOP_SINGLE_BUTTON_WIDTH = '30%';
 const LOBBY_H2_Y_MARGIN = '4px';
 
 export default function LobbyPage() {
   const {code} = useParams();
-  const {pathname} = useLocation();
-  const lobbyUrl = `http://tensorpractic.ru${pathname}`;
+  const lobbyUrl = window.location.href;
   const navigate = useNavigate();
 
   const {isMobile, isDesktop} = useMediaMatch();
   const isThinnerThan1000 = useMediaQuery('(max-width:1000px)');
 
   const dispatch = useAppDispatch();
-  const onPopupOpen = () => dispatch(openPopup());
+  const onPopupOpen = () => dispatch(openQrPopup());
 
   const {game} = useSelector(selectGame);
-  const player = useSelector(selectPlayer);
-
-  const isStartDisabled = player.isHost && game.players.every((p: Player) => p.isReady);
+  const {player} = useSelector(selectPlayer);
 
   const isPlayerConnected = useMemo(() => game.players.some((p) => p.name === player.name), [game, player]);
   const canJoinGame = game.id > 0 && !game.is_started && player.id > 0 && !isPlayerConnected;
 
   const hasAllImages = useMemo(() => game.questions.every((q) => q.image), [game]);
+  const isStartDisabled = useMemo(() => player.isHost && !game.players.every((p: Player) => p.isReady) || game.is_started && !hasAllImages, 
+    [game, player, hasAllImages]);
 
   const [countdown, setCountdown] = useState<number>(0);
 
@@ -141,6 +140,7 @@ export default function LobbyPage() {
             aria-readonly
             InputProps={(
               {
+                disableUnderline: true,
                 endAdornment: (
                   <IconButton color='secondary' onClick={onCodeCopy}>
                     <ContentCopyIcon />
@@ -166,9 +166,9 @@ export default function LobbyPage() {
             {game.is_started && !hasAllImages ? 'Генерируются изображения' : 'Ожидаем участников команды'}
           </Typography>
 
-          <List style={{height: 'stretch', overflowY: 'scroll'}}>
-            {Array.from({length: LOBBY_CAPACITY}, (_v, i) => (
-              <LobbyUserInfo key={nanoid()} user={i < game.players.length ? game.players[i] : undefined}/>
+          <List style={{height: 'stretch', overflowY: 'auto'}}>
+            {game.players.map((p) => (
+              <LobbyUserInfo key={p.id} user={p}/>
             ))}
           </List>
 
@@ -176,23 +176,24 @@ export default function LobbyPage() {
             display='flex'
             flexDirection={isMobile ? 'column' : 'row'}
             gap={2}
+            alignItems='center'
             width={!isDesktop ? (isMobile ? '100%': '90%') : (player.isHost ? DESKTOP_BUTTON_GROUP_WIDTH : DESKTOP_SINGLE_BUTTON_WIDTH)}
             alignSelf='center'>
               <Button 
                 disabled={player.isReady} 
-                style={{width: '100%'}} 
+                style={{width: isMobile ? '60%' : '100%'}} 
                 variant='contained' 
                 color='secondary' 
                 onClick={onSetReady}>
                   Готов играть
               </Button>
               <Button 
-                disabled={!isStartDisabled}
-                style={{width: '100%', display: player.isHost ? 'block' : 'none'}} 
+                disabled={isStartDisabled}
+                style={{width: isMobile ? '60%' : '100%', display: player.isHost ? 'block' : 'none'}} 
                 variant='contained' 
                 color='primary' 
                 onClick={onGameStart}>
-                  {game.is_started && !hasAllImages ? <CircularProgress color='primary'/> : <>Начать</>}
+                  {game.is_started && !hasAllImages ? <CircularProgress color='primary'/> : 'Начать'}
               </Button>
           </Box>
       </Panel>
@@ -204,6 +205,10 @@ export default function LobbyPage() {
       {!game.is_started
       ? <PopupRegistrationForm />
       : <ErrorMessage isOpened={!isPlayerConnected}/>}
+
+      <LoadingPopup isOpened={game.is_started && !hasAllImages && isPlayerConnected}/>
+
+      <QuitGamePopup quitGame={onQuit}/>
     </PanelGroup>
   );
 }

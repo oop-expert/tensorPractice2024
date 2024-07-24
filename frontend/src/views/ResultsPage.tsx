@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useAppDispatch } from "../store/storeHooks";
 import Player from "../utils/types/Player";
 import { WebSocketActionTypes } from "../store/webSocketMiddleware";
+import QuitGamePopup from "../components/QuitGamePopup";
 
 
 export default function ResultsPage(){
@@ -129,6 +130,7 @@ export default function ResultsPage(){
                     </Button>*/}
                 </Container>
             </Box>
+            <QuitGamePopup quitGame={quitGame}/>
            </Container>
     );
 }

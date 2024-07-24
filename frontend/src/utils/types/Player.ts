@@ -6,6 +6,5 @@ export default interface Player {
   isHost: boolean,
   isReady: boolean,
   score: number,
-  createdAt: string,
-  isRight: boolean
+  createdAt: string
 }

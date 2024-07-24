@@ -34,7 +34,7 @@ export default function MainPage() {
   const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
 
   const {game, status: gameStatus, errorCode, errorMessage} = useSelector(selectGame);
-  const player = useSelector(selectPlayer);
+  const {player} = useSelector(selectPlayer);
   const dispatch = useAppDispatch();
 
   const navigate = useNavigate();
@@ -64,7 +64,7 @@ export default function MainPage() {
       margin={getPanelMargin(isMobile, isHorizontalTablet, isVerticalTablet)} 
       width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN}
       height={isMobile ? '100%' : '75vh'}
-      gap={isMobile ? '10vh' : '30px'}>
+      gap={isMobile ? '5vh' : '30px'}>
         <PanelGroup direction='column'>
           <RegistrationForm />
         </PanelGroup>
@@ -81,18 +81,19 @@ export default function MainPage() {
                 onChange={onCodeChange}
                 InputProps={(
                   {
+                    disableUnderline: true,
                     endAdornment: (
                       <Button
                         variant='contained'
                         color='secondary'
                         disabled={!code || !player.name}
                         onClick={onGameJoin}>
-                          {gameStatus === 'loading' ? <CircularProgress color='primary'/> : <>Войти</>}
+                          {gameStatus === 'loading' ? <CircularProgress color='primary'/> : 'Войти'}
                       </Button>
                     ),
                     sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
                   }
-                )}/>
+                )} />
 
               <Divider textAlign='center'><Typography variant='body1'>или</Typography></Divider>
 
@@ -100,8 +101,9 @@ export default function MainPage() {
                 variant='contained' 
                 color='primary'
                 disabled={!player.name || gameStatus === 'loading'}
-                onClick={onGameCreate}>
-                  {gameStatus === 'loading' ? <CircularProgress color='primary'/> : <>Создать комнату</>}
+                onClick={onGameCreate}
+                style={{width: 'max-content', margin: '0 auto'}}>
+                  {gameStatus === 'loading' ? <CircularProgress color='primary'/> : 'Создать комнату'}
               </Button>
 
               <Typography hidden={!errorCode} variant='h2' color={Colors.ErrorInput.OUTLINE}>{errorMessage ?? ''}</Typography>

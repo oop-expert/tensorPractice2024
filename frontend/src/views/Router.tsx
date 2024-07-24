@@ -12,6 +12,7 @@ export default function Router() {
       <Route path='lobby/:code' element={<LobbyPage/>} />
       <Route path='room/:code' element={<RoomPage/>} />
       <Route path='results/:code' element={<ResultsPage/>} />
+      <Route path='test' element={<RoomPage/>} />
       <Route path='*' element={<ErrorPage message='Такой страницы не существует'/>} />
     </Routes>
   );

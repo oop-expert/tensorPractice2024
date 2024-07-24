@@ -284,11 +284,10 @@ const IconButtonOptions: Components<Omit<Theme, 'components'>>['MuiIconButton'] 
 const TextFieldOptions:  Components<Omit<Theme, 'components'>>['MuiTextField'] = {
   defaultProps: {
     autoComplete: 'off',
-    variant: 'outlined',
+    variant: 'filled',
     InputProps: {
+      disableUnderline: true,
       sx: {
-        bgcolor: Colors.VoidInput.FILL,
-        borderColor: Colors.VoidInput.OUTLINE,
         borderRadius: 50,
         padding: 0,
         minHeight: '50px',
@@ -301,6 +300,11 @@ const TextFieldOptions:  Components<Omit<Theme, 'components'>>['MuiTextField'] =
         }
       }
     },
+    inputProps: {
+      style: {
+        alignContent: 'center'
+      }
+    },
     InputLabelProps: {
       sx: { 
         top: -3,
@@ -310,7 +314,7 @@ const TextFieldOptions:  Components<Omit<Theme, 'components'>>['MuiTextField'] =
         [defaultTheme.breakpoints.up('xl')]: {
           fontSize: 30,
         },
-      },
+      }
     },
     FormHelperTextProps: {
       sx: {
@@ -318,6 +322,45 @@ const TextFieldOptions:  Components<Omit<Theme, 'components'>>['MuiTextField'] =
         [defaultTheme.breakpoints.up('xl')]: {
           fontSize: 24,
         },
+        color: Colors.Text.HIGHLIGHT_MAJOR
+      }
+    }
+  },
+  styleOverrides: {
+    root: {
+      '& .MuiFilledInput-root': {
+        backgroundColor: Colors.VoidInput.FILL,
+        border: `solid 2px ${Colors.VoidInput.OUTLINE}`,
+        borderRadius: 50,
+        minHeight: '50px',
+        height: '50px',
+        '&.Mui-focused': {
+          backgroundColor: Colors.VoidInput.FILL,
+          border: `solid 3px ${Colors.Text.HIGHLIGHT_MINOR}`,
+        },
+        '&.MuiInputBase-colorSuccess': {
+          
+            backgroundColor: Colors.SuccessInput.FILL,
+            border: `solid 3px ${Colors.SuccessInput.OUTLINE}`,
+
+        },
+        '&.MuiInputBase-colorError': {
+
+            backgroundColor: Colors.ErrorInput.FILL,
+            border: `solid 3px ${Colors.ErrorInput.OUTLINE}`
+
+        },
+        '&.MuiInputBase-colorInfo': {
+
+            backgroundColor: Colors.InfoInput.FILL,
+            border: `solid 2px ${Colors.InfoInput.OUTLINE}`
+
+        },
+        '& .MuiFilledInput-input': {
+          padding: 0,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }
       }
     }
   }
@@ -349,8 +392,19 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
         [defaultTheme.breakpoints.up('xl')]: {
           fontSize: 40,
         },
-        fontWeight: 600,
+        fontWeight: 500,
         textAlign: 'center'
+      }
+    },
+    {
+      props: {variant: 'h3'},
+      style: {
+        fontSize: 22,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 30,
+        },
+        fontWeight: 500,
+        textAlign: 'left'
       }
     },
     {
@@ -360,7 +414,7 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
         [defaultTheme.breakpoints.up('xl')]: {
           fontSize: 30,
         },
-        fontWeight: 600,
+        fontWeight: 500,
         textAlign: 'center',
         textTransform: 'none',
         letterSpacing: 'normal',
@@ -372,12 +426,27 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
       props: {variant: 'body1'},
       style: {
         fontSize: 18,
+        fontWeight: 400,
         [defaultTheme.breakpoints.up('xl')]: {
           fontSize: 30,
+          fontWeight: 500
         },
-        fontWeight: 400,
         textAlign: 'left',
         lineHeight: 1
+      }
+    },
+    {
+      props: {variant: 'caption'},
+      style: {
+        fontSize: 24,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 40,
+        },
+        fontWeight: 500,
+        textAlign: 'center',
+        backgroundColor: Colors.Text.ON_BUTTON,
+        borderRadius: 50,
+        padding: 2
       }
     }
   ]
@@ -442,6 +511,33 @@ const CircularProgressOptions: Components<Omit<Theme, 'components'>>['MuiCircula
   }
 }
 
+const GridOptions: Components<Omit<Theme, 'components'>>['MuiGrid'] = {
+  styleOverrides: {
+    item: {
+      padding: 0
+    },
+    container: {
+      padding: 0
+    }
+  }
+}
+
+const AvatarGroupOptions: Components<Omit<Theme, 'components'>>['MuiAvatarGroup'] = {
+  defaultProps: {
+    slotProps: {
+      additionalAvatar: {
+        sx: {
+          backgroundColor: Colors.TRANSPARENT,
+          color: Colors.Text.PRIMARY,
+          fontFamily: 'Roboto',
+          fontSize: 20,
+          fontWeight: 700
+        }
+      }
+    }
+  }
+}
+
 const UITheme = createTheme({
   palette: Palette,
   breakpoints: Breakpoints,
@@ -452,7 +548,9 @@ const UITheme = createTheme({
     MuiTypography: TypographyOptions,
     MuiList: ListOptions,
     MuiDialog: DialogOptions,
-    MuiCircularProgress: CircularProgressOptions
+    MuiCircularProgress: CircularProgressOptions,
+    MuiGrid: GridOptions,
+    MuiAvatarGroup: AvatarGroupOptions
   }
 })
 

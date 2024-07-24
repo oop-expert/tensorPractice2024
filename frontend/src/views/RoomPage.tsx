@@ -1,6 +1,4 @@
-import { Avatar, Box, Button, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography} from '@mui/material';
-import PersonIcon from '@mui/icons-material/Person';
-import { useState } from 'react';
+import {Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Timer from '../components/Timer';
 import { useMediaMatch } from '../hooks/useMobileMatch';
@@ -9,71 +7,51 @@ import { selectGame } from '../store/gameSlice';
 import { selectPlayer } from '../store/playerSlice';
 import { useAppDispatch } from '../store/storeHooks';
 import { WebSocketActionTypes } from '../store/webSocketMiddleware';
-
+import RoomUserInfo from '../components/RoomUserInfo';
+import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
+import QuitGamePopup from '../components/QuitGamePopup';
 
 export default function RoomPage() {
   const {game} = useSelector(selectGame);
-  const player = useSelector(selectPlayer)
-  const {isMobile} = useMediaMatch();
+  const {player} = useSelector(selectPlayer)
+  const {isMobile, isVerticalTablet} = useMediaMatch();
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
 
   const dispatch = useAppDispatch();
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
+  const onQuit = () => {
+    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.id, username: player.name, avatarId: player.avatarId}});
+    navigate('/');
   };
 
-  const handleCloseExit = () => {
-    setOpen(false);
-    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.code, username: player.name, avatarId: player.avatarId}});
-    navigate(`/`);
+  if(isMobile || isVerticalTablet) {
+    return (
+      <>
+        <Timer />
+        <QuitGamePopup quitGame={onQuit}/>
+      </>
+    );
   }
 
   return(
     <>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description" sx={{display:'flex', flexDirection:'column', alignContent:'center', alignItems:'center'}}>
-        <DialogTitle id="alert-dialog-title" sx={{display:'flex', justifyContent:'center'}}>
-          {"Покинуть комнату?"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description" sx={{whiteSpace: 'pre-line',textAlign:'center'}}>
-          Внимание! Если вы выйдете из игры во время текущего раунда, вам не будет разрешено вернуться.{'\n'}
-          Вы уверены, что хотите выйти?
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions sx={{display:'flex', flexDirection:'column', gap:1}}>
-          <Button variant='contained' color="secondary" onClick={handleCloseExit}>Выйти</Button>
-          <Button variant='contained' onClick={handleClose}>
-            Вернуться в игру
-          </Button>
-        </DialogActions>
-      </Dialog>
-      <Container maxWidth='lg' sx={{paddingY: '0.5vw', borderRadius: 5, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
-        <Container maxWidth='md' sx={{display: 'flex',padding: '0vw', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-          <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingRight: '1vw'}}>
-            <Avatar alt='avatar 1' src={player.avatar} variant='circular' sx={{width: '10vh', height: '10vh', marginRight: '1vh'}} >
-              <PersonIcon sx={{color: 'black', width: '5vh', height: '5vh'}}/>
-            </Avatar>
-            <Typography sx={{fontWeight:'500', fontSize:'2.5vh'}}>{player.name}</Typography>
-          </Box>
-          <Box display={isMobile ? 'none' : 'flex'}>
-            <Button
-              variant='contained'
-              onClick={handleClickOpen}>
-                Выйти
-            </Button>
-          </Box>
-        </Container>
-        <Timer qwestion={game.questions[0]} player={player}/>
-      </Container>
+      <Grid 
+        container 
+        width={WIDTH_RELATIVE_TO_SCREEN} 
+        margin='0 auto' 
+        height='80vh' 
+        justifyContent='space-between' 
+        alignItems='stretch'
+        columns={24} >
+        <Grid item md={6} paddingRight='2vh'>
+          <RoomUserInfo />
+        </Grid>
+        <Grid item md={18}>
+          <Timer />
+        </Grid>
+      </Grid>
+        
+      <QuitGamePopup quitGame={onQuit}/>
     </>
   );
 }

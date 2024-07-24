@@ -4,6 +4,11 @@ import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
+import { useLocation } from 'react-router-dom';
+import FlexBox from './FlexBox';
+import DefaultAvatar from './DefaultAvatar';
+import { useSelector } from 'react-redux';
+import { selectPlayer } from '../store/playerSlice';
 
 const getHeaderSx = (isMobile: boolean, isVTablet: boolean, isInternal: boolean): SxProps => {
   if(isInternal) {
@@ -16,7 +21,7 @@ const getHeaderSx = (isMobile: boolean, isVTablet: boolean, isInternal: boolean)
     };
   } else if(isMobile) {
     return {
-      height: 65, 
+      height: '10vh', 
       boxShadow: 'none', 
       borderEndStartRadius: 50,
       borderEndEndRadius: 50,
@@ -42,13 +47,21 @@ const getHeaderSx = (isMobile: boolean, isVTablet: boolean, isInternal: boolean)
   );
 }
 
-export default function MainAppBar({isOnMainPage = false, isInternal = false}: {isOnMainPage?: boolean, isInternal?: boolean}) {
+export default function MainAppBar({isInternal = false}: {isInternal?: boolean}) {
   const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
   const [isMenuOpened, setMenuOpen] = useState<boolean>(false);
+
+  const {player} = useSelector(selectPlayer);
   
+  const {pathname} = useLocation();
+
+  const isOnMainPage = pathname.length < 2 && !isInternal;
+
   if(isOnMainPage && (isDesktop || isHorizontalTablet) || isInternal && !isDesktop && !isHorizontalTablet) {
     return <></>;
   } 
+
+  const isOnRoomPage = (isMobile || isVerticalTablet) && (pathname.includes('room') || pathname.includes('test'));
 
   const openMenu = () => setMenuOpen((isOpened) => !isOpened);
   const closeMenu = () => setMenuOpen(false);
@@ -58,7 +71,12 @@ export default function MainAppBar({isOnMainPage = false, isInternal = false}: {
       position='static' 
       sx={ getHeaderSx(isMobile, isVerticalTablet, isInternal) } 
       color={isMobile ? 'secondary' : 'primary'}>
-        <Typography variant='h1' style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</Typography>
+        {isOnRoomPage 
+          ? <FlexBox direction='row' gap={2}>
+              <DefaultAvatar src={player.avatar} width='8vh' userId={player.id}/>
+              <Typography variant='h2' textAlign='left'>{player.name}</Typography>
+            </FlexBox>
+          : <Typography variant='h1' style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</Typography>}
 
         <Box hidden={!isMobile || isOnMainPage} position='relative'>
           <IconButton color='inherit' onClick={openMenu}>

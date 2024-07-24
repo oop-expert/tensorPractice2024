@@ -5,6 +5,7 @@ import { AVATARS, CODE_LENGTH, generateRandomId, getRandomInteger, MAX_PLAYERS }
 import TestQrCode from '../assets/test_qr_code.png';
 import Question from './types/Question';
 import { faker } from '@faker-js/faker/locale/ru';
+import TestPic from '../assets/testpic.png';
 
 const FILMS = ['Побег из Шоушенка', 'Зеленая миля', 'Властелин Колец', 'Крестный отец', 
   'Начало', 'Темный рыцарь', '1+1', 'Форрест Гамп', 'Унесенные призраками', 'Криминальное чтиво'];
@@ -12,7 +13,7 @@ const FILMS = ['Побег из Шоушенка', 'Зеленая миля', '�
 const generateQuestions = () => FILMS.map((film, i) => {
   const question: Question = {
     id: i,
-    image: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+    image: TestPic,
     answer: film
   }
 
@@ -28,8 +29,7 @@ export const generateRandomPlayers = (): Array<Player> => Array.from({length: ge
     isHost: i === 0,
     isReady: true,
     score: 0,
-    createdAt: new Date().toString(),
-    isRight: false
+    createdAt: new Date().toString()
   };
 
   return player;
@@ -43,3 +43,7 @@ export const generateGame = (players: Array<Player>, code?: string): Game => ({
   players,
   questions: generateQuestions()
 });
+
+export const mockPlayers = generateRandomPlayers();
+export const mockPlayer = mockPlayers[0];
+export const mockGame = generateGame(mockPlayers);

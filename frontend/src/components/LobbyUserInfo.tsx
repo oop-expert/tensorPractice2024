@@ -2,15 +2,7 @@ import { Box, ListItem, Typography } from '@mui/material';
 import DefaultAvatar from './DefaultAvatar';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import Player from '../utils/types/Player';
-
-const LobbyAvatarValues = {
-  DESKTOP_WIDTH: '10vw',
-  MOBILE_WIDTH: '10vw',
-  DESKTOP_MIN_WIDTH: 80,
-  MOBILE_MIN_WIDTH: 50,
-  DESTOP_MAX_WIDTH: 90,
-  MOBILE_MAX_WIDTH: 60
-};
+import { AvatarValues } from '../utils/utils';
 
 const DefaultPlayer: Player = {
   id: 0,
@@ -20,8 +12,7 @@ const DefaultPlayer: Player = {
   isHost: false,
   isReady: false,
   score: 0,
-  createdAt: new Date().toString(),
-  isRight: false
+  createdAt: new Date().toString()
 };
 
 export default function LobbyUserInfo({user=DefaultPlayer}: {user?: Player}) {
@@ -36,9 +27,9 @@ export default function LobbyUserInfo({user=DefaultPlayer}: {user?: Player}) {
         alignItems='center'>
         <DefaultAvatar 
           src={user.avatar}
-          width={isMobile ? LobbyAvatarValues.MOBILE_WIDTH : LobbyAvatarValues.DESKTOP_WIDTH}
-          maxWidth={isMobile ? LobbyAvatarValues.MOBILE_MAX_WIDTH : LobbyAvatarValues.DESTOP_MAX_WIDTH}
-          minWidth={isMobile ? LobbyAvatarValues.MOBILE_MIN_WIDTH : LobbyAvatarValues.DESKTOP_MIN_WIDTH}
+          width={isMobile ? AvatarValues.MOBILE_WIDTH : AvatarValues.DESKTOP_WIDTH}
+          maxWidth={isMobile ? AvatarValues.MOBILE_MAX_WIDTH : AvatarValues.DESTOP_MAX_WIDTH}
+          minWidth={isMobile ? AvatarValues.MOBILE_MIN_WIDTH : AvatarValues.DESKTOP_MIN_WIDTH}
           userId={user.id}
           empty={!user.id}/>
 

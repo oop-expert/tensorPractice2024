@@ -3,20 +3,24 @@ import { State } from "./store";
 
 const popupSlice = createSlice({
   name: 'popup',
-  initialState: {isOpened: false},
+  initialState: {isQrOpened: false, isQuitOpened: false, closeWindow: false},
   reducers: {
-    openPopup: (state) => {
-      state.isOpened = true;
+    openQrPopup: (state) => {
+      state.isQrOpened = true;
+      state.isQuitOpened = false;
     },
     closePopup: (state) => {
-      state.isOpened = false;
+      state.isQrOpened = false;
+      state.isQuitOpened = false;
     },
-    switchOpen: (state) => {
-      state.isOpened = !state.isOpened;
+    openQuitPopup: (state, action) => {
+      state.isQrOpened = false;
+      state.isQuitOpened = true;
+      state.closeWindow = action.payload;
     }
   }
 });
 
-export const selectPopupOpen = (state: State) => state.popup.isOpened;
-export const {openPopup, closePopup, switchOpen} = popupSlice.actions;
+export const selectPopupOpen = (state: State) => state.popup;
+export const {openQrPopup, closePopup, openQuitPopup} = popupSlice.actions;
 export default popupSlice.reducer;

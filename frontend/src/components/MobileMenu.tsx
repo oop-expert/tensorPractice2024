@@ -2,33 +2,26 @@ import { Box, Button, Divider } from '@mui/material';
 import ShareIcon from '@mui/icons-material/Share';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Colors } from '../utils/utils';
-import { matchPath, useLocation, useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { openPopup } from '../store/popupSlice';
-import { selectGame } from '../store/gameSlice';
-import { WebSocketActionTypes } from '../store/webSocketMiddleware';
+import { matchPath, useLocation } from 'react-router-dom';
+import { openQrPopup, openQuitPopup } from '../store/popupSlice';
 import { useAppDispatch } from '../store/storeHooks';
-import { selectPlayer } from '../store/playerSlice';
+
 
 export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, closeMenu: () => void}) {
-  const navigate = useNavigate();
   const {pathname} = useLocation();
 
   const shouldDisplayShare = matchPath('/lobby/:id', pathname);
 
-  const {game} = useSelector(selectGame);
-  const player = useSelector(selectPlayer);
   const dispatch = useAppDispatch();
 
-  const onPopupOpen = () => {
+  const onQrOpen = () => {
     closeMenu();
-    dispatch(openPopup());
+    dispatch(openQrPopup());
   };
 
-  const onQuit = () => {
+  const onQuitOpen = () => {
     closeMenu();
-    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.code, username: player.name, avatarId: player.avatarId}})
-    navigate('/');
+    dispatch(openQuitPopup(false));
   };
 
   return (
@@ -39,7 +32,7 @@ export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, cl
       position='absolute'
       top={50}
       right={0}
-      width='50vw'
+      width='max-content'
       maxWidth='215px'
       bgcolor={Colors.PANEL}
       borderRadius={5}
@@ -47,13 +40,13 @@ export default function MobileMenu({isOpened, closeMenu}: {isOpened: boolean, cl
       sx={{
         borderStartEndRadius: 0
       }}>
-        <Button style={{display: shouldDisplayShare ? 'flex' : 'none'}} variant='text' color='secondary' endIcon={<ShareIcon />} onClick={onPopupOpen}>
+        <Button style={{display: shouldDisplayShare ? 'flex' : 'none'}} variant='text' color='secondary' endIcon={<ShareIcon />} onClick={onQrOpen}>
           Поделиться
         </Button>
 
         <Divider style={{color: Colors.Text.HIGHLIGHT_MINOR}}/>
 
-        <Button variant='text' color='secondary' endIcon={<ArrowBackIcon />} onClick={onQuit}>
+        <Button variant='text' color='secondary' endIcon={<ArrowBackIcon />} onClick={onQuitOpen}>
           Выйти из игры
         </Button>
     </Box>

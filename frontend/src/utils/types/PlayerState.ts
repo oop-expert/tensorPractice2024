@@ -3,5 +3,5 @@ import { RequestStatus } from "./RequestStatus";
 
 export default interface PlayerState {
   player: Player,
-  status: RequestStatus
+  answerStatus: RequestStatus | 'incorrect'
 }

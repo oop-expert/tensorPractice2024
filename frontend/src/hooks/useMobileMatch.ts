@@ -5,7 +5,7 @@ export const useMediaMatch = () => {
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const isHorizontalTablet = useMediaQuery(theme.breakpoints.only('md')) && screen.orientation.type === 'landscape-primary';
-  const isVerticalTablet = useMediaQuery(theme.breakpoints.only('md')) && screen.orientation.type === 'portrait-primary';
+  const isVerticalTablet = useMediaQuery(theme.breakpoints.down('lg')) && screen.orientation.type === 'portrait-primary';
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   
   return {isMobile, isVerticalTablet, isHorizontalTablet, isDesktop};

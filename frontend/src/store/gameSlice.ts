@@ -56,6 +56,7 @@ const gameSlice = createSlice({
     updatePlayers: (state, action) => {
       const players = action.payload.map((player: PlayerResponce) => getPlayerFromResponce(player));
       state.game.players = [...players];
+      console.log(action.payload);
     },
     setError: (state, action) => {
       state.errorCode = action.payload.code.toString();
