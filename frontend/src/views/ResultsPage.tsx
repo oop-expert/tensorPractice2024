@@ -74,18 +74,21 @@ export default function ResultsPage(){
                             <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
                                 <Typography style={{fontWeight:'500', fontSize:'3vh', color:'#C94F48'}}>{players[0].name}</Typography>
                                 <Box display={isMobile ? 'none' : 'flex'}><img width={'50px'} height={'50px'} src="/medal.png" /></Box>
-                                </Box>
+                            </Box>
                             <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {players[0].score}</Typography>
                         </Box>
                     </Stack>
                     :<>
                         {(firstPlace !== undefined && playersFiltered !== undefined)?
-                        <Box><Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
+                        <Box width={'90%'}><Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', marginBottom:'0.9vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C'}}>
                         <Avatar alt='avatar 1' variant='circular' src={firstPlace[0].avatar} sx={{ width: '15vh', height: '15vh'}} >
                             <PersonIcon sx={{color: 'black', width: '10vh', height: '10vh'}}/>
                         </Avatar>
                         <Box alignItems={isMobile ? 'center' : 'flex-start'} sx={{margin:'1.6vw', display:'flex', flexDirection:'column', gap:'3vh'}}>
+                            <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
                                 <Typography style={{fontWeight:'500', fontSize:'3vh', color:'#C94F48'}}>{firstPlace[0].name}</Typography>
+                                <Box display={isMobile ? 'none' : 'flex'}><img width={'50px'} height={'50px'} src="/medal.png" /></Box>
+                                </Box>
                             <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {firstPlace[0].score}</Typography>
                         </Box>
                     </Stack>
