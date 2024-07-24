@@ -61,26 +61,26 @@ export default function ResultsPage(){
     }
     console.log(firstPlace)
     return(
-        <Container maxWidth='lg' sx={{padding: '1.3vh', borderRadius: 5, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
-          <Container maxWidth='md' sx={{display: 'flex', padding: '0vw', flexDirection: 'row',justifyContent:'center', alignItems: 'center', gap:'2px'}}>
-            <Box sx={{display: 'flex', fontSize:'2vh',flexDirection: 'column',  alignItems: 'center'}}>
-                <Typography sx={{fontSize:'48', fontWeight:'700', borderRadius:'142px', padding:'15'}}>Результаты игры</Typography>
-                <Box width={'100%'} display={isMobile ? 'none' : 'flex'} >
-                    <Typography sx={{textAlign:'left', padding:'0.1vh 2vh', marginY:'1vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', color:'black'}}>Победитель:</Typography>
-                </Box>
+        // <Container maxWidth='lg' sx={{padding: '1.3vh', borderRadius: 5, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
+          <Container maxWidth='lg' sx={{display: 'flex', padding: '0vw', flexDirection: 'row',justifyContent:'center', alignItems: 'center', gap:'2px'}}>
+            <Box sx={{display: 'flex', fontSize:'2vh',flexDirection: 'column', width:'70%',  alignItems: 'center'}}>
+                <Typography sx={{fontSize:'48', fontWeight:'700', borderRadius:'142px', padding:'15', marginBottom:'0.9vh'}}>Результаты игры</Typography>
                 {(players.length === 1)?
-                    <Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', margin:'0.9vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
-                        <Avatar alt='avatar 1' variant='circular'  sx={{ width: '15vh', height: '15vh'}} >
+                    <Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
+                        <Avatar alt='avatar 1' variant='circular' src={players[0].avatar}  sx={{ width: '15vh', height: '15vh'}} >
                             <PersonIcon sx={{color: 'black', width: '10vh', height: '10vh'}}/>
                         </Avatar>
                         <Box alignItems={isMobile ? 'center' : 'flex-start'} sx={{margin:'1.6vw', display:'flex', flexDirection:'column', gap:'3vh'}}>
+                            <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
                                 <Typography style={{fontWeight:'500', fontSize:'3vh', color:'#C94F48'}}>{players[0].name}</Typography>
+                                <Box display={isMobile ? 'none' : 'flex'}><img width={'50px'} height={'50px'} src="/medal.png" /></Box>
+                                </Box>
                             <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {players[0].score}</Typography>
                         </Box>
                     </Stack>
                     :<>
                         {(firstPlace !== undefined && playersFiltered !== undefined)?
-                        <Box><Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', margin:'0.9vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
+                        <Box><Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
                         <Avatar alt='avatar 1' variant='circular' src={firstPlace[0].avatar} sx={{ width: '15vh', height: '15vh'}} >
                             <PersonIcon sx={{color: 'black', width: '10vh', height: '10vh'}}/>
                         </Avatar>
@@ -89,7 +89,7 @@ export default function ResultsPage(){
                             <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {firstPlace[0].score}</Typography>
                         </Box>
                     </Stack>
-                    <List style={{maxHeight: '30vh', width:'100%', overflowY: 'scroll', overflowX:'hidden', display:'flex', flexDirection:"column",  flexWrap:"nowrap", justifyContent:'space-between', marginBottom:'1.6vw', rowGap:'1vh'  }}>
+                    <List style={{maxHeight: '30vh', width:'100%', overflowY: 'auto', overflowX:'hidden', display:'flex', flexDirection:"column",  flexWrap:"nowrap", justifyContent:'space-between', marginBottom:'1.6vw', rowGap:'1vh'  }}>
                     {(playersFiltered.map((player: Player, place: number)=>
                         <Box sx={{width:'99%', display: 'flex', justifyContent:'space-between', flexDirection: 'row', columnGap:'6vw',  alignItems: 'center', paddingBottom:'1.1vw', paddingRight:'1vh'}}>
                         <Box sx={{flexDirection: 'row',display: 'flex', alignItems:'center'}}>
@@ -127,6 +127,5 @@ export default function ResultsPage(){
                 </Container>
             </Box>
            </Container>
-        </Container>
     );
 }
