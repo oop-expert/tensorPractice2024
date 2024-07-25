@@ -25,9 +25,9 @@ export default function RoomPage() {
   if(isMobile || isVerticalTablet) {
     return (
       <>
-          <Box className='app'>
-        <Timer />
-        <QuitGamePopup quitGame={onQuit}/>
+        <Box className='app'>
+          <Timer />
+          <QuitGamePopup quitGame={onQuit}/>
         </Box>
       </>
     );

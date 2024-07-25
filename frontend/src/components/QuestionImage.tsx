@@ -20,7 +20,7 @@ export default function QuestionImage({question}: {question: Question}) {
       <CardMedia 
         sx={{position: 'relative'}}
         image={!question || !question.image ? '' : `data:image/png;base64,${question.image}`}
-        style={{width: '380px', height: '324px', borderRadius: '30px'}}>
+        style={{width: '100%', height: '324px', borderRadius: '30px'}}>
           <Box position='absolute' top='20px' right='20px'>
             <IconButton color='secondary' onClick={zoomIn} style={{width: '40px', height: '40px'}}>
               <ZoomInIcon sx={{fontSize: iconWidth}}/>

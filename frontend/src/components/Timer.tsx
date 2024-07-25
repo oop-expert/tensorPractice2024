@@ -120,7 +120,7 @@ export default function Timer() {
             ))}
           </AvatarGroup>
         </FlexBox>
-        <Typography variant='h2' sx={{marginTop:'8px'}} color={'#C94F48'} alignItems='center' letterSpacing={3}  lineHeight={1}>{hiddenAnswer}</Typography>
+        <Typography variant='h2' sx={{marginTop:'6px'}} color={'#C94F48'} alignItems='center' letterSpacing={3}  lineHeight={1}>{hiddenAnswer}</Typography>
         </Box>
         <FlexBox direction='column' sx={{marginTop:'18px', marginBottom:'35px', width:'100%'}}>
             <TextField 

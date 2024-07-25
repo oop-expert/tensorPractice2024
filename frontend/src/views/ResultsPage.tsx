@@ -3,13 +3,12 @@ import PersonIcon from '@mui/icons-material/Person';
 import { useNavigate} from "react-router-dom";
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import { useSelector } from "react-redux";
-import { getGameByCode, postCreateGame, selectGame } from "../store/gameSlice";
+import { getGameByCode, selectGame } from "../store/gameSlice";
 import { useEffect } from "react";
 import { useAppDispatch } from "../store/storeHooks";
 import Player from "../utils/types/Player";
 import { WebSocketActionTypes } from "../store/webSocketMiddleware";
 import QuitGamePopup from "../components/QuitGamePopup";
-import { signUp } from "../store/playerSlice";
 
 
 export default function ResultsPage(){
@@ -38,15 +37,15 @@ export default function ResultsPage(){
     }
 
     console.log(game)
-    const onGameCreate = () => {
-        navigate(`/`);
-        dispatch(signUp(true));
-        dispatch(postCreateGame());
-        if(game.id > 0) {
-            navigate(`/lobby/${game.id}`);
-            navigate(`/`);
-        }
-    };
+    // const onGameCreate = () => {
+    //     navigate(`/`);
+    //     dispatch(signUp(true));
+    //     dispatch(postCreateGame());
+    //     if(game.id > 0) {
+    //         navigate(`/lobby/${game.id}`);
+    //         navigate(`/`);
+    //     }
+    // };
     const players = game.players
     console.log(players)
     let firstPlace
@@ -127,11 +126,11 @@ export default function ResultsPage(){
                                 Завершить игру
                         </Button>
                     </Box>
-                    <Button 
+                    {/* <Button 
                         variant='contained'
                         onClick={onGameCreate}>
                             Играть снова
-                    </Button>
+                    </Button> */}
                 </Container>
             {/* </Box> */}
             <QuitGamePopup quitGame={quitGame}/>
