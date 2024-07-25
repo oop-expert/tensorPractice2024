@@ -1,4 +1,4 @@
-import {Box, Grid} from '@mui/material';
+import {Box} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Timer from '../components/Timer';
 import { useMediaMatch } from '../hooks/useMobileMatch';
@@ -7,8 +7,6 @@ import { selectGame } from '../store/gameSlice';
 import { selectPlayer } from '../store/playerSlice';
 import { useAppDispatch } from '../store/storeHooks';
 import { WebSocketActionTypes } from '../store/webSocketMiddleware';
-import RoomUserInfo from '../components/RoomUserInfo';
-import { WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import QuitGamePopup from '../components/QuitGamePopup';
 
 export default function RoomPage() {

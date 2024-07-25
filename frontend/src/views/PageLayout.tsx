@@ -24,7 +24,7 @@ export default function PageLayout() {
     hiddenRef.current?.onclick;
   };
 
-  const onUrlChange = useCallback((url: string, replace: boolean = false) => {
+  const onUrlChange = useCallback((replace: boolean = false) => {
     const method = replace ? 'replaceState' : 'pushState';
     window.history[method];
   }, []);
