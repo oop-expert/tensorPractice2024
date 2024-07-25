@@ -19,7 +19,7 @@ export default function QuestionImage({question}: {question: Question}) {
 
   const imageWidth = isMobile ? '40vh' : '40vh';
 
-  const hiddenAnswer = question.answer.slice().replace(/[а-яa-z0-9]/gi, '_');
+  const hiddenAnswer = question.answer.slice().replace(/[а-яёa-z0-9]/gi, '_');
 
   return (
     <FlexBox direction='column'>

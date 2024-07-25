@@ -52,6 +52,8 @@ export default function LobbyPage() {
 
   const linkRef = useRef<HTMLTextAreaElement>(null);
 
+  const listMargin = isXL ? '100px' : (isMobile && player.isHost ? '140px' : '70px');
+
   const copyToClipboard = (text: string) => {
     if(window.isSecureContext) {
       navigator.clipboard.writeText(text);
@@ -185,7 +187,7 @@ export default function LobbyPage() {
             {game.is_started && !hasAllImages ? 'Генерируются изображения' : 'Ожидаем участников команды'}
           </Typography>
 
-            <List style={{height: 'stretch', marginBottom: isXL ? '100px' : '70px', overflowY: 'auto'}}>
+            <List style={{height: 'stretch', marginBottom: listMargin, overflowY: 'auto'}}>
               {game.players.map((p) => (
                 <LobbyUserInfo key={p.id} user={p}/>
               ))}
@@ -224,8 +226,8 @@ export default function LobbyPage() {
         onCodeSave={onCodeCopy} />
       
       {!game.is_started
-      ? <PopupRegistrationForm />
-      : <ErrorMessage isOpened={!isPlayerConnected}/>}
+      ? (game.players.length >= 10 && !isPlayerConnected ? <ErrorMessage isOpened message='К сожалению, лимит участников превышен'/> : <PopupRegistrationForm />)
+      : <ErrorMessage isOpened={!isPlayerConnected} message='К сожалению, игра уже началась, и Вы не можете подключиться к ней'/>}
 
       <LoadingPopup isOpened={game.is_started && !hasAllImages && isPlayerConnected}/>
 

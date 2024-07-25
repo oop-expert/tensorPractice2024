@@ -6,7 +6,7 @@ import PanelGroup from '../components/PanelGroup';
 import Panel from '../components/Panel';
 import MainAppBar from '../components/MainAppBar';
 import { useMediaMatch } from '../hooks/useMobileMatch';
-import { Colors, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
+import { Colors, MAX_PLAYERS, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import { selectPlayer, signUp } from '../store/playerSlice';
 import { useSelector } from 'react-redux';
 import { getGameByCode, postCreateGame, selectGame } from '../store/gameSlice';
@@ -53,7 +53,7 @@ export default function MainPage() {
   }; 
 
   useEffect(() => {
-    if(game.id > 0) {
+    if(game.id > 0 && game.players.length < MAX_PLAYERS) {
       navigate(`/lobby/${game.code}`);
     }
   });
@@ -111,6 +111,7 @@ export default function MainPage() {
                 </Button>
 
                 <Typography hidden={!errorCode} variant='body1' color={Colors.Text.HIGHLIGHT_MAJOR}>{errorMessage ?? ''}</Typography>
+                <Typography hidden={game.players.length < MAX_PLAYERS} variant='body1' color={Colors.Text.HIGHLIGHT_MAJOR}>К сожалению, лимит участников превышен</Typography>
               </FlexBox>
           </Panel>
       </PanelGroup>
