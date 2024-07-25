@@ -1,4 +1,4 @@
-import { Box, IconButton, TextField, Typography } from '@mui/material';
+import { Box, IconButton, TextField } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Panel from './Panel';

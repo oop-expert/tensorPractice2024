@@ -128,112 +128,116 @@ export default function LobbyPage() {
   }, [game.code, isPlayerConnected, countdown, hasAllImages, dispatch]);
 
   return (
-    <PanelGroup 
-      direction='column' 
-      width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN} 
-      margin={'0 auto'}
-      gap={1}
-      height={isMobile ? '85vh' : '80vh'}>
-      <Box
-        display={isMobile ? 'none' : 'flex'}
-        flexDirection={isThinnerThan1000 ? 'column' : 'row'}
-        justifyContent='space-between'
-        alignItems='center'
-        gap={1}>
-          <Box 
-          display='flex'
-          flexDirection='row'
+    <Box className='app'>
+      <Box className='app__top-content'>
+        <Typography variant='h2' sx={{marginTop: LOBBY_H2_Y_MARGIN, marginBottom: LOBBY_H2_Y_MARGIN}}>
+          {game.is_started && !hasAllImages ? 'Генерируются изображения' : 'Ожидаем участников команды'}
+        </Typography>
+        <PanelGroup 
+          direction='column' 
+          width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN} 
+          margin={'0 auto'}
           gap={1}
-          alignItems='center'>
-            <Typography variant='h2' sx={{margin: 0}}>Поделиться комнатой:</Typography>
-            <IconButton color='primary' onClick={onPopupOpen}>
-              <QrCode2Icon />
-            </IconButton>
-
-            <IconButton color='secondary' onClick={onLinkCopy}>
-              <InsertLinkIcon />
-            </IconButton>
-          </Box>
-
-          <TextField
-            id='code'
-            value={game.code}
-            aria-readonly
-            InputProps={(
-              {
-                disableUnderline: true,
-                endAdornment: (
-                  <IconButton color='secondary' onClick={onCodeCopy}>
-                    <ContentCopyIcon />
-                  </IconButton>
-                ),
-                sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
-              }
-            )}/>
-      </Box>
-      <Panel
-        position='relative'
-        isMatchingMobile={isMobile} 
-        margin={'0 auto'}
-        padding={5}
-        height={isMobile ? '100%' : '60vh'}> 
-          <Box display={isMobile ? 'none' : 'block'} position='absolute' top={20} right={20}>
-            <IconButton color='warning' onClick={onQuitOpen}>
-              <CloseIcon />
-            </IconButton>
-          </Box>
-
-          <Typography variant='h2' sx={{marginTop: LOBBY_H2_Y_MARGIN, marginBottom: LOBBY_H2_Y_MARGIN}}>
-            {game.is_started && !hasAllImages ? 'Генерируются изображения' : 'Ожидаем участников команды'}
-          </Typography>
-
-            <List style={{height: 'stretch', marginBottom: listMargin, overflowY: 'auto'}}>
-              {game.players.map((p) => (
-                <LobbyUserInfo key={p.id} user={p}/>
-              ))}
-            </List>
-
-          <Box 
-            display='flex'
-            flexDirection={isMobile ? 'column' : 'row'}
-            position='absolute'
-            bottom={isMobile ? '1.5vh' : '5vh'}
-            gap={2}
+          height={isMobile ? '85vh' : '80vh'}>
+          <Box
+            display={isMobile ? 'none' : 'flex'}
+            flexDirection={isThinnerThan1000 ? 'column' : 'row'}
+            justifyContent='space-between'
             alignItems='center'
-            width={!isDesktop ? (isMobile ? '100%': '90%') : (player.isHost ? DESKTOP_BUTTON_GROUP_WIDTH : DESKTOP_SINGLE_BUTTON_WIDTH)}
-            alignSelf='center'>
-              <Button 
-                disabled={game.is_started} 
-                style={{width: isMobile ? '60%' : '100%'}} 
-                variant='contained' 
-                color='secondary' 
-                onClick={onSetReady}>
-                  {player.isReady ? 'Не готов играть' : 'Готов играть'}
-              </Button>
-              <Button 
-                disabled={isStartDisabled}
-                style={{width: isMobile ? '60%' : '100%', display: player.isHost ? 'block' : 'none'}} 
-                variant='contained' 
-                color='primary' 
-                onClick={onGameStart}>
-                  {game.is_started && !hasAllImages ? <CircularProgress color='primary'/> : 'Начать'}
-              </Button>
+            gap={1}>
+              <Box 
+              display='flex'
+              flexDirection='row'
+              gap={1}
+              alignItems='center'>
+                <Typography variant='h2' sx={{margin: 0}}>Поделиться комнатой:</Typography>
+                <IconButton color='primary' onClick={onPopupOpen}>
+                  <QrCode2Icon />
+                </IconButton>
+
+                <IconButton color='secondary' onClick={onLinkCopy}>
+                  <InsertLinkIcon />
+                </IconButton>
+              </Box>
+
+              <TextField
+                id='code'
+                value={game.code}
+                aria-readonly
+                InputProps={(
+                  {
+                    disableUnderline: true,
+                    endAdornment: (
+                      <IconButton color='secondary' onClick={onCodeCopy}>
+                        <ContentCopyIcon />
+                      </IconButton>
+                    ),
+                    sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
+                  }
+                )}/>
           </Box>
-      </Panel>
-      <QrCodePopup 
-        qrCode={game.qr_code}
-        onLinkSave={onLinkCopy}
-        onCodeSave={onCodeCopy} />
-      
-      {!game.is_started
-      ? (game.players.length >= 10 && !isPlayerConnected ? <ErrorMessage isOpened message='К сожалению, лимит участников превышен'/> : <PopupRegistrationForm />)
-      : <ErrorMessage isOpened={!isPlayerConnected} message='К сожалению, игра уже началась, и Вы не можете подключиться к ней'/>}
+          <Panel
+            position='relative'
+            isMatchingMobile={isMobile} 
+            margin={'0 auto'}
+            padding={5}
+            height={isMobile ? '100%' : '60vh'}> 
+              <Box display={isMobile ? 'none' : 'block'} position='absolute' top={20} right={20}>
+                <IconButton color='warning' onClick={onQuitOpen}>
+                  <CloseIcon />
+                </IconButton>
+              </Box>
 
-      <LoadingPopup isOpened={game.is_started && !hasAllImages && isPlayerConnected}/>
+              
 
-      <QuitGamePopup quitGame={onQuit}/>
+                <List style={{height: 'stretch', marginBottom: listMargin, overflowY: 'auto'}}>
+                  {game.players.map((p) => (
+                    <LobbyUserInfo key={p.id} user={p}/>
+                  ))}
+                </List>
+          </Panel>
+          <QrCodePopup 
+            qrCode={game.qr_code}
+            onLinkSave={onLinkCopy}
+            onCodeSave={onCodeCopy} />
+          {!game.is_started
+          ? (game.players.length >= 10 && !isPlayerConnected ? <ErrorMessage isOpened message='К сожалению, лимит участников превышен'/> : <PopupRegistrationForm />)
+          : <ErrorMessage isOpened={!isPlayerConnected} message='К сожалению, игра уже началась, и Вы не можете подключиться к ней'/>}
 
-      <textarea ref={linkRef} value={lobbyUrl} style={{position: 'absolute', left: '-9999999px'}} hidden readOnly></textarea>
-    </PanelGroup>
+          <LoadingPopup isOpened={game.is_started && !hasAllImages && isPlayerConnected}/>
+
+          <QuitGamePopup quitGame={onQuit}/>
+
+          <textarea ref={linkRef} value={lobbyUrl} style={{position: 'absolute', left: '-9999999px'}} hidden readOnly></textarea>
+        </PanelGroup>
+      </Box>
+
+      <Box sx={{width: '100%'}}
+        display='flex'
+        flexDirection={isMobile ? 'column' : 'row'}
+        position='absolute'
+        bottom={isMobile ? '1.5vh' : '5vh'}
+        gap={2}
+        alignItems='center'
+        width={!isDesktop ? (isMobile ? '100%': '90%') : (player.isHost ? DESKTOP_BUTTON_GROUP_WIDTH : DESKTOP_SINGLE_BUTTON_WIDTH)}
+        alignSelf='center'>
+        <Button 
+          disabled={game.is_started} 
+          style={{width: isMobile ? '60%' : '100%'}} 
+          variant='contained' 
+          color='secondary' 
+          onClick={onSetReady}>
+            {player.isReady ? 'Не готов играть' : 'Готов играть'}
+        </Button>
+        <Button 
+          disabled={isStartDisabled}
+          style={{width: isMobile ? '60%' : '100%', display: player.isHost ? 'block' : 'none'}} 
+          variant='contained' 
+          color='primary' 
+          onClick={onGameStart}>
+            {game.is_started && !hasAllImages ? <CircularProgress color='primary'/> : 'Начать'}
+        </Button>
+      </Box>
+    </Box>
   );
 }
