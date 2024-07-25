@@ -59,7 +59,7 @@ export default function MainPage() {
   });
 
   return (
-    <Box className='app' >
+    <Box className='app'>
       <Box className='app__top-content'>
         <Typography variant='h2' sx={{marginTop:'40px'}}>
             Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!

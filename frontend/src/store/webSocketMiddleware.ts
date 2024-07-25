@@ -29,7 +29,7 @@ export const WebSocketMiddleware =
 
     switch(action.type) {
       case WebSocketActionTypes.JOIN_GAME: {
-        socket.connect(`ws://tensorpractic.ru:8000/ws/room/${action.payload.gameCode}/?username=${action.payload.username}&avatar_id=${action.payload.avatarId}`);
+        socket.connect(`ws://51.250.36.21:8000/ws/room/${action.payload.gameCode}/?username=${action.payload.username}&avatar_id=${action.payload.avatarId}`);
 
         socket.onMessage((evt: MessageEvent) => {
           const data = JSON.parse(evt.data);
