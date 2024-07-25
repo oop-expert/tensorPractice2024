@@ -1,4 +1,4 @@
-import { Button, CircularProgress, Divider, TextField, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, Divider, TextField, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import RegistrationForm from '../components/RegistrationForm';
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +19,7 @@ const V_TABLET_MAIN_PANEL_MARGIN = '15% auto 0';
 
 const getPanelMargin = (isMobile: boolean, isHTablet: boolean, isVTablet: boolean) => {
   if(isMobile) {
-    return '1vh 0';
+    return '0 0';
   } else if(isHTablet) {
     return H_TABLET_MAIN_PANEL_MARGIN;
   } else if(isVTablet) {
@@ -59,25 +59,31 @@ export default function MainPage() {
   });
 
   return (
-    <PanelGroup 
-      position='relative'
-      direction={isDesktop || isHorizontalTablet ? 'row' : 'column'} 
-      margin={getPanelMargin(isMobile, isHorizontalTablet, isVerticalTablet)} 
-      width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN}
-      height={isMobile ? '80vh' : '75vh'}
-      gap={isMobile ? '10%' : '30px'}
-      sx={{justifyContent: 'center'}}>
-        <PanelGroup direction='column'>
-          <RegistrationForm />
-        </PanelGroup>
+    <Box className='app' >
+      <Box className='app__top-content'>
+        <Typography variant='h2' sx={{marginTop:'40px'}}>
+            Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
+        </Typography>
+        <PanelGroup 
+          position='relative'
+          direction={isDesktop || isHorizontalTablet ? 'row' : 'column'} 
+          margin={getPanelMargin(isMobile, isHorizontalTablet, isVerticalTablet)} 
+          width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN}
+          sx={{justifyContent: 'center', marginTop:'35px'}}>
+            <PanelGroup direction='column'>
+              <RegistrationForm />
+            </PanelGroup>
 
-        <PanelGroup direction='column' gap='30px'>
+            
+        </PanelGroup>
+    </Box>
+    <PanelGroup direction='column' sx={{marginBottom:'35px', marginTop:'18px'}}>
           <MainAppBar isInternal/>
 
-            <Panel gap={isMobile ? '2vh' : 5} isMatchingMobile={isMobile} height={!isDesktop && !isHorizontalTablet ? 'fit-content' : '100%'} sx={{justifyContent: 'center'}}>
+            <Panel isMatchingMobile={isMobile} height={!isDesktop && !isHorizontalTablet ? 'fit-content' : '100%'} sx={{justifyContent: 'center'}}>
               <Typography variant='h2' width={'100%'} hidden={isMobile}>Создайте комнату или войдите в уже существующую</Typography>
               
-              <FlexBox direction='column' gap={isMobile ? '1vh' : 2} sx={{width: '100%'}}>
+              <FlexBox direction='column' sx={{width: '100%'}}>
                 <TextField
                   id='code'
                   placeholder='Код игровой сессии'
@@ -99,14 +105,14 @@ export default function MainPage() {
                     }
                   )} />
 
-                <Divider textAlign='center'><Typography variant='body1'>или</Typography></Divider>
+                <Divider textAlign='center' sx={{marginTop:'18px'}}><Typography variant='body1'><b>или</b></Typography></Divider>
 
                 <Button 
                   variant='contained' 
                   color='primary'
                   disabled={!player.name || gameStatus === 'loading'}
                   onClick={onGameCreate}
-                  style={{width: 'max-content', minWidth: '60%', margin: '0 auto'}}>
+                  style={{ marginTop:'18px'}}>
                     {gameStatus === 'loading' ? <CircularProgress color='primary'/> : 'Создать комнату'}
                 </Button>
 
@@ -115,6 +121,6 @@ export default function MainPage() {
               </FlexBox>
           </Panel>
       </PanelGroup>
-    </PanelGroup>
+    </Box>
   );
 }

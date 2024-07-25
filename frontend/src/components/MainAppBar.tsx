@@ -20,18 +20,16 @@ const getHeaderSx = (isMobile: boolean, isVTablet: boolean, isInternal: boolean)
       margin: '0 auto'
     };
   } else if(isMobile) {
-    return {
-      height: '10vh', 
+    return { 
       boxShadow: 'none', 
       borderEndStartRadius: 50,
       borderEndEndRadius: 50,
       maxWidth: '100%',
-      margin: '0 auto',
-      marginBottom: 0,
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
-      alignItems: 'center'
+      alignItems: 'center',
+      marginTop: '18px'
     };
   }
   return (

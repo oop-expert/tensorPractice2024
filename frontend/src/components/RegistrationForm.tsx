@@ -30,7 +30,7 @@ export default function RegistrationForm({width='100%', padding=5}: {width?: num
   const dispatch = useAppDispatch();
 
   const [avatarId, dispatchAvatarId] = useReducer(avatarIdReducer, 0);
-  const [username, setUsername] = useState<string>('');
+  const [username, setUsername] = useState<string | null>(null);
 
   const avatar = AVATARS[avatarId];
 
@@ -44,16 +44,15 @@ export default function RegistrationForm({width='100%', padding=5}: {width?: num
 
   return (
     <Panel isMatchingMobile={isMobile} width={width} padding={padding} gap={isMobile ? '1vh' : 2} sx={{justifyContent: 'center'}}>
-      <Typography variant='h2'>
-        Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
-      </Typography>
+      
 
       <Box 
         sx={{
           display: 'flex', 
           gap: isMobile ? FormAvatarValues.MOBILE_GAP : FormAvatarValues.DESKTOP_GAP, 
           alignItems: 'center', 
-          marginX: 'auto'
+          marginX: 'auto',
+          //marginTop:'35px'
         }}>
         <IconButton color='primary' onClick={() => dispatchAvatarId(-1)}>
           <ArrowBackIosNewIcon />
@@ -70,12 +69,12 @@ export default function RegistrationForm({width='100%', padding=5}: {width?: num
         </IconButton>
       </Box>
 
-      <TextField 
+      <TextField sx={{marginTop:'35px'}}
         id='username' 
         placeholder='Введите Ваш псевдоним' 
         required
         error={!username}
-        helperText={!username ? 'Это поле обязательно' : ''}
+        helperText={username === null ? '' : 'Это поле обязательно'}
         onChange={onUsernameChange}/>
     </Panel>
   );
