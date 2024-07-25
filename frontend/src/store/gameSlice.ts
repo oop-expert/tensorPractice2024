@@ -9,6 +9,8 @@ import PlayerResponce from "../utils/types/PlayerResponce";
 
 const isPlayerResponce = (responce: unknown): responce is PlayerResponce => (responce as PlayerResponce).is_host !== undefined;
 
+export const isGame = (game: unknown): game is Game => (game as Game).code !== undefined;
+
 //запросы делаются в этих функциях
 const postCreateGame = createAsyncThunk<Game, void, AsyncThunkConfig>('game/createGame', async () => {
   const resp = await AxiosInstance.post('/room/');
@@ -79,7 +81,7 @@ const gameSlice = createSlice({
       .addCase(postCreateGame.rejected, (state, action) => {
         state.status = 'error';
         state.errorCode = action.error.code;
-        state.errorMessage = action.error.message;
+        state.errorMessage = 'Не получилось создать игру. Попробуйте ещё раз.';
       })
       .addCase(getGameByCode.pending, (state) => {
         state.status = 'loading'
@@ -94,7 +96,7 @@ const gameSlice = createSlice({
       .addCase(getGameByCode.rejected, (state, action) => {
         state.status = 'error';
         state.errorCode = action.error.code;
-        state.errorMessage = action.error.message;
+        state.errorMessage = 'Не получилось подключиться к игре. Попробуйте ещё раз.';
       })
       .addCase(getQuestion.pending, (state) => {
         state.status = 'loading';
@@ -112,7 +114,7 @@ const gameSlice = createSlice({
       .addCase(getQuestion.rejected, (state, action) => {
         state.status = 'error';
         state.errorCode = action.error.code;
-        state.errorMessage = action.error.message;
+        state.errorMessage = 'Не удалось получить данные о вопросе.';
       })
   }
 });

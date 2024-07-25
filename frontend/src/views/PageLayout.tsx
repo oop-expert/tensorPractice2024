@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import MainAppBar from "../components/MainAppBar";
 import Router from "./Router";
 import { useAppDispatch } from "../store/storeHooks";
@@ -10,6 +10,8 @@ export default function PageLayout() {
   const dispatch = useAppDispatch();
   const {pathname} = useLocation();
 
+  const hiddenRef = useRef<HTMLButtonElement>(null);
+
   const onWindowClose = (evt: BeforeUnloadEvent) => {
     if(pathname.length > 1) {
       evt.preventDefault();
@@ -18,15 +20,39 @@ export default function PageLayout() {
     }
   };
 
-  const onBackButtonClick = (evt: PopStateEvent) => {
-      evt.preventDefault();
-      evt.stopImmediatePropagation();
-      const result = confirm();
-
-      if(result) {
-        dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: '', username: '', avatarId: 0}});
-      }
+  const setValueToHiddenInput = () => {
+    hiddenRef.current?.onclick;
   };
+
+  const onUrlChange = useCallback((url: string, replace: boolean = false) => {
+    const method = replace ? 'replaceState' : 'pushState';
+    window.history[method];
+  }, []);
+
+  const onPopState = (evt: PopStateEvent) => {
+    evt.preventDefault();
+    evt.stopImmediatePropagation();
+    dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: '', username: '', avatarId: 0}});
+  }
+
+  /*useEffect(() => {
+    onUrlChange(window.location.href);
+    setValueToHiddenInput();
+
+    return () => {
+      dispatch(openQuitPopup(true))
+    };
+  }, []);*/
+
+  useEffect(() => {
+    setValueToHiddenInput();
+
+    window.addEventListener('popstate', onPopState);
+
+    return () => {
+      window.removeEventListener('popstate', onPopState);
+    }
+  }, [hiddenRef, onUrlChange])
 
   const onEscDown = (evt: KeyboardEvent) => {
     if(evt.key === 'Escape') {
@@ -36,12 +62,10 @@ export default function PageLayout() {
 
   useEffect(() => {
     window.addEventListener('beforeunload', onWindowClose);
-    window.addEventListener('popstate', onBackButtonClick);
     document.addEventListener('keydown', onEscDown);
 
     return () => {
       window.removeEventListener('beforeunload', onWindowClose);
-      window.removeEventListener('popstate', onBackButtonClick);
       document.removeEventListener('keydown', onEscDown);
     };
   });
@@ -50,6 +74,7 @@ export default function PageLayout() {
     <>
       <MainAppBar />
       <Router />
+      <button ref={hiddenRef} style={{visibility: 'hidden'}}></button>
     </>
   );
 }

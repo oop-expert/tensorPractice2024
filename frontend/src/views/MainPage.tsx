@@ -9,7 +9,7 @@ import { useMediaMatch } from '../hooks/useMobileMatch';
 import { Colors, MAX_PLAYERS, WIDTH_RELATIVE_TO_SCREEN } from '../utils/utils';
 import { selectPlayer, signUp } from '../store/playerSlice';
 import { useSelector } from 'react-redux';
-import { getGameByCode, postCreateGame, selectGame } from '../store/gameSlice';
+import { getGameByCode, isGame, postCreateGame, selectGame } from '../store/gameSlice';
 import { useAppDispatch } from '../store/storeHooks';
 import FlexBox from '../components/FlexBox';
 
@@ -44,18 +44,24 @@ export default function MainPage() {
 
   const onGameCreate = () => {
     dispatch(signUp(true));
-    dispatch(postCreateGame());
+    dispatch(postCreateGame()).then((action) => {
+      if(isGame(action.payload)) {
+        navigate(`/lobby/${action.payload.code}`);
+      }
+    });
   };
 
   const onGameJoin = () => {
     dispatch(signUp(false));
-    dispatch(getGameByCode(code));
+    dispatch(getGameByCode(code)).then((action) => {
+      if(isGame(action.payload)) {
+        navigate(`/lobby/${action.payload.code}`);
+      }
+    });
   }; 
 
   useEffect(() => {
-    if(game.id > 0 && game.players.length < MAX_PLAYERS) {
-      navigate(`/lobby/${game.code}`);
-    }
+    
   });
 
   return (

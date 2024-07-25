@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const AxiosInstance = axios.create({
-  baseURL: 'http://tensorpractic.ru/api/',
+  baseURL: 'http://51.250.36.21:8000/api/',
   timeout: 30000,
   headers: {
     
