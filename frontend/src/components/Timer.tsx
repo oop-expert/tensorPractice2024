@@ -1,4 +1,4 @@
-import { AvatarGroup, Box, Button, CircularProgress, Dialog, DialogContent, DialogContentText, DialogTitle, Grid, TextField, Typography } from "@mui/material";
+import { AvatarGroup, Box, Button, CircularProgress, Dialog, DialogContent, DialogContentText, DialogTitle, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux";
 import { selectGame } from "../store/gameSlice";
@@ -8,11 +8,10 @@ import { patchAnswer, resetAnswerStatus, selectPlayer } from "../store/playerSli
 import { useMediaMatch } from "../hooks/useMobileMatch";
 import { useAppDispatch } from "../store/storeHooks";
 import Answer from "../utils/types/Answer";
-import { GridRowsValues, MAX_PLAYERS } from "../utils/utils";
+import { MAX_PLAYERS } from "../utils/utils";
 import FlexBox from "./FlexBox";
 import Countdown from "./Countdown";
 import QuestionImage from "./QuestionImage";
-import Panel from "./Panel";
 import DefaultAvatar from "./DefaultAvatar";
 import PlayerState from "../utils/types/PlayerState";
 
@@ -29,7 +28,7 @@ const getFieldColor = (status: PlayerState['answerStatus']) => {
   }
 };
 
-const COUNTDOWN_INITIAL_TIME_IN_SECONDS = 120
+const COUNTDOWN_INITIAL_TIME_IN_SECONDS = 60
 
 export default function Timer() {
   const navigate = useNavigate();
@@ -45,7 +44,7 @@ export default function Timer() {
   const [count, setCount] = useState(1);
   const [filmAnswer, setFilm] = useState<string>('');
 
-  const {isMobile, isVerticalTablet} = useMediaMatch();
+  const {isMobile} = useMediaMatch();
 
   const question: Question = game.questions[count - 1];
 
