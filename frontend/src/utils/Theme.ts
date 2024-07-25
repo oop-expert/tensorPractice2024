@@ -4,10 +4,10 @@ import { Colors } from "./utils";
 const Breakpoints: BreakpointsOptions = {
   values: {
     xs: 0,
-    sm: 600,
-    md: 800,
-    lg: 1100,
-    xl: 1600,
+    sm: 9999,
+    lg: 9999,
+    md: 9999,
+    xl: 9999
   }
 }
 
@@ -56,7 +56,10 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
     sx: {
       borderRadius: 50,
       boxShadow: 'none',
+      paddingX:'33px',
       fontSize: 21,
+      letterSpacing: 'initial',
+      fontWeight:'initial',
       [defaultTheme.breakpoints.up('xl')]: {
         fontSize: 30,
       },
@@ -79,7 +82,7 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       paddingX: 5,
       color: Colors.Text.ON_BUTTON,
       backgroundColor: Colors.PrimaryButton.ACTIVE,
-      border: 'solid 2px',
+      border: 'none',
       borderColor: Colors.PrimaryButton.ACTIVE,
       '&:hover': {
         color: Colors.Text.HIGHLIGHT_MAJOR,
@@ -105,7 +108,7 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       paddingX: 5,
       color: Colors.Text.ON_BUTTON,
       backgroundColor: Colors.SecondaryButton.ACTIVE,
-      border: 'solid 2px',
+      border: 'none',
       borderColor: Colors.SecondaryButton.ACTIVE,
       '&:hover': {
         color: Colors.Text.HIGHLIGHT_MINOR,

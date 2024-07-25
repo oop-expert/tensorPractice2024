@@ -19,7 +19,7 @@ export const Colors = {
   },
   SecondaryButton: {
     ACTIVE: '#F49C1E',
-    DISABLED: '#91724780',
+    DISABLED: '#f49c1e85',
     HOVERED: '#FFFFFF',
     CLICKED: '#FFE8C7'
   },
