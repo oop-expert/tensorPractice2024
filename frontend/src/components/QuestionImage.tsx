@@ -15,34 +15,32 @@ export default function QuestionImage({question}: {question: Question}) {
   const zoomOut = () => setZoomIn(false);
 
   const iconButtonWidth = isMobile ? '15vw' : '5vw'
-  const iconWidth = isMobile ? '13pw' : '3vw';
+  const iconWidth = isMobile ? '36px' : '36px';
 
   const imageWidth = isMobile ? '40vh' : '40vh';
 
   const hiddenAnswer = question.answer.slice().replace(/[а-яёa-z0-9]/gi, '_');
 
   return (
-    <FlexBox direction='column'>
-      <Typography variant='h2'>Название какого фильма изобразил ИИ?</Typography>
+    <FlexBox direction='column' sx={{marginTop:'14px'}}>
+      <Typography variant='h2' sx={{paddingBottom:'14px'}}>Название какого фильма изобразил ИИ?</Typography>
       <CardMedia 
         sx={{position: 'relative'}}
         image={!question || !question.image ? '' : `data:image/png;base64,${question.image}`}
-        style={{width: imageWidth, height: imageWidth, borderRadius: '30px'}}>
+        style={{width: '380px', height: '324px', borderRadius: '30px'}}>
           <Box position='absolute' top='20px' right='20px'>
-            <IconButton color='secondary' onClick={zoomIn} style={{width: iconButtonWidth, height: iconButtonWidth}}>
+            <IconButton color='secondary' onClick={zoomIn} style={{width: '40px', height: '40px'}}>
               <ZoomInIcon sx={{fontSize: iconWidth}}/>
             </IconButton>
           </Box>
-      </CardMedia>
-      <Typography variant='h2' color={Colors.Text.HIGHLIGHT_MAJOR} alignItems='center' letterSpacing={3} marginTop={isHorizontalTablet ? '0.5vh' : '2vh'} lineHeight={1}>{hiddenAnswer}</Typography>
-      
-      <Dialog open={isZoomIn} onClose={zoomOut} PaperProps={{style: {padding: 0, width: '100%'}}}>
+      </CardMedia>     
+      <Dialog open={isZoomIn} onClose={zoomOut} PaperProps={{style: {padding: 0, margin:0, width: '100%'}}}>
           <Box position='absolute' top='20px' right='20px'>
-            <IconButton color='secondary' onClick={zoomOut} style={{width: iconButtonWidth, height: iconButtonWidth}}>
+            <IconButton color='secondary' onClick={zoomOut} style={{width: '40px', height: '40px'}}>
               <ZoomOutIcon sx={{fontSize: iconWidth}}/>
             </IconButton>
           </Box>
-          <img src={!question || !question.image ? '' : `data:image/png;base64,${question.image}`} width='100%'/>
+          <img src={!question || !question.image ? '' : `data:image/png;base64,${question.image}`} width='100%' height='50%'/>
       </Dialog>
     </FlexBox>
   );

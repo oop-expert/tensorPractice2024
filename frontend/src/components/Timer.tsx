@@ -1,4 +1,4 @@
-import { AvatarGroup, Button, CircularProgress, Dialog, DialogContent, DialogContentText, DialogTitle, Grid, TextField, Typography } from "@mui/material";
+import { AvatarGroup, Box, Button, CircularProgress, Dialog, DialogContent, DialogContentText, DialogTitle, Grid, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react"
 import { useSelector } from "react-redux";
 import { selectGame } from "../store/gameSlice";
@@ -29,7 +29,7 @@ const getFieldColor = (status: PlayerState['answerStatus']) => {
   }
 };
 
-const COUNTDOWN_INITIAL_TIME_IN_SECONDS = 10
+const COUNTDOWN_INITIAL_TIME_IN_SECONDS = 120
 
 export default function Timer() {
   const navigate = useNavigate();
@@ -89,6 +89,8 @@ export default function Timer() {
     //setSecondsAmount(0);
     dispatch(patchAnswer(answer));
   }
+  const hiddenAnswer = question.answer.slice().replace(/[а-яёa-z0-9]/gi, '_');
+
   
   return (
     <>
@@ -105,23 +107,23 @@ export default function Timer() {
           </DialogContentText>
         </DialogContent>
       </Dialog>
+      <Box className='app__top-content'>
+        <Countdown minutes={minutes} seconds={seconds}/>
+        <QuestionImage question={question}/>
 
-      {isMobile || isVerticalTablet 
-      ? <Panel isMatchingMobile gap='1vh'>
-          <Countdown minutes={minutes} seconds={seconds}/>
-          <QuestionImage question={question}/>
 
-          <FlexBox direction='row' sx={{justifyContent: 'space-between'}} padding='0 2vw'>
-            <Typography variant='body1' style={{textAlign: 'left'}}>{`Раунд: ${count} из ${MAX_PLAYERS}`}</Typography>
+        <FlexBox direction='row' sx={{justifyContent: 'space-between', marginTop:'12px'}}>
+          <Typography variant='body1' style={{textAlign: 'left'}}>{`Раунд: ${count} из ${MAX_PLAYERS}`}</Typography>
 
-            <AvatarGroup variant='circular' max={4} hidden={!game.players.length} sx={{alignItems:'center'}}>
-              {game.players.map((p) => (
-                <DefaultAvatar key={p.id} userId={p.id} src={p.avatar} width={'6vh'}/>
-              ))}
-            </AvatarGroup>
-          </FlexBox>
-
-          <FlexBox direction='column' gap={1}>
+          <AvatarGroup variant='circular' max={4} hidden={!game.players.length} sx={{alignItems:'center'}}>
+            {game.players.map((p) => (
+              <DefaultAvatar key={p.id} userId={p.id} src={p.avatar} width={'44px'}/>
+            ))}
+          </AvatarGroup>
+        </FlexBox>
+        <Typography variant='h2' sx={{marginTop:'8px'}} color={'#C94F48'} alignItems='center' letterSpacing={3}  lineHeight={1}>{hiddenAnswer}</Typography>
+        </Box>
+        <FlexBox direction='column' sx={{marginTop:'18px', marginBottom:'35px', width:'100%'}}>
             <TextField 
               id='answer'
               value={filmAnswer}
@@ -135,55 +137,12 @@ export default function Timer() {
             <Button 
               variant='contained' 
               color='primary' 
-              style={{width: isMobile ? '60%' : '100%'}}
+              style={{width: isMobile ? '60%' : '100%', marginTop:'28px'}}
               disabled={isInputDisabled || !filmAnswer}
               onClick={onAnswerSend}>
                 {answerStatus === 'loading' ? <CircularProgress color='primary' /> : 'Проверить'}
             </Button>
-          </FlexBox>
-          
-        </Panel>
-      : <Grid container justifyContent='space-between' columns={12}>
-        <Grid item container md={8} direction='column' paddingRight='2vh'>
-          <Grid item height={GridRowsValues.UPPER_HEIGHT} padding={'1.5vh'} marginBottom={GridRowsValues.GAP}>
-            <Countdown minutes={minutes} seconds={seconds} />
-          </Grid>
-
-          <Grid item height={GridRowsValues.MIDDLE_HEIGHT}>
-            <QuestionImage question={question}/>
-          </Grid>
-
-          <Grid item height={GridRowsValues.DOWN_HEIGHT} alignContent='flex-end'>
-            <TextField 
-              id='answer'
-              value={filmAnswer}
-              color={fieldColor}
-              disabled={isInputDisabled}
-              placeholder='Введите Ваш ответ'
-              helperText={answerStatus === 'error' ? 'Не получилось отправить ответ' : ''}
-              style={{width: '100%'}}
-              onChange={onFilmNameChange} />
-          </Grid>
-        </Grid>
-
-        <Grid item container md={4} direction='column' gap={GridRowsValues.GAP}>
-          <Grid item height={GridRowsValues.UPPER_HEIGHT} alignContent='flex-end'>
-            <Typography variant='h3' style={{textAlign: 'right'}}>{`Раунд: ${count} из ${MAX_PLAYERS}`}</Typography>
-          </Grid>
-
-          <Grid item height={GridRowsValues.MIDDLE_AND_DOWN} alignContent='flex-end'>
-            <Button 
-              variant='contained' 
-              color='primary' 
-              disabled={isInputDisabled || !filmAnswer}
-              style={{width: '100%'}} 
-              onClick={onAnswerSend}>
-                {answerStatus === 'loading' ? <CircularProgress color='primary' /> : 'Проверить'}
-            </Button>
-          </Grid>
-        </Grid>
-      </Grid>
-      }
+        </FlexBox>
     </>
   )
 }

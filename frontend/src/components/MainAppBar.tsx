@@ -71,13 +71,13 @@ export default function MainAppBar({isInternal = false}: {isInternal?: boolean})
       color={isMobile ? 'secondary' : 'primary'}>
         {isOnRoomPage 
           ? <FlexBox direction='row' gap={2}>
-              <DefaultAvatar src={player.avatar} width='8vh' userId={player.id}/>
+              <DefaultAvatar src={player.avatar} width='51px' userId={player.id}/>
               <Typography variant='h2' textAlign='left'>{player.name}</Typography>
             </FlexBox>
           : <Typography variant='h1' style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</Typography>}
 
         <Box hidden={!isMobile || isOnMainPage} position='relative'>
-          <IconButton color='inherit' onClick={openMenu}>
+          <IconButton color='inherit' onClick={openMenu} sx={{padding:0}}>
             <MenuIcon />
           </IconButton>
 

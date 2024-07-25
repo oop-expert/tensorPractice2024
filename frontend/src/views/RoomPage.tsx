@@ -27,30 +27,17 @@ export default function RoomPage() {
   if(isMobile || isVerticalTablet) {
     return (
       <>
+          <Box className='app'>
         <Timer />
         <QuitGamePopup quitGame={onQuit}/>
+        </Box>
       </>
     );
   }
 
   return(
     <Box className='app'>
-      <Grid 
-        container 
-        width={WIDTH_RELATIVE_TO_SCREEN} 
-        margin='0 auto' 
-        height='80vh' 
-        justifyContent='space-between' 
-        alignItems='stretch'
-        columns={24} >
-        <Grid item md={6} paddingRight='2vh'>
-          <RoomUserInfo />
-        </Grid>
-        <Grid item md={18}>
-          <Timer />
-        </Grid>
-      </Grid>
-        
+       <Timer />       
       <QuitGamePopup quitGame={onQuit}/>
     </Box>
   );

@@ -10,10 +10,11 @@ export default function Countdown({minutes, seconds}: {minutes: number, seconds:
   return (
     <Box 
       margin={'0 auto'}
-      width={isSmall ? 'fit-content' : '50%'}
+      marginTop={'20px'}
+      width={isSmall ? 'fit-content' : '100%'}
       height={isSmall ? 'fit-content' : '100%'}
       border={isSmall ? 'none' : `3px solid ${Colors.Text.HIGHLIGHT_MINOR}`}
-      padding={isSmall ? '1vh 2vh' : 0}
+      padding={isSmall ? '12px 16px' : 0}
       borderRadius={50}
       color={Colors.Text.HIGHLIGHT_MINOR}
       bgcolor={Colors.Text.ON_BUTTON}
