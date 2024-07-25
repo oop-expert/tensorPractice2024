@@ -11,6 +11,7 @@ import { selectPlayer, signUp } from '../store/playerSlice';
 import { useSelector } from 'react-redux';
 import { getGameByCode, postCreateGame, selectGame } from '../store/gameSlice';
 import { useAppDispatch } from '../store/storeHooks';
+import FlexBox from '../components/FlexBox';
 
 const DESKTOP_MAIN_PANEL_MARGIN = '10vh auto 0';
 const H_TABLET_MAIN_PANEL_MARGIN = '5vh auto 0';
@@ -18,7 +19,7 @@ const V_TABLET_MAIN_PANEL_MARGIN = '15% auto 0';
 
 const getPanelMargin = (isMobile: boolean, isHTablet: boolean, isVTablet: boolean) => {
   if(isMobile) {
-    return 0;
+    return '1vh 0';
   } else if(isHTablet) {
     return H_TABLET_MAIN_PANEL_MARGIN;
   } else if(isVTablet) {
@@ -63,8 +64,9 @@ export default function MainPage() {
       direction={isDesktop || isHorizontalTablet ? 'row' : 'column'} 
       margin={getPanelMargin(isMobile, isHorizontalTablet, isVerticalTablet)} 
       width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN}
-      height={isMobile ? '100%' : '75vh'}
-      gap={isMobile ? '5vh' : '30px'}>
+      height={isMobile ? '80vh' : '75vh'}
+      gap={isMobile ? '10%' : '30px'}
+      sx={{justifyContent: 'center'}}>
         <PanelGroup direction='column'>
           <RegistrationForm />
         </PanelGroup>
@@ -72,41 +74,44 @@ export default function MainPage() {
         <PanelGroup direction='column' gap='30px'>
           <MainAppBar isInternal/>
 
-            <Panel isMatchingMobile={isMobile} height={!isDesktop && !isHorizontalTablet ? 'fit-content' : '100%'}>
-              <Typography variant='h2' hidden={isMobile}>Создайте комнату или войдите в уже существующую</Typography>
+            <Panel gap={isMobile ? '2vh' : 5} isMatchingMobile={isMobile} height={!isDesktop && !isHorizontalTablet ? 'fit-content' : '100%'} sx={{justifyContent: 'center'}}>
+              <Typography variant='h2' width={'100%'} hidden={isMobile}>Создайте комнату или войдите в уже существующую</Typography>
               
-              <TextField
-                id='code'
-                placeholder='Код игровой сессии'
-                onChange={onCodeChange}
-                InputProps={(
-                  {
-                    disableUnderline: true,
-                    endAdornment: (
-                      <Button
-                        variant='contained'
-                        color='secondary'
-                        disabled={!code || !player.name}
-                        onClick={onGameJoin}>
-                          {gameStatus === 'loading' ? <CircularProgress color='primary'/> : 'Войти'}
-                      </Button>
-                    ),
-                    sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
-                  }
-                )} />
+              <FlexBox direction='column' gap={isMobile ? '1vh' : 2} sx={{width: '100%'}}>
+                <TextField
+                  id='code'
+                  placeholder='Код игровой сессии'
+                  onChange={onCodeChange}
+                  fullWidth
+                  InputProps={(
+                    {
+                      disableUnderline: true,
+                      endAdornment: (
+                        <Button
+                          variant='contained'
+                          color='secondary'
+                          disabled={!code || !player.name}
+                          onClick={onGameJoin}>
+                            {gameStatus === 'loading' ? <CircularProgress color='primary'/> : 'Войти'}
+                        </Button>
+                      ),
+                      sx: (theme) => ({...theme.components?.MuiTextField?.defaultProps?.InputProps?.sx}) 
+                    }
+                  )} />
 
-              <Divider textAlign='center'><Typography variant='body1'>или</Typography></Divider>
+                <Divider textAlign='center'><Typography variant='body1'>или</Typography></Divider>
 
-              <Button 
-                variant='contained' 
-                color='primary'
-                disabled={!player.name || gameStatus === 'loading'}
-                onClick={onGameCreate}
-                style={{width: 'max-content', margin: '0 auto'}}>
-                  {gameStatus === 'loading' ? <CircularProgress color='primary'/> : 'Создать комнату'}
-              </Button>
+                <Button 
+                  variant='contained' 
+                  color='primary'
+                  disabled={!player.name || gameStatus === 'loading'}
+                  onClick={onGameCreate}
+                  style={{width: 'max-content', minWidth: '60%', margin: '0 auto'}}>
+                    {gameStatus === 'loading' ? <CircularProgress color='primary'/> : 'Создать комнату'}
+                </Button>
 
-              <Typography hidden={!errorCode} variant='h2' color={Colors.ErrorInput.OUTLINE}>{errorMessage ?? ''}</Typography>
+                <Typography hidden={!errorCode} variant='body1' color={Colors.Text.HIGHLIGHT_MAJOR}>{errorMessage ?? ''}</Typography>
+              </FlexBox>
           </Panel>
       </PanelGroup>
     </PanelGroup>

@@ -10,7 +10,12 @@ export default class Socket<CommandType> {
   }
 
   disconnect() {
-    this.socket?.close();
+    try {
+      this.socket?.close();
+      console.log('close');
+    } catch {
+      console.log('error');
+    }
   }
 
   send(command: CommandType) {

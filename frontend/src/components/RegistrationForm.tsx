@@ -43,7 +43,7 @@ export default function RegistrationForm({width='100%', padding=5}: {width?: num
   }, [username, avatarId, dispatch]);
 
   return (
-    <Panel isMatchingMobile={isMobile} width={width} padding={padding} gap={isMobile ? '1vh' : 2}>
+    <Panel isMatchingMobile={isMobile} width={width} padding={padding} gap={isMobile ? '1vh' : 2} sx={{justifyContent: 'center'}}>
       <Typography variant='h2'>
         Выберите один из предложенных аватаров и придумайте псевдоним, чтобы начать играть!
       </Typography>

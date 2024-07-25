@@ -43,7 +43,7 @@ export default function PopupRegistrationForm() {
         <Button variant='contained' color='primary' onClick={onJoin}>
           {status === 'loading' ? <CircularProgress color='primary'/> : 'Подключиться'}
         </Button>
-        <Typography hidden={!errorCode} variant='h2' color={Colors.ErrorInput.OUTLINE}>{errorMessage ?? ''}</Typography>
+        <Typography hidden={!errorCode} variant='body1' color={Colors.Text.HIGHLIGHT_MAJOR}>{errorMessage ?? ''}</Typography>
       </Box>
     </Dialog>
   );

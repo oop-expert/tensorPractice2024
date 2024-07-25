@@ -334,6 +334,12 @@ const TextFieldOptions:  Components<Omit<Theme, 'components'>>['MuiTextField'] =
         borderRadius: 50,
         minHeight: '50px',
         height: '50px',
+        fontSize: 18,
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: 30,
+          minHeight: '70px',
+          height: '70px'
+        },
         '&.Mui-focused': {
           backgroundColor: Colors.VoidInput.FILL,
           border: `solid 3px ${Colors.Text.HIGHLIGHT_MINOR}`,

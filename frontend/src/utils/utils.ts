@@ -86,6 +86,7 @@ export const getRandomInteger = (min: number, max: number): number => {
 export const generateRandomId = (additionalNumber:number = 0) => Date.now() % 1000 + additionalNumber;
 
 export const getPlayerFromResponce = (responce: PlayerResponce): Player => {
+  console.log(responce);
   const avatarId = !responce.avatar ? 0 : parseInt(responce.avatar);
   
 

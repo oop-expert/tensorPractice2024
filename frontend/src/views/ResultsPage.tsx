@@ -46,7 +46,7 @@ export default function ResultsPage(){
         //     navigate(`/`);
         // }
     };*/
-    let players = game.players
+    const players = game.players
     console.log(players)
     let firstPlace
     let playersFiltered

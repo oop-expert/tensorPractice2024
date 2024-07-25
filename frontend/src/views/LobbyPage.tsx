@@ -10,12 +10,12 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import PanelGroup from '../components/PanelGroup';
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import CloseIcon from '@mui/icons-material/Close';
-import { openQrPopup } from '../store/popupSlice';
+import { openQrPopup, openQuitPopup } from '../store/popupSlice';
 import { useSelector } from 'react-redux';
 import { getGameByCode, selectGame } from '../store/gameSlice';
 import { selectPlayer, setReady } from '../store/playerSlice';
 import Player from '../utils/types/Player';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { WebSocketActionTypes } from '../store/webSocketMiddleware';
 import { useAppDispatch } from '../store/storeHooks';
 import PopupRegistrationForm from '../components/PopupRegistrationForm';
@@ -32,7 +32,7 @@ export default function LobbyPage() {
   const lobbyUrl = window.location.href;
   const navigate = useNavigate();
 
-  const {isMobile, isDesktop} = useMediaMatch();
+  const {isMobile, isDesktop, isXL} = useMediaMatch();
   const isThinnerThan1000 = useMediaQuery('(max-width:1000px)');
 
   const dispatch = useAppDispatch();
@@ -50,8 +50,23 @@ export default function LobbyPage() {
 
   const [countdown, setCountdown] = useState<number>(0);
 
+  const linkRef = useRef<HTMLTextAreaElement>(null);
+
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
+    if(window.isSecureContext) {
+      navigator.clipboard.writeText(text);
+    } else if(linkRef.current) {
+      linkRef.current.hidden = false;
+      linkRef.current.select();
+
+      try {
+        document.execCommand('copy');
+      } catch(err) {
+        console.error(err);
+      } finally {
+        linkRef.current.hidden = true;
+      }
+    }
   };
 
   const onLinkCopy = () => copyToClipboard(lobbyUrl);
@@ -69,6 +84,10 @@ export default function LobbyPage() {
   const onQuit = () => {
     dispatch({type: WebSocketActionTypes.QUIT_GAME, payload: {gameCode: game.id, username: player.name, avatarId: player.avatarId}});
     navigate('/');
+  };
+
+  const onQuitOpen = () => {
+    dispatch(openQuitPopup(false));
   };
 
   useEffect(() => {
@@ -157,7 +176,7 @@ export default function LobbyPage() {
         padding={5}
         height={isMobile ? '100%' : '60vh'}> 
           <Box display={isMobile ? 'none' : 'block'} position='absolute' top={20} right={20}>
-            <IconButton color='warning' onClick={onQuit}>
+            <IconButton color='warning' onClick={onQuitOpen}>
               <CloseIcon />
             </IconButton>
           </Box>
@@ -166,26 +185,28 @@ export default function LobbyPage() {
             {game.is_started && !hasAllImages ? 'Генерируются изображения' : 'Ожидаем участников команды'}
           </Typography>
 
-          <List style={{height: 'stretch', overflowY: 'auto'}}>
-            {game.players.map((p) => (
-              <LobbyUserInfo key={p.id} user={p}/>
-            ))}
-          </List>
+            <List style={{height: 'stretch', marginBottom: isXL ? '100px' : '70px', overflowY: 'auto'}}>
+              {game.players.map((p) => (
+                <LobbyUserInfo key={p.id} user={p}/>
+              ))}
+            </List>
 
           <Box 
             display='flex'
             flexDirection={isMobile ? 'column' : 'row'}
+            position='absolute'
+            bottom={isMobile ? '1.5vh' : '5vh'}
             gap={2}
             alignItems='center'
             width={!isDesktop ? (isMobile ? '100%': '90%') : (player.isHost ? DESKTOP_BUTTON_GROUP_WIDTH : DESKTOP_SINGLE_BUTTON_WIDTH)}
             alignSelf='center'>
               <Button 
-                disabled={player.isReady} 
+                disabled={game.is_started} 
                 style={{width: isMobile ? '60%' : '100%'}} 
                 variant='contained' 
                 color='secondary' 
                 onClick={onSetReady}>
-                  Готов играть
+                  {player.isReady ? 'Не готов играть' : 'Готов играть'}
               </Button>
               <Button 
                 disabled={isStartDisabled}
@@ -209,6 +230,8 @@ export default function LobbyPage() {
       <LoadingPopup isOpened={game.is_started && !hasAllImages && isPlayerConnected}/>
 
       <QuitGamePopup quitGame={onQuit}/>
+
+      <textarea ref={linkRef} value={lobbyUrl} style={{position: 'absolute', left: '-9999999px'}} hidden readOnly></textarea>
     </PanelGroup>
   );
 }

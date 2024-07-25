@@ -27,7 +27,7 @@ export default function RoomUserInfo() {
           gap={0.5}>
             <DefaultAvatar src={player.avatar} width={'8vh'} userId={player.id}/>
             <FlexBox direction='column' alignItems='flex-start' sx={{paddingTop: 1}}>
-              <Typography variant='h3' color={Colors.Text.HIGHLIGHT_MAJOR}>{player.name}</Typography>
+              <Typography variant='h3' color={Colors.Text.HIGHLIGHT_MAJOR} textOverflow='ellipsis'>{player.name}</Typography>
               <Typography variant='body1' color={Colors.Text.HIGHLIGHT_MAJOR}>Очки: {player.score}</Typography>
             </FlexBox>
         </FlexBox>
@@ -50,7 +50,7 @@ export default function RoomUserInfo() {
                 <ListItem key={p.id} sx={{paddingX: 0, display: p.id === player.id ? 'none' : 'flex'}}>
                   <FlexBox direction='row' gap={0.5}>
                     <DefaultAvatar src={p.avatar} width={'8vh'} userId={p.id}/>
-                    <Typography variant='body1'>{p.name}</Typography>
+                    <Typography variant='body1' textOverflow='ellipsis'>{p.name}</Typography>
                   </FlexBox>
                 </ListItem>
               ))}

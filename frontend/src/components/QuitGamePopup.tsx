@@ -23,12 +23,12 @@ export default function QuitGamePopup({quitGame}: {quitGame: () => void}) {
 
   return (
     <Dialog open={isQuitOpened} onClose={onPopupClose}>
-      <FlexBox direction='column' gap={2}>
+      <FlexBox direction='column' gap={3}>
         <Typography variant='h2'>Покинуть комнату?</Typography>
         <Typography variant='body1'>Внимание! Если вы выйдете из игры во время текущего раунда, вам не будет разрешено вернуться.
           <br/>Вы уверены, что хотите выйти?</Typography>
 
-        <FlexBox direction={isMobile || isVerticalTablet ? 'column' : 'row'} gap={1} sx={{justifyContent: 'space-between'}}>
+        <FlexBox direction={isMobile || isVerticalTablet ? 'column' : 'row'} gap={2} sx={{justifyContent: 'space-between'}}>
           <Button variant='contained' color='secondary' onClick={onQuit}>Выйти</Button>
           <Button variant='contained' color='primary' onClick={onPopupClose}>Вернуться к игре</Button>
         </FlexBox>
