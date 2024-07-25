@@ -25,14 +25,14 @@ import QuitGamePopup from '../components/QuitGamePopup';
 
 const DESKTOP_BUTTON_GROUP_WIDTH = '70%';
 const DESKTOP_SINGLE_BUTTON_WIDTH = '30%';
-const LOBBY_H2_Y_MARGIN = '4px';
+//const LOBBY_H2_Y_MARGIN = '4px';
 
 export default function LobbyPage() {
   const {code} = useParams();
   const lobbyUrl = window.location.href;
   const navigate = useNavigate();
 
-  const {isMobile, isDesktop, isXL} = useMediaMatch();
+  const {isMobile, isDesktop} = useMediaMatch();
   const isThinnerThan1000 = useMediaQuery('(max-width:1000px)');
 
   const dispatch = useAppDispatch();
@@ -52,7 +52,7 @@ export default function LobbyPage() {
 
   const linkRef = useRef<HTMLTextAreaElement>(null);
 
-  const listMargin = isXL ? '100px' : (isMobile && player.isHost ? '140px' : '70px');
+  //const listMargin = isXL ? '100px' : (isMobile && player.isHost ? '140px' : '70px');
 
   const copyToClipboard = (text: string) => {
     if(window.isSecureContext) {
@@ -130,15 +130,14 @@ export default function LobbyPage() {
   return (
     <Box className='app'>
       <Box className='app__top-content'>
-        <Typography variant='h2' sx={{marginTop: LOBBY_H2_Y_MARGIN, marginBottom: LOBBY_H2_Y_MARGIN}}>
+        <Typography variant='h2' sx={{marginTop:'40px'}}>
           {game.is_started && !hasAllImages ? 'Генерируются изображения' : 'Ожидаем участников команды'}
         </Typography>
         <PanelGroup 
           direction='column' 
           width={isMobile ? '100%' : WIDTH_RELATIVE_TO_SCREEN} 
-          margin={'0 auto'}
-          gap={1}
-          height={isMobile ? '85vh' : '80vh'}>
+          sx={{marginTop:'21px'}}
+          >
           <Box
             display={isMobile ? 'none' : 'flex'}
             flexDirection={isThinnerThan1000 ? 'column' : 'row'}
@@ -179,9 +178,10 @@ export default function LobbyPage() {
           <Panel
             position='relative'
             isMatchingMobile={isMobile} 
-            margin={'0 auto'}
-            padding={5}
-            height={isMobile ? '100%' : '60vh'}> 
+            //margin={'0 auto'}
+            //padding={5}
+            //height={isMobile ? '100%' : '60vh'}
+            > 
               <Box display={isMobile ? 'none' : 'block'} position='absolute' top={20} right={20}>
                 <IconButton color='warning' onClick={onQuitOpen}>
                   <CloseIcon />
@@ -190,7 +190,7 @@ export default function LobbyPage() {
 
               
 
-                <List style={{height: 'stretch', marginBottom: listMargin, overflowY: 'auto'}}>
+                <List style={{overflowY: 'auto', maxHeight:'410px', padding:'0px'}}>
                   {game.players.map((p) => (
                     <LobbyUserInfo key={p.id} user={p}/>
                   ))}
@@ -212,12 +212,12 @@ export default function LobbyPage() {
         </PanelGroup>
       </Box>
 
-      <Box sx={{width: '100%'}}
+      <Box sx={{width: '100%', marginY:'35px'}}
         display='flex'
         flexDirection={isMobile ? 'column' : 'row'}
-        position='absolute'
-        bottom={isMobile ? '1.5vh' : '5vh'}
-        gap={2}
+        //position='absolute'
+        //bottom={isMobile ? '1.5vh' : '5vh'}
+        //gap={2}
         alignItems='center'
         width={!isDesktop ? (isMobile ? '100%': '90%') : (player.isHost ? DESKTOP_BUTTON_GROUP_WIDTH : DESKTOP_SINGLE_BUTTON_WIDTH)}
         alignSelf='center'>
@@ -231,7 +231,7 @@ export default function LobbyPage() {
         </Button>
         <Button 
           disabled={isStartDisabled}
-          style={{width: isMobile ? '60%' : '100%', display: player.isHost ? 'block' : 'none'}} 
+          style={{width: isMobile ? '60%' : '100%', display: player.isHost ? 'block' : 'none', marginTop: '13px'}} 
           variant='contained' 
           color='primary' 
           onClick={onGameStart}>

@@ -417,6 +417,17 @@ const TypographyOptions: Components<Omit<Theme, 'components'>>['MuiTypography'] 
       }
     },
     {
+      props: {variant: 'h4'},
+      style: {
+        fontSize: '20px',
+        [defaultTheme.breakpoints.up('xl')]: {
+          fontSize: '20px',
+        },
+        fontWeight: 500,
+        textAlign: 'left'
+      }
+    },
+    {
       props: {variant: 'button'},
       style: {
         fontSize: 21,

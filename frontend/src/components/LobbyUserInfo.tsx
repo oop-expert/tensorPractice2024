@@ -19,7 +19,7 @@ export default function LobbyUserInfo({user=DefaultPlayer}: {user?: Player}) {
   const {isMobile} = useMediaMatch();
 
   return (
-    <ListItem alignItems='center' sx={{paddingLeft: 0}} slotProps={{root: {style: {justifyContent: 'space-between'}}}}>
+    <ListItem alignItems='center' sx={{paddingLeft: 0, paddingTop: 0, paddingBottom:'21px'}} slotProps={{root: {style: {justifyContent: 'space-between'}}}}>
       <Box
         display='flex'
         flexDirection='row'

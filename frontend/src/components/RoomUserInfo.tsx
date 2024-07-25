@@ -48,7 +48,7 @@ export default function RoomUserInfo() {
             <List style={{width:'100%', height: '48vh', overflowY: 'auto'}}>
               {game.players.map((p) => (
                 <ListItem key={p.id} sx={{paddingX: 0, display: p.id === player.id ? 'none' : 'flex'}}>
-                  <FlexBox direction='row' gap={0.5}>
+                  <FlexBox direction='row' >
                     <DefaultAvatar src={p.avatar} width={'8vh'} userId={p.id}/>
                     <Typography variant='body1' textOverflow='ellipsis'>{p.name}</Typography>
                   </FlexBox>

@@ -29,7 +29,7 @@ const getFieldColor = (status: PlayerState['answerStatus']) => {
   }
 };
 
-const COUNTDOWN_INITIAL_TIME_IN_SECONDS = 60
+const COUNTDOWN_INITIAL_TIME_IN_SECONDS = 10
 
 export default function Timer() {
   const navigate = useNavigate();
@@ -86,7 +86,7 @@ export default function Timer() {
       question_id: question.id,
       seconds: seconds
     };
-
+    //setSecondsAmount(0);
     dispatch(patchAnswer(answer));
   }
   
@@ -114,7 +114,7 @@ export default function Timer() {
           <FlexBox direction='row' sx={{justifyContent: 'space-between'}} padding='0 2vw'>
             <Typography variant='body1' style={{textAlign: 'left'}}>{`Раунд: ${count} из ${MAX_PLAYERS}`}</Typography>
 
-            <AvatarGroup variant='circular' max={4} hidden={!game.players.length}>
+            <AvatarGroup variant='circular' max={4} hidden={!game.players.length} sx={{alignItems:'center'}}>
               {game.players.map((p) => (
                 <DefaultAvatar key={p.id} userId={p.id} src={p.avatar} width={'6vh'}/>
               ))}

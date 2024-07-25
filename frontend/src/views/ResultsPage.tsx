@@ -3,12 +3,13 @@ import PersonIcon from '@mui/icons-material/Person';
 import { useNavigate} from "react-router-dom";
 import { useMediaMatch } from '../hooks/useMobileMatch';
 import { useSelector } from "react-redux";
-import { getGameByCode, selectGame } from "../store/gameSlice";
+import { getGameByCode, postCreateGame, selectGame } from "../store/gameSlice";
 import { useEffect } from "react";
 import { useAppDispatch } from "../store/storeHooks";
 import Player from "../utils/types/Player";
 import { WebSocketActionTypes } from "../store/webSocketMiddleware";
 import QuitGamePopup from "../components/QuitGamePopup";
+import { signUp } from "../store/playerSlice";
 
 
 export default function ResultsPage(){
@@ -37,15 +38,15 @@ export default function ResultsPage(){
     }
 
     console.log(game)
-    /*const onGameCreate = () => {
+    const onGameCreate = () => {
         navigate(`/`);
-        //dispatch(signUp(true));
-        //dispatch(postCreateGame());
-        // if(game.id > 0) {
-        //     navigate(`/lobby/${game.id}`);
-        //     navigate(`/`);
-        // }
-    };*/
+        dispatch(signUp(true));
+        dispatch(postCreateGame());
+        if(game.id > 0) {
+            navigate(`/lobby/${game.id}`);
+            navigate(`/`);
+        }
+    };
     const players = game.players
     console.log(players)
     let firstPlace
@@ -62,44 +63,46 @@ export default function ResultsPage(){
     }
     console.log(firstPlace)
     return(
-        // <Container maxWidth='lg' sx={{padding: '1.3vh', borderRadius: 5, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}>
-          <Container maxWidth='lg' sx={{display: 'flex', padding: '0vw', flexDirection: 'row',justifyContent:'center', alignItems: 'center', gap:'2px'}}>
-            <Box sx={{display: 'flex', fontSize:'2vh',flexDirection: 'column', width:'70%',  alignItems: 'center'}}>
-                <Typography sx={{fontSize:'48', fontWeight:'700', borderRadius:'142px', padding:'15', marginBottom:'0.9vh'}}>Результаты игры</Typography>
+        <Box className='app'>
+            <Box className='app__top-content'>
+            <Typography variant='h1' sx={{marginTop:'36px', borderRadius:'25px', padding:'14px 29px', backgroundColor:'#FDD59C'}}>Результаты игры</Typography>
+        {/* <Container maxWidth='lg' sx={{padding: '1.3vh', borderRadius: 5, display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}}> */}
+          {/* <Container maxWidth='lg' sx={{display: 'flex', padding: '0vw', flexDirection: 'row',justifyContent:'center', alignItems: 'center', gap:'2px'}}> */}
+            {/* <Box sx={{display: 'flex', fontSize:'2vh',flexDirection: 'column', width:'70%',  alignItems: 'center'}}> */}
                 {(players.length === 1)?
-                    <Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C', width:'100%'}}>
-                        <Avatar alt='avatar 1' variant='circular' src={players[0].avatar}  sx={{ width: '15vh', height: '15vh'}} >
+                    <Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', marginTop:'32px', width:'100%'}}>
+                        <Avatar alt='avatar 1' variant='circular' src={players[0].avatar}  sx={{ width: '222px', height: '222px'}} >
                             <PersonIcon sx={{color: 'black', width: '10vh', height: '10vh'}}/>
                         </Avatar>
-                        <Box alignItems={isMobile ? 'center' : 'flex-start'} sx={{margin:'1.6vw', display:'flex', flexDirection:'column', gap:'3vh'}}>
+                        <Box alignItems={isMobile ? 'center' : 'flex-start'} sx={{marginTop:'19px', display:'flex', flexDirection:'column'}}>
                             <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
-                                <Typography style={{fontWeight:'500', fontSize:'3vh', color:'#C94F48'}}>{players[0].name}</Typography>
+                                <Typography style={{fontWeight:'500', fontSize:'28px', color:'#C94F48'}}>{players[0].name}</Typography>
                                 <Box display={isMobile ? 'none' : 'flex'}><img width={'50px'} height={'50px'} src="/medal.png" /></Box>
                             </Box>
-                            <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {players[0].score}</Typography>
+                            <Typography style={{fontWeight:'500', fontSize:'21px', marginTop:'17px', color:'#C94F48'}}>Итоговые баллы: {players[0].score}</Typography>
                         </Box>
                     </Stack>
                     :<>
                         {(firstPlace !== undefined && playersFiltered !== undefined)?
-                        <Box width={'90%'}><Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', paddingY:'1vh', marginBottom:'0.9vh', border:'6px solid #FDD59C', borderRadius:'41px', background:'#FDD59C'}}>
-                        <Avatar alt='avatar 1' variant='circular' src={firstPlace[0].avatar} sx={{ width: '15vh', height: '15vh'}} >
+                        <Box><Stack direction={isMobile ? 'column' : 'row'}  sx={{display:'flex', alignItems:'center', marginTop:'32px', width:'100%'}}>
+                        <Avatar alt='avatar 1' variant='circular' src={firstPlace[0].avatar}  sx={{ width: '222px', height: '222px'}} >
                             <PersonIcon sx={{color: 'black', width: '10vh', height: '10vh'}}/>
                         </Avatar>
-                        <Box alignItems={isMobile ? 'center' : 'flex-start'} sx={{margin:'1.6vw', display:'flex', flexDirection:'column', gap:'3vh'}}>
+                        <Box alignItems={isMobile ? 'center' : 'flex-start'} sx={{marginTop:'19px', display:'flex', flexDirection:'column'}}>
                             <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
-                                <Typography style={{fontWeight:'500', fontSize:'3vh', color:'#C94F48'}}>{firstPlace[0].name}</Typography>
+                                <Typography style={{fontWeight:'500', fontSize:'28px', color:'#C94F48'}}>{firstPlace[0].name}</Typography>
                                 <Box display={isMobile ? 'none' : 'flex'}><img width={'50px'} height={'50px'} src="/medal.png" /></Box>
-                                </Box>
-                            <Typography style={{fontWeight:'500', fontSize:'2vh', color:'#C94F48'}}>Итоговые баллы: {firstPlace[0].score}</Typography>
+                            </Box>
+                            <Typography style={{fontWeight:'500', fontSize:'21px', marginTop:'17px', color:'#C94F48'}}>Итоговые баллы: {firstPlace[0].score}</Typography>
                         </Box>
                     </Stack>
-                    <List style={{maxHeight: '30vh', width:'100%', overflowY: 'auto', overflowX:'hidden', display:'flex', flexDirection:"column",  flexWrap:"nowrap", justifyContent:'space-between', marginBottom:'1.6vw', rowGap:'1vh'  }}>
+                    <List style={{maxHeight: '184px', overflowY: 'auto', overflowX:'hidden', display:'flex', flexDirection:"column", justifyContent:'space-between',padding:0, marginTop:'31px', rowGap:'32px'}}>
                     {(playersFiltered.map((player: Player, place: number)=>
-                        <Box sx={{width:'99%', display: 'flex', justifyContent:'space-between', flexDirection: 'row', columnGap:'6vw',  alignItems: 'center', paddingBottom:'1.1vw', paddingRight:'1vh'}}>
+                        <Box sx={{display: 'flex', paddingRight:'16px', justifyContent:'space-between', flexDirection: 'row', alignItems: 'center', }}>
                         <Box sx={{flexDirection: 'row',display: 'flex', alignItems:'center'}}>
-                            <Typography sx={{width:'11vh', paddingRight:'3vh'}}>{place+2} место</Typography>
+                            <Typography variant="h4" sx={{width:'11vh', paddingRight:'14px'}}>{place+2} место</Typography>
                                 <Box sx={{flexDirection: 'row',display: 'flex', alignItems:'center'}}>
-                                    <Avatar alt='avatar 1' variant='circular' src={player.avatar} sx={{ width: '5vh', height: '5vh', marginRight:'1vh'}} >
+                                    <Avatar alt='avatar 1' variant='circular' src={player.avatar} sx={{ width: '40px', height: '40px', marginRight:'12px'}} >
                                         <PersonIcon sx={{color: 'black', width: '3vh', height: '3vh'}}/>
                                     </Avatar>
                                     <Typography>{player.name}</Typography>
@@ -112,9 +115,10 @@ export default function ResultsPage(){
                         </Box>:<Typography>Игроки не найдены</Typography>}
                     </>
                     }
+                </Box>
                     
                 
-                <Container maxWidth='md' sx={{position:'absolute', bottom:'1vh', left:'50%', marginRight:'-50%', transform:'translate(-50%, -50%)', alignItems:'center', margin:'0 auto', display: 'flex', flexDirection: 'row', justifyContent:'space-around', paddingBottom:'10px', gap: 1}}>
+                <Container maxWidth='md' sx={{alignItems:'center', marginBottom:'35px', marginTop:'32px', display: 'flex', flexDirection: 'row', justifyContent:'space-around', paddingBottom:'10px', gap: 1}}>
                     <Box display={isMobile ? 'none' : 'flex'}>
                         <Button
                             variant='contained'
@@ -123,14 +127,15 @@ export default function ResultsPage(){
                                 Завершить игру
                         </Button>
                     </Box>
-                    {/*<Button 
+                    <Button 
                         variant='contained'
                         onClick={onGameCreate}>
                             Играть снова
-                    </Button>*/}
+                    </Button>
                 </Container>
-            </Box>
+            {/* </Box> */}
             <QuitGamePopup quitGame={quitGame}/>
-           </Container>
+           {/* </Container> */}
+        </Box>
     );
 }

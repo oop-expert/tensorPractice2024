@@ -1,4 +1,4 @@
-import {Grid} from '@mui/material';
+import {Box, Grid} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Timer from '../components/Timer';
 import { useMediaMatch } from '../hooks/useMobileMatch';
@@ -34,7 +34,7 @@ export default function RoomPage() {
   }
 
   return(
-    <>
+    <Box className='app'>
       <Grid 
         container 
         width={WIDTH_RELATIVE_TO_SCREEN} 
@@ -52,6 +52,6 @@ export default function RoomPage() {
       </Grid>
         
       <QuitGamePopup quitGame={onQuit}/>
-    </>
+    </Box>
   );
 }
