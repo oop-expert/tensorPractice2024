@@ -63,7 +63,7 @@ export default function Timer() {
         setSecondsAmount(COUNTDOWN_INITIAL_TIME_IN_SECONDS);
         dispatch(resetAnswerStatus());
         setFilm('');
-        if (count >= 10){
+        if (count >= 5){
           navigate(`/results/${urlParams.code}`)
         }
       }, 5000)
@@ -112,7 +112,7 @@ export default function Timer() {
 
 
         <FlexBox direction='row' sx={{justifyContent: 'space-between', marginTop:'12px'}}>
-          <Typography variant='body1' style={{textAlign: 'left'}}>{`Раунд: ${count} из ${MAX_PLAYERS}`}</Typography>
+          <Typography variant='body1' style={{textAlign: 'left'}}>{`Раунд: ${count} из 5`}</Typography>
 
           <AvatarGroup variant='circular' max={4} hidden={!game.players.length} sx={{alignItems:'center'}}>
             {game.players.map((p) => (
