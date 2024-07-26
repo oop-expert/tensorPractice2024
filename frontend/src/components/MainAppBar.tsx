@@ -9,6 +9,8 @@ import FlexBox from './FlexBox';
 import DefaultAvatar from './DefaultAvatar';
 import { useSelector } from 'react-redux';
 import { selectPlayer } from '../store/playerSlice';
+import { openQuitPopup } from '../store/popupSlice';
+import { useAppDispatch } from '../store/storeHooks';
 
 const getHeaderSx = (isMobile: boolean, isVTablet: boolean, isInternal: boolean): SxProps => {
   if(isInternal) {
@@ -48,6 +50,7 @@ const getHeaderSx = (isMobile: boolean, isVTablet: boolean, isInternal: boolean)
 export default function MainAppBar({isInternal = false}: {isInternal?: boolean}) {
   const {isMobile, isHorizontalTablet, isVerticalTablet, isDesktop} = useMediaMatch();
   const [isMenuOpened, setMenuOpen] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
 
   const {player} = useSelector(selectPlayer);
   
@@ -63,6 +66,9 @@ export default function MainAppBar({isInternal = false}: {isInternal?: boolean})
 
   const openMenu = () => setMenuOpen((isOpened) => !isOpened);
   const closeMenu = () => setMenuOpen(false);
+  const onHeaderClick = () => {
+    dispatch(openQuitPopup(false));
+  };
 
   return (
     <AppBar
@@ -74,15 +80,14 @@ export default function MainAppBar({isInternal = false}: {isInternal?: boolean})
               <DefaultAvatar src={player.avatar} width='51px' userId={player.id}/>
               <Typography variant='h2' textAlign='left'>{player.name}</Typography>
             </FlexBox>
-          : <Typography variant='h1' style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</Typography>}
-
-        <Box hidden={!isMobile || isOnMainPage} position='relative'>
-          <IconButton color='inherit' onClick={openMenu} sx={{padding:0}}>
-            <MenuIcon />
-          </IconButton>
-
-          <MobileMenu isOpened={!isOnMainPage && isMenuOpened} closeMenu={closeMenu}/>
-        </Box>
+          : 
+          <Typography onClick={onHeaderClick} variant='h1' style={{margin: isMobile ? '0' : 'auto'}}>NeuroQuest</Typography>}
+          <Box hidden={!isMobile || isOnMainPage} position='relative'>
+            <IconButton color='inherit' onClick={openMenu} sx={{padding:0}}>
+              <MenuIcon />
+            </IconButton>
+            <MobileMenu isOpened={!isOnMainPage && isMenuOpened} closeMenu={closeMenu}/>
+          </Box>
     </AppBar>
   );
 }

@@ -15,7 +15,7 @@ export default function ErrorMessage({isOpened, message}: {isOpened: boolean, me
   return (
     <Dialog open={isOpened}>
       <Typography variant='h2'>{message}</Typography>
-      <Button variant='contained' color='primary' onClick={onReturn}>Главное меню</Button>
+      <Button variant='contained' color='primary' onClick={onReturn}>Перейти на главный экран</Button>
     </Dialog>
   );
 }

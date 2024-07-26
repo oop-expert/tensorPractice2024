@@ -74,7 +74,7 @@ export default function RegistrationForm({width='100%', padding=5}: {width?: num
         placeholder='Введите Ваш псевдоним' 
         required
         error={!username}
-        helperText={username === null ? '' : 'Это поле обязательно'}
+        helperText={(username === null || username) ? '' : 'Это поле обязательно'}
         onChange={onUsernameChange}/>
     </Panel>
   );

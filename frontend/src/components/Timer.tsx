@@ -66,7 +66,7 @@ export default function Timer() {
         if (count >= 10){
           navigate(`/results/${urlParams.code}`)
         }
-      }, 10000)
+      }, 5000)
       return;
     }
  
@@ -120,7 +120,13 @@ export default function Timer() {
             ))}
           </AvatarGroup>
         </FlexBox>
-        <Typography variant='h2' sx={{marginTop:'6px'}} color={'#C94F48'} alignItems='center' letterSpacing={3}  lineHeight={1}>{hiddenAnswer}</Typography>
+        {(answerStatus === 'success') ?
+          <Typography variant='h2' marginTop={'6px'} textAlign='center' color={'#0DC268'} alignItems='center' lineHeight={1}>{question.answer}</Typography>
+
+          :
+          <Typography variant='h2' marginTop={'6px'}  color={'#C94F48'} alignItems='center' letterSpacing={3}  lineHeight={1}>{hiddenAnswer}</Typography>
+
+        }
         </Box>
         <FlexBox direction='column' sx={{marginTop:'18px', marginBottom:'35px', width:'100%'}}>
             <TextField 

@@ -186,20 +186,12 @@ const ButtonOptions: Components<Omit<Theme, 'components'>>['MuiButton'] = {
 const IconButtonOptions: Components<Omit<Theme, 'components'>>['MuiIconButton'] = {
   styleOverrides: {
     colorPrimary: {
-      backgroundColor: Colors.PrimaryButton.ACTIVE,
-      border: 'solid 2px',
       borderColor: Colors.PrimaryButton.ACTIVE,
       '&:hover': {
-        backgroundColor: Colors.PrimaryButton.HOVERED,
-        borderColor: Colors.PrimaryButton.ACTIVE,
       },
       '$:active': {
-        backgroundColor: Colors.PrimaryButton.CLICKED,
-        borderColor: Colors.PrimaryButton.CLICKED,
       },
       '&:disabled': {
-        backgroundColor: Colors.PrimaryButton.DISABLED,
-        borderColor: Colors.PrimaryButton.DISABLED,
       },
       '*': {
         color: Colors.Text.ON_BUTTON
@@ -212,20 +204,12 @@ const IconButtonOptions: Components<Omit<Theme, 'components'>>['MuiIconButton'] 
       }
     },
     colorSecondary: {
-      backgroundColor: Colors.SecondaryButton.ACTIVE,
-      border: 'solid 2px',
       borderColor: Colors.SecondaryButton.ACTIVE,
       '&:hover': {
-        backgroundColor: Colors.SecondaryButton.HOVERED,
-        borderColor: Colors.SecondaryButton.ACTIVE,
       },
       '$:active': {
-        backgroundColor: Colors.SecondaryButton.CLICKED,
-        borderColor: Colors.SecondaryButton.CLICKED,
       },
       '&:disabled': {
-        backgroundColor: Colors.SecondaryButton.DISABLED,
-        borderColor: Colors.SecondaryButton.DISABLED,
       },
       '*': {
         color: Colors.Text.ON_BUTTON
