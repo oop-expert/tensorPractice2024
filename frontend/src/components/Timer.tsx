@@ -8,7 +8,6 @@ import { patchAnswer, resetAnswerStatus, selectPlayer } from "../store/playerSli
 import { useMediaMatch } from "../hooks/useMobileMatch";
 import { useAppDispatch } from "../store/storeHooks";
 import Answer from "../utils/types/Answer";
-import { MAX_PLAYERS } from "../utils/utils";
 import FlexBox from "./FlexBox";
 import Countdown from "./Countdown";
 import QuestionImage from "./QuestionImage";
