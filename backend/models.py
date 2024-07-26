@@ -76,7 +76,7 @@ class Prompt(models.Model):
 @receiver(post_save, sender=Room)
 def post_save_room(sender, instance, *args, **kwargs):
     if Question.objects.filter(room=instance).count() == 0:
-        prompts = Prompt.objects.all().order_by('?')[:10]
+        prompts = Prompt.objects.all().order_by('?')[:5]
         for prompt in prompts:
             Question.objects.create(room=instance, answer=prompt.answer)
         questions = Question.objects.filter(room=instance)
